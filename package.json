@@ -1,0 +1,10 @@
+{
+  "name": "@purrbot-site/docs",
+  "version": "1.0.0",
+  "repository": "https://github.com/purrbot-site/Docs",
+  "author": "Andre_601",
+  "license": "MIT",
+  "scripts": {
+    "start": "mkdocs serve"
+  }
+}
