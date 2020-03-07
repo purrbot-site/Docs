@@ -1,0 +1,10 @@
+site_name: PurrBot API
+site_description: 'An image-API for everyone.'
+site_author: 'Andre_601'
+docs_dir: docs/
+repo_name: 'purrbot-site/Docs'
+repo_url: 'https://github.com/purrbot-site/Docs'
+nav:
+    - Home: index.md
+theme:
+  name: 'material'
