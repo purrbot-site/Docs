@@ -1,0 +1,42 @@
+site_name: PurrBot API-Documentation
+site_description: 'An image-API for everyone.'
+site_author: 'Andre_601'
+
+docs_dir: docs/
+
+repo_name: 'purrbot-site/Docs'
+repo_url: 'https://github.com/purrbot-site/Docs'
+
+pages:
+  - Welcome: index.md
+  - API:
+    - PurrBotAPI: api/purrbotapi.md
+    - ImageAPI: api/imageapi.md
+
+theme:
+  name: 'material'
+  logo: 'assets/img/logo.png'
+  favicon: 'assets/img/logo.png'
+  palette:
+    primary: 'deep purple'
+    accent: 'deep purple'
+  feature:
+    tabs: true
+
+extra_css:
+  - 'assets/css/main.css'
+  - 'assets/css/dark.css'
+
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/purrbot-site'
+    - type: 'twitter'
+      link: 'https://twitter.com/TruePurrBot'
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
