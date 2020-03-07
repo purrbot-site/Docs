@@ -3,9 +3,6 @@ Welcome to the documentation of the PurrBot API!
 
 The PurrBot API consists of two separate APIs which work independant from each other: The PurrBotAPI and the ImageAPI.
 
-!!! note Base-URL
-    `https://purrbot.site/api`
-
 ## PurrBotAPI
 The PurrBotAPI was created to generate images that either look like messages from Discord, or an avatar with a status icon attached (Similar to how avatars look in a user profile).
 
