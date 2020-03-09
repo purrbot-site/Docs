@@ -30,15 +30,19 @@ API used to create dynamic images based on the provided input.
 | timestamp  | The date and time as epoch milliseconds.                                                                            | `<The current time of the request>`     |
 | username   | The name to display.                                                                                                | `Someone`                               |
 
-!!! example "Example JSON-request"
-    ```json  
-    {  
-      "avatar": "https://cdn.discordapp.com/avatars/204232208049766400/ae7f2e5247a05791dbf0ef96243622c2.png",  
-      "message": "This is an example message.",  
-      "nameColor": "hex:ff0000"  
-      "username": "Andre_601"  
-    }  
+!!! example
+    **Request**  
+    ```json
+    {
+      "avatar": "https://cdn.discordapp.com/avatars/204232208049766400/ae7f2e5247a05791dbf0ef96243622c2.png",
+      "message": "This is an example message.",
+      "nameColor": "hex:ff0000",
+      "username": "Andre_601"
+    }
     ```
+	
+    **Result**  
+	![quote](/assets/img/quote.png)
 
 ## /status
 *Adds a status icon to the provided avatar*
