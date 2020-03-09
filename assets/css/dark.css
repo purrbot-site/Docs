@@ -137,6 +137,7 @@ article preview text color
 
 .md-typeset code {
   color: white !important;
+  background-color: hsla(0, 0%, 45%, 0.5);
   box-shadow: 0.29412em 0 0 hsla(0, 0%, 100%, 0.07),
     -0.29412em 0 0 hsla(0, 0%, 100%, 0.1);
 }
