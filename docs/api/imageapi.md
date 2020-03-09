@@ -6,7 +6,7 @@
 The ImageAPI was created to be a replacement for the nekos.life API in the bot \*Purr\*.  
 It is publicly available to use.
 
-!!! tip "Important"
+!!! warning "Important"
     - All requests are performed through GET requests
 	- No JSON body or similiar is required for the API.
 
@@ -222,24 +222,22 @@ Example response:
 ## Failed requests
 The API can return one of two error responses, depending on which one is the case.
 
-### Not existing path
-Send when an illegal/not supported path was provided.
+??? example "Not existing path"
+    When you connect to an API path which does not exist (e.g. `/api/img/doesntexist`) will this error response be displayed.
+	
+	```json
+	{
+	  "code": 403,
+	  "message": "Not supported API path"
+	}
+	```
 
-Example response:  
-```json
-{
-  "code": 403,
-  "message": "Not supported API path."
-}
-```
-
-### Folder doesn't contain any images
-Send when a provided path leads to a directory without any images.
-
-Example response:  
-```json
-{
-  "code": 403,
-  "message": "The selected directory doesn't contain any images."
-}
-```
+??? example "Path doesn't contain any images"
+    If the provided path doesn't contain any images, will this error be displayed.
+	
+	```json
+	{
+	  "code": 403,
+	  "message": "The selected directory doesn't contain any images"
+	}
+	```
