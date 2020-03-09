@@ -514,26 +514,6 @@
     Failed requests
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#not-existing-path" class="md-nav__link">
-    Not existing path
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#folder-doesnt-contain-any-images" class="md-nav__link">
-    Folder doesn't contain any images
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
       
@@ -750,26 +730,6 @@
     Failed requests
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#not-existing-path" class="md-nav__link">
-    Not existing path
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#folder-doesnt-contain-any-images" class="md-nav__link">
-    Folder doesn't contain any images
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
       
@@ -794,7 +754,7 @@
                 <h1 id="imageapi">ImageAPI<a class="headerlink" href="#imageapi" title="Permanent link">&para;</a></h1>
 <p>The ImageAPI was created to be a replacement for the nekos.life API in the bot *Purr*.<br />
 It is publicly available to use.</p>
-<div class="admonition tip">
+<div class="admonition warning">
 <p class="admonition-title">Important</p>
 <ul>
 <li>All requests are performed through GET requests</li>
@@ -966,22 +926,22 @@ It is publicly available to use.</p>
 <hr />
 <h2 id="failed-requests">Failed requests<a class="headerlink" href="#failed-requests" title="Permanent link">&para;</a></h2>
 <p>The API can return one of two error responses, depending on which one is the case.</p>
-<h3 id="not-existing-path">Not existing path<a class="headerlink" href="#not-existing-path" title="Permanent link">&para;</a></h3>
-<p>Send when an illegal/not supported path was provided.</p>
-<p>Example response:<br />
+<details class="example"><summary>Not existing path</summary><p>When you connect to an API path which does not exist (e.g. <code>/api/img/doesntexist</code>) will this error response be displayed.</p>
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">403</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path.&quot;</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
 <span class="p">}</span>
-</code></pre></div></p>
-<h3 id="folder-doesnt-contain-any-images">Folder doesn't contain any images<a class="headerlink" href="#folder-doesnt-contain-any-images" title="Permanent link">&para;</a></h3>
-<p>Send when a provided path leads to a directory without any images.</p>
-<p>Example response:<br />
+</code></pre></div>
+
+</details>
+<details class="example"><summary>Path doesn't contain any images</summary><p>If the provided path doesn't contain any images, will this error be displayed.</p>
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">403</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected directory doesn&#39;t contain any images.&quot;</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected directory doesn&#39;t contain any images&quot;</span>
 <span class="p">}</span>
-</code></pre></div></p>
+</code></pre></div>
+
+</details>
                 
                   
                 

@@ -491,7 +491,7 @@
 <p class="admonition-title">Base-URL</p>
 <p><a href="https://purrbot.site/api">https://purrbot.site/api</a></p>
 </div>
-<div class="admonition tip">
+<div class="admonition warning">
 <p class="admonition-title">Important</p>
 <ul>
 <li>All requests are performed through POST requests</li>
@@ -554,14 +554,15 @@
 <p class="admonition-title">Example</p>
 <p><strong>Request</strong><br />
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cdn.discordapp.com/avatars/204232208049766400/ae7f2e5247a05791dbf0ef96243622c2.png&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cdn.discordapp.com/avatars/204232208049766400/dfaaefa54a2804addb1f494da7aa904d.png&quot;</span><span class="p">,</span>
   <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;This is an example message.&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;nameColor&quot;</span><span class="p">:</span> <span class="s2">&quot;hex:ff0000&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;nameColor&quot;</span><span class="p">:</span> <span class="s2">&quot;hex:ffffff&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;dateFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;dd. MMM yyyy&quot;</span><span class="p">,</span>
   <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;Andre_601&quot;</span>
 <span class="p">}</span>
 </code></pre></div></p>
 <p><strong>Result</strong><br />
-<img alt="quote" src="/assets/img/quote.png" /></p>
+<img alt="quote" src="/assets/img/quote.png"></p>
 </div>
 <h2 id="status">/status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h2>
 <p><em>Adds a status icon to the provided avatar</em></p>
@@ -595,15 +596,38 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><strong>Request</strong><br />
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cdn.discordapp.com/avatars/204232208049766400/dfaaefa54a2804addb1f494da7aa904d.png&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;online&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Result</strong><br />
+<img alt="status" src="/assets/img/status.png" style="width: 80px; height: 80px;"></p>
+</div>
 <h2 id="error-responses">Error responses<a class="headerlink" href="#error-responses" title="Permanent link">&para;</a></h2>
 <p>The API might return certain errors, depending on different facors.<br />
-Possible errors are a <code>500 Internal server error</code> or a <code>403 Unauthorized error</code>.</p>
-<p>Both are returned as JSON looking something like this:<br />
+Possible errors are a <code>500 Internal Server Error</code> or a <code>403 Unauthorized Error</code>.</p>
+<details class="example"><summary>500 Internal Server Error</summary><p>In the case of a <code>500 Internal Server Error</code> will you need to check the provided values as those may be invalid.<br />
+Common cause could be a image-link that is no longer valid.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Couldn&#39;t generate image. Make sure the values are valid!&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</details>
+<details class="example"><summary>403 Unauthorized Error</summary><p>When a <code>403 Unauthorized Error</code> happens does it mean, that your provided JSON body is not valid.<br />
+This either means, that you didn't provide a valid JSON (i.e. a comma is missing) or you didn't provide any JSON at all.</p>
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">403</span><span class="p">,</span>
   <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Invalid or empty JSON-body received!&quot;</span>
 <span class="p">}</span>
-</code></pre></div></p>
+</code></pre></div>
+
+</details>
                 
                   
                 
