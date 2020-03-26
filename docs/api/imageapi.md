@@ -25,6 +25,15 @@ Example response:
 }
 ```
 
+### /bite/gif
+Example response:  
+```json
+{
+  "code": 200,
+  "link": "https://purbot.site/img/sfw/bite/gif/bite_001.gif"
+}
+```
+
 ### /cuddle/gif
 Example response:  
 ```json
@@ -143,6 +152,15 @@ Contains images that are considered Not Safe for work.
 !!! note "Base-URL"
     [https://purrbot.site/api/img/nsfw][nsfw]
 
+### /anal/gif
+Example response:  
+```json
+{
+  "code": 200,
+  "link": "https://purrbot.site/img/nsfw/anal/gif/anal_001.gif"
+}
+```
+
 ### /blowjob/gif
 Example response:  
 ```json
@@ -169,6 +187,15 @@ Example response:
 {
   "code": 200,
   "link": "https://purrbot.site/img/nsfw/neko/img/neko_001"
+}
+```
+
+### /pussylick/gif
+Example response:  
+```json
+{
+  "code": 200,
+  "link": "https://purrbot.site/img/nsfw/pussylick/gif/pussylick_001.gif"
 }
 ```
 
