@@ -1,0 +1,1845 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="An image-API for everyone.">
+      
+      
+      
+        <meta name="author" content="Andre_601">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/img/logo.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Commands - PurrBot API-Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#7e57c2">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../assets/css/dark.css">
+    
+      <link rel="stylesheet" href="../../assets/css/main.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#general-info" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="PurrBot API-Documentation" aria-label="PurrBot API-Documentation" class="md-header-nav__button md-logo">
+          
+            <img alt="logo" src="../../assets/img/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              PurrBot API-Documentation
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Commands
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/Andre601/PurrBot/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Andre601/PurrBot
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        Welcome
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../api/" class="md-tabs__link">
+          API
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../" class="md-tabs__link md-tabs__link--active">
+          Bot
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="PurrBot API-Documentation" class="md-nav__button md-logo">
+      
+        <img alt="logo" src="../../assets/img/logo.png" width="48" height="48">
+      
+    </a>
+    PurrBot API-Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/Andre601/PurrBot/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Andre601/PurrBot
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Welcome" class="md-nav__link">
+      Welcome
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/" title="API" class="md-nav__link">
+      API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/purrbotapi/" title="PurrBotAPI" class="md-nav__link">
+      PurrBotAPI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/imageapi/" title="ImageAPI" class="md-nav__link">
+      ImageAPI
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Bot
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Bot
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Wiki" class="md-nav__link">
+      Wiki
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Commands
+      </label>
+    
+    <a href="./" title="Commands" class="md-nav__link md-nav__link--active">
+      Commands
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fun" class="md-nav__link">
+    Fun
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guild" class="md-nav__link">
+    Guild
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#info" class="md-nav__link">
+    Info
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nsfw" class="md-nav__link">
+    NSFW
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category-fun" class="md-nav__link">
+    Category: Fun
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bite" class="md-nav__link">
+    Bite
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuddle" class="md-nav__link">
+    Cuddle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#holo" class="md-nav__link">
+    Holo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hug" class="md-nav__link">
+    Hug
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kiss" class="md-nav__link">
+    Kiss
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kitsune" class="md-nav__link">
+    Kitsune
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lick" class="md-nav__link">
+    Lick
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neko" class="md-nav__link">
+    Neko
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pat" class="md-nav__link">
+    Pat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poke" class="md-nav__link">
+    Poke
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ship" class="md-nav__link">
+    Ship
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slap" class="md-nav__link">
+    Slap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tickle" class="md-nav__link">
+    Tickle
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category-guild" class="md-nav__link">
+    Category: Guild
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#language" class="md-nav__link">
+    Language
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prefix" class="md-nav__link">
+    Prefix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#welcome" class="md-nav__link">
+    Welcome
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category-info" class="md-nav__link">
+    Category: Info
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#emote" class="md-nav__link">
+    Emote
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guild_1" class="md-nav__link">
+    Guild
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help" class="md-nav__link">
+    Help
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#info_1" class="md-nav__link">
+    Info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invite" class="md-nav__link">
+    Invite
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ping" class="md-nav__link">
+    Ping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quote" class="md-nav__link">
+    Quote
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shards" class="md-nav__link">
+    Shards
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stats" class="md-nav__link">
+    Stats
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user" class="md-nav__link">
+    User
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category-nsfw" class="md-nav__link">
+    Category: NSFW
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fuck" class="md-nav__link">
+    Fuck
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lewd" class="md-nav__link">
+    Lewd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pussylick" class="md-nav__link">
+    Pussylick
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solo" class="md-nav__link">
+    Solo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#threesome" class="md-nav__link">
+    Threesome
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yurifuck" class="md-nav__link">
+    Yurifuck
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../credits/" title="Credits" class="md-nav__link">
+      Credits
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../selfhosting/" title="Selfhosting" class="md-nav__link">
+      Selfhosting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../welcome-channel/" title="Welcome Channel" class="md-nav__link">
+      Welcome Channel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../welcome-images/" title="Welcome Images" class="md-nav__link">
+      Welcome Images
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fun" class="md-nav__link">
+    Fun
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guild" class="md-nav__link">
+    Guild
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#info" class="md-nav__link">
+    Info
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nsfw" class="md-nav__link">
+    NSFW
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category-fun" class="md-nav__link">
+    Category: Fun
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bite" class="md-nav__link">
+    Bite
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuddle" class="md-nav__link">
+    Cuddle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#holo" class="md-nav__link">
+    Holo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hug" class="md-nav__link">
+    Hug
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kiss" class="md-nav__link">
+    Kiss
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kitsune" class="md-nav__link">
+    Kitsune
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lick" class="md-nav__link">
+    Lick
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neko" class="md-nav__link">
+    Neko
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pat" class="md-nav__link">
+    Pat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poke" class="md-nav__link">
+    Poke
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ship" class="md-nav__link">
+    Ship
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slap" class="md-nav__link">
+    Slap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tickle" class="md-nav__link">
+    Tickle
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category-guild" class="md-nav__link">
+    Category: Guild
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#language" class="md-nav__link">
+    Language
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prefix" class="md-nav__link">
+    Prefix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#welcome" class="md-nav__link">
+    Welcome
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category-info" class="md-nav__link">
+    Category: Info
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#emote" class="md-nav__link">
+    Emote
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guild_1" class="md-nav__link">
+    Guild
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help" class="md-nav__link">
+    Help
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#info_1" class="md-nav__link">
+    Info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invite" class="md-nav__link">
+    Invite
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ping" class="md-nav__link">
+    Ping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quote" class="md-nav__link">
+    Quote
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shards" class="md-nav__link">
+    Shards
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stats" class="md-nav__link">
+    Stats
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user" class="md-nav__link">
+    User
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category-nsfw" class="md-nav__link">
+    Category: NSFW
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fuck" class="md-nav__link">
+    Fuck
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lewd" class="md-nav__link">
+    Lewd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pussylick" class="md-nav__link">
+    Pussylick
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solo" class="md-nav__link">
+    Solo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#threesome" class="md-nav__link">
+    Threesome
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yurifuck" class="md-nav__link">
+    Yurifuck
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/purrbot-site/Docs/edit/master/docs/bot/commands.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="general-info">General info<a class="headerlink" href="#general-info" title="Permanent link">&para;</a></h1>
+<p>This page lists all available commands of the bot.<br />
+The default prefix is <code>.</code> but can be changed with the [[prefix-command|Commands#prefix]]</p>
+<div class="admonition info">
+<p class="admonition-title">Important</p>
+<ul>
+<li><code>Permission</code> means Discord permissions which the executor of the command (you) requires.</li>
+<li>To make the bot work properly will it require the following permissions:<ul>
+<li><code>Read Messages</code></li>
+<li><code>Send Messages</code></li>
+<li><code>Embed Links</code></li>
+<li><code>Read Message History</code></li>
+<li><code>Add Reactions</code><br />
+Additional permissions required for a command will be mentioned under <code>Bot Requires</code></li>
+</ul>
+</li>
+<li><code>&lt;argument&gt;</code> are required and <code>[argument]</code> are optional.</li>
+<li>If an argument has <code>...</code> does it indicate, that you can provide it multiple times.</li>
+</ul>
+</div>
+<h3 id="fun"><a href="#category-fun">Fun</a><a class="headerlink" href="#fun" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="#bite">Bite</a></li>
+<li><a href="#cuddle">Cuddle</a></li>
+<li><a href="#holo">Holo</a></li>
+<li><a href="#hug">Hug</a></li>
+<li><a href="#kiss">Kiss</a></li>
+<li><a href="#kitsune">Kitsune</a></li>
+<li><a href="#lick">Lick</a></li>
+<li><a href="#neko">Neko</a></li>
+<li><a href="#pat">Pat</a></li>
+<li><a href="#poke">Poke</a></li>
+<li><a href="#ship">Ship</a></li>
+<li><a href="#slap">Slap</a></li>
+<li><a href="#tickle">Tickle</a></li>
+</ul>
+<h3 id="guild"><a href="#category-guild">Guild</a><a class="headerlink" href="#guild" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="#language">Language</a></li>
+<li><a href="#prefix">Prefix</a></li>
+<li><a href="#welcome">Welcome</a></li>
+</ul>
+<h3 id="info"><a href="#category-info">Info</a><a class="headerlink" href="#info" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="#emote">Emote</a></li>
+<li><a href="#guild">Guild</a></li>
+<li><a href="#help">Help</a></li>
+<li><a href="#info">Info</a></li>
+<li><a href="#invite">Invite</a></li>
+<li><a href="#ping">Ping</a></li>
+<li><a href="#quote">Quote</a></li>
+<li><a href="#shards">Shards</a></li>
+<li><a href="#stats">Stats</a></li>
+<li><a href="#user">User</a></li>
+</ul>
+<h3 id="nsfw"><a href="#category-nsfw">NSFW</a><a class="headerlink" href="#nsfw" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="#fuck">Fuck</a></li>
+<li><a href="#lewd">Lewd</a></li>
+<li><a href="#pussylick">Pussylick</a></li>
+<li><a href="#solo">Solo</a></li>
+<li><a href="#threesome">Threesome</a></li>
+<li><a href="#yurifuck">Yurifuck</a></li>
+</ul>
+<hr />
+<h2 id="category-fun">Category: Fun<a class="headerlink" href="#category-fun" title="Permanent link">&para;</a></h2>
+<h3 id="bite">Bite<a class="headerlink" href="#bite" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code></p>
+<p><strong>Aliases</strong>:</p>
+<ul>
+<li><code>Nibble</code></li>
+<li><code>Nom</code></li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Bite &lt;@user ...&gt;</code></li>
+</ul>
+</blockquote>
+<hr />
+<h3 id="cuddle">Cuddle<a class="headerlink" href="#cuddle" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code>  </p>
+<p><strong>Aliases</strong>:</p>
+<ul>
+<li><code>Cuddles</code></li>
+<li><code>Snuggle</code></li>
+<li><code>Snuggles</code></li>
+<li><code>Squeeze</code></li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Cuddle &lt;@user ...&gt;</code></li>
+</ul>
+</blockquote>
+<p>Lets you cuddle one or multiple mentioned users.</p>
+<hr />
+<h3 id="holo">Holo<a class="headerlink" href="#holo" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code></p>
+<p><strong>Aliases</strong>:</p>
+<ul>
+<li><code>spiceandwolf</code>  </li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Holo</code></li>
+</ul>
+</blockquote>
+<p>Gives an image of Holo from the manga and anime "Spice &amp; Wolf". (<a href="https://purrbot.site/img/sfw/holo/img/holo_001.jpg">Example</a>)</p>
+<hr />
+<h3 id="hug">Hug<a class="headerlink" href="#hug" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code>  </p>
+<p><strong>Aliases</strong>:</p>
+<ul>
+<li><code>Hugging</code>  </li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Hug &lt;@user ...&gt;</code></li>
+</ul>
+</blockquote>
+<p>Lets you hug one or multiple mentioned user.</p>
+<hr />
+<h3 id="kiss">Kiss<a class="headerlink" href="#kiss" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code>  </p>
+<p><strong>Aliases</strong>:</p>
+<ul>
+<li><code>Kissu</code></li>
+<li><code>Love</code>  </li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Kiss &lt;@user ...&gt;</code></li>
+</ul>
+</blockquote>
+<p>Lets you kiss one or multiple mentioned user.</p>
+<hr />
+<h3 id="kitsune">Kitsune<a class="headerlink" href="#kitsune" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code>  </p>
+<p><strong>Aliases</strong>:</p>
+<ul>
+<li><code>Foxgirl</code>  </li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Kitsune</code></li>
+</ul>
+</blockquote>
+<p>Gives an image of a kitsune (fox girl). (<a href="https://purrbot.site/img/sfw/kitsune/img/kitsune_001.jpg">Example</a>)</p>
+<hr />
+<h3 id="lick">Lick<a class="headerlink" href="#lick" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code></p>
+<p><strong>Aliases</strong>: <code>None</code>  </p>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Lick &lt;@user ...&gt;</code></li>
+</ul>
+</blockquote>
+<p>Lets you lick one or multiple mentioned user.</p>
+<hr />
+<h3 id="neko">Neko<a class="headerlink" href="#neko" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code></p>
+<p><strong>Aliases</strong>:</p>
+<ul>
+<li><code>Catgirl</code></li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Neko</code></li>
+<li><code>.Neko [--gif]</code></li>
+</ul>
+</blockquote>
+<p>Gives an image of a Neko (catgirl). (<a href="https://purrbot.site/img/sfw/neko/img/neko_001.jpg">Example</a>)<br />
+<code>[--gif]</code> returns a gif of a Neko.</p>
+<hr />
+<h3 id="pat">Pat<a class="headerlink" href="#pat" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code>  </p>
+<p><strong>Aliases</strong>:</p>
+<ul>
+<li><code>Patting</code></li>
+<li><code>Pet</code></li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Pat &lt;@user ...&gt;</code></li>
+</ul>
+</blockquote>
+<p>Lets you pat one or multiple mentioned user.</p>
+<hr />
+<h3 id="poke">Poke<a class="headerlink" href="#poke" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code>  </p>
+<p><strong>Aliases</strong>:</p>
+<ul>
+<li><code>Poking</code></li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Poke &lt;@user ...&gt;</code></li>
+</ul>
+</blockquote>
+<p>Lets you poke one or multiple mentioned user.</p>
+<hr />
+<h3 id="ship">Ship<a class="headerlink" href="#ship" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>:</p>
+<ul>
+<li><code>Attach files</code> (optional for showing a image)  </li>
+</ul>
+<p><strong>Aliases</strong>:</p>
+<ul>
+<li><code>Shipping</code></li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Ship &lt;@user&gt;</code></li>
+<li><code>.Ship &lt;@user1&gt; [@user2]</code></li>
+</ul>
+</blockquote>
+<p>Will make the bot show how likely you match with someone else.<br />
+You can optionally mention a second user to instead ship those two with each other.</p>
+<hr />
+<h3 id="slap">Slap<a class="headerlink" href="#slap" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code>  </p>
+<p><strong>Aliases</strong>: <code>None</code></p>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Slap &lt;@user ...&gt;</code></li>
+</ul>
+</blockquote>
+<p>Lets you slap one or multiple mentioned user.</p>
+<hr />
+<h3 id="tickle">Tickle<a class="headerlink" href="#tickle" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code>  </p>
+<p><strong>Aliases</strong>: <code>None</code></p>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Tickle &lt;@user ...&gt;</code></li>
+</ul>
+</blockquote>
+<p>Lets you tickle one or multiple users.</p>
+<hr />
+<h2 id="category-guild">Category: Guild<a class="headerlink" href="#category-guild" title="Permanent link">&para;</a></h2>
+<h3 id="language">Language<a class="headerlink" href="#language" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>Manage Server</code><br />
+<strong>Bot requires</strong>: <code>None</code></p>
+<p><strong>Aliases</strong>:</p>
+<ul>
+<li><code>Lang</code></li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Lang [set &lt;language&gt;]</code></li>
+<li><code>.Lang [reset]</code></li>
+</ul>
+</blockquote>
+<p>Lets you change or reset the current language set in a Discord.<br />
+Supported are all languages listed <a href="https://github.com/purrbot-site/Translations#supported-languages">here</a></p>
+<hr />
+<h3 id="prefix">Prefix<a class="headerlink" href="#prefix" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>Manage server</code><br />
+<strong>Bot requires</strong>: <code>None</code>  </p>
+<p><strong>Aliases</strong>: <code>None</code></p>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Prefix &lt;set &lt;prefix&gt;&gt;</code></li>
+<li><code>.Prefix &lt;reset&gt;</code></li>
+</ul>
+</blockquote>
+<p>Lets you change or reset the bots prefix for your guild. (Default one is <code>.</code>)</p>
+<hr />
+<h3 id="welcome">Welcome<a class="headerlink" href="#welcome" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>Manage server</code><br />
+<strong>Bot requires</strong>:</p>
+<ul>
+<li><code>Attach files</code> (Used for welcome-images. See [[Welcome images]] for examples)</li>
+</ul>
+<p><strong>Aliases</strong>: <code>None</code></p>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Welcome [bg set &lt;background&gt;]</code></li>
+<li><code>.Welcome [bg reset]</code></li>
+<li><code>.Welcome [channel set &lt;#channel&gt;]</code></li>
+<li><code>.Welcome [channel reset]</code></li>
+<li><code>.Welcome [color set &lt;color&gt;]</code></li>
+<li><code>.Welcome [color reset]</code></li>
+<li><code>.Welcome [icon set &lt;icon&gt;]</code></li>
+<li><code>.Welcome [icon reset]</code></li>
+<li><code>.Welcome [msg set &lt;message&gt;]</code></li>
+<li><code>.Welcome [msg reset]</code></li>
+</ul>
+</blockquote>
+<p>Lets you set different parts of Purr's welcome-feature.<br />
+Providing no arguments will show what the current settings are.</p>
+<p><strong>About the arguments</strong>:</p>
+<ul>
+<li><code>[bg set &lt;background&gt;]</code>: Sets the background of the image.</li>
+<li><code>[bg reset]</code>: Resets the background.</li>
+<li><code>[channel set &lt;#channel&gt;]</code>: Sets the channel where welcome messages are posted to the mentioned one.</li>
+<li><code>[channel reset]</code>: Resets the channel, effectively disabling the welcome feature.</li>
+<li><code>[color set &lt;color&gt;]</code>: Sets the text color of the text in the image.<br />
+Color can either be <code>rgb:</code> with rgb values (<code>rgb:255,0,0</code>) or <code>hex:</code> with hexadecimal values (<code>hex:ff0000</code>)</li>
+<li><code>[color reset]</code>: Resets the color.</li>
+<li><code>[icon set &lt;icon&gt;]</code>: Changes the icon to the provided one. Go to [[Welcome images]] for a list.</li>
+<li><code>[icon reset]</code>: Resets the icon back to the default one ([[Purr|Welcome-images#purr]])</li>
+<li><code>[msg set &lt;message&gt;]</code>: Sets the message to the provided one. The message is shown with the image and you can use placeholders (See below).</li>
+<li><code>[msg reset]</code>: Resets the message back to the normal <code>Welcome {mention}!</code></li>
+</ul>
+<p><strong>Placeholders</strong> (Usable in the <code>msg set &lt;message&gt;</code> argument):</p>
+<ul>
+<li><code>{count}</code>: The current member-count of the guild.</li>
+<li><code>{guild}</code>: The name of the guild.</li>
+<li><code>{mention}</code>: The joined user as mention.</li>
+<li><code>{name}</code>: The name of the joined user.</li>
+</ul>
+<hr />
+<h2 id="category-info">Category: Info<a class="headerlink" href="#category-info" title="Permanent link">&para;</a></h2>
+<h3 id="emote">Emote<a class="headerlink" href="#emote" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>:</p>
+<ul>
+<li><code>Read message history</code> (For the <code>-search</code> option)</li>
+</ul>
+<p><strong>Aliases</strong>:</p>
+<ul>
+<li><code>E</code></li>
+</ul>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>.Emote &lt;:emote:&gt;</code></li>
+<li><code>.Emote &lt;--search&gt;</code></li>
+</ul>
+</blockquote>
+<p>Gives information about a provided emote.<br />
+If the <code>--search</code> argument is used will the bot check the past 100 messages for any emotes and return all it can find.<br />
+This will <strong>not</strong> return unicode emojis!</p>
+<hr />
+<h3 id="guild_1">Guild<a class="headerlink" href="#guild_1" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code>  </p>
+<p><strong>Aliases</strong>:</p>
+<ul>
+<li><code>Guildinfo</code></li>
+<li><code>Server</code></li>
+<li><code>Serverinfo</code></li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Guild</code></li>
+</ul>
+</blockquote>
+<p>Provides basic information about the guild.</p>
+<hr />
+<h3 id="help">Help<a class="headerlink" href="#help" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>:
+- <code>Add reactions</code>  </p>
+<p><strong>Aliases</strong>:</p>
+<ul>
+<li><code>Command</code></li>
+<li><code>Commands</code></li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Help</code></li>
+<li><code>.Help [command]</code></li>
+</ul>
+</blockquote>
+<p>Lists all available commands, or gives information about one, when specified.</p>
+<hr />
+<h3 id="info_1">Info<a class="headerlink" href="#info_1" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code>  </p>
+<p><strong>Aliases</strong>:</p>
+<ul>
+<li><code>Infos</code></li>
+<li><code>Information</code></li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Info</code></li>
+<li><code>.Info [--dm]</code></li>
+</ul>
+</blockquote>
+<p>Provides basic information about the bot.<br />
+You can use <code>--dm</code> to send this info into your DMs.</p>
+<hr />
+<h3 id="invite">Invite<a class="headerlink" href="#invite" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code>  </p>
+<p><strong>Aliases</strong>:</p>
+<ul>
+<li><code>Links</code></li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Invite</code></li>
+<li><code>.Invite [--dm]</code></li>
+</ul>
+</blockquote>
+<p>Sends you links to invite the bot, or join the support-Discord.<br />
+Use <code>--dm</code> to send the links to your DMs.</p>
+<hr />
+<h3 id="ping">Ping<a class="headerlink" href="#ping" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code>  </p>
+<p><strong>Aliases</strong>: <code>None</code></p>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Ping</code></li>
+</ul>
+</blockquote>
+<p>Returns the delay of editing the message, the delay to the API and the WebSocket delay in milliseconds.</p>
+<hr />
+<h3 id="quote">Quote<a class="headerlink" href="#quote" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>:</p>
+<ul>
+<li><code>See message history</code> (For your channel and/or the mentioned channel)  </li>
+</ul>
+<p><strong>Aliases</strong>: <code>None</code></p>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Quote &lt;MessageID&gt;</code></li>
+<li><code>.Quote &lt;MessageID&gt; [#channel]</code></li>
+</ul>
+</blockquote>
+<p>Quotes a message from a user, using the <a href="https://docs.purrbot.site/api/purrbotapi#quote">PurrBotAPI</a> to generate an image looking like a Discord-message.<br />
+<code>&lt;MessageID&gt;</code> is the ID of the message that should be quoted.<br />
+<code>[#channel]</code> is only needed, if the message is in a channel that isn't the same as the one you execute the command in.</p>
+<p>The bot won't quote messages from NSFW channels when the channel you're using the command in isn't one.</p>
+<hr />
+<h3 id="shards">Shards<a class="headerlink" href="#shards" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code></p>
+<p><strong>Aliases</strong>:</p>
+<ul>
+<li><code>Shard</code></li>
+<li><code>Shardinfo</code></li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Shards</code></li>
+</ul>
+</blockquote>
+<p>Lists all shards, their status, ping and Guild count.</p>
+<hr />
+<h3 id="stats">Stats<a class="headerlink" href="#stats" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code>  </p>
+<p><strong>Aliases</strong>:</p>
+<ul>
+<li><code>Stat</code></li>
+<li><code>Statistic</code></li>
+<li><code>Statistics</code></li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Stats</code></li>
+</ul>
+</blockquote>
+<p>Shows statistics of the bot.</p>
+<hr />
+<h3 id="user">User<a class="headerlink" href="#user" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code>  </p>
+<p><strong>Aliases</strong>:</p>
+<ul>
+<li><code>Member</code></li>
+<li><code>Userinfo</code></li>
+<li><code>Userstats</code></li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.User [@user]</code></li>
+</ul>
+</blockquote>
+<p>Shows information about yourself or a mentioned user.</p>
+<hr />
+<h2 id="category-nsfw">Category: NSFW<a class="headerlink" href="#category-nsfw" title="Permanent link">&para;</a></h2>
+<h3 id="fuck">Fuck<a class="headerlink" href="#fuck" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code>  </p>
+<p><strong>Aliases</strong>:</p>
+<ul>
+<li><code>Sex</code></li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Fuck &lt;@user&gt;</code></li>
+<li><code>.Fuck &lt;@user&gt; --anal</code></li>
+</ul>
+</blockquote>
+<p><strong>This command can only be run in NSFW-labeled channels!</strong></p>
+<p>Asks the mentioned user to have sex with you.<br />
+The mentioned user can accept or deny the request by clicking on the corresponding reactions of the message.<br />
+<code>--anal</code> gives a Anal fuck gif.</p>
+<hr />
+<h3 id="lewd">Lewd<a class="headerlink" href="#lewd" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code></p>
+<p><strong>Aliases</strong>: <code>None</code></p>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Lewd</code></li>
+<li><code>.Lewd --gif</code></li>
+</ul>
+</blockquote>
+<p><strong>This command can only be run in NSFW-labeled channels!</strong></p>
+<p>Gives an image of a lewd Neko.<br />
+<code>--gif</code> returns a gif of a lewd neko.</p>
+<hr />
+<h3 id="pussylick">Pussylick<a class="headerlink" href="#pussylick" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code></p>
+<p><strong>Aliases</strong>:</p>
+<ul>
+<li><code>plick</code></li>
+<li><code>cunni</code></li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Pussylick &lt;@user&gt;</code></li>
+</ul>
+</blockquote>
+<p><strong>This command can only be run in NSFW-Labeled channels!</strong></p>
+<p>Asks the mentioned user to let you licking their pussy.<br />
+The mentioned user can accept or deny the request by clicking on the corresponding reactions of the message.</p>
+<hr />
+<h3 id="solo">Solo<a class="headerlink" href="#solo" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code>  </p>
+<p><strong>Aliases</strong>:</p>
+<ul>
+<li><code>girl</code></li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Solo</code></li>
+</ul>
+</blockquote>
+<p><strong>This command can only be run in NSFW-labeled channels!</strong></p>
+<p>Gives a gif of a girl <em>playing</em> with herself.</p>
+<hr />
+<h3 id="threesome">Threesome<a class="headerlink" href="#threesome" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code></p>
+<p><strong>Aliases</strong>:</p>
+<ul>
+<li><code>3some</code></li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Threesome &lt;@user1&gt; &lt;@user2&gt;</code></li>
+<li><code>.Threesome &lt;@user1&gt; &lt;@user2&gt; --fff</code></li>
+<li><code>.Threesome &lt;@user1&gt; &lt;@user2&gt; --mmf</code></li>
+</ul>
+</blockquote>
+<p><strong>This command can only be run in NSFW-labeled channels!</strong></p>
+<p>Similar to <a href="#fuck">Fuck</a> but allows you to ask two people at once.<br />
+By default is the gif with 1 male and 2 females but can be changed using the following args:</p>
+<ul>
+<li><code>--fff</code> for only females.</li>
+<li><code>--mmf</code> for 2 males and 1 female</li>
+</ul>
+<hr />
+<h3 id="yurifuck">Yurifuck<a class="headerlink" href="#yurifuck" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Permission</strong>: <code>None</code><br />
+<strong>Bot requires</strong>: <code>None</code>  </p>
+<p><strong>Aliases</strong>:</p>
+<ul>
+<li><code>Yfuck</code></li>
+<li><code>Ysex</code></li>
+<li><code>Yurifuck</code></li>
+<li><code>Yurisex</code></li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><code>.Yurifuck &lt;@user&gt;</code></li>
+</ul>
+</blockquote>
+<p><strong>This command can only be run in NSFW-labeled channels!</strong></p>
+<p>Similar to <a href="#fuck">Fuck</a>, but with two females.<br />
+The mentioned user can accept or deny the request by clicking on the corresponding reactions of the message.</p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../" title="Wiki" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Wiki
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../credits/" title="Credits" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Credits
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/purrbot-site" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/TruePurrBot" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

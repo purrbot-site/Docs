@@ -4,11 +4,24 @@ site_author: 'Andre_601'
 
 docs_dir: docs/
 
+repo_name: Andre601/PurrBot
+repo_url: https://github.com/Andre601/PurrBot
+edit_uri: https://github.com/purrbot-site/Docs/edit/master/docs
+
 nav:
   - Welcome: index.md
   - API:
+    - API: api/index.md
     - PurrBotAPI: api/purrbotapi.md
     - ImageAPI: api/imageapi.md
+  - Bot:
+    - Wiki: bot/index.md
+    - Commands: bot/commands.md
+    - Credits: bot/credits.md
+    - FAQ: bot/faq.md
+    - Selfhosting: bot/selfhosting.md
+    - Welcome Channel: bot/welcome-channel.md
+    - Welcome Images: bot/welcome-images.md
 
 theme:
   name: 'material'
@@ -21,8 +34,8 @@ theme:
     tabs: true
 
 extra_css:
-  - 'assets/css/main.css'
   - 'assets/css/dark.css'
+  - 'assets/css/main.css'
 
 extra:
   social:
