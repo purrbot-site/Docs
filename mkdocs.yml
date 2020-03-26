@@ -28,14 +28,13 @@ theme:
   logo: 'assets/img/logo.png'
   favicon: 'assets/img/logo.png'
   palette:
-    primary: 'deep purple'
-    accent: 'deep purple'
+    primary: 'cyan'
+    accent: 'blue'
   feature:
     tabs: true
 
 extra_css:
   - 'assets/css/dark.css'
-  - 'assets/css/main.css'
 
 extra:
   social:
