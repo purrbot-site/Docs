@@ -4,9 +4,6 @@ site_author: 'Andre_601'
 
 docs_dir: docs/
 
-repo_name: 'Andre601/PurrBot'
-repo_url: 'https://github.com/Andre601/PurrBot'
-
 nav:
   - Welcome: index.md
   - API:
