@@ -74,7 +74,7 @@ The syntax is as follows:
     Content goes here.
 
     - Same markdown rules
-	    - Apply here too.
+        - Apply here too.
 ```
 
 Result:  
@@ -109,14 +109,14 @@ Example:
 ??? info "Closed info box"
     Content goes here.
 	
-	- Same markdown rules
-	    - Apply here too.
+    - Same markdown rules
+        - Apply here too.
 
 ???+ info "Open info box"
     Content goes here.
 	
-	- Same markdown rules
-	    - Apply here too.
+    - Same markdown rules
+        - Apply here too.
 ```
 
 Result:  
