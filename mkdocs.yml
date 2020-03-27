@@ -1,5 +1,5 @@
-site_name: PurrBot API-Documentation
-site_description: 'An image-API for everyone.'
+site_name: PurrBot Documentation
+site_description: 'API-Documentation and Wiki of *Purr*'
 site_author: 'Andre_601'
 
 docs_dir: docs/
