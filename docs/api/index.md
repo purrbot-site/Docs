@@ -1,4 +1,4 @@
-# Welcome
+# API Documentation
 Welcome to the documentation of the APIs of PurrBot.site!
 
 The APIs consists of two separate APIs which work independant from each other: The PurrBotAPI and the ImageAPI.

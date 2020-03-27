@@ -4,6 +4,7 @@
 [list2]: https://user-images.githubusercontent.com/11576465/77761888-03f42480-7039-11ea-8a0c-9099d8eb8d54.png
 [infobox]: https://user-images.githubusercontent.com/11576465/77762169-63523480-7039-11ea-90a3-f6badb80da20.png
 [cbox]: https://user-images.githubusercontent.com/11576465/77764056-4e2ad500-703c-11ea-8838-b0734cdcc988.png
+[tabs]: https://user-images.githubusercontent.com/11576465/77806369-c917de00-7084-11ea-91b6-99787c5b1a3f.png
 
 [boxes]: https://squidfunk.github.io/mkdocs-material/extensions/admonition/#admonition
 [MkDocs]: https://mkdocs.org
@@ -124,6 +125,29 @@ Result:
 
 Adding a plus (`+`) after the question marks, will have the box open by default, while it is closed otherwise.  
 The same options in terms of type and title are available as with the normal boxes (See above).
+
+#### Tabs
+Tabs are provided through the [PyMdown] extension and use thre equal signs (`===`).  
+They are quite similar to [normal blocks](#blocks) and [collapsable blocks](#collapsable-blocks) and can even be used in combination with those.
+
+Example:  
+```markdown
+=== "Tab 1"
+    My text here
+
+=== "Tab 2"
+    My other text here
+
+!!! info "Box example"
+    === "Tab 1"
+        My text
+
+    === "Tab 2"
+        My other text
+```
+
+Result:  
+![tabs]
 
 ## Credits
 A big thank you goes to the following people/groups:

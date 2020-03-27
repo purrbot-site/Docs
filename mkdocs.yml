@@ -2,6 +2,10 @@ site_name: PurrBot Documentation
 site_description: 'API-Documentation and Wiki of *Purr*'
 site_author: 'Andre_601'
 
+copyright: |
+  This documentation is under the 
+  <a href="https://github.com/purrbot-site/Docs/blob/master/LICENSE" target="_blank">MIT-License</a>
+
 docs_dir: docs/
 
 repo_name: Andre601/PurrBot
@@ -30,17 +34,20 @@ theme:
   palette:
     primary: 'cyan'
     accent: 'blue'
-  feature:
-    tabs: true
+  features:
+  - tabs
+  icon:
+    repo: fontawesome/brands/github-square
 
 extra_css:
   - 'assets/css/dark.css'
+  - 'assets/css/tabbed.css'
 
 extra:
   social:
-    - type: 'github'
+    - icon: 'fontawesome/brands/github'
       link: 'https://github.com/purrbot-site'
-    - type: 'twitter'
+    - icon: 'fontawesome/brands/twitter'
       link: 'https://twitter.com/TruePurrBot'
 
 markdown_extensions:
@@ -50,4 +57,4 @@ markdown_extensions:
   - toc:
       permalink: true
   - pymdownx.superfences
-  - pymdownx.details
+  - pymdownx.tabbed
