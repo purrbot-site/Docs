@@ -72,8 +72,8 @@ The syntax is as follows:
 ```markdown
 !!! info "title here"
     Content goes here.
-	
-	- Same markdown rules
+
+    - Same markdown rules
 	    - Apply here too.
 ```
 
