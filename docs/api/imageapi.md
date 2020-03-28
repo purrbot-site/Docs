@@ -1,6 +1,4 @@
 [SimpleDateFormat]: https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
-[sfw]: https://purrbot.site/api/img/sfw
-[nsfw]: https://purrbot.site/api/img/nsfw
 
 # ImageAPI
 The ImageAPI was created to be a replacement for the nekos.life API in the bot \*Purr\*.  
@@ -14,7 +12,7 @@ It is publicly available to use.
 Contains images that are considered safe for work.
 
 !!! note "Base-URL"
-    [https://purrbot.site/api/img/sfw][sfw]
+    https://purrbot.site/api/img/sfw
 
 ### /background/img
 Example response:  
@@ -150,7 +148,7 @@ Example response:
 Contains images that are considered Not Safe for work.
 
 !!! note "Base-URL"
-    [https://purrbot.site/api/img/nsfw][nsfw]
+    https://purrbot.site/api/img/nsfw
 
 ### /anal/gif
 Example response:  

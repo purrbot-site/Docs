@@ -102,8 +102,8 @@ The boxes also require an empty line before and after its title and content.
 You can read more about this [here][boxes]
 
 #### Collapsable Blocks
-Those are similar to the [normal Blocks](#blocks) but can be collapse (closed) by clicking on it.  
-The syntax is the exact same with the difference, that you use the question marks (`???`) instead of exclamation marks.
+Collapsable blocks are provided through the [PyMdown] extension as "Details".   
+The syntax is the exact same as with the [normal blocks](#blocks) with the difference, that you use three question marks (`???`) instead of exclamation marks.
 
 Example:  
 ```markdown

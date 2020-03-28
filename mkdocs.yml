@@ -40,8 +40,7 @@ theme:
     repo: fontawesome/brands/github-square
 
 extra_css:
-  - 'assets/css/dark.css'
-  - 'assets/css/tabbed.css'
+  - 'assets/css/extra.css'
 
 extra:
   social:
@@ -58,3 +57,7 @@ markdown_extensions:
       permalink: true
   - pymdownx.superfences
   - pymdownx.tabbed
+  - pymdownx.magiclink:
+      repo_url_shortener: true
+      repo_url_shorthand: true
+      social_url_shorthand: true

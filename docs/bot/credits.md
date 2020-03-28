@@ -1,5 +1,4 @@
-\*Purr* utilizes multiple different open source libraries to provide the functionalities it has.  
-We want to thank everyone listed here for providing the libraries used by \*Purr*.
+This page lists different credits for all the different things used by either \*Purr* or for other things on the purrbot.site GitHub organisation.
 
 ## Used Libraries and utilities 
 
@@ -26,12 +25,27 @@ We want to thank everyone listed here for providing the libraries used by \*Purr
 
 [BotBlock.org]: https://botblock.org
 
-| Library            | Author               | License              | Used for                                    |  
-| ------------------ | -------------------- | -------------------- | ------------------------------------------- |  
-| [JDA]              | [DV8FromTheWorld]    | Apache 2.0           | Logging into Discord and using their API    |
-| [RethinkDB]        | [RethinkDB][Rethink] | Apache 2.0           | Database management                         |
-| [Gson]             | [Google]             | Apache 2.0           | Parsing and (de)serialization of JSON       |
-| [jda-command]      | [rainestormee]       | Apache 2.0           | Adding and managing commands in Discord     |
-| [JavaBotBlockAPI]  | [Andre601]           | MIT                  | Posting Guild counts through [BotBlock.org] |
-| [Caffeine]         | [ben-manes]          | Apache 2.0           | Caching various different information       |
-| [Discord-Webhooks] | [MinnDevelopment]    | Apache 2.0           | Sending Webhook messages in Discord         |
+Thanks to the following people, who provide their libraries used by \*Purr*
+
+| Library            | Author               | License    | Used for                                    |  
+| ------------------ | -------------------- | ---------- | ------------------------------------------- |  
+| [JDA]              | [DV8FromTheWorld]    | Apache 2.0 | Logging into Discord and using their API    |
+| [RethinkDB]        | [RethinkDB][Rethink] | Apache 2.0 | Database management                         |
+| [Gson]             | [Google]             | Apache 2.0 | Parsing and (de)serialization of JSON       |
+| [jda-command]      | [rainestormee]       | Apache 2.0 | Adding and managing commands in Discord     |
+| [JavaBotBlockAPI]  | [Andre601]           | MIT        | Posting Guild counts through [BotBlock.org] |
+| [Caffeine]         | [ben-manes]          | Apache 2.0 | Caching various different information       |
+| [Discord-Webhooks] | [MinnDevelopment]    | Apache 2.0 | Sending Webhook messages in Discord         |
+
+We also want to thank the following people:
+
+- @mkdocs for providing the software used for generating those docs.
+    - Website: https://mkdocs.org
+	- GitHub: @mkdocs/mkdocs
+- @squidfunk for providing the Material Theme for MkDocs.
+    - Website: https://ginseng.ai/
+	- GitHub: @squidfunk/mkdocs-material
+- @facelessuser for providing the PyMdown extensions used within those docs.
+    - GitHub: @facelessuser/pymdown-extension
+- @henrywhitaker3 for providing the CSS file for the Material Dark theme.
+    - GitHub: @henrywhitaker3/mkdocs-material-dark-theme
