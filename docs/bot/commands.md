@@ -52,7 +52,6 @@ The default prefix is `.` but can be changed with the [[prefix-command|Commands#
 - [Pussylick](#pussylick)
 - [Solo](#solo)
 - [Threesome](#threesome)
-- [Yurifuck](#yurifuck)
 
 ----
 ## Category: Fun
@@ -524,12 +523,14 @@ Shows information about yourself or a mentioned user.
 >
 > - `.Fuck <@user>`
 > - `.Fuck <@user> --anal`
+> - `.Fuck <@user> --yuri`
 
 **This command can only be run in NSFW-labeled channels!**
 
 Asks the mentioned user to have sex with you.  
 The mentioned user can accept or deny the request by clicking on the corresponding reactions of the message.  
-`--anal` gives a Anal fuck gif.
+`--anal` returns a gif depicting someone having anal-sex.  
+`--yuri` returns a gif depicting 2 girls having sex.
 
 ----
 ### Lewd
@@ -606,24 +607,3 @@ By default is the gif with 1 male and 2 females but can be changed using the fol
 
 - `--fff` for only females.
 - `--mmf` for 2 males and 1 female
-
-----
-### Yurifuck
-> **Permission**: `None`  
-> **Bot requires**: `None`  
-> 
-> **Aliases**:
->
-> - `Yfuck`
-> - `Ysex`
-> - `Yurifuck`
-> - `Yurisex`
->
-> **Usage**:
->
-> - `.Yurifuck <@user>`
-
-**This command can only be run in NSFW-labeled channels!**
-
-Similar to [Fuck](#fuck), but with two females.  
-The mentioned user can accept or deny the request by clicking on the corresponding reactions of the message.
