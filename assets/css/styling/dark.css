@@ -239,7 +239,3 @@ td.linenos pre {
 td.linenos div.linenodiv {
     background-color: #3a3838 !important;
 }
-
-.md-typeset .tabbed-set > input:checked + label {
-    color: var(--md-accent-fg-color--light) !important;
-}
