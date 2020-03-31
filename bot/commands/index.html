@@ -1397,7 +1397,7 @@ Supported are all languages listed <a href="https://github.com/purrbot-site/Tran
 <p><strong>Permission</strong>: <code>Manage server</code><br />
 <strong>Bot requires</strong>:</p>
 <ul>
-<li><code>Attach files</code> (Used for welcome-images. See [[Welcome images]] for examples)</li>
+<li><code>Attach files</code> (Used for welcome-images. See <a href="../welcome-images">Welcome images</a> for examples)</li>
 </ul>
 <p><strong>Aliases</strong>: <code>None</code></p>
 <p><strong>Usage</strong>:</p>
@@ -1419,14 +1419,14 @@ Providing no arguments will show what the current settings are.</p>
 <p><strong>About the arguments</strong>:</p>
 <ul>
 <li><code>[bg set &lt;background&gt;]</code>: Sets the background of the image.</li>
-<li><code>[bg reset]</code>: Resets the background.</li>
+<li><code>[bg reset]</code>: Resets the background to the default one (<a href="../welcome-images#color_white">color_white</a>).</li>
 <li><code>[channel set &lt;#channel&gt;]</code>: Sets the channel where welcome messages are posted to the mentioned one.</li>
 <li><code>[channel reset]</code>: Resets the channel, effectively disabling the welcome feature.</li>
 <li><code>[color set &lt;color&gt;]</code>: Sets the text color of the text in the image.<br />
 Color can either be <code>rgb:</code> with rgb values (<code>rgb:255,0,0</code>) or <code>hex:</code> with hexadecimal values (<code>hex:ff0000</code>)</li>
 <li><code>[color reset]</code>: Resets the color.</li>
-<li><code>[icon set &lt;icon&gt;]</code>: Changes the icon to the provided one. Go to [[Welcome images]] for a list.</li>
-<li><code>[icon reset]</code>: Resets the icon back to the default one ([[Purr|Welcome-images#purr]])</li>
+<li><code>[icon set &lt;icon&gt;]</code>: Changes the icon to the provided one. Go to <a href="../welcome-images">Welcome images</a> for a list.</li>
+<li><code>[icon reset]</code>: Resets the icon back to the default one (<a href="../welcome-images#purr">purr</a>).</li>
 <li><code>[msg set &lt;message&gt;]</code>: Sets the message to the provided one. The message is shown with the image and you can use placeholders (See below).</li>
 <li><code>[msg reset]</code>: Resets the message back to the normal <code>Welcome {mention}!</code></li>
 </ul>
@@ -1556,7 +1556,7 @@ Use <code>--dm</code> to send the links to your DMs.</p>
 <li><code>.Quote &lt;MessageID&gt; [#channel]</code></li>
 </ul>
 </blockquote>
-<p>Quotes a message from a user, using the <a href="https://docs.purrbot.site/api/purrbotapi#quote">PurrBotAPI</a> to generate an image looking like a Discord-message.<br />
+<p>Quotes a message from a user, using the <a href="/api/purrbotapi#quote">PurrBotAPI</a> to generate an image looking like a Discord-message.<br />
 <code>&lt;MessageID&gt;</code> is the ID of the message that should be quoted.<br />
 <code>[#channel]</code> is only needed, if the message is in a channel that isn't the same as the one you execute the command in.</p>
 <p>The bot won't quote messages from NSFW channels when the channel you're using the command in isn't one.</p>
