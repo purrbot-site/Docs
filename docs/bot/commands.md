@@ -292,7 +292,7 @@ Lets you change or reset the bots prefix for your guild. (Default one is `.`)
 > **Permission**: `Manage server`  
 > **Bot requires**:
 >
-> - `Attach files` (Used for welcome-images. See [[Welcome images]] for examples)
+> - `Attach files` (Used for welcome-images. See [Welcome images](../welcome-images) for examples)
 > 
 > **Aliases**: `None`
 > 
@@ -315,14 +315,14 @@ Providing no arguments will show what the current settings are.
 **About the arguments**:
 
 - `[bg set <background>]`: Sets the background of the image.
-- `[bg reset]`: Resets the background.
+- `[bg reset]`: Resets the background to the default one ([color_white](../welcome-images#color_white)).
 - `[channel set <#channel>]`: Sets the channel where welcome messages are posted to the mentioned one.
 - `[channel reset]`: Resets the channel, effectively disabling the welcome feature.
 - `[color set <color>]`: Sets the text color of the text in the image.  
 Color can either be `rgb:` with rgb values (`rgb:255,0,0`) or `hex:` with hexadecimal values (`hex:ff0000`)
 - `[color reset]`: Resets the color.
-- `[icon set <icon>]`: Changes the icon to the provided one. Go to [[Welcome images]] for a list.
-- `[icon reset]`: Resets the icon back to the default one ([[Purr|Welcome-images#purr]])
+- `[icon set <icon>]`: Changes the icon to the provided one. Go to [Welcome images](../welcome-images) for a list.
+- `[icon reset]`: Resets the icon back to the default one ([purr](../welcome-images#purr)).
 - `[msg set <message>]`: Sets the message to the provided one. The message is shown with the image and you can use placeholders (See below).
 - `[msg reset]`: Resets the message back to the normal `Welcome {mention}!`
 
@@ -452,7 +452,7 @@ Returns the delay of editing the message, the delay to the API and the WebSocket
 > - `.Quote <MessageID>`
 > - `.Quote <MessageID> [#channel]`
 
-Quotes a message from a user, using the [PurrBotAPI](https://docs.purrbot.site/api/purrbotapi#quote) to generate an image looking like a Discord-message.  
+Quotes a message from a user, using the [PurrBotAPI](/api/purrbotapi#quote) to generate an image looking like a Discord-message.  
 `<MessageID>` is the ID of the message that should be quoted.  
 `[#channel]` is only needed, if the message is in a channel that isn't the same as the one you execute the command in.
 

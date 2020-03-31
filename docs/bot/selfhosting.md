@@ -1,5 +1,5 @@
-[PurrBot#startUpdates]: https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/PurrBot.java#L163-L182
-[PurrBot#startUpdate]: https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/PurrBot.java#L382-L395
+[PurrBot#startUpdates]: https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/PurrBot.java#L163-L186
+[PurrBot#startUpdate]: https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/PurrBot.java#L386-L399
 [MIT-License]: https://github.com/Andre601/PurrBot/blob/master/LICENSE
 
 [RethinkDB]: https://rethinkdb.com
@@ -44,8 +44,8 @@ Alternatively could you set "beta" in the config.json to true, to set the bot as
 
 If you want to alter the code, make changes to the following sections by either removing or commenting them out:
 
-- [PurrBot#startUpdates] (Lines 163-182)
-- [PurrBot#startUpdate] (Lines 382-395)
+- [PurrBot#startUpdates] (Lines 163-186)
+- [PurrBot#startUpdate] (Lines 386-399)
 
 ### Update some classes
 You need to update values in specific classes to make your version work without issues.  
@@ -81,7 +81,8 @@ On first startup will it generate with the below default values.
         "discord-bots-gg": "dbgg-token",
         "lbots-org": "lbots-token",
         "botlist-space": "botlist-token",
-        "discordextremelist-xyz": "debl-token"
+        "discordextremelist-xyz": "debl-token",
+        "discord-boats": "discord-boats-token"
       },
       
       "database": {
