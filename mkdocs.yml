@@ -26,6 +26,7 @@ nav:
     - Selfhosting: bot/selfhosting.md
     - Welcome Channel: bot/welcome-channel.md
     - Welcome Images: bot/welcome-images.md
+  - Contributing: contribute/index.md
 
 theme:
   name: 'material'
