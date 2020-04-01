@@ -1,5 +1,6 @@
 # Welcome
-Please choose one of the below pages to get started.
+Welcome to the documentation of https://docs.purrbot.site!  
+This site contains the following things:
 
 ## API
 Documentation about the various APIs available under the domain purrbot.site
