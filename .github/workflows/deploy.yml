@@ -2,8 +2,8 @@ name: Deploy Site
 
 on:
   push:
-    tags:
-    - '*'
+    branches:
+    - master
 
 jobs:
   build:
