@@ -1,6 +1,9 @@
-[doc]: https://github.com/purrbot-site/Doc
+[doc]: https://github.com/purrbot-site/Docs
+[contributing_docs]: https://github.com/purrbot-site/Docs#contributions
+
 [purr]: https://github.com/Andre601/PurrBot
-[contributing]: https://github.com/Andre601/PurrBot/blob/master/CONTRIBUTING.md
+[contributing_bot]: https://github.com/Andre601/PurrBot/blob/master/CONTRIBUTING.md
+
 [purrbotapi]: https://github.com/purrbot-site/PurrBotAPI
 [imageapi]: https://github.com/purrbot-site/ImageAPI
 [translation]: https://github.com/purrbot-site/Translations
@@ -12,14 +15,12 @@ But before you blindly dive into the stuff, keep the following things in mind.
 ## Documentation/Wiki
 The documentation (The site you're currently on) is located [here][doc] and we're happy over every improvement made, being it fixing style-issues, or even just correcting minor typos.
 
-When you want to update pages, make sure to follow the instructions on the [Readme][doc] to not getting any formatting issues.  
-The easiest way to edit a page is by clicking the pencil icon on the top right of it. This will imediatally open the page in the Online editor of GitHub (Requires you to have a GitHub account).  
-Once you made your changes, propose the file-changes and create a PR for it.
+When you want to update pages, make sure to follow the [contribution guidelines][contributing_docs] on the [README.md][doc] to not face any formatting issues.
 
 ## Bot
 I (Andre_601) are not the best developer, so there are sure some problematic Coding decision made in the code of [\*Purr\*][purr].  
 That's why I'm always happy to receive Pull requests to improve and fix things.  
-Please make sure to follow the [contributing guidelines][contributing] for the repository.
+Please make sure to follow the [contributing guidelines][contributing_bot] for the repository.
 
 ## APIs
 Similar to the bot are the APIs not the best in terms of code.  
