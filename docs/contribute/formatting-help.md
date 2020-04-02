@@ -114,29 +114,29 @@ I want to point out those specific things:
 ### Types
 The info boxes have various types available which you can choose from:
 
-!!! note "Note"
+!!! note
 
-!!! summary "Summary"
+!!! summary
 
-!!! info "Info"
+!!! info
 
-!!! tip "Tip"
+!!! tip
 
-!!! success "Success"
+!!! success
 
-!!! question "Question"
+!!! question
 
-!!! warning "Warning"
+!!! warning
 
-!!! failure "Failure"
+!!! failure
 
-!!! danger "Danger"
+!!! danger
 
-!!! bug "Bug"
+!!! bug
 
-!!! example "Example"
+!!! example
 
-!!! quote "Quote"
+!!! quote
 
 ## Collapsable info boxes (Details)
 This feature requires the `Details` extension from [PyMdown].
