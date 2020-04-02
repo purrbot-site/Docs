@@ -26,8 +26,8 @@ Any contributions to update and improve the wiki, as well as the API-documentati
 ### Only edit the content in the docs-folder and mkdocs.yml
 The content found under the "docs" folder is the place to edit files in. Each file is saved as a markdown (.md) file.  
 Only the docs folder (and the mkdocs.yml file if new pages where added or got removed) should be altered.  
-At no point should you touch the content of the "sites" directory.  
-Any Pull requests containing changes to that directory will be closed.
+At no point should you touch the content of any other file outside the docs-directory.  
+Any pull request which alters any file other than the above mentioned ones will be denied.
 
 ### Markdown formatting
 We use [MkDocs] to turn Markdown files into static HTML pages.  
