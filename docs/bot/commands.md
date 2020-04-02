@@ -69,6 +69,8 @@ The default prefix is `.` but can be changed with the [[prefix-command|Commands#
 >
 > - `.Bite <@user ...>`
 
+Lets you bite one or multiple mentioned users.
+
 ----
 ### Cuddle
 > **Permission**: `None`  
