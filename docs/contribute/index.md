@@ -1,4 +1,4 @@
-[doc]: https://github.com/purrbot-site/Doc
+[doc]: https://github.com/purrbot-site/Docs
 [purr]: https://github.com/Andre601/PurrBot
 [contributing]: https://github.com/Andre601/PurrBot/blob/master/CONTRIBUTING.md
 [purrbotapi]: https://github.com/purrbot-site/PurrBotAPI
