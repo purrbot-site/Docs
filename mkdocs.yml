@@ -28,6 +28,7 @@ nav:
     - Welcome Images: bot/welcome-images.md
   - Contributing:
     - Contribute: contribute/index.md
+    - Formatting Help: contribute/formatting-help.md
 
 theme:
   name: 'material'
