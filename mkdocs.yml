@@ -3,7 +3,7 @@ site_description: 'API-Documentation and Wiki of *Purr*'
 site_author: 'Andre_601'
 
 copyright: |
-  This documentation is under the 
+  This documentation is provided under the 
   <a href="https://github.com/purrbot-site/Docs/blob/master/LICENSE" target="_blank">MIT-License</a>
 
 docs_dir: docs/
