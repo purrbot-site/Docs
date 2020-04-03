@@ -1,5 +1,6 @@
 [Discord]: https://purrbot.site/discord
 [nekos.life]: https://nekos.life
+[patreon]: https://patreon.com/purrbot
 
 This page contains commonly asked questions.  
 Please read it carefully to prevent issues. If you can't find an answer to your question, feel free to join our [Discord] and ask there.
