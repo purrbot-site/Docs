@@ -10,8 +10,8 @@ Please read it carefully to prevent issues. If you can't find an answer to your 
 	
 	- Prefix: `.`
 	- Welcome channel: `none`
-	- [Welcome background](../welcome-images#backgrounds): `color_white`
-	- [Welcome icon](../welcome-images#icons): `purr`
+	- Welcome background: [`color_white`](../welcome-images#color_white)
+	- Welcome icon: [`purr`](../welcome-images#purr)
 	- Welcome message: `Welcome {mention}!`
 	- Language: `en (english)`
 
@@ -22,15 +22,15 @@ Please read it carefully to prevent issues. If you can't find an answer to your 
 ----
 ??? question "From where are the images?"
     The images are hosted on our own site (https://purrbot.site) and provided through our [own API](/api).  
-	We originally used the API from nekos.life but decided to move to a own one, for the simple reason of having more control over what images are shown.
-	
-	We constantly expand our collection of images and are happy over every submitted image from you, if they meet our requirements.  
-	If you find images on our site, that break the ToS of Discord (i.e. depicting NSFW-Lolis), let us know about this, by either joining our [Discord server][discord] or sending an E-Mail at support@purrbot.site!  
+    We originally used the API from nekos.life but decided to move to a own one, for the simple reason of having more control over what images are shown.
+    
+    We constantly expand our collection of images and are happy over every submitted image from you, if they meet our requirements.  
+    If you find images on our site, that break the ToS of Discord (i.e. depicting NSFW-Lolis), let us know about this, by either joining our [Discord server][discord] or sending an E-Mail at support@purrbot.site!  
 	Please provide the full image-link when reporting it to us, so that we can properly remove it.
 
 ----
 ??? question "Who/What is \*Snuggle\* and can I invite her?"
     \*Snuggle\* is the Beta-Version of \*Purr\* and is used to test new commands/features before updating her with it.  
-	She **can't** be invited through a normal way.  
-	To invite her will you need to be a [Patreon Member][patreon] of the highest tier (Catmint) and contact Andre_601.  
-	He will then join your Discord, where you want \*Snuggle\* to be and invites her (You need to temporary give him `manage server` permission for this).
+    She **can't** be invited through a normal way.  
+    To invite her will you need to be a [Patreon Member][patreon] of the highest tier (Catmint) and contact Andre_601.  
+    He will then join your Discord, where you want \*Snuggle\* to be and invites her (You need to temporary give him `manage server` permission for this).
