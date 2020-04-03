@@ -26,7 +26,7 @@ Please read it carefully to prevent issues. If you can't find an answer to your 
     
     We constantly expand our collection of images and are happy over every submitted image from you, if they meet our requirements.  
     If you find images on our site, that break the ToS of Discord (i.e. depicting NSFW-Lolis), let us know about this, by either joining our [Discord server][discord] or sending an E-Mail at support@purrbot.site!  
-	Please provide the full image-link when reporting it to us, so that we can properly remove it.
+    Please provide the full image-link when reporting it to us, so that we can properly remove it.
 
 ----
 ??? question "Who/What is \*Snuggle\* and can I invite her?"
