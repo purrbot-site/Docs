@@ -33,5 +33,5 @@ Please read it carefully to prevent issues. If you can't find an answer to your 
 ??? question "Who/What is \*Snuggle\* and can I invite her?"
     \*Snuggle\* is the Beta-Version of \*Purr\* and is used to test new commands/features before updating her with it.  
     She **can't** be invited through a normal way.  
-    To invite her will you need to be a [Patreon Member][patreon] of the highest tier (Catmint) and contact Andre_601.  
+    To invite her will you need to be a [Patreon Member][patreon] of the highest tier (Catnip) and contact Andre_601.  
     He will then join your Discord, where you want \*Snuggle\* to be and invites her (You need to temporary give him `manage server` permission for this).
