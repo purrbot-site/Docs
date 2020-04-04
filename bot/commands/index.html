@@ -1484,27 +1484,41 @@ Supported are all languages listed <a href="https://github.com/purrbot-site/Tran
 </blockquote>
 <p>Lets you set different parts of Purr's welcome-feature.<br />
 Providing no arguments will show what the current settings are.</p>
-<p><strong>About the arguments</strong>:</p>
-<ul>
-<li><code>[bg set &lt;background&gt;]</code>: Sets the background of the image.</li>
-<li><code>[bg reset]</code>: Resets the background to the default one (<a href="../welcome-images#color_white">color_white</a>).</li>
-<li><code>[channel set &lt;#channel&gt;]</code>: Sets the channel where welcome messages are posted to the mentioned one.</li>
-<li><code>[channel reset]</code>: Resets the channel, effectively disabling the welcome feature.</li>
-<li><code>[color set &lt;color&gt;]</code>: Sets the text color of the text in the image.<br />
-Color can either be <code>rgb:</code> with rgb values (<code>rgb:255,0,0</code>) or <code>hex:</code> with hexadecimal values (<code>hex:ff0000</code>)</li>
-<li><code>[color reset]</code>: Resets the color.</li>
-<li><code>[icon set &lt;icon&gt;]</code>: Changes the icon to the provided one. Go to <a href="../welcome-images">Welcome images</a> for a list.</li>
-<li><code>[icon reset]</code>: Resets the icon back to the default one (<a href="../welcome-images#purr">purr</a>).</li>
-<li><code>[msg set &lt;message&gt;]</code>: Sets the message to the provided one. The message is shown with the image and you can use placeholders (See below).</li>
-<li><code>[msg reset]</code>: Resets the message back to the normal <code>Welcome {mention}!</code></li>
+<details class="info"><summary>Command arguments</summary><ul>
+<li><code>bg set &lt;backgroun&gt;</code><br />
+Change the background (<a href="../welcome-images#backgrounds">Available backhrounds</a>).</li>
+<li><code>bg reset</code><br />
+Resets the background back to <a href="../welcome-images#color_white"><code>color_white</code></a>.</li>
+<li><code>channel set &lt;#channel&gt;</code><br />
+Set the channel for the welcome messages.</li>
+<li><code>channel reset</code><br />
+Resets the the channel.</li>
+<li><code>color set &lt;color&gt;</code><br />
+Set the text color on the image. The format has to be either <code>rgb:r,g,b</code> or <code>hex:rrggbb</code>.</li>
+<li><code>color reset</code><br />
+Resets the color back to <code>hex:000000</code></li>
+<li><code>icon set &lt;icon&gt;</code><br />
+Set the icon, which is displayed on the right side (<a href="../welcome-images#icons">Available icons</a>).</li>
+<li><code>icon reset</code><br />
+Resets the icon back to <a href="..welcome-images#purr"><code>purr</code></a>.</li>
+<li><code>msg set &lt;message&gt;</code><br />
+Set the message shown in the welcome channel.</li>
+<li><code>msg reset</code><br />
+Resets the message back to <code>Welcome {mention}!</code></li>
 </ul>
-<p><strong>Placeholders</strong> (Usable in the <code>msg set &lt;message&gt;</code> argument):</p>
+</details>
+<details class="info"><summary>Placeholders</summary><p>The following placeholders can be used in the welcome message to display a different value.</p>
 <ul>
-<li><code>{count}</code>: The current member-count of the guild.</li>
-<li><code>{guild}</code>: The name of the guild.</li>
-<li><code>{mention}</code>: The joined user as mention.</li>
-<li><code>{name}</code>: The name of the joined user.</li>
+<li><code>{count}</code><br />
+Displays the current amount of members on the Discord.</li>
+<li><code>{guild}</code><br />
+Displays the name of the Discord.</li>
+<li><code>{mention}</code><br />
+Mentions the joining Member.</li>
+<li><code>{name}</code><br />
+Displays the name of the joining Member.</li>
 </ul>
+</details>
 <hr />
 <h2 id="category-info">Category: Info<a class="headerlink" href="#category-info" title="Permanent link">&para;</a></h2>
 <h3 id="emote">Emote<a class="headerlink" href="#emote" title="Permanent link">&para;</a></h3>
@@ -1526,7 +1540,7 @@ Color can either be <code>rgb:</code> with rgb values (<code>rgb:255,0,0</code>)
 </blockquote>
 <p>Gives information about a provided emote.<br />
 If the <code>--search</code> argument is used will the bot check the past 100 messages for any emotes and return all it can find.<br />
-This will <strong>not</strong> return unicode emojis!</p>
+This will <strong>not</strong> return unicode emojis and is also limited to one emote per message!</p>
 <hr />
 <h3 id="guild_1">Guild<a class="headerlink" href="#guild_1" title="Permanent link">&para;</a></h3>
 <blockquote>
@@ -1579,7 +1593,7 @@ This will <strong>not</strong> return unicode emojis!</p>
 </ul>
 </blockquote>
 <p>Provides basic information about the bot.<br />
-You can use <code>--dm</code> to send this info into your DMs.</p>
+Use <code>--dm</code> to send the info to your DMs.</p>
 <hr />
 <h3 id="invite">Invite<a class="headerlink" href="#invite" title="Permanent link">&para;</a></h3>
 <blockquote>
