@@ -6,7 +6,7 @@ The default prefix is `.` but can be changed with the [[prefix-command|Commands#
     - `Permission` means Discord permissions which the executor of the command (you) requires.
 	- To make the bot work properly will it require the following permissions:
 	    - `Read Messages`
-        - `Send Messages`
+	    - `Send Messages`
 	    - `Embed Links`
 	    - `Read Message History`
 	    - `Add Reactions`  
@@ -314,26 +314,39 @@ Lets you change or reset the bots prefix for your guild. (Default one is `.`)
 Lets you set different parts of Purr's welcome-feature.  
 Providing no arguments will show what the current settings are.
 
-**About the arguments**:
+??? info "Command arguments"
+    - `bg set <backgroun>`  
+    Change the background ([Available backhrounds](../welcome-images#backgrounds)).
+    - `bg reset`  
+    Resets the background back to [`color_white`](../welcome-images#color_white).
+    - `channel set <#channel>`  
+    Set the channel for the welcome messages.
+    - `channel reset`  
+    Resets the the channel.
+    - `color set <color>`  
+    Set the text color on the image. The format has to be either `rgb:r,g,b` or `hex:rrggbb`.
+    - `color reset`  
+    Resets the color back to `hex:000000`
+    - `icon set <icon>`  
+    Set the icon, which is displayed on the right side ([Available icons](../welcome-images#icons)).
+    - `icon reset`  
+    Resets the icon back to [`purr`](..welcome-images#purr).
+    - `msg set <message>`  
+    Set the message shown in the welcome channel.
+    - `msg reset`  
+    Resets the message back to `Welcome {mention}!`
 
-- `[bg set <background>]`: Sets the background of the image.
-- `[bg reset]`: Resets the background to the default one ([color_white](../welcome-images#color_white)).
-- `[channel set <#channel>]`: Sets the channel where welcome messages are posted to the mentioned one.
-- `[channel reset]`: Resets the channel, effectively disabling the welcome feature.
-- `[color set <color>]`: Sets the text color of the text in the image.  
-Color can either be `rgb:` with rgb values (`rgb:255,0,0`) or `hex:` with hexadecimal values (`hex:ff0000`)
-- `[color reset]`: Resets the color.
-- `[icon set <icon>]`: Changes the icon to the provided one. Go to [Welcome images](../welcome-images) for a list.
-- `[icon reset]`: Resets the icon back to the default one ([purr](../welcome-images#purr)).
-- `[msg set <message>]`: Sets the message to the provided one. The message is shown with the image and you can use placeholders (See below).
-- `[msg reset]`: Resets the message back to the normal `Welcome {mention}!`
-
-**Placeholders** (Usable in the `msg set <message>` argument):
-
-- `{count}`: The current member-count of the guild.
-- `{guild}`: The name of the guild.
-- `{mention}`: The joined user as mention.
-- `{name}`: The name of the joined user.
+??? info "Placeholders"
+    The following placeholders can be used in the welcome message to display a different value.
+    
+    - `{count}`  
+    Displays the current amount of members on the Discord.
+    - `{guild}`  
+    Displays the name of the Discord.
+    - `{mention}`  
+    Mentions the joining Member.
+    - `{name}`  
+    Displays the name of the joining Member.
 
 ----
 ## Category: Info
@@ -355,7 +368,7 @@ Color can either be `rgb:` with rgb values (`rgb:255,0,0`) or `hex:` with hexade
 
 Gives information about a provided emote.  
 If the `--search` argument is used will the bot check the past 100 messages for any emotes and return all it can find.  
-This will **not** return unicode emojis!
+This will **not** return unicode emojis and is also limited to one emote per message!
 
 ----
 ### Guild
@@ -408,7 +421,7 @@ Lists all available commands, or gives information about one, when specified.
 > - `.Info [--dm]`
 
 Provides basic information about the bot.  
-You can use `--dm` to send this info into your DMs.
+Use `--dm` to send the info to your DMs.
 
 ----
 ### Invite
