@@ -3,10 +3,10 @@ site_description: 'API-Documentation and Wiki of *Purr*'
 site_author: 'Andre_601'
 
 copyright: |
-  <span class="md-footer-custom-text">Docs made with 
+  Docs made with 
   <img alt="❤" class="twemoji md-footer-custom-text" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title="love"> 
-  and provided under the </span>
-  <a href="https://github.com/purrbot-site/Docs/blob/master/LICENSE" target="_blank">MIT-License</a>
+  and provided under the 
+  <a href="https://github.com/purrbot-site/Docs/blob/master/LICENSE" target="_blank">MIT-License</a>.
 
 docs_dir: docs/
 
@@ -34,6 +34,7 @@ nav:
 
 theme:
   name: 'material'
+  custom_dir: 'override'
   logo: 'assets/img/logo.png'
   favicon: 'assets/img/logo.png'
   palette:
