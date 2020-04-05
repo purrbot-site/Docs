@@ -836,61 +836,75 @@ This means, that you forgot to format it properly (i.e. forgot a comma) or you d
         </div>
       </main>
       
-        
-<footer class="md-footer">
+  <!-- Link to previous and/or next page -->
   
     <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+      <nav class="md-footer-nav__inner md-grid">
+
+        <!-- Link to previous page -->
         
-          <a href="../" title="API" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+          <a href="../"
+              title="API"
+              class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+              rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back
+                    md-footer-nav__button"></i>
             </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
+            <div class="md-flex__cell md-flex__cell--stretch
+                  md-footer-nav__title">
+              <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
                 API
-              </div>
+              </span>
             </div>
           </a>
         
+
+        <!-- Link to next page -->
         
-          <a href="../imageapi/" title="ImageAPI" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
+          <a href="../imageapi/"
+              title="ImageAPI"
+              class="md-flex md-footer-nav__link md-footer-nav__link--next"
+              rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch
+                  md-footer-nav__title">
+              <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
                 ImageAPI
-              </div>
+              </span>
             </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward
+                    md-footer-nav__button"></i>
             </div>
           </a>
         
       </nav>
     </div>
   
+
+  <!-- Further information -->
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            <span class="md-footer-custom-text">Docs made with 
-<img alt="❤" class="twemoji md-footer-custom-text" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title="love"> 
-and provided under the </span>
-<a href="https://github.com/purrbot-site/Docs/blob/master/LICENSE" target="_blank">MIT-License</a>
 
-          </div>
-        
-        made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
+      <!-- Copyright and theme information -->
+      <div class="md-footer-copyright">
+        Docs made with 
+<img alt="❤" class="twemoji md-footer-custom-text" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title="love"> 
+and provided under the 
+<a href="https://github.com/purrbot-site/Docs/blob/master/LICENSE" target="_blank">MIT-License</a>.
+
+        <br>Built using <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>, 
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">Material for MkDocs</a> 
+        and <a href="https://facelessuser.github.io/pymdown-extensions/" target="_blank" rel="noopener">PyMdown Extensions</a>.
       </div>
+
+      <!-- Social links -->
       
   <div class="md-footer-social">
     
@@ -910,8 +924,7 @@ and provided under the </span>
 
     </div>
   </div>
-</footer>
-      
+
     </div>
     
       <script src="../../assets/javascripts/vendor.23350dc5.min.js"></script>
