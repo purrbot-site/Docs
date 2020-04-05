@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block footer %}
+  <div class="md-footer-copyright">
+    {% if config.copyright %}
+      {{ config.copyright }}
+    {% endif %}
+    Build using 
+    <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a> 
+    and 
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">Material for MkDocs</a>
+  </div>
+{% endblock %}
