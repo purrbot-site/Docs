@@ -247,3 +247,7 @@ td.linenos div.linenodiv {
 .md-typeset .tabbed-set > label {
     color: #777 !important;
 }
+
+.md-footer-custom-text {
+	color: var(--md-default-bg-color--lighter);
+}
