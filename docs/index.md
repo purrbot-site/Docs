@@ -12,6 +12,12 @@ General wiki about the Bot \*Purr*, her commands and various other information.
 
 - [Go to page](/bot)
 
+## Contributing
+Pages about how to contribute towards the documentation, bot and the APIs.  
+Also contains information about how formatting works in these documentations.
+
+- [Go to page](/contribute)
+
 ## Other links
 - [Discord](https://purrbot.site/discord)
 - [GitHub](https://purrbot.site/github)
