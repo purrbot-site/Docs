@@ -330,7 +330,7 @@ Providing no arguments will show what the current settings are.
     - `icon set <icon>`  
     Set the icon, which is displayed on the right side ([Available icons](../welcome-images#icons)).
     - `icon reset`  
-    Resets the icon back to [`purr`](..welcome-images#purr).
+    Resets the icon back to [`purr`](../welcome-images#purr).
     - `msg set <message>`  
     Set the message shown in the welcome channel.
     - `msg reset`  
