@@ -25,6 +25,14 @@ code {
     padding-right: 5px !important;
 }
 
+a code {
+    color: var(--md-primary-fg-color) !important;
+}
+
+a code:hover {
+    color: var(--md-accent-fg-color) !important;
+}
+
 blockquote {
     color: #e4e4e4 !important;
 }
@@ -154,10 +162,10 @@ html body .md-typeset .md-source-file {
 .md-typeset .n { color: #f8f8f2 } /* Name */
 .md-typeset .o { color: #f92672 } /* Operator */
 .md-typeset .p { color: #f8f8f2 } /* Punctuation */
-.md-typeset .cm { color: #75715e } /* Comment.Multiline */
-.md-typeset .cp { color: #75715e } /* Comment.Preproc */
+.md-typeset .cm { color: #919191 } /* Comment.Multiline */
+.md-typeset .cp { color: #919191 } /* Comment.Preproc */
 .md-typeset .c1 { color: #919191 } /* Comment.Single */
-.md-typeset .cs { color: #75715e } /* Comment.Special */
+.md-typeset .cs { color: #919191 } /* Comment.Special */
 .md-typeset .ge { font-style: italic } /* Generic.Emph */
 .md-typeset .gs { font-weight: bold } /* Generic.Strong */
 .md-typeset .kc { color: #66d9ef } /* Keyword.Constant */
@@ -246,8 +254,4 @@ td.linenos div.linenodiv {
   
 .md-typeset .tabbed-set > label {
     color: #777 !important;
-}
-
-.md-footer-custom-text {
-	color: var(--md-default-bg-color--lighter);
 }
