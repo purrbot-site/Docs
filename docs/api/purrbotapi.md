@@ -58,6 +58,7 @@ API used to create dynamic images based on the provided input.
 | ---------- | -------------------------------------------------------------------------------------------- | ------------------------------- |
 | avatar     | The URL of the avatar to display.                                                            | https://i.imgur.com/36aniDJ.png |
 | status     | The status to set as icon. Can be `online`, `idle`, `do_not_disturb` (or `dnd`) or `offline` | `offline`                       |
+| mobile     | Boolean to set if the user is on mobile. Will change the icon to the mobile icon when true.  | `false`                         |
 
 !!! example
     === "Request"
