@@ -1,3 +1,5 @@
+[Discord]: https://purrbot.site/discord
+
 [doc]: https://github.com/purrbot-site/Docs
 [contributing_docs]: https://github.com/purrbot-site/Docs#contributions
 
@@ -6,7 +8,7 @@
 
 [purrbotapi]: https://github.com/purrbot-site/PurrBotAPI
 [imageapi]: https://github.com/purrbot-site/ImageAPI
-[translation]: https://github.com/purrbot-site/Translations
+[translation]: https://translations.purrbot.site
 
 # Contribute towards the Projects
 We're always happy for people who want to help us improve our various projects.  
@@ -30,4 +32,4 @@ You can find the source codes [here][imageapi] and [here][purrbotapi].
 
 ## Translations
 We welcome every kind of translation. This even includes those that don't really exist (Are a joke-language like Klingon... No hate towards those guys).  
-Please head over to the [Translations-Repository][translation] and read the information about how to submit your Translation.
+To become a translator, contact Andre_601#0601 on [Discord], so that he can add you as a translator to the [Translation page][translation].
