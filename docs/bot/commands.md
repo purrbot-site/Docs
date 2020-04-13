@@ -27,6 +27,7 @@ The default prefix is `.` but can be changed with the [[prefix-command|Commands#
 - [Poke](#poke)
 - [Ship](#ship)
 - [Slap](#slap)
+- [Tail](#tail)
 - [Tickle](#tickle)
 
 ### [Guild](#category-guild)
@@ -242,6 +243,22 @@ You can optionally mention a second user to instead ship those two with each oth
 > - `.Slap <@user ...>`
 
 Lets you slap one or multiple mentioned user.
+
+----
+### Tail
+> **Permission**: `None`
+> **Bot requires**: `None`
+>
+> **Aliases**:
+>
+> - `Wag`
+> - `Wagging`
+>
+> **Usage**:
+>
+> - `.Tail`
+
+Lets you wag your tail (in excitement hopefully).
 
 ----
 ### Tickle
