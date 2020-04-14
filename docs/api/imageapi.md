@@ -133,6 +133,15 @@ Example response:
 }
 ```
 
+### /tail/gif
+Example response:  
+```json
+{
+  "code": 200,
+  "link": "https://purrbot.site/img/sfw/tail/gif/tail_001.gif"
+}
+```
+
 ### /tickle/gif
 Example response:  
 ```json
