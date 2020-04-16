@@ -555,14 +555,14 @@ Shows information about yourself or a mentioned user.
 >
 > - `.Fuck <@user>`
 > - `.Fuck <@user> --anal`
+> - `.Fuck <@user> --normal`
 > - `.Fuck <@user> --yuri`
 
 **This command can only be run in NSFW-labeled channels!**
 
 Asks the mentioned user to have sex with you.  
-The mentioned user can accept or deny the request by clicking on the corresponding reactions of the message.  
-`--anal` returns a gif depicting someone having anal-sex.  
-`--yuri` returns a gif depicting 2 girls having sex.
+When no arguments are provided can the mentioned user choose which type of sex would be used.  
+Providing `--anal`, `--normal` or `--yuri` however pre-selects the option.
 
 ----
 ### Lewd
