@@ -635,4 +635,4 @@ Gives a gif of a girl *playing* with herself.
 **This command can only be run in NSFW-labeled channels!**
 
 Similar to [Fuck](#fuck) but allows you to ask two people at once.  
-By default will the threesome be with 2 females and 1 male. Providing `--fff` or `--mmf` will change it to a threesome with 3 females ot to a threesome with 1 female and 2 males respectively.
+By default will the threesome be with 2 females and 1 male. Providing `--fff` or `--mmf` will change it to a threesome with 3 females or a threesome with 1 female and 2 males respectively.
