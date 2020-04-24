@@ -5,18 +5,18 @@ This site contains the following things:
 ## API
 Documentation about the various APIs available under the domain purrbot.site
 
-- [:octicons-book: Go to page](/api)
+- [:fontawesome-solid-book: Go to page](/api)
 
 ## Wiki
 General wiki about the Bot \*Purr*, her commands and various other information.
 
-- [:octicons-book: Go to page](/bot)
+- [:fontawesome-solid-book: Go to page](/bot)
 
 ## Contributing
 Pages about how to contribute towards the documentation, bot and the APIs.  
 Also contains information about how formatting works in these documentations.
 
-- [:octicons-book: Go to page](/contribute)
+- [:fontawesome-solid-book: Go to page](/contribute)
 
 ## Other links
 - [:fontawesome-brands-discord: Discord](https://purrbot.site/discord)
