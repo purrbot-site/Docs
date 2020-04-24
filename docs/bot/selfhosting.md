@@ -1,5 +1,5 @@
-[PurrBot#startUpdates]: https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/PurrBot.java#L163-L186
-[PurrBot#startUpdate]: https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/PurrBot.java#L386-L399
+[PurrBot#startUpdates]: https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/PurrBot.java#L164-L183
+[PurrBot#startUpdate]: https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/PurrBot.java#L394-L407
 [MIT-License]: https://github.com/Andre601/PurrBot/blob/master/LICENSE
 
 [RethinkDB]: https://rethinkdb.com
