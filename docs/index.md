@@ -19,6 +19,6 @@ Also contains information about how formatting works in these documentations.
 - [Go to page](/contribute)
 
 ## Other links
-- [:fontawesome-brand-discord: Discord](https://purrbot.site/discord)
-- [:fontawesome-brand-github: GitHub](https://purrbot.site/github)
-- [:fontawesome-brand-twitter: Twitter](https://purrbot.site/twitter)
+- [:fontawesome-brands-discord: Discord](https://purrbot.site/discord)
+- [:fontawesome-brands-github: GitHub](https://purrbot.site/github)
+- [:fontawesome-brands-twitter: Twitter](https://purrbot.site/twitter)
