@@ -1,6 +1,6 @@
 [PyMdown]: https://facelessuser.github.io/pymdown-extensions/
 [MkDocs]: https://www.mkdocs.org
-
+[MkDocs-Material extension]: https://github.com/facelessuser/mkdocs-material-extensions
 
 # Formatting Help
 This page lists all the different Markdown formatting syntaxes, which are used across the documentation.  
@@ -230,6 +230,19 @@ This also works with Twitter-users by prefixing the name with `twitter:` (`@twit
 	    @purrbot-site  
 		@purrbot-site/Docs  
 		@twitter:TruePurrBot
+
+## Emojis
+Thanks to the [PyMdown] extension `Emojis` can we add emojis (From Twemoji) to this Documentation by just providing it as `:emoji_name:`
+
+Additionally do we also use the [MkDocs-Material extension] which also adds icons from FontAwesome, Material Design and Octicons to this pages.  
+You can use them like normal emojis, with the difference, that they are prefixed with one of the following namespaces:
+
+- `fontawesome` FontAwesome icons. You also need to specify the type as listed below.
+    - `fontawesome-brands` for brand icons
+	- `fontawesome-regular` for regular icons
+	- `fontawesome-solid` for solid icons
+- `material` Material Design icons.
+- `octicons` GitHub's Octicon icons.
 
 ## Final Words
 Those are all the important parts you need to know about the markdown syntax for those documentations.  
