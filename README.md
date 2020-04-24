@@ -12,8 +12,8 @@
 [Material Dark Theme]: https://github.com/henrywhitaker3/mkdocs-material-dark-theme
 [pymdown]: https://github.com/facelessuser/pymdown-extensions/
 
-[netlifyImg]: https://api.netlify.com/api/v1/badges/cb9acd27-d730-4526-b679-874c16894e14/deploy-status
-[netlify]: https://app.netlify.com/sites/purrbot-site/deploys
+[netlifyImg]: https://www.netlify.com/img/global/badges/netlify-dark.svg
+[netlify]: https://www.netlify.com
 
 [![netlifyImg]][netlify]
 
