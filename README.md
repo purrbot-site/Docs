@@ -12,6 +12,11 @@
 [Material Dark Theme]: https://github.com/henrywhitaker3/mkdocs-material-dark-theme
 [pymdown]: https://github.com/facelessuser/pymdown-extensions/
 
+[netlifyImg]: https://api.netlify.com/api/v1/badges/cb9acd27-d730-4526-b679-874c16894e14/deploy-status
+[netlify]: https://app.netlify.com/sites/purrbot-site/deploys
+
+[![netlifyImg]][netlify]
+
 # Docs
 This repository is home of the content found on https://docs.purrbot.site  
 It currently houses the API-documentation for the various endpoints under https://purrbot.site/api and the official wiki of [\*Purr*][purr].
