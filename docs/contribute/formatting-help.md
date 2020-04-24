@@ -2,6 +2,10 @@
 [MkDocs]: https://www.mkdocs.org
 [MkDocs-Material extension]: https://github.com/facelessuser/mkdocs-material-extensions
 
+[FontAwesome]: https://fontawesome.com/icons?d=gallery&m=free
+[Material Design]: https://material.io/resources/icons/?style=baseline
+[Octicons]: https://octicons.github.com
+
 # Formatting Help
 This page lists all the different Markdown formatting syntaxes, which are used across the documentation.  
 Please not that not all Styles are available for the default Markdown shipped with MkDocs and require extensions to be installed.  
@@ -234,7 +238,7 @@ This also works with Twitter-users by prefixing the name with `twitter:` (`@twit
 ## Emojis
 Thanks to the [PyMdown] extension `Emojis` can we add emojis (From Twemoji) to this Documentation by just providing it as `:emoji_name:`
 
-Additionally do we also use the [MkDocs-Material extension] which also adds icons from FontAwesome, Material Design and Octicons to this pages.  
+Additionally do we also use the [MkDocs-Material extension] which also adds icons from [FontAwesome], [Material Design] and [Octicons] to this pages.  
 You can use them like normal emojis, with the difference, that they are prefixed with one of the following namespaces:
 
 - `fontawesome` FontAwesome icons. You also need to specify the type as listed below.
