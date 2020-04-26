@@ -15,9 +15,10 @@ We're always happy for people who want to help us improve our various projects.
 But before you blindly dive into the stuff, keep the following things in mind.
 
 ## Documentation/Wiki
-The documentation (The site you're currently on) is located [here][doc] and we're happy over every improvement made, being it fixing style-issues, or even just correcting minor typos.
+The documentation (The site you're currently on) is located [here][doc] and we're happy over every improvement made, being it the addition of missing information, fixing style-issues or even just correcting minor typos.
 
-When you want to update pages, make sure to follow the [contribution guidelines][contributing_docs] on the [README.md][doc] to not face any formatting issues.
+Before you start, make sure you've read the [formatting help](formatting-help) page to know everything important about the styling of the docs.  
+Also make sure to read the [contributions section][contributing_docs] of the README.
 
 ## Bot
 I (Andre_601) are not the best developer, so there are sure some problematic Coding decision made in the code of [\*Purr\*][purr].  
