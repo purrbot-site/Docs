@@ -8,13 +8,13 @@ Please read it carefully to prevent issues. If you can't find an answer to your 
 ----
 ??? question "What are the default settings?"
     The bot has the following default settings:
-	
-	- Prefix: `.`
-	- Welcome channel: `none`
-	- Welcome background: [`color_white`](../welcome-images#color_white)
-	- Welcome icon: [`purr`](../welcome-images#purr)
-	- Welcome message: `Welcome {mention}!`
-	- Language: `en (english)`
+    
+    - Prefix: `.`
+    - Welcome channel: `none`
+    - Welcome background: [`color_white`](../welcome-images#color_white)
+    - Welcome icon: [`purr`](../welcome-images#purr)
+    - Welcome message: `Welcome {mention}!`
+    - Language: `en (english)`
 
 ----
 ??? question "How do I use the welcome feature?"
@@ -31,7 +31,7 @@ Please read it carefully to prevent issues. If you can't find an answer to your 
 
 ----
 ??? question "Who/What is \*Snuggle\* and can I invite her?"
-    \*Snuggle\* is the Beta-Version of \*Purr\* and is used to test new commands/features before updating her with it.  
-    She **can't** be invited through a normal way.  
+    \*Snuggle\* is the Beta-Version of \*Purr\* and is used to test new commands/features before \*Purr\* is receiving them.  
+    She **cannot** be invited through normal ways.  
     To invite her will you need to be a [Patreon Member][patreon] of the highest tier (Catnip) and contact Andre_601.  
     He will then join your Discord, where you want \*Snuggle\* to be and invites her (You need to temporary give him `manage server` permission for this).
