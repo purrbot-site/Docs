@@ -10,6 +10,7 @@ The default prefix is `.` but can be changed with the [[prefix-command|Commands#
 	    - `Embed Links`
 	    - `Read Message History`
 	    - `Add Reactions`  
+            - `Use External Emojis`
 	    Additional permissions required for a command will be mentioned under `Bot Requires`
 	- `<argument>` are required and `[argument]` are optional.
 	- If an argument has `...` does it indicate, that you can provide it multiple times.
@@ -370,9 +371,7 @@ Providing no arguments will show what the current settings are.
 
 ### Emote
 > **Permission**: `None`  
-> **Bot requires**:
->
-> - `Read message history` (For the `-search` option)
+> **Bot requires**: `None`
 > 
 > **Aliases**:
 >
@@ -385,7 +384,7 @@ Providing no arguments will show what the current settings are.
 
 Gives information about a provided emote.  
 If the `--search` argument is used will the bot check the past 100 messages for any emotes and return all it can find.  
-This will **not** return unicode emojis and is also limited to one emote per message!
+This will **not** return unicode emojis!
 
 ----
 ### Guild
@@ -407,8 +406,7 @@ Provides basic information about the guild.
 ----
 ### Help
 > **Permission**: `None`  
-> **Bot requires**:
-> - `Add reactions`  
+> **Bot requires**: `None`
 > 
 > **Aliases**:
 >
@@ -473,9 +471,7 @@ Returns the delay of editing the message, the delay to the API and the WebSocket
 ----
 ### Quote
 > **Permission**: `None`  
-> **Bot requires**:
->
-> - `See message history` (For your channel and/or the mentioned channel)  
+> **Bot requires**: `None`
 > 
 > **Aliases**: `None`
 > 
