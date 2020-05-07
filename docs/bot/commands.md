@@ -5,13 +5,13 @@ The default prefix is `.` but can be changed with the [[prefix-command|Commands#
 !!! info "Important"
     - `Permission` means Discord permissions which the executor of the command (you) requires.
 	- To make the bot work properly will it require the following permissions:
-	    - `Read Messages`
-	    - `Send Messages`
-	    - `Embed Links`
-	    - `Read Message History`
-	    - `Add Reactions`  
-            - `Use External Emojis`
-	    Additional permissions required for a command will be mentioned under `Bot Requires`
+        - `Read Messages`
+        - `Send Messages`
+        - `Embed Links`
+        - `Read Message History`
+        - `Add Reactions`  
+        - `Use External Emojis`  
+        Additional permissions required for a command will be mentioned under `Bot Requires`
 	- `<argument>` are required and `[argument]` are optional.
 	- If an argument has `...` does it indicate, that you can provide it multiple times.
 
