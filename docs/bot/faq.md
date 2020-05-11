@@ -1,6 +1,7 @@
 [Discord]: https://purrbot.site/discord
 [nekos.life]: https://nekos.life
 [patreon]: https://patreon.com/purrbot
+[invite]: https://purrbot.site/invite
 
 This page contains commonly asked questions.  
 Please read it carefully to prevent issues. If you can't find an answer to your question, feel free to join our [Discord] and ask there.
@@ -35,3 +36,9 @@ Please read it carefully to prevent issues. If you can't find an answer to your 
     She **cannot** be invited through normal ways.  
     To invite her will you need to be a [Patreon Member][patreon] of the highest tier (Catnip) and contact Andre_601.  
     He will then join your Discord, where you want \*Snuggle\* to be and invites her (You need to temporary give him `manage server` permission for this).
+
+----
+??? question "Why does the bot not work with Administrator?"
+    When you gave \*Purr\* the `Administrator` permission will she refuse to perform any command and send an error message instead.  
+    This was essentially made to force people into setting permissions up properly, since just giving Administrator is not something good to do.
+    If you don't want to manually set up \*Purr\* with all required permissions, invite her using [this invite][invite] to have a \*Purr\* role with all required permissions set up.
