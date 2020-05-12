@@ -89,11 +89,11 @@ A smiling neko :3
 ![image](https://purrbot.site/img/sfw/icon/img/neko_smile.png)
 
 #### purr
-\*Purr* herself. >w<  
+\*Purr\* herself. >w<  
 ![image](https://purrbot.site/img/sfw/icon/img/purr.png)
 
 #### snuggle
-\*Purr*'s younger sister \*Snuggle*. OwO  
+\*Purr\*'s younger sister \*Snuggle\*. OwO  
 ![image](https://purrbot.site/img/sfw/icon/img/snuggle.png)
 
 ----
