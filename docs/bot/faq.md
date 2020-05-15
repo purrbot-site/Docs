@@ -42,3 +42,10 @@ Please read it carefully to prevent issues. If you can't find an answer to your 
     When you gave \*Purr\* the `Administrator` permission will she refuse to perform any command and send an error message instead.  
     This was essentially made to force people into setting permissions up properly, since just giving Administrator is not something good to do.
     If you don't want to manually set up \*Purr\* with all required permissions, invite her using [this invite][invite] to have a \*Purr\* role with all required permissions set up.
+
+----
+??? question "On what is the bot/website hosted?"
+    The bot is hosted on a VPS running `Ubuntu 18.04` and with `Java 11 (OpenJDK)`.  
+    It uses RethinkDB as database.
+    
+    The website is hosted on the same VPS using Nginx.
