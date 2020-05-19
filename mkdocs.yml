@@ -38,8 +38,9 @@ theme:
   logo: 'assets/img/logo.png'
   favicon: 'assets/img/logo.png'
   palette:
-    primary: 'cyan'
-    accent: 'blue'
+    scheme: slate
+    primary: cyan
+    accent: blue
   features:
   - tabs
   icon:
