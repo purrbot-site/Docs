@@ -342,7 +342,7 @@ Providing no arguments will show what the current settings are.
     - `channel reset`  
     Resets the the channel.
     - `color set <color>`  
-    Set the text color on the image. The format has to be either `rgb:r,g,b` or `hex:rrggbb`.
+    Set the text color on the image. The format has to be either `rgb:r,g,b`, `hex:rrggbb` or `random`.
     - `color reset`  
     Resets the color back to `hex:000000`
     - `icon set <icon>`  
