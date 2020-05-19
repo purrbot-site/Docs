@@ -2,12 +2,12 @@ The welcome channel allows you to greet people with a message and image when the
 
 !!! info "Notes"
     Before you set up the channel, make sure you have made the following checks first:
-	
-	- You have `Manage Server` permission or are the owner of the Discord server.
-	- The bot has `Send Messages` and `Attach Files` permission for the channel where it should send the welcome messsages.
-	
-	For simplicity reasons will the shown commands here use the default prefix (`.`).  
-	If you have set a different prefix, use that instead.
+    
+    - You have `Manage Server` permission or are the owner of the Discord server.
+    - The bot has `Send Messages` and `Attach Files` permission for the channel where it should send the welcome messsages.
+    
+    For simplicity reasons will the shown commands here use the default prefix (`.`).  
+    If you have set a different prefix, use that instead.
 
 ## Step 1: Set a channel
 > **Required step?** Yes  
@@ -41,7 +41,7 @@ Reset this using `.welcome icon reset`
 > **Default**: `hex:000000`
 
 The default font color isn't visible on all backgrounds. For that can you change it with `.welcome color set <color>`.  
-`<color>` has to be either `hex:rrggbb` or `rgb:r,g,b`.
+`<color>` has to be either `hex:rrggbb`, `rgb:r,g,b` or `random`.
 
 Reset this using `.welcome color reset`
 
