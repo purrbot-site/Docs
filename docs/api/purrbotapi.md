@@ -8,25 +8,25 @@ API used to create dynamic images based on the provided input.
 
 !!! warning "Important"
     - All requests are performed through POST requests
-	- The request body needs to contain valid JSON. Even when it is empty.
+    - The request body needs to contain valid JSON. Even when it is empty.
 
 ## /quote
 *Generates images that look like Discord messages*
 
 !!! note "Info"
     - Returns an image on success and JSON on failure.
-	- All provided values need to be String.
-	- Leave away a field and value to use the default option.
+    - All provided values need to be String.
+    - Leave away a field and value to use the default option.
 
 ### Fields
-| Field      | Description                                                                                                         | Default                         |
-| ---------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| avatar     | The URL of the avatar to display.                                                                                   | https://i.imgur.com/36aniDJ.png |
-| dateFormat | The format in which the date should be displayed. This uses the [SimpleDateFormat]                                  | `dd. MMM yyyy hh:mm:ss`         |
-| message    | The message itself to display. This __won't__ format markdown, emotes and only formats selected emojis.             | `Some message`                  |
-| nameColor  | The color, in which the name should be displayed. You can provide `hex:rrggbb`, `rgb:r,g,b` or the raw color value. | `hex:ffffff`                    |
-| timestamp  | The date and time as epoch milliseconds.                                                                            | `<Current time of the request>` |
-| username   | The name to display.                                                                                                | `Someone`                       |
+| Field      | Type   | Description                                                                                                         | Default                         |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| avatar     | String | The URL of the avatar to display.                                                                                   | https://i.imgur.com/36aniDJ.png |
+| dateFormat | String | The format in which the date should be displayed. This uses the [SimpleDateFormat]                                  | `dd. MMM yyyy hh:mm:ss`         |
+| message    | String | The message itself to display. This __won't__ format markdown, emotes and only formats selected emojis.             | `Some message`                  |
+| nameColor  | String | The color, in which the name should be displayed. You can provide `hex:rrggbb`, `rgb:r,g,b` or the raw color value. | `hex:ffffff`                    |
+| timestamp  | Number | The date and time as epoch milliseconds.                                                                            | `<Current time of the request>` |
+| username   | String | The name to display.                                                                                                | `Someone`                       |
 
 !!! example
     === "Request"
@@ -50,15 +50,15 @@ API used to create dynamic images based on the provided input.
 
 !!! note "Info"
     - Returns an image on success and JSON on failure.
-	- All provided values need to be String.
-	- Leave away a field and value to use the default option.
+    - All provided values need to be String.
+    - Leave away a field and value to use the default option.
 
 ### Fields
-| Field      | Description                                                                                  | Default                         |
-| ---------- | -------------------------------------------------------------------------------------------- | ------------------------------- |
-| avatar     | The URL of the avatar to display.                                                            | https://i.imgur.com/36aniDJ.png |
-| status     | The status to set as icon. Can be `online`, `idle`, `do_not_disturb` (or `dnd`) or `offline` | `offline`                       |
-| mobile     | Boolean to set if the user is on mobile. Will change the icon to the mobile icon when true.  | `false`                         |
+| Field      | Type    | Description                                                                                                                     | Default                         |
+| ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| avatar     | String  | The URL of the avatar to display.                                                                                               | https://i.imgur.com/36aniDJ.png |
+| status     | String  | The status to set as icon. Can be `online`, `idle`, `do_not_disturb` (or `dnd`) or `offline`                                    | `offline`                       |
+| mobile     | Boolean | If the user is on mobile. `true` will change the icon to the one used in Discord to indicate a mobile user (Small smartphone).  | `false`                         |
 
 !!! example
     === "Request"
