@@ -15,7 +15,7 @@
         <meta name="author" content="Andre_601">
       
       <link rel="shortcut icon" href="../../assets/img/logo.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.1">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.18ac144a.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.71dfd922.min.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/palette.616af814.min.css">
       
@@ -694,6 +694,7 @@
 <thead>
 <tr>
 <th>Field</th>
+<th>Type</th>
 <th>Description</th>
 <th>Default</th>
 </tr>
@@ -701,31 +702,37 @@
 <tbody>
 <tr>
 <td>avatar</td>
+<td>String</td>
 <td>The URL of the avatar to display.</td>
 <td><a href="https://i.imgur.com/36aniDJ.png">https://i.imgur.com/36aniDJ.png</a></td>
 </tr>
 <tr>
 <td>dateFormat</td>
+<td>String</td>
 <td>The format in which the date should be displayed. This uses the <a href="https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html">SimpleDateFormat</a></td>
 <td><code>dd. MMM yyyy hh:mm:ss</code></td>
 </tr>
 <tr>
 <td>message</td>
+<td>String</td>
 <td>The message itself to display. This <strong>won't</strong> format markdown, emotes and only formats selected emojis.</td>
 <td><code>Some message</code></td>
 </tr>
 <tr>
 <td>nameColor</td>
+<td>String</td>
 <td>The color, in which the name should be displayed. You can provide <code>hex:rrggbb</code>, <code>rgb:r,g,b</code> or the raw color value.</td>
 <td><code>hex:ffffff</code></td>
 </tr>
 <tr>
 <td>timestamp</td>
+<td>Number</td>
 <td>The date and time as epoch milliseconds.</td>
 <td><code>&lt;Current time of the request&gt;</code></td>
 </tr>
 <tr>
 <td>username</td>
+<td>String</td>
 <td>The name to display.</td>
 <td><code>Someone</code></td>
 </tr>
@@ -765,6 +772,7 @@
 <thead>
 <tr>
 <th>Field</th>
+<th>Type</th>
 <th>Description</th>
 <th>Default</th>
 </tr>
@@ -772,17 +780,20 @@
 <tbody>
 <tr>
 <td>avatar</td>
+<td>String</td>
 <td>The URL of the avatar to display.</td>
 <td><a href="https://i.imgur.com/36aniDJ.png">https://i.imgur.com/36aniDJ.png</a></td>
 </tr>
 <tr>
 <td>status</td>
+<td>String</td>
 <td>The status to set as icon. Can be <code>online</code>, <code>idle</code>, <code>do_not_disturb</code> (or <code>dnd</code>) or <code>offline</code></td>
 <td><code>offline</code></td>
 </tr>
 <tr>
 <td>mobile</td>
-<td>Boolean to set if the user is on mobile. Will change the icon to the mobile icon when true.</td>
+<td>Boolean</td>
+<td>If the user is on mobile. <code>true</code> will change the icon to the one used in Discord to indicate a mobile user (Small smartphone).</td>
 <td><code>false</code></td>
 </tr>
 </tbody>
