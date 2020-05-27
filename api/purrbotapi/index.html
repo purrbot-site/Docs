@@ -350,6 +350,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -366,6 +373,13 @@
           <li class="md-nav__item">
   <a href="#fields_1" class="md-nav__link">
     Fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    Example
   </a>
   
 </li>
@@ -614,6 +628,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -630,6 +651,13 @@
           <li class="md-nav__item">
   <a href="#fields_1" class="md-nav__link">
     Fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    Example
   </a>
   
 </li>
@@ -690,58 +718,50 @@
 </ul>
 </div>
 <h3 id="fields">Fields<a class="headerlink" href="#fields" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>avatar</td>
-<td>String</td>
-<td>The URL of the avatar to display.</td>
-<td><a href="https://purrbot.site/assets/img/api/unknown.png">https://purrbot.site/assets/img/api/unknown.png</a></td>
-</tr>
-<tr>
-<td>dateFormat</td>
-<td>String</td>
-<td>The format in which the date should be displayed. This uses the <a href="https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html">SimpleDateFormat</a></td>
-<td><code>dd. MMM yyyy hh:mm:ss zzz</code></td>
-</tr>
-<tr>
-<td>message</td>
-<td>String</td>
-<td>The message itself to display. This <strong>won't</strong> format markdown, emotes and only formats selected emojis.</td>
-<td><code>Some message</code></td>
-</tr>
-<tr>
-<td>nameColor</td>
-<td>String</td>
-<td>The color, in which the name should be displayed. You can provide <code>hex:rrggbb</code>, <code>rgb:r,g,b</code> or the raw color value.</td>
-<td><code>hex:ffffff</code></td>
-</tr>
-<tr>
-<td>timestamp</td>
-<td>Number</td>
-<td>The date and time as epoch milliseconds.</td>
-<td><code>&lt;Current time of the request&gt;</code></td>
-</tr>
-<tr>
-<td>username</td>
-<td>String</td>
-<td>The name to display.</td>
-<td><code>Someone</code></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Request</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">avatar</label><div class="tabbed-content">
+<p><strong>Type</strong>: String<br />
+<strong>Default</strong>: <a href="https://purrbot.site/assets/img/api/unknown.png">https://purrbot.site/assets/img/api/unknown.png</a></p>
+<p><strong>Description</strong>:<br />
+The URL of the avatar to display in the image. The image will be resized to 217x217 pixels.</p>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">dateFormat</label><div class="tabbed-content">
+<p><strong>Type</strong>: String<br />
+<strong>Default</strong>: <code>dd. MMM yyyy hh:mm:ss zzz</code></p>
+<p><strong>Description</strong>:<br />
+The format in which the date should be displayed.<br />
+This uses the <a href="https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html">SimpleDateFormat</a> from Java.</p>
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">message</label><div class="tabbed-content">
+<p><strong>Type</strong>: String<br />
+<strong>Default</strong>: <code>Some message</code></p>
+<p><strong>Description</strong>
+The actual message that should be displayed.<br />
+Note that this will <strong>NOT</strong> render markdown and can only render a few selected emojis (No Discord emotes).</p>
+</div>
+<input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">nameColor</label><div class="tabbed-content">
+<p><strong>Type</strong>: String<br />
+<strong>Default</strong>: <code>hex:ffffff</code></p>
+<p><strong>Description</strong>:<br />
+The color in which the username should be displayed.<br />
+Supported are <code>hex:rrggbb</code>, <code>rgb:r,g,b</code> or the raw Color value.</p>
+</div>
+<input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><label for="__tabbed_1_5">timestamp</label><div class="tabbed-content">
+<p><strong>Type</strong>: Number<br />
+<strong>Default</strong>: Current time of the request</p>
+<p><strong>Description</strong>:<br />
+The date of the message as epoch milliseconds.</p>
+</div>
+<input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><label for="__tabbed_1_6">username</label><div class="tabbed-content">
+<p><strong>Type</strong>: String<br />
+<strong>Default</strong>: <code>Someone</code></p>
+<p><strong>Description</strong>:<br />
+The username to display.</p>
+</div>
+</div>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Request</label><div class="tabbed-content">
 <p><br>
+This request was made on march, 9th 2020.<br />
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cdn.discordapp.com/avatars/204232208049766400/dfaaefa54a2804addb1f494da7aa904d.png&quot;</span><span class="p">,</span>
   <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;This is an example message.&quot;</span><span class="p">,</span>
@@ -751,10 +771,9 @@
 <span class="p">}</span>
 </code></pre></div></p>
 </div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Response</label><div class="tabbed-content">
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Response</label><div class="tabbed-content">
 <p><br>
 <img alt="quote" src="/assets/img/quote.png"></p>
-</div>
 </div>
 </div>
 <h2 id="status">/status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h2>
@@ -768,39 +787,28 @@
 </ul>
 </div>
 <h3 id="fields_1">Fields<a class="headerlink" href="#fields_1" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>avatar</td>
-<td>String</td>
-<td>The URL of the avatar to display.</td>
-<td><a href="https://purrbot.site/assets/img/api/unknown.png">https://purrbot.site/assets/img/api/unknown.png</a></td>
-</tr>
-<tr>
-<td>mobile</td>
-<td>Boolean</td>
-<td>If the user is on mobile. <code>true</code> will change the icon to the one used in Discord to indicate a mobile user (Small smartphone).</td>
-<td><code>false</code></td>
-</tr>
-<tr>
-<td>status</td>
-<td>String</td>
-<td>The status to set as icon. Can be <code>online</code>, <code>idle</code>, <code>do_not_disturb</code> (or <code>dnd</code>), <code>streaming</code> or <code>offline</code></td>
-<td><code>offline</code></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Request</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">avatar</label><div class="tabbed-content">
+<p><strong>Type</strong>: String<br />
+<strong>Default</strong>: <a href="https://purrbot.site/assets/img/api/unknown.png">https://purrbot.site/assets/img/api/unknown.png</a></p>
+<p><strong>Description</strong>:<br />
+The URL of the avatar to display in the image. The image will be resized to 950x950 pixels.</p>
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">mobile</label><div class="tabbed-content">
+<p><strong>Type</strong>: Boolean<br />
+<strong>Default</strong>: <code>false</code></p>
+<p><strong>Description</strong>:<br />
+Wether the user is on mobile. <code>true</code> will change the status icon to that used to indicate mobile users on Discord (Small smartphone).</p>
+</div>
+<input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><label for="__tabbed_3_3">status</label><div class="tabbed-content">
+<p><strong>Type</strong>: String<br />
+<strong>Default</strong>: <code>offline</code></p>
+<p><strong>Description</strong>:<br />
+The status to display with the icon.<br />
+Available are <code>online</code>, <code>idle</code>, <code>do_not_disturb</code> (or <code>dnd</code>), <code>streaming</code> and <code>offline</code>.</p>
+</div>
+</div>
+<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Request</label><div class="tabbed-content">
 <p><br>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cdn.discordapp.com/avatars/204232208049766400/dfaaefa54a2804addb1f494da7aa904d.png&quot;</span><span class="p">,</span>
@@ -808,18 +816,15 @@
 <span class="p">}</span>
 </code></pre></div></p>
 </div>
-<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Response</label><div class="tabbed-content">
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">Response</label><div class="tabbed-content">
 <p><br>
 <img alt="status" src="/assets/img/status.png" style="width: 80px; height: 80px;"></p>
-</div>
 </div>
 </div>
 <h2 id="error-responses">Error responses<a class="headerlink" href="#error-responses" title="Permanent link">&para;</a></h2>
 <p>The API might return certain errors, depending on different facors.<br />
 Possible errors are a <code>500 Internal Server Error</code> or a <code>403 Unauthorized Error</code>.</p>
-<div class="admonition example">
-<p class="admonition-title">Error responses</p>
-<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">500 Internal Server Error</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">500 Internal Server Error</label><div class="tabbed-content">
 <p>If you receive the below error response will you need to check, if the values you provided are valid.<br />
 A possible issue could be a image-link being invalid.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -829,7 +834,7 @@ A possible issue could be a image-link being invalid.</p>
 </code></pre></div>
 
 </div>
-<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">403 Unauthorized Error</label><div class="tabbed-content">
+<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">403 Unauthorized Error</label><div class="tabbed-content">
 <p>If you receive the below error response, does it mean that your provided JSON body was malformed (invalid).<br />
 This means, that you forgot to format it properly (i.e. forgot a comma) or you didn't provide any JSON at all.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -838,7 +843,6 @@ This means, that you forgot to format it properly (i.e. forgot a comma) or you d
 <span class="p">}</span>
 </code></pre></div>
 
-</div>
 </div>
 </div>
                 
