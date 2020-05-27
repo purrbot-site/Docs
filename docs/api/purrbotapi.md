@@ -19,6 +19,7 @@ API used to create dynamic images based on the provided input.
     - Leave away a field and value to use the default option.
 
 ### Fields
+
 === "avatar"
     **Type**: String  
     **Default**: https://purrbot.site/assets/img/api/unknown.png
@@ -65,6 +66,7 @@ API used to create dynamic images based on the provided input.
     The username to display.
 
 ### Example
+
 === "Request"
     <br>
     ```json
