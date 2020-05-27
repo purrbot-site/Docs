@@ -19,14 +19,14 @@ API used to create dynamic images based on the provided input.
     - Leave away a field and value to use the default option.
 
 ### Fields
-| Field      | Type   | Description                                                                                                         | Default                         |
-| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| avatar     | String | The URL of the avatar to display.                                                                                   | https://i.imgur.com/36aniDJ.png |
-| dateFormat | String | The format in which the date should be displayed. This uses the [SimpleDateFormat]                                  | `dd. MMM yyyy hh:mm:ss`         |
-| message    | String | The message itself to display. This __won't__ format markdown, emotes and only formats selected emojis.             | `Some message`                  |
-| nameColor  | String | The color, in which the name should be displayed. You can provide `hex:rrggbb`, `rgb:r,g,b` or the raw color value. | `hex:ffffff`                    |
-| timestamp  | Number | The date and time as epoch milliseconds.                                                                            | `<Current time of the request>` |
-| username   | String | The name to display.                                                                                                | `Someone`                       |
+| Field      | Type   | Description                                                                                                         | Default                                         |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| avatar     | String | The URL of the avatar to display.                                                                                   | https://purrbot.site/assets/img/api/unknown.png |
+| dateFormat | String | The format in which the date should be displayed. This uses the [SimpleDateFormat]                                  | `dd. MMM yyyy hh:mm:ss zzz`                     |
+| message    | String | The message itself to display. This __won't__ format markdown, emotes and only formats selected emojis.             | `Some message`                                  |
+| nameColor  | String | The color, in which the name should be displayed. You can provide `hex:rrggbb`, `rgb:r,g,b` or the raw color value. | `hex:ffffff`                                    |
+| timestamp  | Number | The date and time as epoch milliseconds.                                                                            | `<Current time of the request>`                 |
+| username   | String | The name to display.                                                                                                | `Someone`                                       |
 
 !!! example
     === "Request"
@@ -54,11 +54,11 @@ API used to create dynamic images based on the provided input.
     - Leave away a field and value to use the default option.
 
 ### Fields
-| Field      | Type    | Description                                                                                                                     | Default                         |
-| ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| avatar     | String  | The URL of the avatar to display.                                                                                               | https://i.imgur.com/36aniDJ.png |
-| status     | String  | The status to set as icon. Can be `online`, `idle`, `do_not_disturb` (or `dnd`) or `offline`                                    | `offline`                       |
-| mobile     | Boolean | If the user is on mobile. `true` will change the icon to the one used in Discord to indicate a mobile user (Small smartphone).  | `false`                         |
+| Field  | Type    | Description                                                                                                                    | Default                                         |
+| ------ | ------- | ------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------- |
+| avatar | String  | The URL of the avatar to display.                                                                                              | https://purrbot.site/assets/img/api/unknown.png |
+| mobile | Boolean | If the user is on mobile. `true` will change the icon to the one used in Discord to indicate a mobile user (Small smartphone). | `false`                                         |
+| status | String  | The status to set as icon. Can be `online`, `idle`, `do_not_disturb` (or `dnd`), `streaming` or `offline`                      | `offline`                                       |
 
 !!! example
     === "Request"
