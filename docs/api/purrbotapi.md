@@ -69,6 +69,7 @@ API used to create dynamic images based on the provided input.
 
 === "Request"
     <br>
+    This request was made on march, 9th 2020.  
     ```json
     {
       "avatar": "https://cdn.discordapp.com/avatars/204232208049766400/dfaaefa54a2804addb1f494da7aa904d.png",
@@ -116,7 +117,7 @@ API used to create dynamic images based on the provided input.
     Available are `online`, `idle`, `do_not_disturb` (or `dnd`), `streaming` and `offline`.
     
 
-### example
+### Example
 
 === "Request"
     <br>
