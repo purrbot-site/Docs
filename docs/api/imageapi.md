@@ -256,23 +256,22 @@ Example response:
 ## Failed requests
 The API can return one of two error responses, depending on which one is the case.
 
-!!! example "Errors"
-    === "Not existing path"
-        When you connect to an API path which does not exist (e.g. `/api/img/doesntexist`) will this error response be displayed.
-        
-        ```json
-		{
-		  "code": 403,
-		  "message": "Not supported API path"
-		}
-		```
-
-    === "Path doesn't contain any images"
-        If the provided path doesn't contain any images, will this error be displayed.
-	    
-	    ```json
-	    {
-	      "code": 403,
-	      "message": "The selected directory doesn't contain any images"
-	    }
-	    ```
+=== "Not existing path"
+    When you connect to an API path which does not exist (e.g. `/api/img/doesntexist`) will this error response be displayed.
+    
+    ```json
+    {
+      "code": 403,
+      "message": "Not supported API path"
+    }
+    ```
+    
+=== "Path doesn't contain any images"
+    If the provided path doesn't contain any images, will this error be displayed.
+    
+    ```json
+    {
+      "code": 403,
+      "message": "The selected directory doesn't contain any images"
+    }
+    ```
