@@ -19,31 +19,67 @@ API used to create dynamic images based on the provided input.
     - Leave away a field and value to use the default option.
 
 ### Fields
-| Field      | Type   | Description                                                                                                         | Default                                         |
-| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| avatar     | String | The URL of the avatar to display.                                                                                   | https://purrbot.site/assets/img/api/unknown.png |
-| dateFormat | String | The format in which the date should be displayed. This uses the [SimpleDateFormat]                                  | `dd. MMM yyyy hh:mm:ss zzz`                     |
-| message    | String | The message itself to display. This __won't__ format markdown, emotes and only formats selected emojis.             | `Some message`                                  |
-| nameColor  | String | The color, in which the name should be displayed. You can provide `hex:rrggbb`, `rgb:r,g,b` or the raw color value. | `hex:ffffff`                                    |
-| timestamp  | Number | The date and time as epoch milliseconds.                                                                            | `<Current time of the request>`                 |
-| username   | String | The name to display.                                                                                                | `Someone`                                       |
+=== "avatar"
+    **Type**: String  
+    **Default**: https://purrbot.site/assets/img/api/unknown.png
+    
+    **Description**:  
+    The URL of the avatar to display in the image. The image will be resized to 217x217 pixels.
+    
+=== "dateFormat"
+    **Type**: String  
+    **Default**: `dd. MMM yyyy hh:mm:ss zzz`
+    
+    **Description**:  
+    The format in which the date should be displayed.  
+    This uses the [SimpleDateFormat] from Java.
+    
+=== "message"
+    **Type**: String  
+    **Default**: `Some message`
+    
+    **Description**
+    The actual message that should be displayed.  
+    Note that this will **NOT** render markdown and can only render a few selected emojis (No Discord emotes).
+    
+=== "nameColor"
+    **Type**: String  
+    **Default**: `hex:ffffff`
+    
+    **Description**:  
+    The color in which the username should be displayed.  
+    Supported are `hex:rrggbb`, `rgb:r,g,b` or the raw Color value.
+    
+=== "timestamp"
+    **Type**: Number  
+    **Default**: Current time of the request
+    
+    **Description**:  
+    The date of the message as epoch milliseconds.
+    
+=== "username"
+    **Type**: String  
+    **Default**: `Someone`
+    
+    **Description**:  
+    The username to display.
 
-!!! example
-    === "Request"
-        <br>
-        ```json
-        {
-          "avatar": "https://cdn.discordapp.com/avatars/204232208049766400/dfaaefa54a2804addb1f494da7aa904d.png",
-          "message": "This is an example message.",
-          "nameColor": "hex:ffffff",
-          "dateFormat": "dd. MMM yyyy",
-          "username": "Andre_601"
-        }
-        ```
-	
-    === "Response"
-        <br>
-        <img alt="quote" src="/assets/img/quote.png">
+### Example
+=== "Request"
+    <br>
+    ```json
+    {
+      "avatar": "https://cdn.discordapp.com/avatars/204232208049766400/dfaaefa54a2804addb1f494da7aa904d.png",
+      "message": "This is an example message.",
+      "nameColor": "hex:ffffff",
+      "dateFormat": "dd. MMM yyyy",
+      "username": "Andre_601"
+    }
+    ```
+    
+=== "Response"
+    <br>
+    <img alt="quote" src="/assets/img/quote.png">
 
 ## /status
 *Adds a status icon to the provided avatar*
