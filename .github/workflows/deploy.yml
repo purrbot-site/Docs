@@ -43,5 +43,25 @@ jobs:
               "color": 65280,
               "title": "Documentation updated!",
               "url": "https://github.com/purrbot-site/Docs",
-              "description": "**Build with commit [`${ GITHUB_SHA:0:7 }`](${{ github.event.compare }})**\n\nThe changes will soon be available at https://docs.purrbot.site"
+              "description": "The documentation of purrbot.site has been updated.\nBelow can you find some more information.",
+              "footer": {
+                "text": "Page built using MkDocs"
+              },
+              "fields": [
+                {
+                  "name": "Commit",
+                  "value": "[`${GITHUB_SHA:0:7}`](${{github.event.compare})",
+                  "inline": true
+                },
+                {
+                  "name": "Source",
+                  "value": "https://github.com/purrbot-site/Docs",
+                  "inline": true
+                },
+                {
+                  "name": "Result",
+                  "value": "https://docs.purrbot.site",
+                  "inline": true
+                }
+              ]
             }
