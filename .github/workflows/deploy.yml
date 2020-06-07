@@ -12,7 +12,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - name: Chekout code
+      uses: actions/checkout@v2
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
       with:
@@ -34,34 +35,36 @@ jobs:
     if: success()
     runs-on: ubuntu-latest
     steps:
-      - name: Send Discord Notification
-        uses: Sniddl/discord-commits@v1.2
-        with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK }}
-          embed: |
-            {
-              "color": 65280,
-              "title": "Documentation updated!",
-              "url": "https://github.com/purrbot-site/Docs",
-              "description": "The documentation of purrbot.site has been updated.\nBelow can you find some more information.",
-              "footer": {
-                "text": "Page built using MkDocs"
+    - name: Chekout code
+      uses: actions/checkout@v2
+    - name: Send Discord Notification
+      uses: Sniddl/discord-commits@v1.2
+      with:
+        webhook: ${{ secrets.DISCORD_WEBHOOK }}
+        embed: |
+          {
+            "color": 65280,
+            "title": "Documentation updated!",
+            "url": "https://github.com/purrbot-site/Docs",
+            "description": "The documentation of purrbot.site has been updated.\nBelow can you find some more information.",
+            "footer": {
+              "text": "Page built using MkDocs"
+            },
+            "fields": [
+              {
+                "name": "Commit",
+                "value": "[`${GITHUB_SHA:0:7}`](${{github.event.compare}})",
+                "inline": true
               },
-              "fields": [
-                {
-                  "name": "Commit",
-                  "value": "[`${GITHUB_SHA:0:7}`](${{github.event.compare}})",
-                  "inline": true
-                },
-                {
-                  "name": "Source",
-                  "value": "https://github.com/purrbot-site/Docs",
-                  "inline": true
-                },
-                {
-                  "name": "Result",
-                  "value": "https://docs.purrbot.site",
-                  "inline": true
-                }
-              ]
-            }
+              {
+                "name": "Source",
+                "value": "https://github.com/purrbot-site/Docs",
+                "inline": true
+              },
+              {
+                "name": "Result",
+                "value": "https://docs.purrbot.site",
+                "inline": true
+              }
+            ]
+          }
