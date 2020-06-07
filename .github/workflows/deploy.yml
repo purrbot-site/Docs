@@ -53,12 +53,12 @@ jobs:
             "fields": [
               {
                 "name": "Commit",
-                "value": "[`${GITHUB_SHA:0:7}`](${{github.event.compare}})",
+                "value": "[` ${GITHUB_SHA:0:7} `](${{github.event.compare}})",
                 "inline": true
               },
               {
                 "name": "Source",
-                "value": "https://github.com/purrbot-site/Docs",
+                "value": "<:github:621725336367005710> [GitHub](https://github.com/purrbot-site/Docs)",
                 "inline": true
               },
               {
