@@ -1513,6 +1513,7 @@ Supported are all languages listed <a href="https://github.com/purrbot-site/Tran
 <li><code>.Welcome [icon reset]</code></li>
 <li><code>.Welcome [msg set &lt;message&gt;]</code></li>
 <li><code>.Welcome [msg reset]</code></li>
+<li><code>.Welcome [test]</code></li>
 </ul>
 </blockquote>
 <p>Lets you set different parts of Purr's welcome-feature.<br />
@@ -1538,6 +1539,8 @@ Resets the icon back to <a href="../welcome-images#purr"><code>purr</code></a>.<
 Set the message shown in the welcome channel.</li>
 <li><code>msg reset</code><br />
 Resets the message back to <code>Welcome {mention}!</code></li>
+<li><code>test</code><br />
+Create a preview of the current message (with placeholders parsed) and the image.</li>
 </ul>
 </details>
 <details class="info"><summary>Placeholders</summary><p>The following placeholders can be used in the welcome message to display a different value.</p>
@@ -1550,6 +1553,10 @@ Displays the name of the Discord.</li>
 Mentions the joining Member.</li>
 <li><code>{name}</code><br />
 Displays the name of the joining Member.</li>
+<li><code>{r_mention:&lt;id&gt;}</code><br />
+Displays a role as mention. <code>&lt;id&gt;</code> has to be the ID of the role.</li>
+<li><code>{r_name:&lt;id&gt;}</code><br />
+Displays a role's name. <code>&lt;id&gt;</code> has to be the ID of the role.</li>
 </ul>
 </details>
 <hr />
