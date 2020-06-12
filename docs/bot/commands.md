@@ -328,6 +328,7 @@ Lets you change or reset the bots prefix for your guild. (Default one is `.`)
 > - `.Welcome [icon reset]`
 > - `.Welcome [msg set <message>]`
 > - `.Welcome [msg reset]`
+> - `.Welcome [test]`
 
 Lets you set different parts of Purr's welcome-feature.  
 Providing no arguments will show what the current settings are.
@@ -353,6 +354,8 @@ Providing no arguments will show what the current settings are.
     Set the message shown in the welcome channel.
     - `msg reset`  
     Resets the message back to `Welcome {mention}!`
+    - `test`  
+    Create a preview of the current message (with placeholders parsed) and the image.
 
 ??? info "Placeholders"
     The following placeholders can be used in the welcome message to display a different value.
@@ -365,6 +368,10 @@ Providing no arguments will show what the current settings are.
     Mentions the joining Member.
     - `{name}`  
     Displays the name of the joining Member.
+    - `{r_mention:<id>}`  
+    Displays a role as mention. `<id>` has to be the ID of the role.
+    - `{r_name:<id>}`  
+    Displays a role's name. `<id>` has to be the ID of the role.
 
 ----
 ## Category: Info
