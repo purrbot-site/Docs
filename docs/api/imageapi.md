@@ -238,7 +238,7 @@ Example responses:
     ```json
     {
       "code": 200,
-      "link": "https://purrbot.site/img/nsfw/neko/img/neko_001",
+      "link": "https://purrbot.site/img/nsfw/neko/img/neko_001.jpg",
       "time": 0
     }
     ```
