@@ -171,7 +171,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/sfw/slap/gif/slap_001.gif"
+  "link": "https://purrbot.site/img/sfw/slap/gif/slap_001.gif",
+  "time": 0
 }
 ```
 
@@ -180,7 +181,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/sfw/tail/gif/tail_001.gif"
+  "link": "https://purrbot.site/img/sfw/tail/gif/tail_001.gif",
+  "time": 0
 }
 ```
 
@@ -189,7 +191,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/sfw/tickle/gif/tickle_001.gif"
+  "link": "https://purrbot.site/img/sfw/tickle/gif/tickle_001.gif",
+  "time": 0
 }
 ```
 
@@ -207,7 +210,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/nsfw/anal/gif/anal_001.gif"
+  "link": "https://purrbot.site/img/nsfw/anal/gif/anal_001.gif",
+  "time": 0
 }
 ```
 
@@ -216,7 +220,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/nsfw/blowjob/gif/blowjob_001.gif"
+  "link": "https://purrbot.site/img/nsfw/blowjob/gif/blowjob_001.gif",
+  "time": 0
 }
 ```
 
@@ -225,7 +230,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/nsfw/fuck/gif/fuck_001.gif"
+  "link": "https://purrbot.site/img/nsfw/fuck/gif/fuck_001.gif",
+  "time": 0
 }
 ```
 
@@ -256,7 +262,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/nsfw/pussylick/gif/pussylick_001.gif"
+  "link": "https://purrbot.site/img/nsfw/pussylick/gif/pussylick_001.gif",
+  "time": 0
 }
 ```
 
@@ -265,7 +272,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/nsfw/solo/gif/solo_001.gif"
+  "link": "https://purrbot.site/img/nsfw/solo/gif/solo_001.gif",
+  "time": 0
 }
 ```
 
@@ -274,7 +282,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/nsfw/threesome_fff/gif/threesome_001.gif"
+  "link": "https://purrbot.site/img/nsfw/threesome_fff/gif/threesome_001.gif",
+  "time": 0
 }
 ```
 
@@ -283,7 +292,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/nsfw/threesome_ffm/gif/threesome_001.gif"
+  "link": "https://purrbot.site/img/nsfw/threesome_ffm/gif/threesome_001.gif",
+  "time": 0
 }
 ```
 
@@ -292,7 +302,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/nsfw/threesome_mmf/gif/threesome_001.gif"
+  "link": "https://purrbot.site/img/nsfw/threesome_mmf/gif/threesome_001.gif",
+  "time": 0
 }
 ```
 
@@ -301,7 +312,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/nsfw/yuri/gif/yuri_001.gif"
+  "link": "https://purrbot.site/img/nsfw/yuri/gif/yuri_001.gif",
+  "time": 0
 }
 ```
 
@@ -316,7 +328,8 @@ The API can return one of two error responses, depending on which one is the cas
     ```json
     {
       "code": 403,
-      "message": "Not supported API path"
+      "message": "Not supported API path",
+      "time": 0
     }
     ```
     
@@ -326,6 +339,7 @@ The API can return one of two error responses, depending on which one is the cas
     ```json
     {
       "code": 403,
-      "message": "The selected directory doesn't contain any images"
+      "message": "The selected directory doesn't contain any images",
+      "time": 0
     }
     ```
