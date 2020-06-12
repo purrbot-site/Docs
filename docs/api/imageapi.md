@@ -6,7 +6,7 @@ It is publicly available to use.
 
 !!! warning "Important"
     - All requests are performed through GET requests
-	- No JSON body or similiar is required for the API.
+    - No JSON body or similiar is required for the API.
 
 ## SFW (Safe for work) endpoints
 Contains images that are considered safe for work.
@@ -19,7 +19,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/sfw/background/img/gradient_orange.png"
+  "link": "https://purrbot.site/img/sfw/background/img/gradient_orange.png",
+  "time": 0
 }
 ```
 
@@ -28,7 +29,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purbot.site/img/sfw/bite/gif/bite_001.gif"
+  "link": "https://purbot.site/img/sfw/bite/gif/bite_001.gif",
+  "time": 0
 }
 ```
 
@@ -37,7 +39,18 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/sfw/cuddle/gif/cuddle_001.gif"
+  "link": "https://purrbot.site/img/sfw/cuddle/gif/cuddle_001.gif",
+  "time": 0
+}
+```
+
+### /feed/gif
+Example response:  
+```json
+{
+  "code": 200,
+  "link": "https://purrbot.site/img/sfw/feed/gif/feed_001.gif",
+  "time": 0
 }
 ```
 
@@ -46,7 +59,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/sfw/holo/img/holo_001.jpg"
+  "link": "https://purrbot.site/img/sfw/holo/img/holo_001.jpg",
+  "time": 0
 }
 ```
 
@@ -55,7 +69,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/sfw/hug/gif/hug_001.gif"
+  "link": "https://purrbot.site/img/sfw/hug/gif/hug_001.gif",
+  "time": 0
 }
 ```
 
@@ -64,7 +79,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/sfw/icon/img/purr.png"
+  "link": "https://purrbot.site/img/sfw/icon/img/purr.png",
+  "time": 0
 }
 ```
 
@@ -73,7 +89,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/sfw/kiss/gif/kiss_001.gif"
+  "link": "https://purrbot.site/img/sfw/kiss/gif/kiss_001.gif",
+  "time": 0
 }
 ```
 
@@ -82,7 +99,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/sfw/kitsune/img/kitsune_001.jpg"
+  "link": "https://purrbot.site/img/sfw/kitsune/img/kitsune_001.jpg",
+  "time": 0
 }
 ```
 
@@ -91,27 +109,40 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/sfw/lick/gif/lick_001.gif"
+  "link": "https://purrbot.site/img/sfw/lick/gif/lick_001.gif",
+  "time": 0
 }
 ```
 
 ### /neko/:type
 `:type` can be either `gif` for gifs or `img` for images.
 
-Example response:  
-```json
-{
-  "code": 200,
-  "link": "https://purrbot.site/img/sfw/neko/img/neko_001.jpg"
-}
-```
+Example responses:
+
+=== "Image"
+    ```json
+    {
+      "code": 200,
+      "link": "https://purrbot.site/img/sfw/neko/img/neko_001.jpg",
+      "time": 0
+    }
+    ```
+=== "Gif"
+    ```json
+    {
+      "code": 200,
+      "link": "https://purrbot.site/img/sfw/neko/gif/neko_001.gif",
+      "time": 0
+    }
+    ```
 
 ### /pat/gif
 Example response:  
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/sfw/pat/gif/pat_001.gif"
+  "link": "https://purrbot.site/img/sfw/pat/gif/pat_001.gif",
+  "time": 0
 }
 ```
 
@@ -120,7 +151,18 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/sfw/poke/gif/poke_001.gif"
+  "link": "https://purrbot.site/img/sfw/poke/gif/poke_001.gif",
+  "time": 0
+}
+```
+
+### /senko/img
+Example response:  
+```json
+{
+  "code": 200,
+  "link": "https://purrbot.site/img/sfw/senko/img/senko_001.jpg",
+  "time": 0
 }
 ```
 
@@ -129,7 +171,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/sfw/slap/gif/slap_001.gif"
+  "link": "https://purrbot.site/img/sfw/slap/gif/slap_001.gif",
+  "time": 0
 }
 ```
 
@@ -138,7 +181,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/sfw/tail/gif/tail_001.gif"
+  "link": "https://purrbot.site/img/sfw/tail/gif/tail_001.gif",
+  "time": 0
 }
 ```
 
@@ -147,14 +191,16 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/sfw/tickle/gif/tickle_001.gif"
+  "link": "https://purrbot.site/img/sfw/tickle/gif/tickle_001.gif",
+  "time": 0
 }
 ```
 
 ----
 
 ## NSFW (Not safe for work) endpoints
-Contains images that are considered Not Safe for work.
+Contains images that are considered Not Safe for work.  
+If you are using those images on Discord, make sure to only share them in Channels marked as NSFW.
 
 !!! note "Base-URL"
     https://purrbot.site/api/img/nsfw
@@ -164,7 +210,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/nsfw/anal/gif/anal_001.gif"
+  "link": "https://purrbot.site/img/nsfw/anal/gif/anal_001.gif",
+  "time": 0
 }
 ```
 
@@ -173,7 +220,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/nsfw/blowjob/gif/blowjob_001.gif"
+  "link": "https://purrbot.site/img/nsfw/blowjob/gif/blowjob_001.gif",
+  "time": 0
 }
 ```
 
@@ -182,27 +230,40 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/nsfw/fuck/gif/fuck_001.gif"
+  "link": "https://purrbot.site/img/nsfw/fuck/gif/fuck_001.gif",
+  "time": 0
 }
 ```
 
 ### /neko/:type
 `:type` can be either `gif` for gifs or `img` for images.
 
-Example response:  
-```json
-{
-  "code": 200,
-  "link": "https://purrbot.site/img/nsfw/neko/img/neko_001"
-}
-```
+Example responses:
+
+=== "Image"
+    ```json
+    {
+      "code": 200,
+      "link": "https://purrbot.site/img/nsfw/neko/img/neko_001.jpg",
+      "time": 0
+    }
+    ```
+=== "Gif"
+    ```json
+    {
+      "code": 200,
+      "link": "https://purrbot.site/img/nsfw/neko/gif/neko_001.gif",
+      "time": 0
+    }
+    ```
 
 ### /pussylick/gif
 Example response:  
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/nsfw/pussylick/gif/pussylick_001.gif"
+  "link": "https://purrbot.site/img/nsfw/pussylick/gif/pussylick_001.gif",
+  "time": 0
 }
 ```
 
@@ -211,7 +272,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/nsfw/solo/gif/solo_001.gif"
+  "link": "https://purrbot.site/img/nsfw/solo/gif/solo_001.gif",
+  "time": 0
 }
 ```
 
@@ -220,7 +282,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/nsfw/threesome_fff/gif/threesome_001.gif"
+  "link": "https://purrbot.site/img/nsfw/threesome_fff/gif/threesome_001.gif",
+  "time": 0
 }
 ```
 
@@ -229,7 +292,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/nsfw/threesome_ffm/gif/threesome_001.gif"
+  "link": "https://purrbot.site/img/nsfw/threesome_ffm/gif/threesome_001.gif",
+  "time": 0
 }
 ```
 
@@ -238,7 +302,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/nsfw/threesome_mmf/gif/threesome_001.gif"
+  "link": "https://purrbot.site/img/nsfw/threesome_mmf/gif/threesome_001.gif",
+  "time": 0
 }
 ```
 
@@ -247,7 +312,8 @@ Example response:
 ```json
 {
   "code": 200,
-  "link": "https://purrbot.site/img/nsfw/yuri/gif/yuri_001.gif"
+  "link": "https://purrbot.site/img/nsfw/yuri/gif/yuri_001.gif",
+  "time": 0
 }
 ```
 
@@ -262,7 +328,8 @@ The API can return one of two error responses, depending on which one is the cas
     ```json
     {
       "code": 403,
-      "message": "Not supported API path"
+      "message": "Not supported API path",
+      "time": 0
     }
     ```
     
@@ -272,6 +339,7 @@ The API can return one of two error responses, depending on which one is the cas
     ```json
     {
       "code": 403,
-      "message": "The selected directory doesn't contain any images"
+      "message": "The selected directory doesn't contain any images",
+      "time": 0
     }
     ```
