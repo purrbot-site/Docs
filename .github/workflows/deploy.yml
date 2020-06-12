@@ -38,7 +38,7 @@ jobs:
     - name: Send Discord Notification
       uses: Sniddl/discord-commits@v1.2
       env:
-        SHA: '${ GITHUB_SHA:0:7 }'
+        SHA: '${GITHUB_SHA:0:7}'
       with:
         webhook: ${{ secrets.DISCORD_WEBHOOK }}
         embed: |
