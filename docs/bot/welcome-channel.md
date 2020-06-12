@@ -57,6 +57,8 @@ You can also use placeholders in the message:
 - `{guild}` The name of the Discord
 - `{mention}` The joined user as a mention
 - `{name}` The name of the joined user
+- `{r_mention:<id>}` A role-mention. `<id>` has to be a role id.
+- `{r_name:<id>}` The name of a role. `<id>` has to be a role id.
 
 Reset this using `.welcome msg reset`
 
