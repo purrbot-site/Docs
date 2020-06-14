@@ -35,6 +35,8 @@ jobs:
     if: success()
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
     - name: Send Discord Notification
       uses: Sniddl/discord-commits@v1.2
       with:
