@@ -704,10 +704,10 @@ Use <code>.welcome icon set &lt;icon&gt;</code> where <code>&lt;icon&gt;</code> 
 To do that run <code>.welcome msg set &lt;message&gt;</code> where <code>&lt;message&gt;</code> can be anything you want.<br />
 You can also use placeholders in the message:</p>
 <ul>
-<li><code>{count}</code> The member count of the Discord</li>
-<li><code>{guild}</code> The name of the Discord</li>
+<li><code>{count}</code> / <code>{members}</code> The member count of the Discord</li>
+<li><code>{guild}</code> / <code>{server}</code> The name of the Discord</li>
 <li><code>{mention}</code> The joined user as a mention</li>
-<li><code>{name}</code> The name of the joined user</li>
+<li><code>{name}</code> / <code>{username}</code> The name of the joined user</li>
 <li><code>{r_mention:&lt;id&gt;}</code> A role-mention. <code>&lt;id&gt;</code> has to be a role id.</li>
 <li><code>{r_name:&lt;id&gt;}</code> The name of a role. <code>&lt;id&gt;</code> has to be a role id.</li>
 </ul>
@@ -717,8 +717,8 @@ You can also use placeholders in the message:</p>
 <p><strong>Required step?</strong> No<br />
 <strong>Default</strong>: <code>Uses saved values</code></p>
 </blockquote>
-<p>You can see the current image by just using <code>.welcome</code> without any arguments.<br />
-The image will be shown at the bottom of the embed.</p>
+<p>You can see the current message and image set by running <code>.welcome test</code><br />
+This will generate a message similar to the one which would be shown for joining members.</p>
                 
               
               

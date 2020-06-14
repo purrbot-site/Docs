@@ -1519,7 +1519,7 @@ Supported are all languages listed <a href="https://github.com/purrbot-site/Tran
 <p>Lets you set different parts of Purr's welcome-feature.<br />
 Providing no arguments will show what the current settings are.</p>
 <details class="info"><summary>Command arguments</summary><ul>
-<li><code>bg set &lt;backgroun&gt;</code><br />
+<li><code>bg set &lt;background&gt;</code><br />
 Change the background (<a href="../welcome-images#backgrounds">Available backhrounds</a>).</li>
 <li><code>bg reset</code><br />
 Resets the background back to <a href="../welcome-images#color_white"><code>color_white</code></a>.</li>
@@ -1545,13 +1545,13 @@ Create a preview of the current message (with placeholders parsed) and the image
 </details>
 <details class="info"><summary>Placeholders</summary><p>The following placeholders can be used in the welcome message to display a different value.</p>
 <ul>
-<li><code>{count}</code><br />
+<li><code>{count}</code> / <code>{members}</code><br />
 Displays the current amount of members on the Discord.</li>
-<li><code>{guild}</code><br />
+<li><code>{guild}</code> / <code>{server}</code><br />
 Displays the name of the Discord.</li>
 <li><code>{mention}</code><br />
 Mentions the joining Member.</li>
-<li><code>{name}</code><br />
+<li><code>{name}</code> / <code>{username}</code><br />
 Displays the name of the joining Member.</li>
 <li><code>{r_mention:&lt;id&gt;}</code><br />
 Displays a role as mention. <code>&lt;id&gt;</code> has to be the ID of the role.</li>
