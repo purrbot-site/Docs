@@ -334,7 +334,7 @@ Lets you set different parts of Purr's welcome-feature.
 Providing no arguments will show what the current settings are.
 
 ??? info "Command arguments"
-    - `bg set <backgroun>`  
+    - `bg set <background>`  
     Change the background ([Available backhrounds](../welcome-images#backgrounds)).
     - `bg reset`  
     Resets the background back to [`color_white`](../welcome-images#color_white).
@@ -360,13 +360,13 @@ Providing no arguments will show what the current settings are.
 ??? info "Placeholders"
     The following placeholders can be used in the welcome message to display a different value.
     
-    - `{count}`  
+    - `{count}` / `{members}`  
     Displays the current amount of members on the Discord.
-    - `{guild}`  
+    - `{guild}` / `{server}`  
     Displays the name of the Discord.
     - `{mention}`  
     Mentions the joining Member.
-    - `{name}`  
+    - `{name}` / `{username}`  
     Displays the name of the joining Member.
     - `{r_mention:<id>}`  
     Displays a role as mention. `<id>` has to be the ID of the role.

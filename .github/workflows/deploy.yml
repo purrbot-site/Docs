@@ -51,7 +51,7 @@ jobs:
             "fields": [
               {
                 "name": "Commit",
-                "value": "[\`${GITHUB_SHA:0:7}\`](${{github.event.compare}})",
+                "value": "[${GITHUB_SHA:0:7}](${{github.event.compare}})",
                 "inline": false
               },
               {

@@ -17,7 +17,6 @@ This page lists different credits for all the different things used by either \*
 [MkDocs]: https://github.com/mkdocs/mkdocs
 [MkDocs-Material]: https://github.com/squidfunk/mkdocs-material
 [PyMdown-extensions]: https://github.com/facelessuser/pymdown-extension
-[MkDocs-Material Dark Theme]: https://github.com/enrywhitaker3/mkdocs-material-dark-theme
 
 ### Bot
 Thanks to the following people, who provide their libraries used by \*Purr*
@@ -41,4 +40,3 @@ Thanks to the following people, providing software to make this documentation po
 | [MkDocs]                     | @MkDocs         | BSD-2-Clause | Building this documentation.     |
 | [MkDocs-Material]            | @squidfunk      | MIT          | Theme of this documentation.     |
 | [PyMdown-extensions]         | @facelessuser   | MIT          | Extensions for the documentation |
-| [MkDocs-Material Dark Theme] | @henrywhitaker3 | MIT          | Dark theme for MkDocs-Material   |

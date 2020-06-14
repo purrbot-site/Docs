@@ -53,10 +53,10 @@ You can set your very own welcome message that is shown next to the image.
 To do that run `.welcome msg set <message>` where `<message>` can be anything you want.  
 You can also use placeholders in the message:
 
-- `{count}` The member count of the Discord
-- `{guild}` The name of the Discord
+- `{count}` / `{members}` The member count of the Discord
+- `{guild}` / `{server}` The name of the Discord
 - `{mention}` The joined user as a mention
-- `{name}` The name of the joined user
+- `{name}` / `{username}` The name of the joined user
 - `{r_mention:<id>}` A role-mention. `<id>` has to be a role id.
 - `{r_name:<id>}` The name of a role. `<id>` has to be a role id.
 
@@ -66,5 +66,5 @@ Reset this using `.welcome msg reset`
 > **Required step?** No  
 > **Default**: `Uses saved values`
 
-You can see the current image by just using `.welcome` without any arguments.  
-The image will be shown at the bottom of the embed.
+You can see the current message and image set by running `.welcome test`  
+This will generate a message similar to the one which would be shown for joining members.
