@@ -39,8 +39,6 @@ jobs:
       uses: actions/checkout@v2
     - name: Send Discord Notification
       uses: Sniddl/discord-commits@v1.2
-      env:
-        SHA: "${GITHUB_SHA:0:7}"
       with:
         webhook: ${{ secrets.DISCORD_WEBHOOK }}
         embed: |
@@ -55,7 +53,7 @@ jobs:
             "fields": [
               {
                 "name": "Commit",
-                "value": "[\\`$SHA\\`](${{github.event.compare}})",
+                "value": "[\\`${{github.event.after}}\\`](${{github.event.compare}})",
                 "inline": false
               },
               {
