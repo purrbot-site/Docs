@@ -53,7 +53,7 @@ jobs:
             "fields": [
               {
                 "name": "Commit",
-                "value": "[\\`${{github.event.after}}\\`](${{github.event.compare}})",
+                "value": "[`${{github.event.after}}`](${{github.event.compare}})",
                 "inline": false
               },
               {
