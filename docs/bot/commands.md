@@ -18,6 +18,7 @@ The default prefix is `.` but can be changed with the [[prefix-command|Commands#
 ### [Fun](#category-fun)
 - [Bite](#bite)
 - [Cuddle](#cuddle)
+- [Feed](#feed)
 - [Holo](#holo)
 - [Hug](#hug)
 - [Kiss](#kiss)
@@ -90,6 +91,23 @@ Lets you bite one or multiple mentioned users.
 > - `.Cuddle <@user ...>`
 
 Lets you cuddle one or multiple mentioned users.
+
+----
+### Feed
+> **Permission**: `None`  
+> **Bot requires**: `None`
+> 
+> **Aliases**:
+>
+> - `Food`
+> - `Eat`
+> 
+> **Usage**:
+>
+> - `.Feed <@user>`
+
+Lets you feed someone.  
+The asked user can either accept or deny the request.
 
 ----
 ### Holo
