@@ -19,6 +19,7 @@ The default prefix is `.` but can be changed with the [[prefix-command|Commands#
 - [Bite](#bite)
 - [Cuddle](#cuddle)
 - [Eevee](#eevee)
+- [Feed](#feed)
 - [Holo](#holo)
 - [Hug](#hug)
 - [Kiss](#kiss)
@@ -106,6 +107,23 @@ Lets you cuddle one or multiple mentioned users.
 
 Gives an image of the cute Pokémon Eevee. ([Example](https://purrbot.site/img/sfw/eevee/img/eevee_001.jpg))  
 `--gif` returns a gif of an Eevee.
+
+----
+### Feed
+> **Permission**: `None`  
+> **Bot requires**: `None`
+> 
+> **Aliases**:
+>
+> - `Food`
+> - `Eat`
+> 
+> **Usage**:
+>
+> - `.Feed <@user>`
+
+Lets you feed someone.  
+The asked user can either accept or deny the request.
 
 ----
 ### Holo
