@@ -44,6 +44,28 @@ Example response:
 }
 ```
 
+### /eevee/:type
+`:type` can be either `gif` for gifs or `img` for images.
+
+Example responses:
+
+=== "Image"
+    ```json
+    {
+      "code": 200,
+      "link": "https://purrbot.site/img/sfw/eevee/img/eevee_001.jpg",
+      "time": 0
+    }
+    ```
+=== "Gif"
+    ```json
+    {
+      "code": 200,
+      "link": "https://purrbot.site/img/sfw/eevee/gif/eevee_001.gif",
+      "time": 0
+    }
+    ```
+
 ### /feed/gif
 Example response:  
 ```json
