@@ -6,10 +6,8 @@
 [MkDocs]: https://www.mkdocs.org
 
 [squidfunk]: https://github.com/squidfunk
-[henrywhitaker3]: https://github.com/henrywhitaker3
 [facelessuser]: https://github.com/facelessuser
 
-[Material Dark Theme]: https://github.com/henrywhitaker3/mkdocs-material-dark-theme
 [pymdown]: https://github.com/facelessuser/pymdown-extensions/
 
 [netlifyImg]: https://www.netlify.com/img/global/badges/netlify-dark.svg
@@ -39,5 +37,4 @@ Please take a look at the [formatting help] page for important information about
 A big thank you goes to the following people/groups:
 - [MkDocs] for providing the software, to generate documentation.
 - [squidfunk] for the MkDocs Material Theme.
-- [henrywhitaker3] for the CSS file for the [Material Dark Theme]
 - [facelessuser] for the [PyMdown Extensions][pymdown]
