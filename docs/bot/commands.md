@@ -18,6 +18,7 @@ The default prefix is `.` but can be changed with the [[prefix-command|Commands#
 ### [Fun](#category-fun)
 - [Bite](#bite)
 - [Cuddle](#cuddle)
+- [Eevee](#eevee)
 - [Feed](#feed)
 - [Holo](#holo)
 - [Hug](#hug)
@@ -91,6 +92,21 @@ Lets you bite one or multiple mentioned users.
 > - `.Cuddle <@user ...>`
 
 Lets you cuddle one or multiple mentioned users.
+
+----
+### Eevee
+> **Permission**: `None`  
+> **Bot requires**: `None`
+>
+> **Aliases**: `None`
+>
+> **Usage**:
+>
+> - `.Eevee`
+> - `.Eevee [--gif]`
+
+Gives an image of the cute Pokémon Eevee. ([Example](https://purrbot.site/img/sfw/eevee/img/eevee_001.jpg))  
+`--gif` returns a gif of an Eevee.
 
 ----
 ### Feed
@@ -197,7 +213,7 @@ Lets you lick one or multiple mentioned user.
 > - `.Neko`
 > - `.Neko [--gif]`
 
-Gives an image of a Neko (catgirl). ([Example](https://purrbot.site/img/sfw/neko/img/neko_001.jpg))  
+Gives an image of a Neko (cat girl). ([Example](https://purrbot.site/img/sfw/neko/img/neko_001.jpg))  
 `[--gif]` returns a gif of a Neko.
 
 ----
