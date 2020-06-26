@@ -15,7 +15,7 @@
         <meta name="author" content="Andre_601">
       
       <link rel="shortcut icon" href="../../assets/img/logo.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.3">
     
     
       
@@ -373,6 +373,13 @@
           <li class="md-nav__item">
   <a href="#cuddlegif" class="md-nav__link">
     /cuddle/gif
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eeveetype" class="md-nav__link">
+    /eevee/:type
   </a>
   
 </li>
@@ -805,6 +812,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#eeveetype" class="md-nav__link">
+    /eevee/:type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#feedgif" class="md-nav__link">
     /feed/gif
   </a>
@@ -1057,6 +1071,28 @@ It is publicly available to use.</p>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div></p>
+<h3 id="eeveetype">/eevee/:type<a class="headerlink" href="#eeveetype" title="Permanent link">&para;</a></h3>
+<p><code>:type</code> can be either <code>gif</code> for gifs or <code>img</code> for images.</p>
+<p>Example responses:</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Image</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/eevee/img/eevee_001.jpg&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Gif</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/eevee/gif/eevee_001.gif&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
 <h3 id="feedgif">/feed/gif<a class="headerlink" href="#feedgif" title="Permanent link">&para;</a></h3>
 <p>Example response:<br />
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -1116,7 +1152,7 @@ It is publicly available to use.</p>
 <h3 id="nekotype">/neko/:type<a class="headerlink" href="#nekotype" title="Permanent link">&para;</a></h3>
 <p><code>:type</code> can be either <code>gif</code> for gifs or <code>img</code> for images.</p>
 <p>Example responses:</p>
-<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Image</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Image</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/neko/img/neko_001.jpg&quot;</span><span class="p">,</span>
@@ -1125,7 +1161,7 @@ It is publicly available to use.</p>
 </code></pre></div>
 
 </div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Gif</label><div class="tabbed-content">
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Gif</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/neko/gif/neko_001.gif&quot;</span><span class="p">,</span>
@@ -1218,7 +1254,7 @@ If you are using those images on Discord, make sure to only share them in Channe
 <h3 id="nekotype_1">/neko/:type<a class="headerlink" href="#nekotype_1" title="Permanent link">&para;</a></h3>
 <p><code>:type</code> can be either <code>gif</code> for gifs or <code>img</code> for images.</p>
 <p>Example responses:</p>
-<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Image</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Image</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/neko/img/neko_001.jpg&quot;</span><span class="p">,</span>
@@ -1227,7 +1263,7 @@ If you are using those images on Discord, make sure to only share them in Channe
 </code></pre></div>
 
 </div>
-<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Gif</label><div class="tabbed-content">
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Gif</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/neko/gif/neko_001.gif&quot;</span><span class="p">,</span>
@@ -1288,7 +1324,7 @@ If you are using those images on Discord, make sure to only share them in Channe
 <hr />
 <h2 id="failed-requests">Failed requests<a class="headerlink" href="#failed-requests" title="Permanent link">&para;</a></h2>
 <p>The API can return one of two error responses, depending on which one is the case.</p>
-<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Not existing path</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Not existing path</label><div class="tabbed-content">
 <p>When you connect to an API path which does not exist (e.g. <code>/api/img/doesntexist</code>) will this error response be displayed.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">403</span><span class="p">,</span>
@@ -1298,7 +1334,7 @@ If you are using those images on Discord, make sure to only share them in Channe
 </code></pre></div>
 
 </div>
-<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Path doesn't contain any images</label><div class="tabbed-content">
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">Path doesn't contain any images</label><div class="tabbed-content">
 <p>If the provided path doesn't contain any images, will this error be displayed.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">403</span><span class="p">,</span>
@@ -1367,7 +1403,7 @@ and provided under the
     </div>
     
       <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../../assets/javascripts/bundle.7f4f3c92.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/bundle.4a5ba8d6.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
