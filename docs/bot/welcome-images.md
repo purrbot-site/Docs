@@ -70,6 +70,10 @@ A red gradient (bright red).
 ### Other
 Other available options.
 
+#### rainbow
+A rainbow gradient.  
+![image](https://purrbot.site/img/sfw/background/img/rainbow.png)
+
 #### random
 The option `random` picks one of the above backgrounds randomly for each new image.
 
