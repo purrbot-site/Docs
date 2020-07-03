@@ -19,6 +19,14 @@ Also contains information about how formatting works in these documentations.
 - [:fontawesome-solid-book: Go to page](/contribute)
 
 ## Other links
+**Social**
+
 - [:fontawesome-brands-discord: Discord](https://purrbot.site/discord)
 - [:fontawesome-brands-github: GitHub](https://purrbot.site/github)
 - [:fontawesome-brands-twitter: Twitter](https://purrbot.site/twitter)
+- [:fontawesome-brands-youtube: YouTube](https://purrbot.site/youtube)
+
+**Donate**
+
+- [:fontawesome-brands-patreon: Patreon (Continued donations)](https://patreon.com/andre_601)
+- [:fontawesome-brands-paypal: PayPal (Single donation)](https://purrbot.site/donate)
