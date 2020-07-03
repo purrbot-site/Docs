@@ -34,7 +34,7 @@ nav:
 
 theme:
   name: 'material'
-  custom_dir: 'override'
+  custom_dir: 'theme'
   logo: 'assets/img/logo.png'
   favicon: 'assets/img/logo.png'
   palette:
