@@ -28,6 +28,8 @@ nav:
     - Selfhosting: bot/selfhosting.md
     - Welcome Channel: bot/welcome-channel.md
     - Welcome Images: bot/welcome-images.md
+  - Legal: 
+    - Legal: legal.md
   - Contributing:
     - Contribute: contribute/index.md
     - Formatting Help: contribute/formatting-help.md
