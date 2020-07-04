@@ -1,5 +1,7 @@
 # Legal
 This page contains the general Terms of Service, Privacy Policy and other useful information needed.  
+By visiting it do you agree to have read it.
+
 The site utilizes the following names and terms for simplicity:
 
 | Term      | Description                                                     |
@@ -10,16 +12,18 @@ The site utilizes the following names and terms for simplicity:
 | Owner     | The Developer and official owner of the Bot Account (Andre_601) |
 | Bot       | The Discord Bot \*Purr*                                         |
 | Guild     | The Discord Server the bot may get invited and used in          |
+| Site      | The website located under https://purrbot.site                  |
 
+----
 ## Bot
 
 ### Terms of Service
+These terms apply when inviting or using the Bot.  
 
 #### General Usage
-These terms apply when inviting or using the Bot.  
 The bot may store and use information as described in its Policy to function properly.  
-You aknowledge that you have the right to use and invite the bot to any Discord that you have Manage Server access towards and that this right might get revoked by the Owner.  
-In addition do you also aknowledge that the owner reserves the right to blacklist your Discord Server, if it is considered to break either this terms, or the Terms of Service of Discord.
+You aknowledge that you have the right to use and invite the bot to any Guild that you have Manage Server access towards and that this right might get revoked by the Owner for reasons such as breaking these Terms.  
+In addition do you also aknowledge that the Owner reserves the right to blacklist your Guild, if it is considered to break either this terms, or the Terms of Service of Discord.
 
 #### Intendet age
 The Bot may not be used by individuals under the age of 13 years.  
@@ -61,3 +65,11 @@ The user is solely responsible for the data provided and for its intendet use.
 The API may use sensitive information such as username, nickname, avatar or content of a message to provide core functionalities.  
 These information has to be provided by the user using the API.  
 The information won't be stored anywhere and only anonymous information is logged and cannot be traced back to an individual user.
+
+----
+## Other
+
+### Affiliations
+The Bot, API and Site are not affiliated, supported or made by Discord.  
+The website design was originally created by [Maxee](https://notmaxee.bitbucket.io/) and altered by Andre_601 with his permission.  
+All copyright of used images, icons, symbols or other kinds of graphics belong to their respective copyright owners.
