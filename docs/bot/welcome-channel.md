@@ -53,12 +53,13 @@ You can set your very own welcome message that is shown next to the image.
 To do that run `.welcome msg set <message>` where `<message>` can be anything you want.  
 You can also use placeholders in the message:
 
-- `{count}` / `{members}` The member count of the Discord
-- `{guild}` / `{server}` The name of the Discord
-- `{mention}` The joined user as a mention
-- `{name}` / `{username}` The name of the joined user
+- `{count}` / `{members}` The member count of the Discord.
+- `{guild}` / `{server}` The name of the Discord.
+- `{mention}` The joined user as a mention.
+- `{name}` / `{username}` The name of the joined user.
 - `{r_mention:<id>}` A role-mention. `<id>` has to be a role id.
 - `{r_name:<id>}` The name of a role. `<id>` has to be a role id.
+- `{tag}` The tag (username and discriminator) of the user.
 
 Reset this using `.welcome msg reset`
 
