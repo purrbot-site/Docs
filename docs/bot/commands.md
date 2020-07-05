@@ -406,6 +406,8 @@ Providing no arguments will show what the current settings are.
     Displays a role as mention. `<id>` has to be the ID of the role.
     - `{r_name:<id>}`  
     Displays a role's name. `<id>` has to be the ID of the role.
+    - `{tag}`  
+    Displays the tag (Username and discriminator) of the user.
 
 ----
 ## Category: Info
