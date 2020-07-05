@@ -31,7 +31,7 @@ Furthermore is the usage of commands categorized as NSFW (Not safe for Work) not
 The Owner cannot be made responsible for underaged individuals using the bot and breaking the terms.
 
 #### Liability
-The Owner cannot be made responsible for the Bots usage in way against these or Discord's Terms of Service.  
+The Owner cannot be made responsible for the Bots usage in ways against these or Discord's Terms of Service.  
 The End User aknowledges to have read these Terms and the Terms of Service from Discord and also aknowledges that these Terms and Policy are provided as is without any warranty.  
 Any questions about these Terms should be send through e-mail at support@purrbot.site.
 
