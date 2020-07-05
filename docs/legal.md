@@ -30,10 +30,15 @@ The Bot may not be used by individuals under the age of 13 years.
 Furthermore is the usage of commands categorized as NSFW (Not safe for Work) not allowed for individuals under the legal age of maturity in their country.  
 The Owner cannot be made responsible for underaged individuals using the bot and breaking the terms.
 
+#### Liability
+The Owner cannot be made responsible for the Bots usage in way against these or Discord's Terms of Service.  
+The End User aknowledges to have read these Terms and the Terms of Service from Discord and also aknowledges that these Terms and Policy are provided as is without any warranty.  
+Any questions about these Terms should be send through e-mail at support@purrbot.site.
+
 ### Privacy Policy
 
 #### Stored information
-The bot may collect information such as Guild Id and Ids of Text Channels.  .  
+The bot may collect information such as Guild Id and Ids of Text Channels.  
 No sensitive information - as described in Discord's Developer Terms of Service - is stored and the information stored cannot be traced back to an individual user.
 
 #### Usage of Data
@@ -64,7 +69,10 @@ The user is solely responsible for the data provided and for its intendet use.
 #### Used Information
 The API may use sensitive information such as username, nickname, avatar or content of a message to provide core functionalities.  
 These information has to be provided by the user using the API.  
-The information won't be stored anywhere and only anonymous information is logged and cannot be traced back to an individual user.
+
+#### Stored Information
+No sensitive information - As described in Discord's Developer Terms of Service - is stored.  
+The APIs may log anonymous information, such as performed requests, type of request and towards which endpoint. This information cannot be traced back to any individual.
 
 ----
 ## Other
