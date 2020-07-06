@@ -39,7 +39,7 @@ API used to create dynamic images based on the provided input.
     **Type**: String  
     **Default**: `Some message`
     
-    **Description**
+    **Description**:  
     The actual message that should be displayed.  
     Note that this will **NOT** render markdown and can only render a few selected emojis (No Discord emotes).
     
