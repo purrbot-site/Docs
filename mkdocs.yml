@@ -10,8 +10,8 @@ copyright: |
 
 docs_dir: docs/
 
-repo_name: Andre601/PurrBot
-repo_url: https://github.com/Andre601/PurrBot
+repo_name: purrbot-site/PurrBot
+repo_url: https://github.com/purrbot-site/PurrBot
 edit_uri: https://github.com/purrbot-site/Docs/edit/master/docs
 
 nav:
