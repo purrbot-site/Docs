@@ -41,6 +41,8 @@ Any questions about these Terms should be send through e-mail at support@purrbot
 The bot may collect information such as Guild Id and Ids of Text Channels.  
 No sensitive information - as described in Discord's Developer Terms of Service - is stored and the information stored cannot be traced back to an individual user.
 
+The bot may also store data of aforementioned types for a certain time in its internal caching (10 Minutes from time of caching).
+
 #### Usage of Data
 The stored information may be used to provide core functionalities within the bot such as welcoming joining members in a specific channel, or providing responses in a specific language.
 
