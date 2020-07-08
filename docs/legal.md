@@ -2,7 +2,7 @@
 This page contains the general Terms of Service, Privacy Policy and other useful information needed.  
 By visiting it do you agree to have read it.
 
-The site utilizes the following names and terms for simplicity:
+## Terminology
 
 | Term      | Description                                                     |
 | --------- | --------------------------------------------------------------- |
@@ -37,19 +37,31 @@ Any questions about these Terms should be send through e-mail at support@purrbot
 
 ### Privacy Policy
 
-#### Stored information
-The bot may collect information such as Guild Id and Ids of Text Channels.  
-No sensitive information - as described in Discord's Developer Terms of Service - is stored and the information stored cannot be traced back to an individual user.
+#### Automatically stored information
+The bot may automatically store the Guild Id and any default setting as described in the [FAQ](../bot/faq) when it is invited to a Guild.  
+It doesn't store any other information automatically unless intentionally provided by the User (Usually through usage of commands).
 
-The bot may also store data of aforementioned types for a certain time in its internal caching (10 Minutes from time of caching).
+#### Information stored by commands
+The bot may store and/or update stored information when provided by those through the usage of commands.  
+Currently stored informations include the ID of the Welcome Text Channel, the Command prefix, the Welcome message, Image and Icon.
+
+#### Temporary stored information
+The information described in the section above may be stored temporary into the Bots internal Caching. The stored information remains in cache for 10 Minutes after saving.  
+The cached information may be removed prematurely by methods such as removing the Bot from a Guild.
 
 #### Usage of Data
-The stored information may be used to provide core functionalities within the bot such as welcoming joining members in a specific channel, or providing responses in a specific language.
+The stored information may be used for functionalities such as command handling and the Bots welcome feature.  
+No usage of the Information outside of the bot is done.
 
 #### Removal of Data
-You may get the stored information removed by either kicking the Bot from the Guild, or by requesting a removal through e-mail at support@purrbot.site.  
-Note that requesting removal of data through e-mail may get the bot removed from your Guild as the information is required for features listed in the previous section of this Policy.  
-You may not request removal of stored information if you're not the Guild Owner or a member without sufficient rights to kick/ban Members and we may request confirmation of your identity, when requesting removal through E-Mail.
+Stored Information may be removed by one of the below methods:
+
+- Kicking or Banning the Bot from your Guild. Note that the bot has to be online to remove the data successfully.
+- Requesting removal of data through E-Mail at support@purrbot.site
+
+!!! info
+    Requests made through E-Mail may require additional information from you, to verify your identity and Ownership of a Guild.  
+    Only Guildowners may request removal of data through E-Mail while any individual with sufficient permissions may remove the bot from a Guild they are part of.
 
 ----
 ## API
