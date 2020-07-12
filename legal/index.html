@@ -1084,10 +1084,11 @@ Any questions about these Terms should be send through e-mail at <a href="&#109;
 It doesn't store any other information automatically unless intentionally provided by the User (Usually through usage of commands).</p>
 <h4 id="information-stored-by-commands">Information stored by commands<a class="headerlink" href="#information-stored-by-commands" title="Permanent link">&para;</a></h4>
 <p>The bot may store and/or update stored information when provided by those through the usage of commands.<br />
-Currently stored informations include the ID of the Welcome Text Channel, the Command prefix, the Welcome message, Image and Icon.</p>
+Currently stored informations include the ID of the Welcome Text Channel, the Command prefix, the Welcome message, Image and Icon and the used language for responses.</p>
 <h4 id="temporary-stored-information">Temporary stored information<a class="headerlink" href="#temporary-stored-information" title="Permanent link">&para;</a></h4>
-<p>The information described in the section above may be stored temporary into the Bots internal Caching. The stored information remains in cache for 10 Minutes after saving.<br />
-The cached information may be removed prematurely by methods such as removing the Bot from a Guild.</p>
+<p>The aforementioned information are kept within a internal caching mechanic of the bot for 10 minutes.<br />
+After this time is the information automatically dropped and only re-added as long as the bot remains on the Guild.</p>
+<p>The data may be removed from cache prematurely by kicking the bot from the Guild.</p>
 <h4 id="usage-of-data">Usage of Data<a class="headerlink" href="#usage-of-data" title="Permanent link">&para;</a></h4>
 <p>The stored information may be used for functionalities such as command handling and the Bots welcome feature.<br />
 No usage of the Information outside of the bot is done.</p>
@@ -1099,6 +1100,7 @@ No usage of the Information outside of the bot is done.</p>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
+<p>We try our best to remove the stored information from our database when removal was requested as described above, but due to the nature of the bot may the data not be removed in cases, where it is kicked while it remains offline, or communication to the database gets temporary lost.</p>
 <p>Requests made through E-Mail may require additional information from you, to verify your identity and Ownership of a Guild.<br />
 Only Guildowners may request removal of data through E-Mail while any individual with sufficient permissions may remove the bot from a Guild they are part of.</p>
 </div>
