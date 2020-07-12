@@ -43,11 +43,13 @@ It doesn't store any other information automatically unless intentionally provid
 
 #### Information stored by commands
 The bot may store and/or update stored information when provided by those through the usage of commands.  
-Currently stored informations include the ID of the Welcome Text Channel, the Command prefix, the Welcome message, Image and Icon.
+Currently stored informations include the ID of the Welcome Text Channel, the Command prefix, the Welcome message, Image and Icon and the used language for responses.
 
 #### Temporary stored information
-The information described in the section above may be stored temporary into the Bots internal Caching. The stored information remains in cache for 10 Minutes after saving.  
-The cached information may be removed prematurely by methods such as removing the Bot from a Guild.
+The aforementioned information are kept within a internal caching mechanic of the bot for 10 minutes.  
+After this time is the information automatically dropped and only re-added as long as the bot remains on the Guild.
+
+The data may be removed from cache prematurely by kicking the bot from the Guild.
 
 #### Usage of Data
 The stored information may be used for functionalities such as command handling and the Bots welcome feature.  
@@ -60,6 +62,8 @@ Stored Information may be removed by one of the below methods:
 - Requesting removal of data through E-Mail at support@purrbot.site
 
 !!! info
+    We try our best to remove the stored information from our database when removal was requested as described above, but due to the nature of the bot may the data not be removed in cases, where it is kicked while it remains offline, or communication to the database gets temporary lost.
+    
     Requests made through E-Mail may require additional information from you, to verify your identity and Ownership of a Guild.  
     Only Guildowners may request removal of data through E-Mail while any individual with sufficient permissions may remove the bot from a Guild they are part of.
 
