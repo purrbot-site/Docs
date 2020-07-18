@@ -25,7 +25,7 @@ The bot may store and use information as described in its Policy to function pro
 You aknowledge that you have the right to use and invite the bot to any Guild that you have Manage Server access towards and that this right might get revoked by the Owner for reasons such as breaking these Terms.  
 In addition do you also aknowledge that the Owner reserves the right to blacklist your Guild, if it is considered to break either this terms, or the Terms of Service of Discord.
 
-#### Intendet age
+#### Intended age
 The Bot may not be used by individuals under the age of 13 years.  
 Furthermore is the usage of commands categorized as NSFW (Not safe for Work) not allowed for individuals under the legal age of maturity in their country.  
 The Owner cannot be made responsible for underaged individuals using the bot and breaking the terms.
@@ -62,7 +62,8 @@ Stored Information may be removed by one of the below methods:
 - Requesting removal of data through E-Mail at support@purrbot.site
 
 !!! info
-    We try our best to remove the stored information from our database when removal was requested as described above, but due to the nature of the bot may the data not be removed in cases, where it is kicked while it remains offline, or communication to the database gets temporary lost.
+    We try our best to remove the stored information from our database when removal was requested as described above, but due to the nature of the bot may the data not be removed in cases, where it is kicked while it remains offline, or communication to the database gets temporary lost.  
+    You may contact us through e-mail for if your data was removed and if not can you request removal.
     
     Requests made through E-Mail may require additional information from you, to verify your identity and Ownership of a Guild.  
     Only Guildowners may request removal of data through E-Mail while any individual with sufficient permissions may remove the bot from a Guild they are part of.
@@ -75,7 +76,7 @@ Stored Information may be removed by one of the below methods:
 #### General Usage
 These terms apply by either connecting to https://purrbot.site/api, one of its sub-directories or by utilizing the API either by your own software or through the Bot \*Purr*.  
 
-#### Intendet Use
+#### Intended Use
 The APIs are intendet to be used for software and projects mostly aimed at Discord, but may also be used on other sites and services, as long as the targeted site/service allows this.
 
 #### Liability
@@ -93,9 +94,16 @@ No sensitive information - As described in Discord's Developer Terms of Service 
 The APIs may log anonymous information, such as performed requests, type of request and towards which endpoint. This information cannot be traced back to any individual.
 
 ----
-## Other
+## Website
 
 ### Affiliations
 The Bot, API and Site are not affiliated, supported or made by Discord.  
 The website design was originally created by [Maxee](https://notmaxee.bitbucket.io/) and altered by Andre_601 with his permission.  
 All copyright of used images, icons, symbols or other kinds of graphics belong to their respective copyright owners.
+
+### Usage of cookies
+The website may use small text files (So called cookies) to speed up and improve loading time and display of the site's content by storing specific information in said files.  
+These cookies are generated and managed by CloudFlare and are stored inside your Browser.  
+You may disable the creation and storage of cookies by disabling them in your Browser-Settings, but please note, that this may have a negative impact on your overall experience on the site.
+
+You may allow temporary creation and usage of cookies, by opening the site in a Private Browser Session, which deletes any cookies after it was closed.
