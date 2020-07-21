@@ -15,7 +15,6 @@ API used to create dynamic images based on the provided input.
 
 !!! note "Info"
     - Returns an image on success and JSON on failure.
-    - All provided values need to be String.
     - Leave away a field and value to use the default option.
 
 ### Fields
@@ -89,7 +88,6 @@ API used to create dynamic images based on the provided input.
 
 !!! note "Info"
     - Returns an image on success and JSON on failure.
-    - All provided values need to be String.
     - Leave away a field and value to use the default option.
 
 ### Fields
