@@ -53,11 +53,11 @@ jobs:
             "fields": [
               {
                 "name": "Commit",
-                "value": "[`${{github.event.after}}`](${{github.event.compare}})",
+                "value": "[`${{ github.event.after }}`](${{ github.event.compare }})",
                 "inline": false
               },
               {
-                "name": "<:github:621725336367005710> Source",
+                "name": "Source",
                 "value": "https://github.com/purrbot-site/Docs",
                 "inline": false
               },
