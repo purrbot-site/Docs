@@ -10,10 +10,8 @@
 
 [pymdown]: https://github.com/facelessuser/pymdown-extensions/
 
-[netlifyImg]: https://www.netlify.com/img/global/badges/netlify-dark.svg
+[netlifyImg]: https://www.netlify.com/img/press/logos/full-logo-light.svg
 [netlify]: https://www.netlify.com
-
-[![netlifyImg]][netlify]
 
 # Docs
 This repository is home of the content found on https://docs.purrbot.site  
@@ -32,6 +30,11 @@ Any pull request which alters any file other than the above mentioned ones will 
 We use [MkDocs] to turn Markdown files into static HTML pages.  
 MkDocs *mostly* follows the basic markdown formatting with some minor exceptions and alterations.  
 Please take a look at the [formatting help] page for important information about differences compared to the normal markdown syntax.
+
+## Builds
+We use [Netlify] to generate and deploy previews of Pull requests in order to see, if the PR in question would break something in terms of look and design.
+
+[![netlifyImg]][netlify]
 
 ## Credits
 A big thank you goes to the following people/groups:
