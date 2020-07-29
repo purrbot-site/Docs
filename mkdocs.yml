@@ -17,9 +17,7 @@ edit_uri: https://github.com/purrbot-site/Docs/edit/master/docs
 nav:
   - Welcome: index.md
   - API:
-    - API: api/index.md
-    - PurrBotAPI: api/purrbotapi.md
-    - ImageAPI: api/imageapi.md
+    - ImageAPI: api/index.md
   - Bot:
     - Wiki: bot/index.md
     - Commands: bot/commands.md
