@@ -10,16 +10,18 @@ The API is [open source](https://github.com/purrbot-site/ImageAPI) and contribut
 !!! note "Base URL"
     https://purrbot.site/api
 
-## /quote
+## POST
+These API endpoints can only be used through `POST` requests.
+
+### /quote
 *Generates images that look like Discord messages.*
 
 !!! info
-    - **Request Type**: `POST`
     - **Responses:
         - Success: `Image`
         - Failure: `JSON`
 
-### Fields
+#### Fields
 
 === "avatar"
     **Type**: String  
@@ -66,7 +68,7 @@ The API is [open source](https://github.com/purrbot-site/ImageAPI) and contribut
     **Description**:  
     The username to display.
 
-### Example
+#### Example
 
 === "Request"
     <br>
@@ -85,16 +87,15 @@ The API is [open source](https://github.com/purrbot-site/ImageAPI) and contribut
     <br>
     <img alt="quote" src="/assets/img/quote.png">
 
-## /status
+### /status
 *Adds a status icon to the provided Avatar.*
 
 !!! info
-    - **Request Type**: `POST`
     - **Responses:
         - Success: `Image`
         - Failure: `JSON`
 
-### Fields
+#### Fields
 
 === "avatar"
     **Type**: String  
@@ -118,7 +119,7 @@ The API is [open source](https://github.com/purrbot-site/ImageAPI) and contribut
     The status to display with the icon.  
     Available are `online`, `idle`, `do_not_disturb` (or `dnd`), `streaming` and `offline`.
 
-### Example
+#### Example
 
 === "Request"
     <br>
@@ -133,11 +134,11 @@ The API is [open source](https://github.com/purrbot-site/ImageAPI) and contribut
     <br>
     <img alt="status" src="/assets/img/status.png" style="width: 80px; height: 80px;">
 
-## SFW (Safe for work) endpoints
-Contains images that are considered safe for work.
+## GET <small>(SFW (Safe for work) endpoints)</small>
+Contains images that are considered safe for work.  
+You can access those endpoints through simple `GET` requests.
 
 !!! info
-    - **Request Type**: `GET`
     - **Responses:
         - Success: `JSON`
         - Failure: `JSON`
@@ -348,12 +349,12 @@ Example response:
 
 ----
 
-## NSFW (Not safe for work) endpoints
+## GET <small>(NSFW (Not safe for work) endpoints)</small>
 Contains images that are considered Not Safe for work.  
-If you are using those images on Discord, make sure to only share them in Channels marked as NSFW.
+If you are using those images on Discord, make sure to only share them in Channels marked as NSFW.  
+You can access those endpoints through simple `GET` requests.
 
 !!! info
-    - **Request Type**: `GET`
     - **Responses:
         - Success: `JSON`
         - Failure: `JSON`
