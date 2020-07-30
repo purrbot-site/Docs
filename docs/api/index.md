@@ -17,7 +17,7 @@ These API endpoints can only be used through `POST` requests.
 *Generates images that look like Discord messages.*
 
 !!! info
-    - **Responses:
+    - **Responses**:
         - Success: `Image`
         - Failure: `JSON`
 
@@ -91,7 +91,7 @@ These API endpoints can only be used through `POST` requests.
 *Adds a status icon to the provided Avatar.*
 
 !!! info
-    - **Responses:
+    - **Responses**:
         - Success: `Image`
         - Failure: `JSON`
 
@@ -139,7 +139,7 @@ Contains images that are considered safe for work.
 You can access those endpoints through simple `GET` requests.
 
 !!! info
-    - **Responses:
+    - **Responses**:
         - Success: `JSON`
         - Failure: `JSON`
 
@@ -507,6 +507,7 @@ The API can return one of two error responses, depending on which one is the cas
       "time": 0
     }
     ```
+
 === "403: Invalid or empty JSON body provided."
     Your request didn't contain any JSON (Not even just `{}`) or the JSON was invalid.  
     Common issues of invalid JSON are missing commas or similar.
