@@ -13,13 +13,13 @@ The API is [open source](https://github.com/purrbot-site/ImageAPI) and contribut
 ## POST
 These API endpoints can only be used through `POST` requests.
 
-### /quote
-*Generates images that look like Discord messages.*
-
 !!! info
-    - **Responses:
+    - **Responses**:
         - Success: `Image`
         - Failure: `JSON`
+
+### /quote
+*Generates images that look like Discord messages.*
 
 #### Fields
 
@@ -90,11 +90,6 @@ These API endpoints can only be used through `POST` requests.
 ### /status
 *Adds a status icon to the provided Avatar.*
 
-!!! info
-    - **Responses:
-        - Success: `Image`
-        - Failure: `JSON`
-
 #### Fields
 
 === "avatar"
@@ -139,7 +134,7 @@ Contains images that are considered safe for work.
 You can access those endpoints through simple `GET` requests.
 
 !!! info
-    - **Responses:
+    - **Responses**:
         - Success: `JSON`
         - Failure: `JSON`
 
@@ -355,7 +350,7 @@ If you are using those images on Discord, make sure to only share them in Channe
 You can access those endpoints through simple `GET` requests.
 
 !!! info
-    - **Responses:
+    - **Responses**:
         - Success: `JSON`
         - Failure: `JSON`
 
@@ -484,7 +479,7 @@ Example response:
 ----
 
 ## Failed requests
-The API can return one of two error responses, depending on which one is the case.
+The API can return one of the following HTTP error codes.
 
 === "403: Not supported API path"
     When you connect to an API path which does not exist (e.g. `/api/img/doesntexist`) will this error response be displayed.
@@ -507,6 +502,7 @@ The API can return one of two error responses, depending on which one is the cas
       "time": 0
     }
     ```
+
 === "403: Invalid or empty JSON body provided."
     Your request didn't contain any JSON (Not even just `{}`) or the JSON was invalid.  
     Common issues of invalid JSON are missing commas or similar.
@@ -514,7 +510,7 @@ The API can return one of two error responses, depending on which one is the cas
     ```json
     {
       "code": 403,
-      "message": Invalid or empty JSON body provided.",
+      "message": "Invalid or empty JSON body provided.",
       "time": 0
     }
     ```
@@ -526,6 +522,7 @@ The API can return one of two error responses, depending on which one is the cas
     ```json
     {
       "code": 500,
-      "message": "Couldn't generate image. Make sure the values are valid!"
+      "message": "Couldn't generate image. Make sure the values are valid!",
+      "time": 0
     }
     ```
