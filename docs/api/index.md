@@ -522,6 +522,7 @@ The API can return one of the following HTTP error codes.
     ```json
     {
       "code": 500,
-      "message": "Couldn't generate image. Make sure the values are valid!"
+      "message": "Couldn't generate image. Make sure the values are valid!",
+      "time": 0
     }
     ```
