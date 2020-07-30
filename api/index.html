@@ -1221,18 +1221,18 @@ The API is <a href="https://github.com/purrbot-site/ImageAPI">open source</a> an
 </div>
 <h2 id="post">POST<a class="headerlink" href="#post" title="Permanent link">&para;</a></h2>
 <p>These API endpoints can only be used through <code>POST</code> requests.</p>
-<h3 id="quote">/quote<a class="headerlink" href="#quote" title="Permanent link">&para;</a></h3>
-<p><em>Generates images that look like Discord messages.</em></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <ul>
-<li>**Responses:<ul>
+<li><strong>Responses</strong>:<ul>
 <li>Success: <code>Image</code></li>
 <li>Failure: <code>JSON</code></li>
 </ul>
 </li>
 </ul>
 </div>
+<h3 id="quote">/quote<a class="headerlink" href="#quote" title="Permanent link">&para;</a></h3>
+<p><em>Generates images that look like Discord messages.</em></p>
 <h4 id="fields">Fields<a class="headerlink" href="#fields" title="Permanent link">&para;</a></h4>
 <div class="tabbed-set" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">avatar</label><div class="tabbed-content">
 <p><strong>Type</strong>: String<br />
@@ -1294,16 +1294,6 @@ This request was made on march, 9th 2020.<br />
 </div>
 <h3 id="status">/status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h3>
 <p><em>Adds a status icon to the provided Avatar.</em></p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<ul>
-<li>**Responses:<ul>
-<li>Success: <code>Image</code></li>
-<li>Failure: <code>JSON</code></li>
-</ul>
-</li>
-</ul>
-</div>
 <h4 id="fields_1">Fields<a class="headerlink" href="#fields_1" title="Permanent link">&para;</a></h4>
 <div class="tabbed-set" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">avatar</label><div class="tabbed-content">
 <p><strong>Type</strong>: String<br />
@@ -1345,7 +1335,7 @@ You can access those endpoints through simple <code>GET</code> requests.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <ul>
-<li>**Responses:<ul>
+<li><strong>Responses</strong>:<ul>
 <li>Success: <code>JSON</code></li>
 <li>Failure: <code>JSON</code></li>
 </ul>
@@ -1532,7 +1522,7 @@ You can access those endpoints through simple <code>GET</code> requests.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <ul>
-<li>**Responses:<ul>
+<li><strong>Responses</strong>:<ul>
 <li>Success: <code>JSON</code></li>
 <li>Failure: <code>JSON</code></li>
 </ul>
@@ -1643,7 +1633,7 @@ You can access those endpoints through simple <code>GET</code> requests.</p>
 </code></pre></div></p>
 <hr />
 <h2 id="failed-requests">Failed requests<a class="headerlink" href="#failed-requests" title="Permanent link">&para;</a></h2>
-<p>The API can return one of two error responses, depending on which one is the case.</p>
+<p>The API can return one of the following HTTP error codes.</p>
 <div class="tabbed-set" data-tabs="8:4"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><label for="__tabbed_8_1">403: Not supported API path</label><div class="tabbed-content">
 <p>When you connect to an API path which does not exist (e.g. <code>/api/img/doesntexist</code>) will this error response be displayed.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -1656,14 +1646,21 @@ You can access those endpoints through simple <code>GET</code> requests.</p>
 </div>
 <input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><label for="__tabbed_8_2">403: The selected directory doesn't contain any images</label><div class="tabbed-content">
 <p>If the provided path doesn't contain any images, will this error be displayed.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">403</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected directory doesn&#39;t contain any images&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
+<span class="p">}</span>
+</code></pre></div>
+
 </div>
 <input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><label for="__tabbed_8_3">403: Invalid or empty JSON body provided.</label><div class="tabbed-content">
 <p>Your request didn't contain any JSON (Not even just <code>{}</code>) or the JSON was invalid.<br />
 Common issues of invalid JSON are missing commas or similar.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">403</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="err">Invalid</span> <span class="err">or</span> <span class="err">empty</span> <span class="err">JSON</span> <span class="err">body</span> <span class="err">provided.</span><span class="s2">&quot;,</span>
-<span class="s2">  &quot;</span><span class="err">time&quot;</span><span class="p">:</span> <span class="mi">0</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Invalid or empty JSON body provided.&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
 
@@ -1673,7 +1670,8 @@ Common issues of invalid JSON are missing commas or similar.</p>
 This is often the case when things like the Avatar URL lead to an invalid page.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Couldn&#39;t generate image. Make sure the values are valid!&quot;</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Couldn&#39;t generate image. Make sure the values are valid!&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
 
