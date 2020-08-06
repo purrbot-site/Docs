@@ -21,16 +21,17 @@ nav:
   - Bot:
     - Wiki: bot/index.md
     - Commands: bot/commands.md
-    - Credits: bot/credits.md
     - FAQ: bot/faq.md
     - Selfhosting: bot/selfhosting.md
     - Welcome Channel: bot/welcome-channel.md
     - Welcome Images: bot/welcome-images.md
-  - Legal: 
-    - Legal: legal.md
   - Contributing:
     - Contribute: contribute/index.md
     - Formatting Help: contribute/formatting-help.md
+  - Credits:
+    - Credits: credits.md
+  - Legal: 
+    - Legal: legal.md
 
 theme:
   name: 'material'
