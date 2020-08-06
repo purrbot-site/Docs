@@ -26,7 +26,7 @@ See what Software is behind both the bot and this documentation.
 ## Legal
 All the legal details about the Bot, API and website.
 
-- [:fontawesoma-solid-gavel: Go to page](/legal)
+- [:fontawesome-solid-gavel: Go to page](/legal)
 
 ## Other links
 **Social**
