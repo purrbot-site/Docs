@@ -18,6 +18,16 @@ Also contains information about how formatting works in these documentations.
 
 - [:fontawesome-solid-book: Go to page](/contribute)
 
+## Credits
+See what Software is behind both the bot and this documentation.
+
+- [:fontawesome-solid-heart: Go to page](/credits)
+
+## Legal
+All the legal details about the Bot, API and website.
+
+- [:fontawesome-solid-gavel: Go to page](/legal)
+
 ## Other links
 **Social**
 
