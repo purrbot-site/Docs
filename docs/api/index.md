@@ -200,6 +200,16 @@ Example response:
 }
 ```
 
+### /img/sfw/fluff/gif
+Example response:  
+```json
+{
+  "code": 200,
+  "link": "https://purrbot.site/img/sfw/fluff/gif/fluff_001.gif",
+  "time": 0
+}
+```
+
 ### /img/sfw/holo/img
 Example response:  
 ```json
