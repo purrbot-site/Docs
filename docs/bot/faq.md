@@ -1,6 +1,6 @@
 [Discord]: https://purrbot.site/discord
 [nekos.life]: https://nekos.life
-[patreon]: https://patreon.com/purrbot
+[patreon]: https://patreon.com/andre_601
 [invite]: https://purrbot.site/invite
 
 This page contains commonly asked questions.  
