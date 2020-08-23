@@ -476,6 +476,16 @@ Example response:
 }
 ```
 
+### /img/nsfw/yaoi/gif
+Example response:  
+```json
+{
+  "code": 200,
+  "link": "https://purrbot.site/img/nsfw/yaoi/gif/yaoi_001.gif",
+  "time": 0
+}
+```
+
 ### /img/nsfw/yuri/gif
 Example response:  
 ```json
@@ -487,7 +497,6 @@ Example response:
 ```
 
 ----
-
 ## Failed requests
 The API can return one of the following HTTP error codes.
 
