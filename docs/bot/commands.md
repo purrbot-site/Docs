@@ -20,6 +20,7 @@ The default prefix is `.` but can be changed with the [[prefix-command|Commands#
 - [Cuddle](#cuddle)
 - [Eevee](#eevee)
 - [Feed](#feed)
+- [Fluff](#fluff)
 - [Holo](#holo)
 - [Hug](#hug)
 - [Kiss](#kiss)
@@ -28,6 +29,7 @@ The default prefix is `.` but can be changed with the [[prefix-command|Commands#
 - [Neko](#neko)
 - [Pat](#pat)
 - [Poke](#poke)
+- [Senko](#senko)
 - [Ship](#ship)
 - [Slap](#slap)
 - [Tail](#tail)
@@ -51,6 +53,8 @@ The default prefix is `.` but can be changed with the [[prefix-command|Commands#
 - [User](#user)
 
 ### [NSFW](#category-nsfw)
+- [Blowjob](#blowjob)
+- [Cum](#cum)
 - [Fuck](#fuck)
 - [Lewd](#lewd)
 - [Pussylick](#pussylick)
@@ -123,6 +127,22 @@ Gives an image of the cute Pokémon Eevee. ([Example](https://purrbot.site/img/s
 > - `.Feed <@user>`
 
 Lets you feed someone.  
+The asked user can either accept or deny the request.
+
+----
+### Fluff
+> **Permission**: `None`  
+> **Bot requires**: `None`
+>
+> **Aliases**:
+>
+> - `Fluffing`
+>
+> **Usage**:
+>
+> - `.Fluff <@user>`
+
+Lets you ask someone if you can fluff their tail.  
 The asked user can either accept or deny the request.
 
 ----
@@ -246,6 +266,21 @@ Lets you pat one or multiple mentioned user.
 > - `.Poke <@user ...>`
 
 Lets you poke one or multiple mentioned user.
+
+----
+### Senko
+> **Permission**: `None`  
+> **Bot requires**: `None`
+>
+> **Aliases**:
+>
+> - `Senko-san`
+>
+> **Usage**:
+>
+> - `.Senko`
+
+Gives a random image of the divine messenger Senko-San ([Example](https://purrbot.site/img/sfw/senko/img/senko_001.jpg))
 
 ----
 ### Ship
@@ -582,6 +617,43 @@ Shows information about yourself or a mentioned user.
 ----
 ## Category: NSFW
 
+### Blowjob
+> **Permission**: `None`  
+> **Bot requires**: `None`  
+> 
+> **Aliases**:
+>
+> - `Bj`
+> - `Bjob`
+> - `Succ`
+> 
+> **Usage**:
+>
+> - `.Blowjob <@user>`
+
+**This command can only be run in NSFW-labeled channels!**
+
+Lets you ask the mentioned user, if you can give them a blowjob.  
+The user can accept or deny the request.
+
+----
+### Cum
+> **Permission**: `None`  
+> **Bot requires**: `None`  
+> 
+> **Aliases**:
+>
+> - `Cumming`
+> 
+> **Usage**:
+>
+> - `.Cum`
+
+**This command can only be run in NSFW-labeled channels!**
+
+Returns a random gif of someone cumming.
+
+----
 ### Fuck
 > **Permission**: `None`  
 > **Bot requires**: `None`  
@@ -595,13 +667,14 @@ Shows information about yourself or a mentioned user.
 > - `.Fuck <@user>`
 > - `.Fuck <@user> --anal`
 > - `.Fuck <@user> --normal`
+> - `.Fuck <@user> --yaoi`
 > - `.Fuck <@user> --yuri`
 
 **This command can only be run in NSFW-labeled channels!**
 
 Asks the mentioned user to have sex with you.  
 When no arguments are provided can the mentioned user choose which type of sex would be used.  
-Providing `--anal`, `--normal` or `--yuri` however pre-selects the option.
+Providing `--anal`, `--normal`, `--yaoi` or `--yuri` however pre-selects the option.
 
 ----
 ### Lewd
