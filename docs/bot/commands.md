@@ -360,7 +360,7 @@ Lets you tickle one or multiple users.
 > - `.Lang [reset]`
 
 Lets you change or reset the current language set in a Discord.  
-Supported are all languages listed [here](https://github.com/purrbot-site/Translations#supported-languages)
+A list of currently worked on (and completed) translations can be found on https://lang.purrbot.site.
 
 ----
 ### Prefix
