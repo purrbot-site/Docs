@@ -558,7 +558,7 @@ Returns the delay of editing the message, the delay to the API and the WebSocket
 > - `.Quote <MessageID>`
 > - `.Quote <MessageID> [#channel]`
 
-Quotes a message from a user, using the [PurrBotAPI](/api/purrbotapi#quote) to generate an image looking like a Discord-message.  
+Quotes a message from a user, using the [PurrBotAPI](/api#quote) to generate an image looking like a Discord-message.  
 `<MessageID>` is the ID of the message that should be quoted.  
 `[#channel]` is only needed, if the message is in a channel that isn't the same as the one you execute the command in.
 
