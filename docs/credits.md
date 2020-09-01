@@ -25,7 +25,7 @@ Thanks to the following people, who provide their libraries used by \*Purr*
 | ------------------ | ---------------- | ---------- | ------------------------------------------------------------- |
 | [Caffeine]         | @ben-manes       | Apache 2.0 | Caching various different information.                        |
 | [Discord-Webhooks] | @MinnDevelopment | Apache 2.0 | Sending Webhook messages in Discord.                          |
-| [DServices4J]      | @Andre601        | MIT        | Posting Guild counst and other info to [Discordservices.net]. |
+| [DServices4J]      | @Andre601        | MIT        | Posting Guild counts and other info to [Discordservices.net]. |
 | [Gson]             | @google          | Apache 2.0 | Parsing and (de)serialization of JSON.                        |
 | [JavaBotBlockAPI]  | @Andre601        | MIT        | Posting Guild counts through [BotBlock.org].                  |
 | [JDA]              | @DV8FromTheWorld | Apache 2.0 | Logging into Discord and using their API.                     |
