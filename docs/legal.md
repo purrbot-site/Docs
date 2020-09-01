@@ -38,16 +38,25 @@ Any questions about these Terms should be send through e-mail at support@purrbot
 ### Privacy Policy
 
 #### Automatically stored information
-The bot may automatically store the Guild Id and any default setting as described in the [FAQ](../bot/faq) when it is invited to a Guild.  
-It doesn't store any other information automatically unless intentionally provided by the User (Usually through usage of commands).
+The bot may automatically store the Guild Id alongside the following initial information on a Guild join:
 
-#### Information stored by commands
-The bot may store and/or update stored information when provided by those through the usage of commands.  
-Currently stored informations include the ID of the Welcome Text Channel, the Command prefix, the Welcome message, Image and Icon and the used language for responses.
+| Key                | Value                               |
+| ------------------ | ----------------------------------- |
+| language           | Based on a Guilds prefered language |
+| prefix             | `.`                                 |
+| welcome_background | `color_white`                       |
+| welcome_channel    | `none`                              |
+| welcome_color      | `hex:ffffff`                        |
+| welcome_icon       | `purr`                              |
+| welcome_message    | `Welcome {mention}!`                |
+
+#### Updating of stored information
+The aforementioned information are only updated when done so through the usage of specific commands by the end user.  
+No information will be automatically changed.
 
 #### Temporary stored information
 The aforementioned information are kept within a internal caching mechanic of the bot for 10 minutes.  
-After this time is the information automatically dropped and only re-added as long as the bot remains on the Guild.
+After this time is the information automatically dropped and only re-added when requested.
 
 The data may be removed from cache prematurely by kicking the bot from the Guild.
 
@@ -61,12 +70,11 @@ Stored Information may be removed by one of the below methods:
 - Kicking or Banning the Bot from your Guild. Note that the bot has to be online to remove the data successfully.
 - Requesting removal of data through E-Mail at support@purrbot.site
 
-!!! info
-    We try our best to remove the stored information from our database when removal was requested as described above, but due to the nature of the bot may the data not be removed in cases, where it is kicked while it remains offline, or communication to the database gets temporary lost.  
-    You may contact us through e-mail for if your data was removed and if not can you request removal.
+!!! info "Possible issues"
+    Due to the nature of the bot being offline at random times - either due to maintenance or due to technical issues by the host or Discord - is it possible that the stored information isn't removed from the database.  
+    In those cases can the owner of a Discord server request the removal of this data by E-Mail at the above mentioned e-mail.
     
-    Requests made through E-Mail may require additional information from you, to verify your identity and Ownership of a Guild.  
-    Only Guildowners may request removal of data through E-Mail while any individual with sufficient permissions may remove the bot from a Guild they are part of.
+    Note that we may ask for confirmation of identity when requesting removal of data through E-Mail.
 
 ----
 ## API
@@ -91,7 +99,7 @@ These information has to be provided by the user using the API.
 
 #### Stored Information
 No sensitive information - As described in Discord's Developer Terms of Service - is stored.  
-The APIs may log anonymous information, such as performed requests, type of request and towards which endpoint. This information cannot be traced back to any individual.
+The APIs may log anonymous information, such as performed requests, type of request, time of execution and towards which endpoint. This information cannot be traced back to any individual and is not shared with any 3rd-party.
 
 ----
 ## Website
