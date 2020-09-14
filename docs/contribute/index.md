@@ -8,7 +8,7 @@
 
 [purrbotapi]: https://github.com/purrbot-site/PurrBotAPI
 [imageapi]: https://github.com/purrbot-site/ImageAPI
-[translation]: https://translations.purrbot.site
+[translation]: https://lang.purrbot.site
 
 # Contribute towards the Projects
 We're always happy for people who want to help us improve our various projects.  
