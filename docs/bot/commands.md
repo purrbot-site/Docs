@@ -430,7 +430,9 @@ Providing no arguments will show what the current settings are.
     The following placeholders can be used in the welcome message to display a different value.
     
     - `{count}` / `{members}`  
-    Displays the current amount of members on the Discord.
+    Displays the current amount of members on the Discord (i.e. `1000`).
+    - `{count_formatted}` / `{members_formatted}`  
+    Displays the current amount of members on the Discord in a formatted way (i.e. `1,000`).
     - `{guild}` / `{server}`  
     Displays the name of the Discord.
     - `{mention}`  
