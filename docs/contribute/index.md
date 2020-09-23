@@ -3,12 +3,12 @@
 [doc]: https://github.com/purrbot-site/Docs
 [contributing_docs]: https://github.com/purrbot-site/Docs#contributions
 
-[purr]: https://github.com/Andre601/PurrBot
-[contributing_bot]: https://github.com/Andre601/PurrBot/blob/master/CONTRIBUTING.md
+[purr]: https://github.com/purrbot-site/PurrBot
+[contributing_bot]: https://github.com/purrbot-site/PurrBot/blob/master/CONTRIBUTING.md
+[translations]: https://github.com/purrbot-site/PurrBot/blob/master/translations.md
 
-[purrbotapi]: https://github.com/purrbot-site/PurrBotAPI
 [imageapi]: https://github.com/purrbot-site/ImageAPI
-[translation]: https://lang.purrbot.site
+[crowdin]: https://lang.purrbot.site
 
 # Contribute towards the Projects
 We're always happy for people who want to help us improve our various projects.  
@@ -25,12 +25,12 @@ I (Andre_601) are not the best developer, so there are sure some problematic Cod
 That's why I'm always happy to receive Pull requests to improve and fix things.  
 Please make sure to follow the [contributing guidelines][contributing_bot] for the repository.
 
-## APIs
-Similar to the bot are the APIs not the best in terms of code.  
-Feel free to submit any Pull requests to improve them.
+## API
+Similar to the bot is the API not the best in terms of code.  
+Feel free to submit any Pull requests to improve it.
 
-You can find the source codes [here][imageapi] and [here][purrbotapi].
+You can find the source codes [here][imageapi].
 
 ## Translations
 We welcome every kind of translation. This even includes those that don't really exist (Are a joke-language like Klingon... No hate towards those guys).  
-To become a translator, contact Andre_601#0601 on [Discord], so that he can add you as a translator to the [Translation page][translation].
+To become a translator, read how to on the [translations.md][translations] file and join our [Discord], so that he can add you as a translator to the [Translation page][crowdin].
