@@ -129,6 +129,20 @@ These API endpoints can only be used through `POST` requests.
     <br>
     <img alt="status" src="/assets/img/status.png" style="width: 80px; height: 80px;">
 
+## GET /api/list
+Displays all currently available API endpoints as JSON.
+
+A single JSON entry may look like this:  
+```json
+{
+  "help": "https://docs.purrbot.site/api#imgsfwbackgroundimg",
+  "paths": [
+    "https://purrbot.site/api/img/sfw/background/img"
+  ],
+  "name": "background"
+}
+```
+
 ## GET <small>(SFW (Safe for work) endpoints)</small>
 Contains images that are considered safe for work.  
 You can access those endpoints through simple `GET` requests.
