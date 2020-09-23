@@ -1,6 +1,7 @@
 
 
 
+
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -15,7 +16,7 @@
         <meta name="author" content="Andre_601">
       
       <link rel="shortcut icon" href="../assets/img/logo.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.13">
     
     
       
@@ -23,9 +24,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4dd2dd8d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.077507d7.min.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/palette.6a5ad368.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ff0a5ce4.min.css">
       
       
         
@@ -406,6 +407,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-apilist" class="md-nav__link">
+    GET /api/list
+  </a>
   
 </li>
       
@@ -986,6 +994,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#get-apilist" class="md-nav__link">
+    GET /api/list
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#get-sfw-safe-for-work-endpoints" class="md-nav__link">
     GET (SFW (Safe for work) endpoints)
   </a>
@@ -1374,6 +1389,17 @@ Available are <code>online</code>, <code>idle</code>, <code>do_not_disturb</code
 <img alt="status" src="/assets/img/status.png" style="width: 80px; height: 80px;"></p>
 </div>
 </div>
+<h2 id="get-apilist">GET /api/list<a class="headerlink" href="#get-apilist" title="Permanent link">&para;</a></h2>
+<p>Displays all currently available API endpoints as JSON.</p>
+<p>A single JSON entry may look like this:<br />
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;help&quot;</span><span class="p">:</span> <span class="s2">&quot;https://docs.purrbot.site/api#imgsfwbackgroundimg&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;https://purrbot.site/api/img/sfw/background/img&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;background&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
 <h2 id="get-sfw-safe-for-work-endpoints">GET <small>(SFW (Safe for work) endpoints)</small><a class="headerlink" href="#get-sfw-safe-for-work-endpoints" title="Permanent link">&para;</a></h2>
 <p>Contains images that are considered safe for work.<br />
 You can access those endpoints through simple <code>GET</code> requests.</p>
@@ -1795,13 +1821,13 @@ and provided under the
 
     </div>
     
-      <script src="../assets/javascripts/vendor.3636a4ec.min.js"></script>
-      <script src="../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.2d1db4bd.min.js"></script>
+      <script src="../assets/javascripts/bundle.6627ddf3.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "..",
-          features: ["tabs"],
+          features: ['tabs'],
           search: Object.assign({
             worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
           }, typeof search !== "undefined" && search)
