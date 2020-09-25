@@ -53,7 +53,8 @@ You can set your very own welcome message that is shown next to the image.
 To do that run `.welcome msg set <message>` where `<message>` can be anything you want.  
 You can also use placeholders in the message:
 
-- `{count}` / `{members}` The member count of the Discord.
+- `{count}` / `{members}` The member count of the Discord (e.g. 1000).
+- `{count_formatted}` / `{members_formatted}` The member count of the Discord but formatted (e.g. 1,000).
 - `{guild}` / `{server}` The name of the Discord.
 - `{mention}` The joined user as a mention.
 - `{name}` / `{username}` The name of the joined user.
