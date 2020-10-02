@@ -49,3 +49,8 @@ Please read it carefully to prevent issues. If you can't find an answer to your 
     It uses RethinkDB as database.
     
     The website is hosted on the same VPS using Nginx.
+
+----
+??? question "Why does the bot react with `:cancel:` when using a comman?"
+    This will happen when the bot lacks the `Send Message` permission (But is able to react).  
+    Please make sure to give the right permissions for the bot to work properly!
