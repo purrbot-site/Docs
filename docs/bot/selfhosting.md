@@ -1,5 +1,4 @@
-[PurrBot#startUpdates]: https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/PurrBot.java#L164-L183
-[PurrBot#startUpdate]: https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/PurrBot.java#L394-L407
+[PurrBot.java]: https://github.com/purrbot-site/PurrBot/blob/master/src/main/java/site/purrbot/bot/PurrBot.java
 [MIT-License]: https://github.com/Andre601/PurrBot/blob/master/LICENSE
 
 [RethinkDB]: https://rethinkdb.com
@@ -36,16 +35,103 @@ You need **at least** Java 8 to be installed and working. Newer versions of Java
 When you made sure, that the [requirements](#requirements) are met, can you continue with preparing the code.
 
 ### Clone the repository
-Clone/Fork this repository, if you didn't already and open it in your preferred IDE.
+Clone/Fork the PurrBot repository, if you didn't already and open it in your preferred IDE.
 
 ### Make changes to code
 You need to alter specific parts of the code, to prevent errors from appearing.  
-Alternatively could you set "beta" in the config.json to true, to set the bot as Beta-Bot, disabling certain functionalities.
+Alternatively could you set "beta" in the config.json to true, to set the bot as Beta-Bot, disabling certain functionalities such as posting stats to Bot Lists.
 
-If you want to alter the code, make changes to the following sections by either removing or commenting them out:
+When making changes to the code should you remove or uncomment the following code-snippets in [PurrBot.java]:
 
-- [PurrBot#startUpdates] (Lines 163-186)
-- [PurrBot#startUpdate] (Lines 386-399)
+```java
+public void startUpdater(){
+    
+    if(!isBeta()){
+        PostAction post = new PostAction(getShardManager());
+        BotBlockAPI botBlockAPI = new BotBlockAPI.Builder()
+                .addAuthToken(
+                        Site.BOTLIST_SPACE,
+                        getFileManager().getString("config", "tokens.botlist-space")
+                )
+                .addAuthToken(
+                        Site.DISCORD_BOTS_GG,
+                        getFileManager().getString("config", "tokens.discord-bots-gg")
+                )
+                .addAuthToken(
+                        Site.DISCORDEXTREMELIST_XYZ,
+                        getFileManager().getString("config", "tokens.discordextremelist-xyz")
+                )
+                .addAuthToken(
+                        Site.DISCORD_BOATS,
+                        getFileManager().getString("config", "tokens.discord-boats")
+                )
+                .build();
+
+        DServices4J dServices4J = new DServices4J.Builder()
+                .setToken(getFileManager().getString("config", "tokens.discordservices-net"))
+                .setId(IDs.PURR)
+                .build();
+        Commands commands = dServices4J.getCommands();
+        Stats stats = dServices4J.getStats();
+        
+        commands.addCommands(getCommands());
+        try{
+            commands.postCommands();
+        }catch(IOException | RatelimitedException ex){
+            logger.warn("Could not post Commands", ex);
+        }
+
+        scheduler.scheduleAtFixedRate(() -> {
+    
+            getShardManager().setActivity(Activity.of(
+                    Activity.ActivityType.WATCHING,
+                    getMessageUtil().getBotGame(getShardManager().getGuildCache().size())
+            ));
+    
+            if(isBeta())
+                return;
+    
+            try{
+                post.postGuilds(getShardManager(), botBlockAPI);
+            }catch(Exception ex){
+                logger.warn("Not able to post guild counts!", ex);
+            }
+            
+            try{
+                stats.postStats(
+                        getShardManager().getGuildCache().size(),
+                        getShardManager().getShardCache().size()
+                );
+            }catch(IOException | RatelimitedException ex){
+                logger.warn("Could not post Server stats", ex);
+            }
+        }, 1, 5, TimeUnit.MINUTES);
+    }else{
+        scheduler.scheduleAtFixedRate(() -> 
+                getShardManager().setActivity(Activity.of(
+                        Activity.ActivityType.WATCHING,
+                        getMessageUtil().getBotGame(getShardManager().getGuildCache().size())
+                ))
+        , 1, 5, TimeUnit.MINUTES);
+    }
+}
+
+private List<Commands.CommandInfo> getCommands(){
+    List<Commands.CommandInfo> commandInfoList = new ArrayList<>();
+    for(site.purrbot.bot.commands.Command command : commandLoader.getCommands()){
+        if(command.getAttribute("category").equals("owner"))
+            continue;
+        
+        commandInfoList.add(new Commands.CommandInfo(
+                command.getDescription().name(),
+                command.getDescription().description(),
+                command.getAttribute("category")
+        ));
+    }
+    
+    return commandInfoList;
+}
+```
 
 ### Update some classes
 You need to update values in specific classes to make your version work without issues.  
