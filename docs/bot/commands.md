@@ -17,6 +17,7 @@ The default prefix is `.` but can be changed with the [[prefix-command|Commands#
 
 ### [Fun](#category-fun)
 - [Bite](#bite)
+- [Blush](#blush)
 - [Cuddle](#cuddle)
 - [Eevee](#eevee)
 - [Feed](#feed)
@@ -78,6 +79,21 @@ The default prefix is `.` but can be changed with the [[prefix-command|Commands#
 > - `.Bite <@user ...>`
 
 Lets you bite one or multiple mentioned users.
+
+----
+### Blush
+> **Permission**: `None`  
+> **Bot requires**: `None`
+>
+> **Aliases**:
+>
+> - `Blushing`
+>
+> **Usage**:
+>
+> - `.Blush`
+
+Lets you blush.
 
 ----
 ### Cuddle
