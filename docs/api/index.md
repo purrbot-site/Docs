@@ -177,7 +177,7 @@ Example response:
 ```json
 {
   "error": false,
-  "link": https://purrbot.site/img/sfw/blush/gif/blush_001.gif",
+  "link": "https://purrbot.site/img/sfw/blush/gif/blush_001.gif",
   "time": 0
 }
 ```
