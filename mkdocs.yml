@@ -31,7 +31,10 @@ nav:
   - Credits:
     - Credits: credits.md
   - Legal: 
-    - Legal: legal.md
+    - Info: legal/index.md
+    - Bot: legal/bot.md
+    - API: legal/api.md
+    - Website: legal/website.md
 
 theme:
   name: 'material'
