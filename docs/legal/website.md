@@ -1,8 +1,13 @@
+[Maxee]: https://notmaxee.bitbucket.io/
+
+[CloudFlare]: https://cloudflare.com
+[WidgetBot]: https://widgetbot.io
+
 # Website
 
 ## Affiliations
 The Website is not affiliated, supported or made by Discord.  
-The website design was originally created by [Maxee](https://notmaxee.bitbucket.io/) and altered by Andre_601 with his permission.  
+The website design was originally created by [Maxee] and altered by Andre_601 with his permission.  
 All copyright of used images, icons, symbols or other kinds of graphics belong to their respective copyright owners.
 
 ## Usage of cookies
