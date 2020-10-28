@@ -15,7 +15,7 @@ By inviting the bot and using its features (commands, welcome system) are you ag
 You acknowledge that you have the right to use the bot freely on any Discord Server (Server) you share with it, that you can invite it to any Server that you have "Manage Server" rights for and that this right might get revoked for you, if you're confirmed to break either these terms or the [Terms of Service] and/or [Community Guidelines] of [Discord Inc][discord].
 
 Through Inviting the bot may it collect specific data as described in its [Policy](#privacy-policy) (Linked below).  
-The intended usage of this data is for core functionalities of the bot such as command handling, guild-specific settings and its Welcoming System.
+The intended usage of this data is for core functionalities of the bot such as command handling, guild-specific settings and the Welcoming System.
 
 ### Intended Age
 The bot may not be used by individuals under the minimal age described in Discord's Terms of Service.  
