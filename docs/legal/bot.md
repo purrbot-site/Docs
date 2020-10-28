@@ -68,7 +68,7 @@ No other actions may update the stored information at any given time.
 
 ### Temporarely stored Information
 The Bot may keep the stored information in an internal cacheing mechanic for a certain amount of time.  
-When this time passes will the cached information be dropped and only be re-added when required.
+After this time period, the cached information will be dropped and only be re-added when required.
 
 Data may be dropped from cache pre-maturely through actions such as removing the bot from the Server.
 
