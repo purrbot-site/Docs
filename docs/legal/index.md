@@ -4,6 +4,6 @@ We highly recommend to read the pages in their entirety to prevent any possible 
 
 You may find Legal pages for the following services:
 
-- [\*Purr*](purr) - Discord Bot
+- [\*Purr*](bot) - Discord Bot
 - [API](api) - The ImageAPI used by \*Purr*
 - [Website](website) - The website located under https://purrbot.site
