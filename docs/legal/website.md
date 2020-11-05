@@ -1,4 +1,4 @@
-[Maxee]: https://notmaxee.bitbucket.io/
+[Maxee]: https://notmaxee.github.io/
 
 [CloudFlare]: https://cloudflare.com
 [WidgetBot]: https://widgetbot.io
