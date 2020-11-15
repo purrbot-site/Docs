@@ -455,6 +455,10 @@ Providing no arguments will show what the current settings are.
     Mentions the joining Member.
     - `{name}` / `{username}`  
     Displays the name of the joining Member.
+    - `{c_mention:<id>}`  
+    Displays a channel as mention. `<id>` has to be the ID of the Text Channel (Other channel types won't work).
+    - `{c_name:<id>}`  
+    Displays a channel's name. `<id>` has to be the ID of the channel.
     - `{r_mention:<id>}`  
     Displays a role as mention. `<id>` has to be the ID of the role.
     - `{r_name:<id>}`  
