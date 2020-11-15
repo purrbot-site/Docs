@@ -58,6 +58,8 @@ You can also use placeholders in the message:
 - `{guild}` / `{server}` The name of the Discord.
 - `{mention}` The joined user as a mention.
 - `{name}` / `{username}` The name of the joined user.
+- `{c_mention:<id>}` A channel-mention. `<id>` has to be a Text Channel id (Other channel types won't work).
+- `{c_name:<id>}` The name of a channel. `<id>` has to be a channel id.
 - `{r_mention:<id>}` A role-mention. `<id>` has to be a role id.
 - `{r_name:<id>}` The name of a role. `<id>` has to be a role id.
 - `{tag}` The tag (username and discriminator) of the user.
