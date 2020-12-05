@@ -19,6 +19,7 @@ The default prefix is `.` but can be changed with the [[prefix-command|Commands#
 - [Bite](#bite)
 - [Blush](#blush)
 - [Cuddle](#cuddle)
+- [Cry](#cry)
 - [Eevee](#eevee)
 - [Feed](#feed)
 - [Fluff](#fluff)
@@ -112,6 +113,22 @@ Lets you blush.
 > - `.Cuddle <@user ...>`
 
 Lets you cuddle one or multiple mentioned users.
+
+----
+### Cry
+> **Permission**: `None`  
+> **Bot requires**: `None`
+>
+> **Aliases**:
+>
+> - `Sad`
+> - `Sob`
+>
+> **Usage**:
+>
+> - `.Cry`
+
+Lets you cry. :sad_face:
 
 ----
 ### Eevee
