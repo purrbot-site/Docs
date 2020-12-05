@@ -1,0 +1,12 @@
+@keyframes heart-anim {
+    0%, 40%, 80%, 100% {
+        transform: scale(1);
+    }
+    20%, 60% {
+        transform: scale(1.15);
+    }
+}
+
+.heart-anim {
+    animation: heart-anim 1000ms infinite;
+}
