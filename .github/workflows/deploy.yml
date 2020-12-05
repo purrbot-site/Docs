@@ -28,7 +28,7 @@ jobs:
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git remote add gh-token "https://github.com/purrbot-site/Docs.git"
         git fetch gh-token && git fetch gh-token gh-pages:gh-pages
-        python -m mkdocs gh-deploy --clean -m "Deploying Wiki to GitHub Pages (${GITHUB_SHA:0:7})" --remote-name gh-token
+        python -m mkdocs gh-deploy --clean -m "Deploying Docs to GitHub Pages (${GITHUB_SHA:0:7})" --remote-name gh-token
         git push gh-token gh-pages
   sendMsg:
     needs: [build]
