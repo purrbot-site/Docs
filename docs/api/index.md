@@ -182,6 +182,16 @@ Example response:
 }
 ```
 
+### /img/sfw/cry/gif
+Example response:  
+```json
+{
+  "error": false,
+  "link": "https://purrbot.site/img/sfw/cry/gif/cry_001.gif",
+  "time": 0
+}
+```
+
 ### /img/sfw/cuddle/gif
 Example response:  
 ```json
