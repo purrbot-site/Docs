@@ -166,6 +166,8 @@ These API endpoints can only be used through `POST` requests.
     }
     ```
 
+----
+
 ## GET <small>(SFW (Safe for work) endpoints)</small>
 Contains images that are considered safe for work.  
 You can access those endpoints through simple `GET` requests.
