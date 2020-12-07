@@ -101,7 +101,7 @@ These API endpoints can only be used through `POST` requests.
     ```json
     {
       "error": true,
-      "message": Couldn't generate Image. Make sure the values are valid!"
+      "message": "Couldn't generate Image. Make sure the values are valid!"
     }
     ```
     
@@ -162,7 +162,7 @@ These API endpoints can only be used through `POST` requests.
     ```json
     {
       "error": true,
-      "message": Couldn't generate Image. Make sure the values are valid!"
+      "message": "Couldn't generate Image. Make sure the values are valid!"
     }
     ```
 
