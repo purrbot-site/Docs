@@ -83,9 +83,28 @@ These API endpoints can only be used through `POST` requests.
     }
     ```
     
-=== "Response"
+=== "Response (Success)"
     <br>
     <img alt="quote" src="/assets/img/quote.png">
+
+=== "Response (Failure)"
+    <br>
+    **Empty JSON Body/No JSON Provided**  
+    ```json
+    {
+      "error": true,
+      "message": "Invalid or empty JSON Body provided."
+    }
+    ```
+    
+    **Malformed JSON or invalid values**  
+    ```json
+    {
+      "error": true,
+      "message": "Couldn't generate Image. Make sure the values are valid!"
+    }
+    ```
+    
 
 ### /status
 *Adds a status icon to the provided Avatar.*
@@ -125,23 +144,29 @@ These API endpoints can only be used through `POST` requests.
     }
     ```
     
-=== "Response"
+=== "Response (Success)"
     <br>
     <img alt="status" src="/assets/img/status.png" style="width: 80px; height: 80px;">
 
-## GET /api/list
-Displays all currently available API endpoints as JSON.
+=== "Response (Failure)"
+    <br>
+    **Empty JSON Body/No JSON Provided**  
+    ```json
+    {
+      "error": true,
+      "message": "Invalid or empty JSON Body provided."
+    }
+    ```
+    
+    **Malformed JSON or invalid values**  
+    ```json
+    {
+      "error": true,
+      "message": "Couldn't generate Image. Make sure the values are valid!"
+    }
+    ```
 
-A single JSON entry may look like this:  
-```json
-{
-  "help": "https://docs.purrbot.site/api#imgsfwbackgroundimg",
-  "paths": [
-    "https://purrbot.site/api/img/sfw/background/img"
-  ],
-  "name": "background"
-}
-```
+----
 
 ## GET <small>(SFW (Safe for work) endpoints)</small>
 Contains images that are considered safe for work.  
@@ -153,69 +178,149 @@ You can access those endpoints through simple `GET` requests.
         - Failure: `JSON`
 
 ### /img/sfw/background/img
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/sfw/background/img/gradient_orange.png",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/sfw/background/img/gradient_orange.png",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/sfw/bite/gif
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purbot.site/img/sfw/bite/gif/bite_001.gif",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/sfw/bite/gif/bite_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/sfw/blush/gif
-Example response:
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/sfw/blush/gif/blush_001.gif",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/sfw/background/blush/gif/blush_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/sfw/cry/gif
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/sfw/cry/gif/cry_001.gif",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/sfw/cry/gif/cry_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/sfw/cuddle/gif
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/sfw/cuddle/gif/cuddle_001.gif",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/sfw/cuddle/gif/cuddle_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/sfw/eevee/:type
 `:type` can be either `gif` for gifs or `img` for images.
 
-Example responses:
-
-=== "Image"
-    ```json
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/eevee/img/eevee_001.jpg",
-      "time": 0
-    }
-    ```
-=== "Gif"
+=== "Response (Success GIF)"
     ```json
     {
       "error": false,
@@ -224,100 +329,260 @@ Example responses:
     }
     ```
 
+=== "Response (Success IMG)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/sfw/eevee/img/eevee_001.jpg",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
+
 ### /img/sfw/feed/gif
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/sfw/feed/gif/feed_001.gif",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/sfw/feed/gif/feed_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/sfw/fluff/gif
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/sfw/fluff/gif/fluff_001.gif",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/sfw/fluff/gif/fluff_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/sfw/holo/img
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/sfw/holo/img/holo_001.jpg",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/sfw/holo/img/holo_001.jpg",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/sfw/hug/gif
-Example response:  
-```json
-{
-  "code": 200,
-  "link": "https://purrbot.site/img/sfw/hug/gif/hug_001.gif",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/sfw/hug/gif/hug_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/sfw/icon/img
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/sfw/icon/img/purr.png",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/sfw/icon/img/holo.png",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/sfw/kiss/gif
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/sfw/kiss/gif/kiss_001.gif",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/sfw/kiss/gif/kiss_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/sfw/kitsune/img
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/sfw/kitsune/img/kitsune_001.jpg",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/sfw/kitsune/img/kitsune_001.jpg",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/sfw/lick/gif
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/sfw/lick/gif/lick_001.gif",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/sfw/lick/gif/lick_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/sfw/neko/:type
 `:type` can be either `gif` for gifs or `img` for images.
 
-Example responses:
-
-=== "Image"
-    ```json
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/neko/img/neko_001.jpg",
-      "time": 0
-    }
-    ```
-=== "Gif"
+=== "Response (Success GIF)"
     ```json
     {
       "error": false,
@@ -326,65 +591,199 @@ Example responses:
     }
     ```
 
+=== "Response (Success IMG)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/sfw/neko/img/neko_001.jpg",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
+
 ### /img/sfw/pat/gif
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/sfw/pat/gif/pat_001.gif",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/sfw/pat/gif/pat_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/sfw/poke/gif
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/sfw/poke/gif/poke_001.gif",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/sfw/poke/gif/poke_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/sfw/senko/img
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/sfw/senko/img/senko_001.jpg",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/sfw/senko/img/senko_001.jpg",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/sfw/slap/gif
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/sfw/slap/gif/slap_001.gif",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/sfw/slap/gif/slap_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/sfw/tail/gif
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/sfw/tail/gif/tail_001.gif",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/sfw/tail/gif/tail_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/sfw/tickle/gif
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/sfw/tickle/gif/tickle_001.gif",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/sfw/tickle/gif/tickle_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ----
 
@@ -399,59 +798,121 @@ You can access those endpoints through simple `GET` requests.
         - Failure: `JSON`
 
 ### /img/nsfw/anal/gif
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/nsfw/anal/gif/anal_001.gif",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/nsfw/anal/gif/anal_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/nsfw/blowjob/gif
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/nsfw/blowjob/gif/blowjob_001.gif",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/nsfw/blowjob/gif/blowjob_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/nsfw/cum/gif
-Example response:
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/nsfw/cum/gif/cum_001.gif",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/nsfw/cum/gif/cum_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/nsfw/fuck/gif
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/nsfw/fuck/gif/fuck_001.gif",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/nsfw/fuck/gif/fuck_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/nsfw/neko/:type
 `:type` can be either `gif` for gifs or `img` for images.
 
-Example responses:
-
-=== "Image"
-    ```json
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/nsfw/neko/img/neko_001.jpg",
-      "time": 0
-    }
-    ```
-=== "Gif"
+=== "Response (Success GIF)"
     ```json
     {
       "error": false,
@@ -460,122 +921,224 @@ Example responses:
     }
     ```
 
+=== "Response (Success IMG)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/nsfw/neko/gif/neko_001.jpg",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
+
 ### /img/nsfw/pussylick/gif
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/nsfw/pussylick/gif/pussylick_001.gif",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/nsfw/pussylick/gif/pussylick_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/nsfw/solo/gif
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/nsfw/solo/gif/solo_001.gif",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/nsfw/solo/gif/solo_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/nsfw/threesome_fff/gif
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/nsfw/threesome_fff/gif/threesome_001.gif",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/threesome_fff/gif/threesome_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/nsfw/threesome_ffm/gif
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/nsfw/threesome_ffm/gif/threesome_001.gif",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/nsfw/threesome_ffm/gif/threesome_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/nsfw/threesome_mmf/gif
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/nsfw/threesome_mmf/gif/threesome_001.gif",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/nsfw/threesome_mmf/gif/threesome_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/nsfw/yaoi/gif
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/nsfw/yaoi/gif/yaoi_001.gif",
-  "time": 0
-}
-```
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/nsfw/yaoi/gif/yaoi_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
 
 ### /img/nsfw/yuri/gif
-Example response:  
-```json
-{
-  "error": false,
-  "link": "https://purrbot.site/img/nsfw/yuri/gif/yuri_001.gif",
-  "time": 0
-}
-```
 
-----
-## Failed requests
-The API can return one of the following HTTP error codes.
-
-=== "403: Not supported API path"
-    When you connect to an API path which does not exist (e.g. `/api/img/doesntexist`) will this error response be displayed.
-    
+=== "Response (Success)"
     ```json
     {
-      "error": true,
-      "message": "[403] Not supported API path",
-      "time": 0
-    }
-    ```
-    
-=== "403: The selected directory doesn't contain any images"
-    If the provided path doesn't contain any images, will this error be displayed.
-    
-    ```json
-    {
-      "error": true,
-      "message": "[403] The selected directory doesn't contain any images",
+      "error": false,
+      "link": "https://purrbot.site/img/nsfw/yuri/gif/yuri_001.gif",
       "time": 0
     }
     ```
 
-=== "403: Invalid or empty JSON body provided."
-    Your request didn't contain any JSON (Not even just `{}`) or the JSON was invalid.  
-    Common issues of invalid JSON are missing commas or similar.
-    
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
     ```json
     {
       "error": true,
-      "message": "[403] Invalid or empty JSON body provided.",
-      "time": 0
+      "message": "Not supported API path"
     }
     ```
-
-=== "500: Couldn't generate image. Make sure the values are valid!"
-    The API was unable to generate an image from the provided JSON.  
-    This is often the case when things like the Avatar URL lead to an invalid page.
     
+    **Invalid Path (No images)**  
     ```json
     {
       "error": true,
-      "message": "[500] Couldn't generate image. Make sure the values are valid!",
-      "time": 0
+      "message": "The selected path doesn't contain any images"
     }
     ```
