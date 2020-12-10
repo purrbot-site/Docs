@@ -46,7 +46,6 @@ jobs:
             "color": 65280,
             "title": "Documentation updated!",
             "url": "https://github.com/purrbot-site/Docs",
-            "description": "${{ github.event.commits[0].message }}",
             "footer": {
               "text": "Page built using MkDocs"
             },
