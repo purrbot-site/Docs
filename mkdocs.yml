@@ -21,7 +21,7 @@ nav:
   - Bot:
     - Wiki: bot/index.md
     - Commands: bot/commands.md
-    - FAQ: bot/faq.md
+    - FAQ: 'https://purrbot.site/discord'
     - Selfhosting: bot/selfhosting.md
     - Welcome Channel: bot/welcome-channel.md
     - Welcome Images: bot/welcome-images.md
