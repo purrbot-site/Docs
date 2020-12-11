@@ -128,7 +128,7 @@ Lets you cuddle one or multiple mentioned users.
 >
 > - `.Cry`
 
-Lets you cry. :crying:
+Lets you cry. :cry:
 
 ----
 ### Eevee
