@@ -168,7 +168,7 @@ These API endpoints can only be used through `POST` requests.
 
 ----
 
-## GET <small>(SFW (Safe for work) endpoints)</small>
+## GET <small>(SFW)</small>
 Contains images that are considered safe for work.  
 You can access those endpoints through simple `GET` requests.
 
@@ -815,7 +815,7 @@ You can access those endpoints through simple `GET` requests.
 
 ----
 
-## GET <small>(NSFW (Not safe for work) endpoints)</small>
+## GET <small>(NSFW)</small>
 Contains images that are considered Not Safe for work.  
 If you are using those images on Discord, make sure to only share them in Channels marked as NSFW.  
 You can access those endpoints through simple `GET` requests.
