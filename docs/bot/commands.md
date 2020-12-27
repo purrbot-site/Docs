@@ -34,6 +34,7 @@ The default prefix is `.` but can be changed with the [[prefix-command|Commands#
 - [Senko](#senko)
 - [Ship](#ship)
 - [Slap](#slap)
+- [Smile](#smile)
 - [Tail](#tail)
 - [Tickle](#tickle)
 
@@ -43,6 +44,7 @@ The default prefix is `.` but can be changed with the [[prefix-command|Commands#
 - [Welcome](#welcome)
 
 ### [Info](#category-info)
+- [Donate](#donate)
 - [Emote](#emote)
 - [Guild](#guild)
 - [Help](#help)
@@ -348,6 +350,22 @@ You can optionally mention a second user to instead ship those two with each oth
 Lets you slap one or multiple mentioned user.
 
 ----
+### Smile
+> **Permission**: `None`
+> **Bot requires**: `None`
+>
+> **Aliases**:
+>
+> - `Grinning`
+> - `Grin`
+>
+> **Usage**:
+>
+> - `.Smile`
+
+Lets you Smile. :)
+
+----
 ### Tail
 > **Permission**: `None`
 > **Bot requires**: `None`
@@ -486,6 +504,23 @@ Providing no arguments will show what the current settings are.
 ----
 ## Category: Info
 
+### Donate
+> **Permission**: `None`  
+> **Bot requires**: `None`
+> 
+> **Aliases**:
+>
+> - `Donation`
+> - `Donations`
+> - `Donators`
+> 
+> **Arguments**:
+>
+> - `.Donate`
+
+Gives you information on how you can donate and who donated so far.
+
+----
 ### Emote
 > **Permission**: `None`  
 > **Bot requires**: `None`
