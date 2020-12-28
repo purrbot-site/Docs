@@ -193,7 +193,7 @@ If you followed the previous step on preparing the bot will you only need to set
 | `bot-token`            | Valid Bot-token of your Bot-application to login.                   |
 | `webhooks.guild`       | A URL to a Discord webhook for logging joins and leaves of the bot. |
 | `webhooks.log`         | A URL to a Discord webhook for logging dis/reconnects of the bot.   |
-| `blaze-token`          | Valid Authentication-token for the image-API of Fluxpoint.dev       |
+| `tokens.fluxpoint-dev` | Valid Authentication-token for the image-API of Fluxpoint.dev       |
 | `database.ip`          | Domain/IP of the RethinkDB server.                                  |
 | `database.name`        | Name of the database you created.                                   |
 | `database.guildTable`  | Name of the table you created to store guild settings.              |
