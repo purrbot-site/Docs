@@ -924,6 +924,10 @@ Alternatively could you set "beta" in the config.json to true, to set the bot as
                         <span class="n">Site</span><span class="p">.</span><span class="na">DISCORD_BOATS</span><span class="p">,</span>
                         <span class="n">getFileManager</span><span class="p">().</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;config&quot;</span><span class="p">,</span> <span class="s">&quot;tokens.discord-boats&quot;</span><span class="p">)</span>
                 <span class="p">)</span>
+        <span class="p">.</span><span class="na">addAuthToken</span><span class="p">(</span>
+                        <span class="n">Site</span><span class="p">.</span><span class="na">DISCORDBOTLIST_COM</span><span class="p">,</span>
+                        <span class="n">getFileManager</span><span class="p">().</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;config&quot;</span><span class="p">,</span> <span class="s">&quot;tokens.discordbotlist-com&quot;</span><span class="p">)</span>
+                <span class="p">)</span>
                 <span class="p">.</span><span class="na">build</span><span class="p">();</span>
 
         <span class="n">DServices4J</span> <span class="n">dServices4J</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DServices4J</span><span class="p">.</span><span class="na">Builder</span><span class="p">()</span>
@@ -983,7 +987,7 @@ Alternatively could you set "beta" in the config.json to true, to set the bot as
 
         <span class="n">commandInfoList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Commands</span><span class="p">.</span><span class="na">CommandInfo</span><span class="p">(</span>
                 <span class="n">command</span><span class="p">.</span><span class="na">getDescription</span><span class="p">().</span><span class="na">name</span><span class="p">(),</span>
-                <span class="n">command</span><span class="p">.</span><span class="na">getDescription</span><span class="p">().</span><span class="na">description</span><span class="p">(),</span>
+                <span class="n">langUtils</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;en&quot;</span><span class="p">,</span> <span class="n">command</span><span class="p">.</span><span class="na">getDescription</span><span class="p">().</span><span class="na">description</span><span class="p">()),</span>
                 <span class="n">command</span><span class="p">.</span><span class="na">getAttribute</span><span class="p">(</span><span class="s">&quot;category&quot;</span><span class="p">)</span>
         <span class="p">));</span>
     <span class="p">}</span>
@@ -997,7 +1001,6 @@ Namely you have to alter the content of the following classes:</p>
 <ul>
 <li><a href="https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/constants/IDs.java">IDs.java</a> (Contains various IDs of users or Guilds)</li>
 <li><a href="https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/constants/Emotes.java">Emotes.java</a> (Contains different emotes used in commands)</li>
-<li><a href="https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/constants/Roles.java">Roles.java</a> (Contains roles for things like the support Guild's join roles)</li>
 <li><a href="https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/constants/Links.java">Links.java</a> (Contains various links of the bot)</li>
 </ul>
 <h3 id="build-jar-file">Build jar file<a class="headerlink" href="#build-jar-file" title="Permanent link">&para;</a></h3>
@@ -1009,6 +1012,7 @@ On first startup will it generate with the below default values.</p>
   <span class="nt">&quot;bot-token&quot;</span><span class="p">:</span> <span class="s2">&quot;TOKEN&quot;</span><span class="p">,</span>
 
   <span class="nt">&quot;beta&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&quot;debug&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
 
   <span class="nt">&quot;webhooks&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;guild&quot;</span><span class="p">:</span> <span class="s2">&quot;guild-webhook-url&quot;</span><span class="p">,</span>
@@ -1016,13 +1020,14 @@ On first startup will it generate with the below default values.</p>
   <span class="p">},</span>
 
   <span class="nt">&quot;tokens&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;blaze&quot;</span><span class="p">:</span> <span class="s2">&quot;blaze-token&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fluxpoint-dev&quot;</span><span class="p">:</span> <span class="s2">&quot;fluxpoint-dev-token&quot;</span><span class="p">,</span>
 
     <span class="nt">&quot;discord-bots-gg&quot;</span><span class="p">:</span> <span class="s2">&quot;dbgg-token&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;lbots-org&quot;</span><span class="p">:</span> <span class="s2">&quot;lbots-token&quot;</span><span class="p">,</span>
     <span class="nt">&quot;botlist-space&quot;</span><span class="p">:</span> <span class="s2">&quot;botlist-token&quot;</span><span class="p">,</span>
     <span class="nt">&quot;discordextremelist-xyz&quot;</span><span class="p">:</span> <span class="s2">&quot;debl-token&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;discord-boats&quot;</span><span class="p">:</span> <span class="s2">&quot;discord-boats-token&quot;</span>
+    <span class="nt">&quot;discord-boats&quot;</span><span class="p">:</span> <span class="s2">&quot;discord-boats-token&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;discordservices-net&quot;</span><span class="p">:</span> <span class="s2">&quot;discordservices-net-token&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;discordbotlist-com&quot;</span><span class="p">:</span> <span class="s2">&quot;discordbotlist-com-token&quot;</span>
   <span class="p">},</span>
 
   <span class="nt">&quot;database&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -1056,7 +1061,7 @@ If you followed the previous step on preparing the bot will you only need to set
 <td>A URL to a Discord webhook for logging dis/reconnects of the bot.</td>
 </tr>
 <tr>
-<td><code>blaze-token</code></td>
+<td><code>tokens.fluxpoint-dev</code></td>
 <td>Valid Authentication-token for the image-API of Fluxpoint.dev</td>
 </tr>
 <tr>
@@ -1077,6 +1082,7 @@ If you followed the previous step on preparing the bot will you only need to set
 <p>The bot also has other files, which you can alter to your liking.</p>
 <ul>
 <li><a href="https://github.com/Andre601/PurrBot/blob/master/src/main/resources/random.json">random.json</a> contains various messages and links used for (often) random responses.</li>
+<li><a href="https://github.com/Andre601/PurrBot/blob/master/src/main/resources/data.json">data.json</a> contains data such as current guild blacklist, special users and more.</li>
 <li>Various <a href="https://github.com/Andre601/PurrBot/blob/master/src/main/resources/lang">lang-files</a> used for the different command responses of the bot.</li>
 </ul>
                 
