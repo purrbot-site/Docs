@@ -9,6 +9,7 @@
 [Links.java]: https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/constants/Links.java
 
 [random.json]: https://github.com/Andre601/PurrBot/blob/master/src/main/resources/random.json
+[data.json]: https://github.com/Andre601/PurrBot/blob/master/src/main/resources/data.json
 [lang-files]: https://github.com/Andre601/PurrBot/blob/master/src/main/resources/lang
 
 Some of you may want to selfhost the bot on your own VPS/server.  
@@ -64,6 +65,10 @@ public void startUpdater(){
                 .addAuthToken(
                         Site.DISCORD_BOATS,
                         getFileManager().getString("config", "tokens.discord-boats")
+                )
+		.addAuthToken(
+                        Site.DISCORDBOTLIST_COM,
+                        getFileManager().getString("config", "tokens.discordbotlist-com")
                 )
                 .build();
 
@@ -124,7 +129,7 @@ private List<Commands.CommandInfo> getCommands(){
         
         commandInfoList.add(new Commands.CommandInfo(
                 command.getDescription().name(),
-                command.getDescription().description(),
+                langUtils.getString("en", command.getDescription().description()),
                 command.getAttribute("category")
         ));
     }
@@ -139,7 +144,6 @@ Namely you have to alter the content of the following classes:
 
 - [IDs.java] (Contains various IDs of users or Guilds)
 - [Emotes.java] (Contains different emotes used in commands)
-- [Roles.java] (Contains roles for things like the support Guild's join roles)
 - [Links.java] (Contains various links of the bot)
 
 ### Build jar file
@@ -155,6 +159,7 @@ On first startup will it generate with the below default values.
       "bot-token": "TOKEN",
       
       "beta": false,
+      "debug": false,
       
       "webhooks": {
         "guild": "guild-webhook-url",
@@ -162,13 +167,14 @@ On first startup will it generate with the below default values.
       },
       
       "tokens": {
-        "blaze": "blaze-token",
+        "fluxpoint-dev": "fluxpoint-dev-token",
         
         "discord-bots-gg": "dbgg-token",
-        "lbots-org": "lbots-token",
         "botlist-space": "botlist-token",
         "discordextremelist-xyz": "debl-token",
-        "discord-boats": "discord-boats-token"
+        "discord-boats": "discord-boats-token",
+        "discordservices-net": "discordservices-net-token",
+        "discordbotlist-com": "discordbotlist-com-token"
       },
       
       "database": {
@@ -187,7 +193,7 @@ If you followed the previous step on preparing the bot will you only need to set
 | `bot-token`            | Valid Bot-token of your Bot-application to login.                   |
 | `webhooks.guild`       | A URL to a Discord webhook for logging joins and leaves of the bot. |
 | `webhooks.log`         | A URL to a Discord webhook for logging dis/reconnects of the bot.   |
-| `blaze-token`          | Valid Authentication-token for the image-API of Fluxpoint.dev       |
+| `tokens.fluxpoint-dev` | Valid Authentication-token for the image-API of Fluxpoint.dev       |
 | `database.ip`          | Domain/IP of the RethinkDB server.                                  |
 | `database.name`        | Name of the database you created.                                   |
 | `database.guildTable`  | Name of the table you created to store guild settings.              |
@@ -196,4 +202,5 @@ If you followed the previous step on preparing the bot will you only need to set
 The bot also has other files, which you can alter to your liking.
 
 - [random.json] contains various messages and links used for (often) random responses.
+- [data.json] contains data such as current guild blacklist, special users and more.
 - Various [lang-files] used for the different command responses of the bot.
