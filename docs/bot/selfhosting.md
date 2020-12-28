@@ -167,13 +167,14 @@ On first startup will it generate with the below default values.
       },
       
       "tokens": {
-        "blaze": "blaze-token",
+        "fluxpoint-dev": "fluxpoint-dev-token",
         
         "discord-bots-gg": "dbgg-token",
         "botlist-space": "botlist-token",
         "discordextremelist-xyz": "debl-token",
         "discord-boats": "discord-boats-token",
-        "discordservices-net": "discordservices-net-token"
+        "discordservices-net": "discordservices-net-token",
+        "discordbotlist-com": "discordbotlist-com-token"
       },
       
       "database": {
