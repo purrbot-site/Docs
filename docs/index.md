@@ -32,12 +32,12 @@ All the legal details about the Bot, API and website.
 **Social**
 
 
-[:fontawesome-brands-discord: Discord](https://purrbot.site/discord){: .md-button }  
-[:fontawesome-brands-github: GitHub](https://purrbot.site/github){: .md-button }  
-[:fontawesome-brands-twitter: Twitter](https://purrbot.site/twitter){: .md-button }  
+[:fontawesome-brands-discord: Discord](https://purrbot.site/discord){: .md-button }
+[:fontawesome-brands-github: GitHub](https://purrbot.site/github){: .md-button }
+[:fontawesome-brands-twitter: Twitter](https://purrbot.site/twitter){: .md-button }
 [:fontawesome-brands-youtube: YouTube](https://purrbot.site/youtube){: .md-button }
 
-**Donate** [heart](https://twemoji.maxcdn.com/v/latest/svg/2764.svg){: .tweemoji .heart-anim }
+**Donate** ![heart](https://twemoji.maxcdn.com/v/latest/svg/2764.svg){: .tweemoji .heart-anim }
 
-[:fontawesome-brands-patreon: Patreon (Continued donations)](https://patreon.com/andre_601){: .md-button }  
+[:fontawesome-brands-patreon: Patreon (Continued donations)](https://patreon.com/andre_601){: .md-button }
 [:fontawesome-brands-paypal: PayPal (Single donation)](https://purrbot.site/donate){: .md-button }
