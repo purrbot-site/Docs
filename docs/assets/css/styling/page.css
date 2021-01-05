@@ -1,21 +1,25 @@
 .md-typeset a.source-link {
-	 position: relative;
-	 top: px2rem(-12px);
-	 float: right;
-	 color: var(--md-default-fg-color--lighter);
-	 transition: color 125ms;
+    position: relative;
+    top: px2rem(-12px);
+    float: right;
+    color: var(--md-default-fg-color--lighter);
+    transition: color 125ms;
 }
- .md-typeset a.source-link:hover {
-	 color: var(--md-accent-fg-color);
+
+.md-typeset a.source-link:hover {
+    color: var(--md-accent-fg-color);
 }
- .md-typeset a.source-link .twemoji {
-	 height: px2rem(24px);
+
+.md-typeset a.source-link .twemoji {
+    height: px2rem(24px);
 }
- .md-typeset a.source-link .twemoji svg {
-	 width: px2rem(24px);
-	 height: px2rem(24px);
+
+.md-typeset a.source-link .twemoji svg {
+    width: px2rem(24px);
+    height: px2rem(24px);
 }
- .md-typeset div.highlight.md-max-height pre > code {
-	 max-height: px2rem(300px);
+
+.md-typeset div.highlight.md-max-height pre > code {
+    max-height: px2rem(300px);
 }
  
