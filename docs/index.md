@@ -37,7 +37,7 @@ All the legal details about the Bot, API and website.
 [:fontawesome-brands-twitter: Twitter](https://purrbot.site/twitter){: .md-button }
 [:fontawesome-brands-youtube: YouTube](https://purrbot.site/youtube){: .md-button }
 
-**Donate** ![heart](https://twemoji.maxcdn.com/v/latest/svg/2764.svg){: .tweemoji .heart-anim }
+**Donate**
 
 [:fontawesome-brands-patreon: Patreon (Continued donations)](https://patreon.com/andre_601){: .md-button }
 [:fontawesome-brands-paypal: PayPal (Single donation)](https://purrbot.site/donate){: .md-button }
