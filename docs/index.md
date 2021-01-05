@@ -1,3 +1,5 @@
+[:octicons-file-code-24:](https://github.com/purrbot-site/Docs/blob/feature/add-source-icon/docs/index.md){: .source-link }
+
 # Welcome
 Welcome to the PurrBot Documentation!
 
