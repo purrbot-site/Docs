@@ -3,10 +3,8 @@
     --md-typeset-a-color: #00BDD6;
 }
 
-.md-typeset {
-    .md-button {
-        color: #00BDD6;
-    }
+.md-typeset .md-button {
+    color: #00BDD6;
 }
 
 html {
