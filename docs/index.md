@@ -10,7 +10,7 @@ Documentation about the various APIs available under the domain purrbot.site
 ## Wiki
 General wiki about the Bot \*Purr*, her commands and various other information.
 
-[;fontawesome-solid-book: Bot Wiki](/bot){: .md-button }
+[:fontawesome-solid-book: Bot Wiki](/bot){: .md-button }
 
 ## Contributing
 Pages about how to contribute towards the documentation, bot and the APIs.  
