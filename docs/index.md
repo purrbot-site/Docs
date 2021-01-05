@@ -1,6 +1,8 @@
 # Welcome
-Welcome to the documentation of https://docs.purrbot.site!  
-This site contains the following things:
+Welcome to the PurrBot Documentation!
+
+These pages cover various things for the API, the Bot and some other stuff.  
+Want to help improve those pages? Awesome! Just check out the [Contributing Section](#contributing) for how you can do this.
 
 ## API
 Documentation about the various APIs available under the domain purrbot.site
