@@ -8,3 +8,7 @@
         color: #00BDD6;
     }
 }
+
+html {
+    scroll-behaviour: smooth;
+}
