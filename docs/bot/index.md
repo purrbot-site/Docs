@@ -15,5 +15,5 @@
 
 ## :fontawesome-regular-question-circle: Misc
 - [Credits](credits)
-- [FAQ](faq)
+- [FAQ](https://purrbot.site/discord)
 - [Selfhosting](selfhosting)
