@@ -1,3 +1,8 @@
+---
+title: Wiki
+description: Wiki about the Bot.
+---
+
 \*Purr* is a simple bot, which is focused around nekos (catgirls) but also provides other fun commands.
 
 ## :fontawesome-solid-terminal: Commands

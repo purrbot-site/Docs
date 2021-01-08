@@ -1,3 +1,8 @@
+---
+title: Setup the Welcome System
+description: How to setup the Welcome System.
+---
+
 The welcome channel allows you to greet people with a message and image when they join your Discord.
 
 !!! info "Notes"

@@ -1,3 +1,8 @@
+---
+title: Welcome Images
+description: All available Welcome images.
+---
+
 \*Purr* allows you to set a welcome-channel where she greets joining users with a message and an image.  
 A tutorial on how to set this up can be found [here](/bot/welcome-channel).
 

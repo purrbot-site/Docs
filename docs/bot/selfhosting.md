@@ -1,3 +1,8 @@
+---
+title: Selfhosting
+description: Want to selfhost the Bot? This page explains the details.
+---
+
 [PurrBot.java]: https://github.com/purrbot-site/PurrBot/blob/master/src/main/java/site/purrbot/bot/PurrBot.java
 [MIT-License]: https://github.com/Andre601/PurrBot/blob/master/LICENSE
 
