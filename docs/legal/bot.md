@@ -7,6 +7,11 @@
 # Bot
 This page covers the Terms of Service (Terms) and Privacy Policy of the Discord Bot \*Purr*
 
+---
+title: Bot ToS and Privacy Policy
+description: The Terms of Service and Privacy Policy of the Discord Bot.
+---
+
 ## Terms of Service
 
 ### Usage Agreement

@@ -1,3 +1,8 @@
+---
+title: Formatting Help
+description: Page explaining the details about formatting those docs.
+---
+
 [PyMdown]: https://facelessuser.github.io/pymdown-extensions/
 [MkDocs]: https://www.mkdocs.org
 [MkDocs-Material extension]: https://github.com/facelessuser/mkdocs-material-extensions

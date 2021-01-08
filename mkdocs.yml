@@ -2,6 +2,8 @@ site_name: PurrBot Documentation
 site_description: 'API-Documentation and Wiki of *Purr*'
 site_author: 'Andre_601'
 
+site_url: 'https://docs.purrbot.site'
+
 copyright: |
   Docs made with 
   <img alt="❤" class="twemoji heart-anim md-footer-custom-text" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title="love"> 

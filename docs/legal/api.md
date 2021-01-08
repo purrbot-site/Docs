@@ -1,3 +1,8 @@
+---
+title: API ToS and Privacy Policy
+description: The Terms of Service and Privacy Policy for the ImageAPI.
+---
+
 # API
 
 ## Terms of Service

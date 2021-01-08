@@ -1,3 +1,8 @@
+---
+title: API
+description: Detailed information about the ImageAPI.
+---
+
 [SimpleDateFormat]: https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
 
 # API Documentation
