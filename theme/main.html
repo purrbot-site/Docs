@@ -8,6 +8,9 @@
   {% elif page and page.title and not page.is_homepage %}
     <meta property="og:title" content="{{ title }} - {{ page.title | striptags }}" />
     <meta name="twitter:title" content="{{ title }} - {{ page.title | striptags }}" />
+  {% else %}
+    <meta property="og:title" content="{{ title }}" />
+    <meta name="twitter:title" content="{{ title }}" />
   {% endif %}
   
   {% if page and page.meta and page.meta.description %}
