@@ -1,3 +1,8 @@
+---
+title: Contribute
+description: Help us improving the bot, website or this Documentation!
+---
+
 [Discord]: https://purrbot.site/discord
 
 [doc]: https://github.com/purrbot-site/Docs

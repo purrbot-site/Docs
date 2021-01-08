@@ -1,3 +1,8 @@
+---
+title: Website Legal info
+description: Legal information about the website.
+---
+
 [Maxee]: https://notmaxee.github.io/
 
 [CloudFlare]: https://cloudflare.com

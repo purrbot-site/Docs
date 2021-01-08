@@ -1,3 +1,8 @@
+---
+title: Commands
+description: List of all Commands the Bot currently offers.
+---
+
 # General info
 This page lists all available commands of the bot.  
 The default prefix is `.` but can be changed with the [[prefix-command|Commands#prefix]]

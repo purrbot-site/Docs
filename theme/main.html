@@ -1,5 +1,44 @@
 {% extends "base.html" %}
 
+{% block extrahead %}
+  {% set title = config.site_name %}
+  {% if page and page.meta and page.meta.title %}
+    <meta property="og:title" content="{{ page.meta.title }} - {{ title }}" />
+    <meta name="twitter:title" content="{{page.meta.title }} - {{ title }}" />
+  {% elif page and page.title and not page.is_homepage %}
+    <meta property="og:title" content="{{ title }} - {{ page.title | striptags }}" />
+    <meta name="twitter:title" content="{{ title }} - {{ page.title | striptags }}" />
+  {% endif %}
+  
+  {% if page and page.meta and page.meta.description %}
+    <meta property="og:description" content="{{ page.meta.description }}" />
+    <meta name="twitter:description" content="{{ page.meta.description }}" />
+  {% else %}
+    <meta property="og:description" content="{{ config.site_description }}" />
+    <meta name="twitter:description" content="{{ config.site_description }}" />
+  {% endif %}
+  <meta name="theme-color" content="#3F51B5">
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ page.canonical_url }}" />
+  <meta property="og:image" content="https://docs.purrbot.site/assets/img/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:creator" content="Andre_601" />
+  <meta name="twitter:image" content="https://docs.purrbot.site/assets/img/logo.png" />
+{% endblock %}
+
+{% block htmltitle %}
+  {% if page and page.meta and page.meta.title %}
+    <title>{{ page.meta.title }} - {{ config.site_name }}</title>
+  {% elif page and page.title and not page.is_homepage %}
+    <title>{{ page.title | striptags }} - {{ config.site_name }}</title>
+  {% else %}
+    <title>{{ config.site_name }}</title>
+  {% endif %}
+{% endblock %}
+
 {% block footer %}
   <!-- Further information -->
   <div class="md-footer-meta md-typeset">
