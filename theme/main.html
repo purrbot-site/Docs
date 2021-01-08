@@ -1,5 +1,34 @@
 {% extends "base.html" %}
 
+{% block extrahead %}
+  {% set title = config.site_name %}
+  {% if page and page.meta and page.meta.title %}
+    <meta property="og:title" content="{{ title }} - {{ page.meta.title }}" />
+  {% elif page and page.title and not page.is_homepage %}
+    <meta property="og:title" content="{{ title }} - {{ page.title | striptags }}" />
+  {% endif %}
+  
+  {% if page and page.meta and page.meta.description %}
+    <meta property="og:description" content="{{ page.meta.description }}" />
+  {% elif config.site_description %}
+    <meta property="og:description" content="{{ config.site_description }}" />
+  {% endif %}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ page.canonical_url }}" />
+  <meta property="og:image" content="{{ config.theme.favicon }}" />
+  <meta property="og:image:type" content="image/png" />
+{% endblock %}
+
+{% block htmltitle %}
+  {% if page and page.meta and page.meta.title %}
+    <title>{{ page.meta.title }} - {{ config.site_name }}</title>
+  {% elif page and page.title and not page.is_homepage %}
+    <title>{{ page.title | striptags }} - {{ config.site_name }}</title>
+  {% else %}
+    <title>{{ config.site_name }}</title>
+  {% endif %}
+{% endblock %}
+
 {% block footer %}
   <!-- Further information -->
   <div class="md-footer-meta md-typeset">
