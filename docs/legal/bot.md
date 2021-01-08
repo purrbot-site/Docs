@@ -1,3 +1,8 @@
+---
+title: Bot ToS and Privacy Policy
+description: The Terms of Service and Privacy Policy of the Discord Bot.
+---
+
 [Terms of Service]: https://discord.com/terms
 [Community Guidelines]: https://discord.com/guidelines
 [discord]: https://discord.com
@@ -6,11 +11,6 @@
 
 # Bot
 This page covers the Terms of Service (Terms) and Privacy Policy of the Discord Bot \*Purr*
-
----
-title: Bot ToS and Privacy Policy
-description: The Terms of Service and Privacy Policy of the Discord Bot.
----
 
 ## Terms of Service
 
