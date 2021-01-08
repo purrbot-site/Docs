@@ -317,6 +317,34 @@ You can access those endpoints through simple `GET` requests.
     }
     ```
 
+### /img/sfw/dance/gif
+
+=== "Response (Success)"
+    ```json
+    {
+      "error": false,
+      "link": "https://purrbot.site/img/sfw/dance/gif/cuddle_001.gif",
+      "time": 0
+    }
+    ```
+
+=== "Response (Failure)"
+    **Invalid Path (Not an API endpoint)**  
+    ```json
+    {
+      "error": true,
+      "message": "Not supported API path"
+    }
+    ```
+    
+    **Invalid Path (No images)**  
+    ```json
+    {
+      "error": true,
+      "message": "The selected path doesn't contain any images"
+    }
+    ```
+
 ### /img/sfw/eevee/:type
 `:type` can be either `gif` for gifs or `img` for images.
 
