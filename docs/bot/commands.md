@@ -18,8 +18,9 @@ The default prefix is `.` but can be changed with the [[prefix-command|Commands#
 ### [Fun](#category-fun)
 - [Bite](#bite)
 - [Blush](#blush)
-- [Cuddle](#cuddle)
 - [Cry](#cry)
+- [Cuddle](#cuddle)
+- [Dance](#dance)
 - [Eevee](#eevee)
 - [Feed](#feed)
 - [Fluff](#fluff)
@@ -99,6 +100,22 @@ Lets you bite one or multiple mentioned users.
 Lets you blush.
 
 ----
+### Cry
+> **Permission**: `None`  
+> **Bot requires**: `None`
+>
+> **Aliases**:
+>
+> - `Sad`
+> - `Sob`
+>
+> **Usage**:
+>
+> - `.Cry`
+
+Lets you cry. :cry:
+
+----
 ### Cuddle
 > **Permission**: `None`  
 > **Bot requires**: `None`  
@@ -117,20 +134,19 @@ Lets you blush.
 Lets you cuddle one or multiple mentioned users.
 
 ----
-### Cry
+### Dance
 > **Permission**: `None`  
 > **Bot requires**: `None`
 >
 > **Aliases**:
->
-> - `Sad`
-> - `Sob`
+> 
+> - `Dancing`
 >
 > **Usage**:
 >
-> - `.Cry`
+> - `.Dance`
 
-Lets you cry. :cry:
+Gives a gif of someone dancing. ~(^-^)~
 
 ----
 ### Eevee
