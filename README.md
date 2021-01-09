@@ -14,6 +14,8 @@
 [netlify]: https://www.netlify.com
 
 # Docs
+![forthebadge](https://forthebadge.com/images/badges/made-with-markdown.svg)
+
 This repository is home of the content found on https://docs.purrbot.site  
 It currently houses the API-documentation for the various endpoints under https://purrbot.site/api and the official wiki of [\*Purr*][purr].
 
