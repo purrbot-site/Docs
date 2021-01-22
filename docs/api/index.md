@@ -90,7 +90,7 @@ These API endpoints can only be used through `POST` requests.
     
 === "Response (Success)"
     <br>
-    <img alt="quote" src="/assets/img/quote.png">
+    ![quote](/assets/img/quote.png)
 
 === "Response (Failure)"
     <br>
@@ -151,7 +151,7 @@ These API endpoints can only be used through `POST` requests.
     
 === "Response (Success)"
     <br>
-    <img alt="status" src="/assets/img/status.png" style="width: 80px; height: 80px;">
+    ![status](/assets/img/status.png){: width="80" }
 
 === "Response (Failure)"
     <br>
