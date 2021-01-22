@@ -113,7 +113,8 @@ A smiling neko :3
 ![image](https://purrbot.site/img/sfw/icon/img/neko_smile.png)
 
 #### purr
-\*Purr\* herself. >w<
+\*Purr\* herself. >w<  
+Created by `Makay#0270`
 
 ![image](https://purrbot.site/img/sfw/icon/img/purr.png){: width="320" }
 
