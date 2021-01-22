@@ -115,7 +115,12 @@ A smiling neko :3
 #### purr
 \*Purr\* herself. >w<
 
-![image](https://purrbot.site/img/sfw/icon/img/purr.png)
+![image](https://purrbot.site/img/sfw/icon/img/purr.png){: width="320" }
+
+#### purr_old
+\*Purr\*'s old avatar. -w-
+
+![image](https://purrbot.site/img/sfw/icon/img/purr_old.png)
 
 #### snuggle
 \*Purr\*'s younger sister \*Snuggle\*. OwO
