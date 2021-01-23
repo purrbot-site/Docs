@@ -1,0 +1,12 @@
+.md-tabs__item {
+    height: 2rem;
+}
+
+.md-tabs__link {
+    margin-top: .4rem;
+}
+
+.md-header-nav__button.md-logo img, .md-header-nav__button.md-logo svg {
+    width: 2.4rem;
+    height: 2.4rem;
+}
