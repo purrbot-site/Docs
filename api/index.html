@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://docs.purrbot.site/api/">
       
       <link rel="shortcut icon" href="../assets/img/logo.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.5">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.7">
     
     
   
@@ -24,10 +24,10 @@
   
 
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.15aa0b43.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.cb6bc1d0.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.75751829.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
         
           
           
@@ -328,7 +328,6 @@
       
       
 
-
   
   
   
@@ -343,7 +342,6 @@
       
       
       
-
 
   
   
@@ -741,6 +739,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#failed-requests" class="md-nav__link">
+    Failed Requests
+  </a>
+  
+    <nav class="md-nav" aria-label="Failed Requests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apiquote" class="md-nav__link">
+    /api/quote
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apistatus" class="md-nav__link">
+    /api/status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apiimg" class="md-nav__link">
+    /api/img/*
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -758,7 +790,6 @@
       
       
       
-
 
   
   
@@ -863,7 +894,6 @@
       
       
 
-
   
   
   
@@ -919,7 +949,6 @@
       
       
 
-
   
   
   
@@ -962,7 +991,6 @@
       
       
       
-
 
   
   
@@ -1401,6 +1429,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#failed-requests" class="md-nav__link">
+    Failed Requests
+  </a>
+  
+    <nav class="md-nav" aria-label="Failed Requests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apiquote" class="md-nav__link">
+    /api/quote
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apistatus" class="md-nav__link">
+    /api/status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apiimg" class="md-nav__link">
+    /api/img/*
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1429,18 +1491,18 @@ The API is <a href="https://github.com/purrbot-site/ImageAPI">open source</a> an
 </div>
 <h2 id="post">POST<a class="headerlink" href="#post" title="Permanent link">&para;</a></h2>
 <p>These API endpoints can only be used through <code>POST</code> requests.</p>
+<h3 id="quote">/quote<a class="headerlink" href="#quote" title="Permanent link">&para;</a></h3>
+<p><em>Generates images that look like Discord messages.</em></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <ul>
 <li><strong>Responses</strong>:<ul>
 <li>Success: <code>Image</code></li>
-<li>Failure: <code>JSON</code></li>
+<li><a href="#apiquote">Failure: <code>JSON</code></a></li>
 </ul>
 </li>
 </ul>
 </div>
-<h3 id="quote">/quote<a class="headerlink" href="#quote" title="Permanent link">&para;</a></h3>
-<p><em>Generates images that look like Discord messages.</em></p>
 <h4 id="fields">Fields<a class="headerlink" href="#fields" title="Permanent link">&para;</a></h4>
 <div class="tabbed-set" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">avatar</label><div class="tabbed-content">
 <p><strong>Type</strong>: String<br />
@@ -1483,7 +1545,7 @@ The username to display.</p>
 </div>
 </div>
 <h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
-<div class="tabbed-set" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Request</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Request</label><div class="tabbed-content">
 <p><br>
 This request was made on march, 9th 2020.<br />
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -1495,28 +1557,23 @@ This request was made on march, 9th 2020.<br />
 <span class="p">}</span>
 </code></pre></div></p>
 </div>
-<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Response (Success)</label><div class="tabbed-content">
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Response</label><div class="tabbed-content">
 <p><br>
 <img alt="quote" src="/assets/img/quote.png" /></p>
-</div>
-<input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">Response (Failure)</label><div class="tabbed-content">
-<p><br>
-<strong>Empty JSON Body/No JSON Provided</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Invalid or empty JSON Body provided.&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Malformed JSON or invalid values</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Couldn&#39;t generate Image. Make sure the values are valid!&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
 </div>
 </div>
 <h3 id="status">/status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h3>
 <p><em>Adds a status icon to the provided Avatar.</em></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li><strong>Responses</strong>:<ul>
+<li>Success: <code>Image</code></li>
+<li><a href="#apistatus">Failure: <code>JSON</code></a></li>
+</ul>
+</li>
+</ul>
+</div>
 <h4 id="fields_1">Fields<a class="headerlink" href="#fields_1" title="Permanent link">&para;</a></h4>
 <div class="tabbed-set" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">avatar</label><div class="tabbed-content">
 <p><strong>Type</strong>: String<br />
@@ -1539,7 +1596,7 @@ Available are <code>online</code>, <code>idle</code>, <code>do_not_disturb</code
 </div>
 </div>
 <h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h4>
-<div class="tabbed-set" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Request</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Request</label><div class="tabbed-content">
 <p><br>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cdn.discordapp.com/avatars/204232208049766400/dfaaefa54a2804addb1f494da7aa904d.png&quot;</span><span class="p">,</span>
@@ -1547,24 +1604,9 @@ Available are <code>online</code>, <code>idle</code>, <code>do_not_disturb</code
 <span class="p">}</span>
 </code></pre></div></p>
 </div>
-<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">Response (Success)</label><div class="tabbed-content">
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">Response</label><div class="tabbed-content">
 <p><br>
 <img alt="status" src="/assets/img/status.png" width="80" /></p>
-</div>
-<input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><label for="__tabbed_4_3">Response (Failure)</label><div class="tabbed-content">
-<p><br>
-<strong>Empty JSON Body/No JSON Provided</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Invalid or empty JSON Body provided.&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Malformed JSON or invalid values</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Couldn&#39;t generate Image. Make sure the values are valid!&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
 </div>
 </div>
 <hr />
@@ -1576,158 +1618,63 @@ You can access those endpoints through simple <code>GET</code> requests.</p>
 <ul>
 <li><strong>Responses</strong>:<ul>
 <li>Success: <code>JSON</code></li>
-<li>Failure: <code>JSON</code></li>
+<li><a href="#apiimg">Failure: <code>JSON</code></a></li>
 </ul>
 </li>
 </ul>
 </div>
 <h3 id="imgsfwbackgroundimg">/img/sfw/background/img<a class="headerlink" href="#imgsfwbackgroundimg" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a Random <a href="/bot/welcome-images#backgrounds">Welcome Background</a>.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-  <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/background/img/gradient_orange.png&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/background/img/color_black.png&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgsfwbitegif">/img/sfw/bite/gif<a class="headerlink" href="#imgsfwbitegif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Bite Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/bite/gif/bite_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><label for="__tabbed_6_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgsfwblushgif">/img/sfw/blush/gif<a class="headerlink" href="#imgsfwblushgif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><label for="__tabbed_7_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random blush Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-  <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/background/blush/gif/blush_001.gif&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/blush/gif/blush_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><label for="__tabbed_7_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgsfwcrygif">/img/sfw/cry/gif<a class="headerlink" href="#imgsfwcrygif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><label for="__tabbed_8_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Cry Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/cry/gif/cry_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><label for="__tabbed_8_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgsfwcuddlegif">/img/sfw/cuddle/gif<a class="headerlink" href="#imgsfwcuddlegif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><label for="__tabbed_9_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Cuddle Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/cuddle/gif/cuddle_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><label for="__tabbed_9_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgsfwdancegif">/img/sfw/dance/gif<a class="headerlink" href="#imgsfwdancegif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><label for="__tabbed_10_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Dance Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-  <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/dance/gif/cuddle_001.gif&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/dance/gif/dance_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><label for="__tabbed_10_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgsfweeveetype">/img/sfw/eevee/:type<a class="headerlink" href="#imgsfweeveetype" title="Permanent link">&para;</a></h3>
-<p><code>:type</code> can be either <code>gif</code> for gifs or <code>img</code> for images.</p>
-<div class="tabbed-set" data-tabs="11:3"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><label for="__tabbed_11_1">Response (Success GIF)</label><div class="tabbed-content">
+<p>Returns either a random Eevee Image or Gif.<br />
+<code>:type</code> can be either <code>gif</code> for gifs or <code>img</code> for images.</p>
+<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">Response (GIF)</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/eevee/gif/eevee_001.gif&quot;</span><span class="p">,</span>
@@ -1735,7 +1682,7 @@ You can access those endpoints through simple <code>GET</code> requests.</p>
 <span class="p">}</span>
 </code></pre></div>
 </div>
-<input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><label for="__tabbed_11_2">Response (Success IMG)</label><div class="tabbed-content">
+<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">Response (IMG)</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/eevee/img/eevee_001.jpg&quot;</span><span class="p">,</span>
@@ -1743,216 +1690,75 @@ You can access those endpoints through simple <code>GET</code> requests.</p>
 <span class="p">}</span>
 </code></pre></div>
 </div>
-<input id="__tabbed_11_3" name="__tabbed_11" type="radio" /><label for="__tabbed_11_3">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
 </div>
 <h3 id="imgsfwfeedgif">/img/sfw/feed/gif<a class="headerlink" href="#imgsfwfeedgif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><label for="__tabbed_12_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Feeding Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/feed/gif/feed_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><label for="__tabbed_12_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgsfwfluffgif">/img/sfw/fluff/gif<a class="headerlink" href="#imgsfwfluffgif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><label for="__tabbed_13_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Fluffing Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/fluff/gif/fluff_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><label for="__tabbed_13_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgsfwholoimg">/img/sfw/holo/img<a class="headerlink" href="#imgsfwholoimg" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><label for="__tabbed_14_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Image of Holo (Spice &amp; Wolf).</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-  <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/holo/img/holo_001.jpg&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/holo/img/holo_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><label for="__tabbed_14_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgsfwhuggif">/img/sfw/hug/gif<a class="headerlink" href="#imgsfwhuggif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><label for="__tabbed_15_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Hug Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/hug/gif/hug_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><label for="__tabbed_15_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgsfwiconimg">/img/sfw/icon/img<a class="headerlink" href="#imgsfwiconimg" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><label for="__tabbed_16_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random <a href="/bot/welcome-images#icons">Welcome Icon</a></p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/icon/img/holo.png&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><label for="__tabbed_16_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgsfwkissgif">/img/sfw/kiss/gif<a class="headerlink" href="#imgsfwkissgif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><label for="__tabbed_17_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Kiss Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/kiss/gif/kiss_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><label for="__tabbed_17_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgsfwkitsuneimg">/img/sfw/kitsune/img<a class="headerlink" href="#imgsfwkitsuneimg" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="18:2"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><label for="__tabbed_18_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Image of a Kitsune (Fox girl).</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-  <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/kitsune/img/kitsune_001.jpg&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/kitsune/img/kitsune_001.png&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><label for="__tabbed_18_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgsfwlickgif">/img/sfw/lick/gif<a class="headerlink" href="#imgsfwlickgif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><label for="__tabbed_19_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Lick Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/lick/gif/lick_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><label for="__tabbed_19_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgsfwnekotype">/img/sfw/neko/:type<a class="headerlink" href="#imgsfwnekotype" title="Permanent link">&para;</a></h3>
-<p><code>:type</code> can be either <code>gif</code> for gifs or <code>img</code> for images.</p>
-<div class="tabbed-set" data-tabs="20:3"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><label for="__tabbed_20_1">Response (Success GIF)</label><div class="tabbed-content">
+<p>Returns either a random Neko Image or Gif.<br />
+<code>:type</code> can be either <code>gif</code> for gifs or <code>img</code> for images.</p>
+<div class="tabbed-set" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">Response (GIF)</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/neko/gif/neko_001.gif&quot;</span><span class="p">,</span>
@@ -1960,7 +1766,7 @@ You can access those endpoints through simple <code>GET</code> requests.</p>
 <span class="p">}</span>
 </code></pre></div>
 </div>
-<input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><label for="__tabbed_20_2">Response (Success IMG)</label><div class="tabbed-content">
+<input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><label for="__tabbed_6_2">Response (IMG)</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/neko/img/neko_001.jpg&quot;</span><span class="p">,</span>
@@ -1968,189 +1774,63 @@ You can access those endpoints through simple <code>GET</code> requests.</p>
 <span class="p">}</span>
 </code></pre></div>
 </div>
-<input id="__tabbed_20_3" name="__tabbed_20" type="radio" /><label for="__tabbed_20_3">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
 </div>
 <h3 id="imgsfwpatgif">/img/sfw/pat/gif<a class="headerlink" href="#imgsfwpatgif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><label for="__tabbed_21_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Pat Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/pat/gif/pat_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><label for="__tabbed_21_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgsfwpokegif">/img/sfw/poke/gif<a class="headerlink" href="#imgsfwpokegif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="22:2"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><label for="__tabbed_22_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Poke Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/poke/gif/poke_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><label for="__tabbed_22_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgsfwsenkoimg">/img/sfw/senko/img<a class="headerlink" href="#imgsfwsenkoimg" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="23:2"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><label for="__tabbed_23_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Image of Senko-San.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-  <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/senko/img/senko_001.jpg&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/senko/img/senko_001.png&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_23_2" name="__tabbed_23" type="radio" /><label for="__tabbed_23_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgsfwslapgif">/img/sfw/slap/gif<a class="headerlink" href="#imgsfwslapgif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="24:2"><input checked="checked" id="__tabbed_24_1" name="__tabbed_24" type="radio" /><label for="__tabbed_24_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Slap Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/slap/gif/slap_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_24_2" name="__tabbed_24" type="radio" /><label for="__tabbed_24_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgsfwsmilegif">/img/sfw/smile/gif<a class="headerlink" href="#imgsfwsmilegif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="25:2"><input checked="checked" id="__tabbed_25_1" name="__tabbed_25" type="radio" /><label for="__tabbed_25_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Smile Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/smile/gif/smile_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_25_2" name="__tabbed_25" type="radio" /><label for="__tabbed_25_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgsfwtailgif">/img/sfw/tail/gif<a class="headerlink" href="#imgsfwtailgif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="26:2"><input checked="checked" id="__tabbed_26_1" name="__tabbed_26" type="radio" /><label for="__tabbed_26_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Tail wagging Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/tail/gif/tail_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_26_2" name="__tabbed_26" type="radio" /><label for="__tabbed_26_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgsfwticklegif">/img/sfw/tickle/gif<a class="headerlink" href="#imgsfwticklegif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="27:2"><input checked="checked" id="__tabbed_27_1" name="__tabbed_27" type="radio" /><label for="__tabbed_27_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Tickle Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/tickle/gif/tickle_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_27_2" name="__tabbed_27" type="radio" /><label for="__tabbed_27_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <hr />
 <h2 id="get-nsfw">GET <small>(NSFW)</small><a class="headerlink" href="#get-nsfw" title="Permanent link">&para;</a></h2>
 <p>Contains images that are considered Not Safe for work.<br />
@@ -2161,110 +1841,47 @@ You can access those endpoints through simple <code>GET</code> requests.</p>
 <ul>
 <li><strong>Responses</strong>:<ul>
 <li>Success: <code>JSON</code></li>
-<li>Failure: <code>JSON</code></li>
+<li><a href="#apiimg">Failure: <code>JSON</code></a></li>
 </ul>
 </li>
 </ul>
 </div>
 <h3 id="imgnsfwanalgif">/img/nsfw/anal/gif<a class="headerlink" href="#imgnsfwanalgif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="28:2"><input checked="checked" id="__tabbed_28_1" name="__tabbed_28" type="radio" /><label for="__tabbed_28_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Anal-sex Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_28_2" name="__tabbed_28" type="radio" /><label for="__tabbed_28_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgnsfwblowjobgif">/img/nsfw/blowjob/gif<a class="headerlink" href="#imgnsfwblowjobgif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="29:2"><input checked="checked" id="__tabbed_29_1" name="__tabbed_29" type="radio" /><label for="__tabbed_29_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Blowjob Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/blowjob/gif/blowjob_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_29_2" name="__tabbed_29" type="radio" /><label for="__tabbed_29_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgnsfwcumgif">/img/nsfw/cum/gif<a class="headerlink" href="#imgnsfwcumgif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="30:2"><input checked="checked" id="__tabbed_30_1" name="__tabbed_30" type="radio" /><label for="__tabbed_30_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Cumming Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/cum/gif/cum_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_30_2" name="__tabbed_30" type="radio" /><label for="__tabbed_30_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgnsfwfuckgif">/img/nsfw/fuck/gif<a class="headerlink" href="#imgnsfwfuckgif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="31:2"><input checked="checked" id="__tabbed_31_1" name="__tabbed_31" type="radio" /><label for="__tabbed_31_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Sex Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/fuck/gif/fuck_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_31_2" name="__tabbed_31" type="radio" /><label for="__tabbed_31_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgnsfwnekotype">/img/nsfw/neko/:type<a class="headerlink" href="#imgnsfwnekotype" title="Permanent link">&para;</a></h3>
-<p><code>:type</code> can be either <code>gif</code> for gifs or <code>img</code> for images.</p>
-<div class="tabbed-set" data-tabs="32:3"><input checked="checked" id="__tabbed_32_1" name="__tabbed_32" type="radio" /><label for="__tabbed_32_1">Response (Success GIF)</label><div class="tabbed-content">
+<p>Returns either a random lewd Neko Image or Gif.<br />
+<code>:type</code> can be either <code>gif</code> for gifs or <code>img</code> for images.</p>
+<div class="tabbed-set" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><label for="__tabbed_7_1">Response (Success GIF)</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/neko/gif/neko_001.gif&quot;</span><span class="p">,</span>
@@ -2272,7 +1889,7 @@ You can access those endpoints through simple <code>GET</code> requests.</p>
 <span class="p">}</span>
 </code></pre></div>
 </div>
-<input id="__tabbed_32_2" name="__tabbed_32" type="radio" /><label for="__tabbed_32_2">Response (Success IMG)</label><div class="tabbed-content">
+<input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><label for="__tabbed_7_2">Response (Success IMG)</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/neko/gif/neko_001.jpg&quot;</span><span class="p">,</span>
@@ -2280,185 +1897,154 @@ You can access those endpoints through simple <code>GET</code> requests.</p>
 <span class="p">}</span>
 </code></pre></div>
 </div>
-<input id="__tabbed_32_3" name="__tabbed_32" type="radio" /><label for="__tabbed_32_3">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
 </div>
 <h3 id="imgnsfwpussylickgif">/img/nsfw/pussylick/gif<a class="headerlink" href="#imgnsfwpussylickgif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="33:2"><input checked="checked" id="__tabbed_33_1" name="__tabbed_33" type="radio" /><label for="__tabbed_33_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Pussy licking Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/pussylick/gif/pussylick_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_33_2" name="__tabbed_33" type="radio" /><label for="__tabbed_33_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgnsfwsologif">/img/nsfw/solo/gif<a class="headerlink" href="#imgnsfwsologif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="34:2"><input checked="checked" id="__tabbed_34_1" name="__tabbed_34" type="radio" /><label for="__tabbed_34_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Girl masturbating Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/solo/gif/solo_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_34_2" name="__tabbed_34" type="radio" /><label for="__tabbed_34_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgnsfwthreesome_fffgif">/img/nsfw/threesome_fff/gif<a class="headerlink" href="#imgnsfwthreesome_fffgif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="35:2"><input checked="checked" id="__tabbed_35_1" name="__tabbed_35" type="radio" /><label for="__tabbed_35_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Threesome (only Female) Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-  <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/threesome_fff/gif/threesome_001.gif&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/threesome_fff/gif/threesome_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_35_2" name="__tabbed_35" type="radio" /><label for="__tabbed_35_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgnsfwthreesome_ffmgif">/img/nsfw/threesome_ffm/gif<a class="headerlink" href="#imgnsfwthreesome_ffmgif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="36:2"><input checked="checked" id="__tabbed_36_1" name="__tabbed_36" type="radio" /><label for="__tabbed_36_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Threesome (2 Female, 1 Male) Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/threesome_ffm/gif/threesome_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_36_2" name="__tabbed_36" type="radio" /><label for="__tabbed_36_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgnsfwthreesome_mmfgif">/img/nsfw/threesome_mmf/gif<a class="headerlink" href="#imgnsfwthreesome_mmfgif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="37:2"><input checked="checked" id="__tabbed_37_1" name="__tabbed_37" type="radio" /><label for="__tabbed_37_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Threesome (2 Male, 1 Female) Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/threesome_mmf/gif/threesome_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_37_2" name="__tabbed_37" type="radio" /><label for="__tabbed_37_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgnsfwyaoigif">/img/nsfw/yaoi/gif<a class="headerlink" href="#imgnsfwyaoigif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="38:2"><input checked="checked" id="__tabbed_38_1" name="__tabbed_38" type="radio" /><label for="__tabbed_38_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a Random Yaoi (Gay) sex Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/yaoi/gif/yaoi_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<input id="__tabbed_38_2" name="__tabbed_38" type="radio" /><label for="__tabbed_38_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
 <h3 id="imgnsfwyurigif">/img/nsfw/yuri/gif<a class="headerlink" href="#imgnsfwyurigif" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="39:2"><input checked="checked" id="__tabbed_39_1" name="__tabbed_39" type="radio" /><label for="__tabbed_39_1">Response (Success)</label><div class="tabbed-content">
+<p>Returns a random Yuri (Lesbian) sex Gif.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/yuri/gif/yuri_001.gif&quot;</span><span class="p">,</span>
   <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
 </code></pre></div>
+<hr />
+<h2 id="failed-requests">Failed Requests<a class="headerlink" href="#failed-requests" title="Permanent link">&para;</a></h2>
+<p>The API will return a JSON body whenever a request failed.<br />
+An error is returned for the following cases:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Following placeholders are used in the below examples and may look different per-request:</p>
+<ul>
+<li><code>:content-type</code> The <code>Content-Type</code> set for the Request (i.e. <code>application/json</code>).</li>
+<li><code>:user-agent</code> The <code>User-Agent</code> used for the Request (i.e. <code>Chrome</code>).</li>
+<li><code>:path</code> The path targeted by the Request (i.e. <code>sfw/cuddle/gif</code>)</li>
+</ul>
 </div>
-<input id="__tabbed_39_2" name="__tabbed_39" type="radio" /><label for="__tabbed_39_2">Response (Failure)</label><div class="tabbed-content">
-<p><strong>Invalid Path (Not an API endpoint)</strong><br />
+<h3 id="apiquote">/api/quote<a class="headerlink" href="#apiquote" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><label for="__tabbed_8_1">Empty JSON Body/No JSON</label><div class="tabbed-content">
+<p><strong>Status-Code</strong>: 403<br />
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;details&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/api/quote&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;content-type&quot;</span><span class="p">:</span> <span class="s2">&quot;:content-type&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;user-agent&quot;</span><span class="p">:</span> <span class="s2">&quot;:user-agent&quot;</span>
+  <span class="p">},</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Not supported API path&quot;</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Received invalid or empty JSON Body.&quot;</span>
 <span class="p">}</span>
 </code></pre></div></p>
-<p><strong>Invalid Path (No images)</strong><br />
+</div>
+<input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><label for="__tabbed_8_2">Malformed JSON/Invalid Values</label><div class="tabbed-content">
+<p><strong>Status-Code</strong>: 500<br />
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;details&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/api/quote&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;content-type&quot;</span><span class="p">:</span> <span class="s2">&quot;:content-type&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;user-agent&quot;</span><span class="p">:</span> <span class="s2">&quot;:user-agent&quot;</span>
+  <span class="p">},</span>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected path doesn&#39;t contain any images&quot;</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Couldn&#39;t generate Image. Make sure the values are valid!&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</div>
+</div>
+<h3 id="apistatus">/api/status<a class="headerlink" href="#apistatus" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><label for="__tabbed_9_1">Empty JSON Body/No JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;details&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/api/status&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;content-type&quot;</span><span class="p">:</span> <span class="s2">&quot;:content-type&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;user-agent&quot;</span><span class="p">:</span> <span class="s2">&quot;:user-agent&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Received invalid or empty JSON Body.&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><label for="__tabbed_9_2">Malformed JSON/Invalid Values</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;details&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/api/status&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;content-type&quot;</span><span class="p">:</span> <span class="s2">&quot;:content-type&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;user-agent&quot;</span><span class="p">:</span> <span class="s2">&quot;:user-agent&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Couldn&#39;t generate Image. Make sure the values are valid!&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<h3 id="apiimg">/api/img/*<a class="headerlink" href="#apiimg" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><label for="__tabbed_10_1">Invalid Path (No API endpoint)</label><div class="tabbed-content">
+<p><strong>Status-Code</strong>: 403<br />
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;details&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/api/img/:path&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;content-type&quot;</span><span class="p">:</span> <span class="s2">&quot;:content-type&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;user-agent&quot;</span><span class="p">:</span> <span class="s2">&quot;:user-agent&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected API path is not supported!&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</div>
+<input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><label for="__tabbed_10_2">No Images available</label><div class="tabbed-content">
+<p><strong>Status-Code</strong>: 403<br />
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;details&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/api/img/:path&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;content-type&quot;</span><span class="p">:</span> <span class="s2">&quot;:content-type&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;user-agent&quot;</span><span class="p">:</span> <span class="s2">&quot;:user-agent&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The selected API path does not contain any images!&quot;</span>
 <span class="p">}</span>
 </code></pre></div></p>
 </div>
@@ -2522,15 +2108,15 @@ and provided under the
 
     </div>
     
-      <script src="../assets/javascripts/vendor.93c04032.min.js"></script>
-      <script src="../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.53cc9318.min.js"></script>
+      <script src="../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: ['navigation.tabs'],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.8c7e0a7e.min.js"
+            worker: "../assets/javascripts/worker/search.9c0e82ba.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
