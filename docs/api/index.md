@@ -150,7 +150,7 @@ You can access those endpoints through simple `GET` requests.
 !!! info
     - **Responses**:
         - Success: `JSON`
-        - [Failure: `JSON`](#apiimg
+        - [Failure: `JSON`](#apiimg)
 
 ### /img/sfw/background/img
 Returns a Random [Welcome Background](/bot/welcome-images#backgrounds).
