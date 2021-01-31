@@ -51,11 +51,8 @@ No usage of data outside of the aformentioned cases will happen and the data is 
 ### Stored Information
 The bot may store the following information automatically when being invited to a new Discord Server:
 
-- The ID of the Server it was invited to.
-- The ["Prefered Language"][language] used by the Server.
-
-In addition are the following default settings saved:
-
+- `id` with the Server's ID as value.
+- `language` with value `en`
 - `prefix` with value `.`
 - `welcome_background` with value `color_white`
 - `welcome_channel` with value `none`
