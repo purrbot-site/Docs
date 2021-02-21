@@ -84,7 +84,7 @@ A red gradient (bright red).
 ![image](https://purrbot.site/img/sfw/background/img/gradient_red.png)
 
 ----
-### Other
+### Other {: #other-backgrounds }
 Other available options.
 
 #### rainbow
@@ -135,7 +135,7 @@ Created by `Makay#0270`
 ![image](https://purrbot.site/img/sfw/icon/img/snuggle_lurk.png)
 
 ----
-### Sewayaki Kitsune no Senko-san
+### Sewayaki Kitsune no Senko-san {: #senko-san }
 Characters from the anime "Sewayaki Kitsune no Senko-san"
 
 #### Senko
@@ -149,7 +149,7 @@ The second female character of the anime.
 ![image](https://purrbot.site/img/sfw/icon/img/shiro.png)
 
 ----
-### Spice & Wolf
+### Spice & Wolf {: #spice-and-wolf }
 Characters from the anime "Spice & Wolf".
 
 #### holo
@@ -158,7 +158,7 @@ The main character holo.
 ![image](https://purrbot.site/img/sfw/icon/img/holo.png)
 
 ----
-### Other
+### Other {: #other-icons }
 Other available options.
 
 #### random
