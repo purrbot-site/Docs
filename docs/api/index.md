@@ -152,7 +152,7 @@ You can access those endpoints through simple `GET` requests.
         - Success: `JSON`
         - [Failure: `JSON`](#apiimg)
 
-### /img/sfw/background/img
+### /img/sfw/background/img {: #img-sfw-background-img }
 Returns a Random [Welcome Background](/bot/welcome-images#backgrounds).
 
 ```json
@@ -163,7 +163,7 @@ Returns a Random [Welcome Background](/bot/welcome-images#backgrounds).
 }
 ```
 
-### /img/sfw/bite/gif
+### /img/sfw/bite/gif {: #img-sfw-bite-gif }
 Returns a random Bite Gif.
 
 ```json
@@ -174,7 +174,7 @@ Returns a random Bite Gif.
 }
 ```
 
-### /img/sfw/blush/gif
+### /img/sfw/blush/gif {: #img-sfw-blush-gif }
 Returns a random blush Gif.
 
 ```json
@@ -185,7 +185,7 @@ Returns a random blush Gif.
 }
 ```
 
-### /img/sfw/cry/gif
+### /img/sfw/cry/gif {: #img-sfw-cry-gif }
 Returns a random Cry Gif.
 
 ```json
@@ -196,7 +196,7 @@ Returns a random Cry Gif.
 }
 ```
 
-### /img/sfw/cuddle/gif
+### /img/sfw/cuddle/gif {: #img-sfw-cuddle-gif }
 Returns a random Cuddle Gif.
 
 ```json
@@ -207,7 +207,7 @@ Returns a random Cuddle Gif.
 }
 ```
 
-### /img/sfw/dance/gif
+### /img/sfw/dance/gif {: #img-sfw-dance-gif }
 Returns a random Dance Gif.
 
 ```json
@@ -218,7 +218,7 @@ Returns a random Dance Gif.
 }
 ```
 
-### /img/sfw/eevee/:type
+### /img/sfw/eevee/:type {: #img-sfw-eevee-type }
 Returns either a random Eevee Image or Gif.  
 `:type` can be either `gif` for gifs or `img` for images.
 
@@ -240,7 +240,7 @@ Returns either a random Eevee Image or Gif.
     }
     ```
 
-### /img/sfw/feed/gif
+### /img/sfw/feed/gif {: #img-sfw-feed-gif }
 Returns a random Feeding Gif.
 
 ```json
@@ -251,7 +251,7 @@ Returns a random Feeding Gif.
 }
 ```
 
-### /img/sfw/fluff/gif
+### /img/sfw/fluff/gif {: #img-sfw-fluff-gif }
 Returns a random Fluffing Gif.
 
 ```json
@@ -262,7 +262,7 @@ Returns a random Fluffing Gif.
 }
 ```
 
-### /img/sfw/holo/img
+### /img/sfw/holo/img {: #img-sfw-holo-img }
 Returns a random Image of Holo (Spice & Wolf).
 
 ```json
@@ -273,7 +273,7 @@ Returns a random Image of Holo (Spice & Wolf).
 }
 ```
 
-### /img/sfw/hug/gif
+### /img/sfw/hug/gif {: #img-sfw-hug-gif }
 Returns a random Hug Gif.
 
 ```json
@@ -284,7 +284,7 @@ Returns a random Hug Gif.
 }
 ```
 
-### /img/sfw/icon/img
+### /img/sfw/icon/img {: #img-sfw-icon-img }
 Returns a random [Welcome Icon](/bot/welcome-images#icons)
 
 ```json
@@ -295,7 +295,7 @@ Returns a random [Welcome Icon](/bot/welcome-images#icons)
 }
 ```
 
-### /img/sfw/kiss/gif
+### /img/sfw/kiss/gif {: #img-sfw-kiss-gif }
 Returns a random Kiss Gif.
 
 ```json
@@ -306,7 +306,7 @@ Returns a random Kiss Gif.
 }
 ```
 
-### /img/sfw/kitsune/img
+### /img/sfw/kitsune/img {: #img-sfw-kitsune-img }
 Returns a random Image of a Kitsune (Fox girl).
 
 ```json
@@ -317,7 +317,7 @@ Returns a random Image of a Kitsune (Fox girl).
 }
 ```
 
-### /img/sfw/lick/gif
+### /img/sfw/lick/gif {: #img-sfw-lick-gif }
 Returns a random Lick Gif.
 
 ```json
@@ -328,7 +328,7 @@ Returns a random Lick Gif.
 }
 ```
 
-### /img/sfw/neko/:type
+### /img/sfw/neko/:type {: #img-sfw-neko-type }
 Returns either a random Neko Image or Gif.  
 `:type` can be either `gif` for gifs or `img` for images.
 
@@ -350,7 +350,7 @@ Returns either a random Neko Image or Gif.
     }
     ```
 
-### /img/sfw/pat/gif
+### /img/sfw/pat/gif {: #img-sfw-pat-gif }
 Returns a random Pat Gif.
 
 ```json
@@ -361,7 +361,7 @@ Returns a random Pat Gif.
 }
 ```
 
-### /img/sfw/poke/gif
+### /img/sfw/poke/gif {: #img-sfw-poke-gif }
 Returns a random Poke Gif.
 
 ```json
@@ -372,7 +372,7 @@ Returns a random Poke Gif.
 }
 ```
 
-### /img/sfw/senko/img
+### /img/sfw/senko/img {: #img-sfw-senko-img }
 Returns a random Image of Senko-San.
 
 ```json
@@ -383,7 +383,7 @@ Returns a random Image of Senko-San.
 }
 ```
 
-### /img/sfw/slap/gif
+### /img/sfw/slap/gif {: #img-sfw-slap-gif }
 Returns a random Slap Gif.
 
 ```json
@@ -394,7 +394,7 @@ Returns a random Slap Gif.
 }
 ```
 
-### /img/sfw/smile/gif
+### /img/sfw/smile/gif {: #img-sfw-smile-gif }
 Returns a random Smile Gif.
 
 ```json
@@ -405,7 +405,7 @@ Returns a random Smile Gif.
 }
 ```
 
-### /img/sfw/tail/gif
+### /img/sfw/tail/gif {: #img-sfw-tail-gif }
 Returns a random Tail wagging Gif.
 
 ```json
@@ -416,7 +416,7 @@ Returns a random Tail wagging Gif.
 }
 ```
 
-### /img/sfw/tickle/gif
+### /img/sfw/tickle/gif {: #img-sfw-tickle-gif }
 Returns a random Tickle Gif.
 
 ```json
@@ -439,7 +439,7 @@ You can access those endpoints through simple `GET` requests.
         - Success: `JSON`
         - [Failure: `JSON`](#apiimg)
 
-### /img/nsfw/anal/gif
+### /img/nsfw/anal/gif {: #img-nsfw-anal-gif }
 Returns a random Anal-sex Gif.
 
 ```json
@@ -450,7 +450,7 @@ Returns a random Anal-sex Gif.
 }
 ```
 
-### /img/nsfw/blowjob/gif
+### /img/nsfw/blowjob/gif {: #img-nsfw-blowjob-gif }
 Returns a random Blowjob Gif.
 
 ```json
@@ -461,7 +461,7 @@ Returns a random Blowjob Gif.
 }
 ```
 
-### /img/nsfw/cum/gif
+### /img/nsfw/cum/gif {: #img-nsfw-cum-gif }
 Returns a random Cumming Gif.
 
 ```json
@@ -472,7 +472,7 @@ Returns a random Cumming Gif.
 }
 ```
 
-### /img/nsfw/fuck/gif
+### /img/nsfw/fuck/gif {: #img-nsfw-fuck-gif }
 Returns a random Sex Gif.
 
 ```json
@@ -483,7 +483,7 @@ Returns a random Sex Gif.
 }
 ```
 
-### /img/nsfw/neko/:type
+### /img/nsfw/neko/:type {: #img-nsfw-neko-type }
 Returns either a random lewd Neko Image or Gif.  
 `:type` can be either `gif` for gifs or `img` for images.
 
@@ -505,7 +505,7 @@ Returns either a random lewd Neko Image or Gif.
     }
     ```
 
-### /img/nsfw/pussylick/gif
+### /img/nsfw/pussylick/gif {: #img-nsfw-pussylick-gif }
 Returns a random Pussy licking Gif.
 
 ```json
@@ -516,7 +516,7 @@ Returns a random Pussy licking Gif.
 }
 ```
 
-### /img/nsfw/solo/gif
+### /img/nsfw/solo/gif {: #img-nsfw-solo-gif }
 Returns a random Girl masturbating Gif.
 
 ```json
@@ -527,7 +527,7 @@ Returns a random Girl masturbating Gif.
 }
 ```
 
-### /img/nsfw/threesome_fff/gif
+### /img/nsfw/threesome_fff/gif {: #img-nsfw-threesome_fff-gif }
 Returns a random Threesome (only Female) Gif.
 
 ```json
@@ -538,7 +538,7 @@ Returns a random Threesome (only Female) Gif.
 }
 ```
 
-### /img/nsfw/threesome_ffm/gif
+### /img/nsfw/threesome_ffm/gif {: #img-nsfw-threesome_ffm-gif }
 Returns a random Threesome (2 Female, 1 Male) Gif.
 
 ```json
@@ -549,7 +549,7 @@ Returns a random Threesome (2 Female, 1 Male) Gif.
 }
 ```
 
-### /img/nsfw/threesome_mmf/gif
+### /img/nsfw/threesome_mmf/gif {: #img-nsfw-threesome_mmf-gif }
 Returns a random Threesome (2 Male, 1 Female) Gif.
 
 ```json
@@ -560,7 +560,7 @@ Returns a random Threesome (2 Male, 1 Female) Gif.
 }
 ```
 
-### /img/nsfw/yaoi/gif
+### /img/nsfw/yaoi/gif {: #img-nsfw-yaoi-gif }
 Returns a Random Yaoi (Gay) sex Gif.
 
 ```json
@@ -571,7 +571,7 @@ Returns a Random Yaoi (Gay) sex Gif.
 }
 ```
 
-### /img/nsfw/yuri/gif
+### /img/nsfw/yuri/gif {: #img-nsfw-yuri-gif }
 Returns a random Yuri (Lesbian) sex Gif.
 
 ```json
@@ -595,7 +595,7 @@ An error is returned for the following cases:
     - `:user-agent` The `User-Agent` used for the Request (i.e. `Chrome`).
     - `:path` The path targeted by the Request (i.e. `sfw/cuddle/gif`)
 
-### /api/quote
+### /api/quote {: #api-quote }
 
 === "Empty JSON Body/No JSON"
     **Status-Code**: 403  
@@ -625,7 +625,7 @@ An error is returned for the following cases:
     }
     ```
 
-### /api/status
+### /api/status {: #api-status }
 
 === "Empty JSON Body/No JSON"
     ```json
@@ -653,7 +653,7 @@ An error is returned for the following cases:
     }
     ```
 
-### /api/img/*
+### /api/img/* {: #api-img }
 
 === "Invalid Path (No API endpoint)"
     **Status-Code**: 403  
