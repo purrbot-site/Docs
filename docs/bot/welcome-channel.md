@@ -14,11 +14,11 @@ The welcome channel allows you to greet people with a message and image when the
     For simplicity reasons will the shown commands here use the default prefix (`.`).  
     If you have set a different prefix, use that instead.
 
-??? Video Tutorial
+??? "Video Tutorial"
     Here is a video explaining the steps below.  
     <iframe width="560" height="315" src="https://www.youtube.com/embed/vfhSj-4PF1A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Step 1: Set a channel
+## Step 1: Set a channel {: #step-1 }
 > **Required step?** Yes  
 > **Default**: `None`
 
@@ -27,7 +27,7 @@ To do that, run `.welcome channel set #channel` where `#channel` is the channel 
 
 Reset this using `.welcome channel reset`
 
-## Step 2: Set a background
+## Step 2: Set a background {: #step-2 }
 > **Required step?** No  
 > **Default**: [`color_white`](/bot/welcome-images#color_white)
 
@@ -36,7 +36,7 @@ The syntax is `.welcome bg set <background>` where `<background>` is one of the 
 
 Reset this using `.welcome bg reset`
 
-## Step 3: Set an icon
+## Step 3: Set an icon {: #step-3 }
 > **Required step?** No  
 > **Default**: [`purr`](/bot/welcome-images#purr)
 
@@ -45,7 +45,7 @@ Use `.welcome icon set <icon>` where `<icon>` is one of the [available icons](/b
 
 Reset this using `.welcome icon reset`
 
-## Step 4: Set a text color
+## Step 4: Set a text color {: #step-4 }
 > **Required step?** No  
 > **Default**: `hex:000000`
 
@@ -54,7 +54,7 @@ The default font color isn't visible on all backgrounds. For that can you change
 
 Reset this using `.welcome color reset`
 
-## Step 5: Set a message
+## Step 5: Set a message {: #step-5 }
 > **Required step?** No  
 > **Default**: `Welcome {mention}!`
 
@@ -75,7 +75,7 @@ You can also use placeholders in the message:
 
 Reset this using `.welcome msg reset`
 
-## Final Step: Testing
+## Final Step: Testing {: #final-step }
 > **Required step?** No  
 > **Default**: `Uses saved values`
 
