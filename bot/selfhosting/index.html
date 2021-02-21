@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://docs.purrbot.site/bot/selfhosting/">
       
       <link rel="shortcut icon" href="../../assets/img/logo.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.7">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
     
     
   
@@ -512,35 +512,35 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#clone-the-repository" class="md-nav__link">
+  <a href="#clone-repository" class="md-nav__link">
     Clone the repository
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#make-changes-to-code" class="md-nav__link">
+  <a href="#change-code" class="md-nav__link">
     Make changes to code
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#update-some-classes" class="md-nav__link">
+  <a href="#update-classes" class="md-nav__link">
     Update some classes
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#build-jar-file" class="md-nav__link">
+  <a href="#build-jar" class="md-nav__link">
     Build jar file
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#configjson" class="md-nav__link">
+  <a href="#config" class="md-nav__link">
     Config.json
   </a>
   
@@ -831,35 +831,35 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#clone-the-repository" class="md-nav__link">
+  <a href="#clone-repository" class="md-nav__link">
     Clone the repository
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#make-changes-to-code" class="md-nav__link">
+  <a href="#change-code" class="md-nav__link">
     Make changes to code
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#update-some-classes" class="md-nav__link">
+  <a href="#update-classes" class="md-nav__link">
     Update some classes
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#build-jar-file" class="md-nav__link">
+  <a href="#build-jar" class="md-nav__link">
     Build jar file
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#configjson" class="md-nav__link">
+  <a href="#config" class="md-nav__link">
     Config.json
   </a>
   
@@ -918,9 +918,9 @@ This also includes creating databases and tables to later set in the config.json
 <p>You need <strong>at least</strong> Java 8 to be installed and working. Newer versions of Java should work too.</p>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <p>When you made sure, that the <a href="#requirements">requirements</a> are met, can you continue with preparing the code.</p>
-<h3 id="clone-the-repository">Clone the repository<a class="headerlink" href="#clone-the-repository" title="Permanent link">&para;</a></h3>
+<h3 id="clone-repository">Clone the repository<a class="headerlink" href="#clone-repository" title="Permanent link">&para;</a></h3>
 <p>Clone/Fork the PurrBot repository, if you didn't already and open it in your preferred IDE.</p>
-<h3 id="make-changes-to-code">Make changes to code<a class="headerlink" href="#make-changes-to-code" title="Permanent link">&para;</a></h3>
+<h3 id="change-code">Make changes to code<a class="headerlink" href="#change-code" title="Permanent link">&para;</a></h3>
 <p>You need to alter specific parts of the code, to prevent errors from appearing.<br />
 Alternatively could you set "beta" in the config.json to true, to set the bot as Beta-Bot, disabling certain functionalities such as posting stats to Bot Lists.</p>
 <p>When making changes to the code should you remove or uncomment the following code-snippets in <a href="https://github.com/purrbot-site/PurrBot/blob/master/src/main/java/site/purrbot/bot/PurrBot.java">PurrBot.java</a>:</p>
@@ -1016,7 +1016,7 @@ Alternatively could you set "beta" in the config.json to true, to set the bot as
     <span class="k">return</span> <span class="n">commandInfoList</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="update-some-classes">Update some classes<a class="headerlink" href="#update-some-classes" title="Permanent link">&para;</a></h3>
+<h3 id="update-classes">Update some classes<a class="headerlink" href="#update-classes" title="Permanent link">&para;</a></h3>
 <p>You need to update values in specific classes to make your version work without issues.<br />
 Namely you have to alter the content of the following classes:</p>
 <ul>
@@ -1024,9 +1024,9 @@ Namely you have to alter the content of the following classes:</p>
 <li><a href="https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/constants/Emotes.java">Emotes.java</a> (Contains different emotes used in commands)</li>
 <li><a href="https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/constants/Links.java">Links.java</a> (Contains various links of the bot)</li>
 </ul>
-<h3 id="build-jar-file">Build jar file<a class="headerlink" href="#build-jar-file" title="Permanent link">&para;</a></h3>
+<h3 id="build-jar">Build jar file<a class="headerlink" href="#build-jar" title="Permanent link">&para;</a></h3>
 <p>When you're done with your changes, make sure to execute <code>gradlew clean shadowJar</code> to build a shaded jar containing all dependnencies required.</p>
-<h3 id="configjson">Config.json<a class="headerlink" href="#configjson" title="Permanent link">&para;</a></h3>
+<h3 id="config">Config.json<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>The <code>config.json</code> is the core file of the bot in which you set various different information that will be used by the bot.<br />
 On first startup will it generate with the below default values.</p>
 <details class="note"><summary>Default Config.json</summary><div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -1165,8 +1165,8 @@ and provided under the
 
     </div>
     
-      <script src="../../assets/javascripts/vendor.53cc9318.min.js"></script>
-      <script src="../../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

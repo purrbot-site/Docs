@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://docs.purrbot.site/contribute/formatting-help/">
       
       <link rel="shortcut icon" href="../../assets/img/logo.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.7">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
     
     
   
@@ -872,15 +872,15 @@ In order for the list to work will they require an empty line between the list, 
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Markdown</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>This list below will work.
 
-- Entry 1
-- Entry 2
-- Entry 3
+<span class="k">-</span> Entry 1
+<span class="k">-</span> Entry 2
+<span class="k">-</span> Entry 3
 
 ----  
 This list, however, won&#39;t work.
-- Entry 1
-- Entry 2
-- Entry 3
+<span class="k">-</span> Entry 1
+<span class="k">-</span> Entry 2
+<span class="k">-</span> Entry 3
 </code></pre></div>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Result</label><div class="tabbed-content">
@@ -904,16 +904,16 @@ This list, however, won&#39;t work.
 <div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Markdown</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>Working indents:
 
-- Entry 1
-    - Entry 1.1
-- Entry 2
+<span class="k">-</span> Entry 1
+    <span class="k">-</span> Entry 1.1
+<span class="k">-</span> Entry 2
 
 ----  
 Not working indents:
 
-- Entry 1
-  - Entry 1.1
-- Entry 2
+<span class="k">-</span> Entry 1
+  <span class="k">-</span> Entry 1.1
+<span class="k">-</span> Entry 2
 </code></pre></div>
 </div>
 <input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Result</label><div class="tabbed-content">
@@ -944,8 +944,8 @@ Those are provided through <a href="https://www.mkdocs.org">MkDocs</a> and use a
 <div class="highlight"><pre><span></span><code>!!! info &quot;Title&quot;
     Rules about Markdown still apply.
 
-    - F.e. Lists
-    - Still need an empty line
+    <span class="k">-</span> F.e. Lists
+    <span class="k">-</span> Still need an empty line
 
 ----
 
@@ -1053,7 +1053,7 @@ Additionally does it also not have a type parameter, meaning you can only set th
     You can add more tabs...
 
 === &quot;Tab 2&quot;
-    ...by adding extra `===`.
+    ...by adding extra <span class="sb">`===`</span>.
 
 ===! &quot;Tab A&quot;
     Using a ! after the equal signs...
@@ -1098,9 +1098,9 @@ This also works with Twitter-users by prefixing the name with <code>twitter:</co
 <div class="admonition example">
 <p class="admonition-title">Mention examples</p>
 <div class="tabbed-set" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><label for="__tabbed_9_1">Markdown</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>@purrbot-site  
-@purrbot-site/Docs  
-@twitter:TruePurrBot
+<div class="highlight"><pre><span></span><code><span class="ni">@purrbot</span>-site  
+<span class="ni">@purrbot</span>-site/Docs  
+<span class="ni">@twitter:TruePurrBot</span>
 </code></pre></div>
 </div>
 <input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><label for="__tabbed_9_2">Result</label><div class="tabbed-content">
@@ -1186,8 +1186,8 @@ and provided under the
 
     </div>
     
-      <script src="../../assets/javascripts/vendor.53cc9318.min.js"></script>
-      <script src="../../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
