@@ -40,10 +40,10 @@ You need **at least** Java 8 to be installed and working. Newer versions of Java
 ## Setup
 When you made sure, that the [requirements](#requirements) are met, can you continue with preparing the code.
 
-### Clone the repository
+### Clone the repository {: #clone-repository }
 Clone/Fork the PurrBot repository, if you didn't already and open it in your preferred IDE.
 
-### Make changes to code
+### Make changes to code {: #change-code }
 You need to alter specific parts of the code, to prevent errors from appearing.  
 Alternatively could you set "beta" in the config.json to true, to set the bot as Beta-Bot, disabling certain functionalities such as posting stats to Bot Lists.
 
@@ -143,7 +143,7 @@ private List<Commands.CommandInfo> getCommands(){
 }
 ```
 
-### Update some classes
+### Update some classes {: #update-classes }
 You need to update values in specific classes to make your version work without issues.  
 Namely you have to alter the content of the following classes:
 
@@ -151,10 +151,10 @@ Namely you have to alter the content of the following classes:
 - [Emotes.java] (Contains different emotes used in commands)
 - [Links.java] (Contains various links of the bot)
 
-### Build jar file
+### Build jar file {: #build-jar }
 When you're done with your changes, make sure to execute `gradlew clean shadowJar` to build a shaded jar containing all dependnencies required.
 
-### Config.json
+### Config.json {: #config }
 The `config.json` is the core file of the bot in which you set various different information that will be used by the bot.  
 On first startup will it generate with the below default values.
 
