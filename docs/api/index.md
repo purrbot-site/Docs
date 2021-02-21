@@ -27,7 +27,7 @@ These API endpoints can only be used through `POST` requests.
         - Success: `Image`
         - [Failure: `JSON`](#apiquote)
 
-#### Fields
+#### Fields {: #fields-quote }
 
 === "avatar"
     **Type**: String  
@@ -74,7 +74,7 @@ These API endpoints can only be used through `POST` requests.
     **Description**:  
     The username to display.
 
-#### Example
+#### Example {: #example-quote }
 
 === "Request"
     <br>
@@ -102,7 +102,7 @@ These API endpoints can only be used through `POST` requests.
         - Success: `Image`
         - [Failure: `JSON`](#apistatus)
 
-#### Fields
+#### Fields {: #fields-status }
 
 === "avatar"
     **Type**: String  
@@ -126,7 +126,7 @@ These API endpoints can only be used through `POST` requests.
     The status to display with the icon.  
     Available are `online`, `idle`, `do_not_disturb` (or `dnd`), `streaming` and `offline`.
 
-#### Example
+#### Example {: #example-status }
 
 === "Request"
     <br>
