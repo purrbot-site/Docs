@@ -3,14 +3,20 @@ title: Welcome Images
 description: All available Welcome images.
 ---
 
+[discord]: https://purrbot.site/discord
+
+[fluxpoint]: https://fluxpoint.dev
+[waifu]: https://fluxpoint.dev/waifu
+[hangman]: https://fluxpoint.dev/hangman
+
 \*Purr* allows you to set a welcome-channel where she greets joining users with a message and an image.  
 A tutorial on how to set this up can be found [here](/bot/welcome-channel).
 
 This page here lists all available icons and backgrounds that can be used.  
-If you have suggestions for new backgrounds or icons, feel free to join our [Discord](https://purrbot.site/discord) and suggest it there.
+If you have suggestions for new backgrounds or icons, feel free to join our [Discord] and suggest it there.
 
 ## Credit
-\*Purr* uses the API from Fluxpoint Development (https://fluxpoint.dev). The owner is Builderb, the creator of popular bots like Waifu and Hangman.
+\*Purr* uses the API from [Fluxpoint Development][fluxpoint] which is owned by Builderb, the creator of popular bots like [Waifu] and [Hangman].
 
 ----
 ## Backgrounds
