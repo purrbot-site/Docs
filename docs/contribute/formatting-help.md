@@ -285,7 +285,7 @@ Note that unlike emojis, the custom ones added by the MkDocs-Material Extension 
         Material Design:
         
         - :material-sync:
-        - :material-warning:
+        - :material-alert:
         
         Octicons:
         
@@ -317,7 +317,7 @@ Note that unlike emojis, the custom ones added by the MkDocs-Material Extension 
         Material Design:
         
         - :material-sync:
-        - :material-warning:
+        - :material-alert:
         
         Octicons:
         
