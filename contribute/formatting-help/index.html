@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://docs.purrbot.site/contribute/formatting-help/">
       
       <link rel="shortcut icon" href="../../assets/img/logo.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.1">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
     
     
   
@@ -366,7 +366,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -408,7 +407,6 @@
           Bot
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -514,7 +512,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -618,6 +615,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    Buttons
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#final-words" class="md-nav__link">
     Final Words
   </a>
@@ -662,7 +666,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -704,7 +707,6 @@
           Legal
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -835,6 +837,13 @@
         <li class="md-nav__item">
   <a href="#emojis" class="md-nav__link">
     Emojis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    Buttons
   </a>
   
 </li>
@@ -975,11 +984,13 @@ The box will then use the name of its type.</p>
 </div>
 </div>
 </div>
-<p>I want to point out those specific things:</p>
+<div class="admonition warning">
+<p class="admonition-title">Special rules</p>
 <ul>
 <li>You don't need to add two spaces after the <code>!!! &lt;type&gt; "&lt;title&gt;"</code>. MkDocs can handle this just fine.</li>
 <li>You need to add at least one empty line before and after the info box to not have unwanted formatting issues.</li>
 </ul>
+</div>
 <h3 id="types">Types<a class="headerlink" href="#types" title="Permanent link">&para;</a></h3>
 <p>The info boxes have various types available which you can choose from:</p>
 <div class="admonition note">
@@ -1020,7 +1031,7 @@ The box will then use the name of its type.</p>
 </div>
 <h2 id="collapsable-info-boxes-details">Collapsable info boxes (Details)<a class="headerlink" href="#collapsable-info-boxes-details" title="Permanent link">&para;</a></h2>
 <p>This feature requires the <code>Details</code> extension from <a href="https://facelessuser.github.io/pymdown-extensions/">PyMdown</a>.</p>
-<p>Those boxes are similar to the normal info boxes, but can be collapsed (closed) or opened.<br />
+<p>Those boxes are similar to the normal info boxes, but can be collapsed (closed) or expanded (opened).<br />
 They follow the same syntax as the info boxes, but use question marks (<code>?</code>) instead of exclamation marks (<code>!</code>).<br />
 You can use the exact same <a href="#types">types</a> as with the info boxes.</p>
 <div class="admonition example">
@@ -1114,22 +1125,111 @@ This also works with Twitter-users by prefixing the name with <code>twitter:</co
 </div>
 </div>
 <h2 id="emojis">Emojis<a class="headerlink" href="#emojis" title="Permanent link">&para;</a></h2>
-<p>Thanks to the <a href="https://facelessuser.github.io/pymdown-extensions/">PyMdown</a> extension <code>Emojis</code> can we add emojis (From Twemoji) to this Documentation by just providing it as <code>:emoji_name:</code></p>
-<p>Additionally do we also use the <a href="https://github.com/facelessuser/mkdocs-material-extensions">MkDocs-Material extension</a> which also adds icons from <a href="https://fontawesome.com/icons?d=gallery&amp;m=free">FontAwesome</a>, <a href="https://material.io/resources/icons/?style=baseline">Material Design</a> and <a href="https://octicons.github.com">Octicons</a> to this pages.<br />
-You can use them like normal emojis, with the difference, that they are prefixed with one of the following namespaces:</p>
+<p>We use the <code>Emojis</code> extension from <a href="https://facelessuser.github.io/pymdown-extensions/">PyMdown</a> to allow the usage of emojis through the common <code>:emoji:</code> pattern.<br />
+We also use the <a href="https://github.com/facelessuser/mkdocs-material-extensions">MkDocs-Material Extension</a> which adds support for using SVG icons of <a href="https://fontawesome.com/icons?d=gallery&amp;m=free">FontAwesome</a>, <a href="https://materialdesignicons.com/">Material Design</a> and <a href="https://octicons.github.com">Octicons</a> in the same format.</p>
+<p>Note that unlike emojis, the custom ones added by the MkDocs-Material Extension require to be prefixed with the site they should come from.</p>
 <ul>
-<li><code>fontawesome</code> FontAwesome icons. You also need to specify the type as listed below.<ul>
 <li><code>fontawesome-brands</code> for brand icons</li>
-<li><code>fontawesome-regular</code> for regular icons</li>
-<li><code>fontawesome-solid</code> for solid icons</li>
+<li><code>fontawesome-regular</code> for all regular icons</li>
+<li><code>fontawesome-solid</code> for all Solid icons</li>
+<li><code>material</code> for the Material Design icons</li>
+<li><code>octicons</code> for the Octicons icons</li>
 </ul>
-</li>
-<li><code>material</code> Material Design icons.</li>
-<li><code>octicons</code> GitHub's Octicon icons.</li>
+<div class="admonition warning">
+<p class="admonition-title">Note about FontAwesome and Octicons</p>
+<div class="tabbed-set" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><label for="__tabbed_10_1">FontAwesome</label><div class="tabbed-content">
+<p>The MkDocs-Material Extension will only be able to use free FontAwesome icons! Paid ones aren't supported.</p>
+</div>
+<input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><label for="__tabbed_10_2">Octicons</label><div class="tabbed-content">
+<p>Due to Octicons being offered in 16px and 24px format, are you required to suffix the icon name with either <code>-16</code> or <code>-24</code> depending on which you want to use.<br />
+As an example: Instead of <code>:octicon-repo:</code> would you use <code>:octicon-repo-16:</code> or <code>:octicon-repo-24:</code></p>
+</div>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Emoji/Icons Examples</p>
+<div class="tabbed-set" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><label for="__tabbed_11_1">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>Normal Emojis  
+
+<span class="k">-</span> :smile:
+<span class="k">-</span> :heart:
+
+FontAwesome Icons (Brands):  
+
+<span class="k">-</span> :fontawesome-brands-github:
+<span class="k">-</span> :fontawesome-brands-discord:
+
+FontAwesome Icons (Regular)  
+
+<span class="k">-</span> :fontawesome-regular-bell:
+<span class="k">-</span> :fontawesome-regular-bell-slash:
+
+FontAwesome Icons (Solid)  
+
+<span class="k">-</span> :fontawesome-solid-bell:
+<span class="k">-</span> :fontawesome-solid-bell-slash:
+
+Material Design:
+
+<span class="k">-</span> :material-sync:
+<span class="k">-</span> :material-alert:
+
+Octicons:
+
+<span class="k">-</span> :octicons-repo-24:
+<span class="k">-</span> :octicons-git-pull-request-24:
+</code></pre></div>
+</div>
+<input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><label for="__tabbed_11_2">Result</label><div class="tabbed-content">
+<p>Normal Emojis  </p>
+<ul>
+<li><img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /></li>
+<li><img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></li>
 </ul>
+<p>FontAwesome Icons (Brands):  </p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span></li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M297.216 243.2c0 15.616-11.52 28.416-26.112 28.416-14.336 0-26.112-12.8-26.112-28.416s11.52-28.416 26.112-28.416c14.592 0 26.112 12.8 26.112 28.416zm-119.552-28.416c-14.592 0-26.112 12.8-26.112 28.416s11.776 28.416 26.112 28.416c14.592 0 26.112-12.8 26.112-28.416.256-15.616-11.52-28.416-26.112-28.416zM448 52.736V512c-64.494-56.994-43.868-38.128-118.784-107.776l13.568 47.36H52.48C23.552 451.584 0 428.032 0 398.848V52.736C0 23.552 23.552 0 52.48 0h343.04C424.448 0 448 23.552 448 52.736zm-72.96 242.688c0-82.432-36.864-149.248-36.864-149.248-36.864-27.648-71.936-26.88-71.936-26.88l-3.584 4.096c43.52 13.312 63.744 32.512 63.744 32.512-60.811-33.329-132.244-33.335-191.232-7.424-9.472 4.352-15.104 7.424-15.104 7.424s21.248-20.224 67.328-33.536l-2.56-3.072s-35.072-.768-71.936 26.88c0 0-36.864 66.816-36.864 149.248 0 0 21.504 37.12 78.08 38.912 0 0 9.472-11.52 17.152-21.248-32.512-9.728-44.8-30.208-44.8-30.208 3.766 2.636 9.976 6.053 10.496 6.4 43.21 24.198 104.588 32.126 159.744 8.96 8.96-3.328 18.944-8.192 29.44-15.104 0 0-12.8 20.992-46.336 30.464 7.68 9.728 16.896 20.736 16.896 20.736 56.576-1.792 78.336-38.912 78.336-38.912z"/></svg></span></li>
+</ul>
+<p>FontAwesome Icons (Regular)  </p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.39 362.29c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71zM67.53 368c21.22-27.97 44.42-74.33 44.53-159.42 0-.2-.06-.38-.06-.58 0-61.86 50.14-112 112-112s112 50.14 112 112c0 .2-.06.38-.06.58.11 85.1 23.31 131.46 44.53 159.42H67.53zM224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64z"/></svg></span></li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M633.99 471.02L36 3.51C29.1-2.01 19.03-.9 13.51 6l-10 12.49C-2.02 25.39-.9 35.46 6 40.98l598 467.51c6.9 5.52 16.96 4.4 22.49-2.49l10-12.49c5.52-6.9 4.41-16.97-2.5-22.49zM163.53 368c16.71-22.03 34.48-55.8 41.4-110.58l-45.47-35.55c-3.27 90.73-36.47 120.68-54.84 140.42-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h279.66l-61.4-48H163.53zM320 96c61.86 0 112 50.14 112 112 0 .2-.06.38-.06.58.02 16.84 1.16 31.77 2.79 45.73l59.53 46.54c-8.31-22.13-14.34-51.49-14.34-92.85 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84c-26.02 5.41-49.45 16.94-69.13 32.72l38.17 29.84C275 103.18 296.65 96 320 96zm0 416c35.32 0 63.97-28.65 63.97-64H256.03c0 35.35 28.65 64 63.97 64z"/></svg></span></li>
+</ul>
+<p>FontAwesome Icons (Solid)  </p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z"/></svg></span></li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M633.82 458.1l-90.62-70.05c.19-1.38.8-2.66.8-4.06.05-7.55-2.61-15.27-8.61-21.71-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84c-40.33 8.38-74.66 31.07-97.59 62.57L45.47 3.37C38.49-2.05 28.43-.8 23.01 6.18L3.37 31.45C-2.05 38.42-.8 48.47 6.18 53.9l588.35 454.73c6.98 5.43 17.03 4.17 22.46-2.81l19.64-25.27c5.42-6.97 4.17-17.02-2.81-22.45zM157.23 251.54c-8.61 67.96-36.41 93.33-52.62 110.75-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h241.92L157.23 251.54zM320 512c35.32 0 63.97-28.65 63.97-64H256.03c0 35.35 28.65 64 63.97 64z"/></svg></span></li>
+</ul>
+<p>Material Design:</p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18a6 6 0 0 1-6-6c0-1 .25-1.97.7-2.8L5.24 7.74A7.93 7.93 0 0 0 4 12a8 8 0 0 0 8 8v3l4-4-4-4m0-11V1L8 5l4 4V6a6 6 0 0 1 6 6c0 1-.25 1.97-.7 2.8l1.46 1.46A7.93 7.93 0 0 0 20 12a8 8 0 0 0-8-8z"/></svg></span></li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2 1 21z"/></svg></span></li>
+</ul>
+<p>Octicons:</p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 2.75A2.75 2.75 0 0 1 5.75 0h14.5a.75.75 0 0 1 .75.75v20.5a.75.75 0 0 1-.75.75h-6a.75.75 0 0 1 0-1.5h5.25v-4H6A1.5 1.5 0 0 0 4.5 18v.75c0 .716.43 1.334 1.05 1.605a.75.75 0 0 1-.6 1.374A3.25 3.25 0 0 1 3 18.75v-16zM19.5 1.5V15H6c-.546 0-1.059.146-1.5.401V2.75c0-.69.56-1.25 1.25-1.25H19.5z"/><path d="M7 18.25a.25.25 0 0 1 .25-.25h5a.25.25 0 0 1 .25.25v5.01a.25.25 0 0 1-.397.201l-2.206-1.604a.25.25 0 0 0-.294 0L7.397 23.46a.25.25 0 0 1-.397-.2v-5.01z"/></svg></span></li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M4.75 3a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5zM1.5 4.75a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0zM4.75 17.5a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5zM1.5 19.25a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0zm17.75-1.75a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5zM16 19.25a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0z"/><path fill-rule="evenodd" d="M4.75 7.25A.75.75 0 0 1 5.5 8v8A.75.75 0 0 1 4 16V8a.75.75 0 0 1 .75-.75zm8.655-5.53a.75.75 0 0 1 0 1.06L12.185 4h4.065A3.75 3.75 0 0 1 20 7.75v8.75a.75.75 0 0 1-1.5 0V7.75a2.25 2.25 0 0 0-2.25-2.25h-4.064l1.22 1.22a.75.75 0 0 1-1.061 1.06l-2.5-2.5a.75.75 0 0 1 0-1.06l2.5-2.5a.75.75 0 0 1 1.06 0z"/></svg></span></li>
+</ul>
+</div>
+</div>
+</div>
+<h2 id="buttons">Buttons<a class="headerlink" href="#buttons" title="Permanent link">&para;</a></h2>
+<p>Using the List Attribute extension can we turn embedded Links (<code>[text](link)</code>) into buttons by appending <code>{: .md-button }</code> to it.</p>
+<div class="admonition example">
+<p class="admonition-title">Button Example</p>
+<div class="tabbed-set" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><label for="__tabbed_12_1">Markdown</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>[<span class="nt">To the Website</span>](<span class="na">https://purrbot.site</span>){: .md-button }
+</code></pre></div>
+</div>
+<input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><label for="__tabbed_12_2">Result</label><div class="tabbed-content">
+<p><a class="md-button" href="https://purrbot.site">To the Website</a></p>
+</div>
+</div>
+</div>
 <h2 id="final-words">Final Words<a class="headerlink" href="#final-words" title="Permanent link">&para;</a></h2>
-<p>Those are all the important parts you need to know about the markdown syntax for those documentations.<br />
-Every other markdown format that wasn't mentioned here uses the default, most commonly known syntax (e.g. <code>*italic*</code> is <em>italic</em>, <code>**bold**</code> is <strong>botld</strong>, etc.)</p>
+<p>Those are all the important parts you need to know about the markdown syntax for the documentation.<br />
+Anything Markdown-related that wasn't mentioned here is assumed to be the normal formatting (e.g. <code>*italic*</code>, <code>**bold**</code>, etc.).</p>
                 
                   
                 
@@ -1194,7 +1294,7 @@ and provided under the
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.4e3fea51.min.js"></script>
+      <script src="../../assets/javascripts/bundle.3981fc68.min.js"></script>
       
     
   </body>
