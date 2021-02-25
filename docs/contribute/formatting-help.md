@@ -8,7 +8,7 @@ description: Page explaining the details about formatting those docs.
 [MkDocs-Material extension]: https://github.com/facelessuser/mkdocs-material-extensions
 
 [FontAwesome]: https://fontawesome.com/icons?d=gallery&m=free
-[Material Design]: https://material.io/resources/icons/?style=baseline
+[Material Design]: https://materialdesignicons.com/
 [Octicons]: https://octicons.github.com
 
 # Formatting Help
@@ -22,65 +22,65 @@ In order for the list to work will they require an empty line between the list, 
 
 !!! example "List example"
     === "Markdown"
-	    ```markdown
-		This list below will work.
-		
-		- Entry 1
-		- Entry 2
-		- Entry 3
-		
-		----  
-		This list, however, won't work.
-		- Entry 1
-		- Entry 2
-		- Entry 3
-		```
-    
-	=== "Result"
-		This list below will work.
-		
-		- Entry 1
-		- Entry 2
-		- Entry 3
-		
-		----  
-		This list, however, won't work.
-		- Entry 1
-		- Entry 2
-		- Entry 3
+        ```markdown
+        This list below will work.
+        
+        - Entry 1
+        - Entry 2
+        - Entry 3
+        
+        ----  
+        This list, however, won't work.
+        - Entry 1
+        - Entry 2
+        - Entry 3
+        ```
+
+    === "Result"
+        This list below will work.
+        
+        - Entry 1
+        - Entry 2
+        - Entry 3
+        
+        ----  
+        This list, however, won't work.
+        - Entry 1
+        - Entry 2
+        - Entry 3
 
 In addition to the above requirement will you also need to use 4 spaces compared to the usual 2, when you want to indent the list.
 
 !!! example "Indent example"
     === "Markdown"
-	    ```markdown
-		Working indents:
-		
-		- Entry 1
-		    - Entry 1.1
-		- Entry 2
-		
-		----  
-		Not working indents:
-		
-		- Entry 1
-		  - Entry 1.1
-		- Entry 2
-		```
+        ```markdown
+        Working indents:
+        
+        - Entry 1
+            - Entry 1.1
+        - Entry 2
+        
+        ----  
+        Not working indents:
+        
+        - Entry 1
+          - Entry 1.1
+        - Entry 2
+        ```
 	
-	=== "Result"
-		Working indents:
-		
-		- Entry 1
-		    - Entry 1.1
-		- Entry 2
-		
-		----  
-		Not working indents:
-		
-		- Entry 1
-		  - Entry 1.1
-		- Entry 2
+    === "Result"
+        Working indents:
+        
+        - Entry 1
+            - Entry 1.1
+        - Entry 2
+        
+        ----  
+        Not working indents:
+        
+        - Entry 1
+          - Entry 1.1
+        - Entry 2
 
 ## Info boxes
 You sure have noticed those neat looking boxes that contain various information of stuff.  
@@ -88,37 +88,36 @@ Those are provided through [MkDocs] and use a specific syntax, that you need to 
 
 !!! example "Box examples"
     === "Markdown"
-	    ```markdown
-		!!! info "Title"
-		    Rules about Markdown still apply.
-			
-			- F.e. Lists
-			- Still need an empty line
-		
-		----
-		
-		!!! info
-		    The title can be omited.  
-			The box will then use the name of its type.
-		```
-	
-	=== "Result"
-		!!! info "Title"
-		    Rules about Markdown still apply.
-			
-			- F.e. Lists
-			- Still need an empty line
-		
-		----
-		
-		!!! info
-		    The title can be omited.  
-			The box will then use the name of its type.
+        ```markdown
+        !!! info "Title"
+            Rules about Markdown still apply.
+            
+            - F.e. Lists
+            - Still need an empty line
+            
+        ----
+        
+        !!! info
+            The title can be omited.  
+            The box will then use the name of its type.
+        ```
+        	
+    === "Result"
+        !!! info "Title"
+            Rules about Markdown still apply.
+            
+            - F.e. Lists
+            - Still need an empty line
+            
+        ----
+        
+        !!! info
+            The title can be omited.  
+            The box will then use the name of its type.
 
-I want to point out those specific things:
-
-- You don't need to add two spaces after the `!!! <type> "<title>"`. MkDocs can handle this just fine.
-- You need to add at least one empty line before and after the info box to not have unwanted formatting issues.
+!!! warning "Special rules"
+    - You don't need to add two spaces after the `!!! <type> "<title>"`. MkDocs can handle this just fine.
+    - You need to add at least one empty line before and after the info box to not have unwanted formatting issues.
 
 ### Types
 The info boxes have various types available which you can choose from:
@@ -150,31 +149,31 @@ The info boxes have various types available which you can choose from:
 ## Collapsable info boxes (Details)
 This feature requires the `Details` extension from [PyMdown].
 
-Those boxes are similar to the normal info boxes, but can be collapsed (closed) or opened.  
+Those boxes are similar to the normal info boxes, but can be collapsed (closed) or expanded (opened).  
 They follow the same syntax as the info boxes, but use question marks (`?`) instead of exclamation marks (`!`).  
 You can use the exact same [types](#types) as with the info boxes.
 
 
 !!! example "Collapsable Box example"
     === "Markdown"
-	    ```markdown
-		??? info "Title"
-		    This box is closed by default
-		
-		----
-		
-		???+ info "Title"
-		    Adding a + after the question mark makes this box open by default.
-		```
-	
-	=== "Result"
-		??? info "Title"
-		    This box is closed by default
-		
-		----
-		
-		???+ info "Title"
-		    Adding a + after the question mark makes this box open by default.
+        ```markdown
+        ??? info "Title"
+            This box is closed by default
+            
+        ----
+        
+        ???+ info "Title"
+            Adding a + after the question mark makes this box open by default.
+        ```
+    
+    === "Result"
+        ??? info "Title"
+            This box is closed by default
+        
+        ----
+        
+        ???+ info "Title"
+            Adding a + after the question mark makes this box open by default.
 
 ## Tabs
 This feature requires the `Tabbed` extension from [PyMdown].
@@ -185,73 +184,157 @@ Additionally does it also not have a type parameter, meaning you can only set th
 
 !!! example "Tabs example"
     === "Markdown"
-	    ```markdown
-		=== "Tab 1"
-		    You can add more tabs...
-		
-		=== "Tab 2"
-		    ...by adding extra `===`.
-		
-		===! "Tab A"
-		    Using a ! after the equal signs...
-		
-		=== "Tab B"
-		    ...indicates a new set of tabs.
-		```
-	
-	=== "Result"
-		=== "Tab 1"
-		    You can add more tabs...
-		
-		=== "Tab 2"
-		    ...by adding extra `===`.
-		
-		===! "Tab A"
-		    Using a ! after the equal signs...
-		
-		=== "Tab B"
-		    ...indicates a new set of tabs.
+        ```markdown
+        === "Tab 1"
+            You can add more tabs...
+            
+        === "Tab 2"
+            ...by adding extra `===`.
+            
+        ===! "Tab A"
+            Using a ! after the equal signs...
+            
+        === "Tab B"
+            ...indicates a new set of tabs.
+        ```
+    
+    === "Result"
+        === "Tab 1"
+            You can add more tabs...
+            
+        === "Tab 2"
+            ...by adding extra `===`.
+            
+        ===! "Tab A"
+            Using a ! after the equal signs...
+            
+        === "Tab B"
+            ...indicates a new set of tabs.
 
 ## Links
 We use the [PyMdown] extension `MagicLink` which allows us to automatically transform links into clickable links. This doesn't happen by default.
 
 !!! example "Link example"
     === "Markdown"
-	    ```markdown
-	    https://purrbot.site
-		```
-	
-	=== "Result"
-	    https://purrbot.site
+        ```markdown
+        https://purrbot.site
+        ```
+        
+    === "Result"
+        https://purrbot.site
 
 Additionally can we link to a repository or GitHub user by just using the format `@user/repo` and `@user` respectively.  
 This also works with Twitter-users by prefixing the name with `twitter:` (`@twitter:username`)
 
 !!! example "Mention examples"
     === "Markdown"
-	    ```markdown
-	    @purrbot-site  
-		@purrbot-site/Docs  
-		@twitter:TruePurrBot
-		```
-	
-	=== "Result"
-	    @purrbot-site  
-		@purrbot-site/Docs  
-		@twitter:TruePurrBot
+        ```markdown
+        @purrbot-site  
+        @purrbot-site/Docs  
+        @twitter:TruePurrBot
+        ```
+    
+    === "Result"
+        @purrbot-site  
+        @purrbot-site/Docs  
+        @twitter:TruePurrBot
 
 ## Emojis
-Thanks to the [PyMdown] extension `Emojis` can we add emojis (From Twemoji) to this Documentation by just providing it as `:emoji_name:`
+We use the `Emojis` extension from [PyMdown] to allow the usage of emojis through the common `:emoji:` pattern.  
+We also use the [MkDocs-Material Extension] which adds support for using SVG icons of [FontAwesome], [Material Design] and [Octicons] in the same format.
 
-Additionally do we also use the [MkDocs-Material extension] which also adds icons from [FontAwesome], [Material Design] and [Octicons] to this pages.  
-You can use them like normal emojis, with the difference, that they are prefixed with one of the following namespaces:
+Note that unlike emojis, the custom ones added by the MkDocs-Material Extension require to be prefixed with the site they should come from.
 
-- `fontawesome` FontAwesome icons. You also need to specify the type as listed below.
-    - `fontawesome-brands` for brand icons
-	- `fontawesome-regular` for regular icons
-	- `fontawesome-solid` for solid icons
-- `material` Material Design icons.
-- `octicons` GitHub's Octicon icons.
+- `fontawesome-brands` for brand icons
+- `fontawesome-regular` for all regular icons
+- `fontawesome-solid` for all Solid icons
+- `material` for the Material Design icons
+- `octicons` for the Octicons icons
+
+!!! warning "Note about FontAwesome and Octicons"
+    === "FontAwesome"
+        The MkDocs-Material Extension will only be able to use free FontAwesome icons! Paid ones aren't supported.
+    
+    === "Octicons"
+        Due to Octicons being offered in 16px and 24px format, are you required to suffix the icon name with either `-16` or `-24` depending on which you want to use.  
+        As an example: Instead of `:octicon-repo:` would you use `:octicon-repo-16:` or `:octicon-repo-24:`
+
+!!! example "Emoji/Icons Examples"
+    === "Markdown"
+        ```markdown
+        Normal Emojis  
+        
+        - :smile:
+        - :heart:
+        
+        FontAwesome Icons (Brands):  
+        
+        - :fontawesome-brands-github:
+        - :fontawesome-brands-discord:
+        
+        FontAwesome Icons (Regular)  
+        
+        - :fontawesome-regular-bell:
+        - :fontawesome-regular-bell-slash:
+        
+        FontAwesome Icons (Solid)  
+        
+        - :fontawesome-solid-bell:
+        - :fontawesome-solid-bell-slash:
+        
+        Material Design:
+        
+        - :material-sync:
+        - :material-warning:
+        
+        Octicons:
+        
+        - :octicons-repo-24:
+        - :octicons-git-pull-request-24:
+        ```
+    
+    === "Result"
+        Normal Emojis  
+        
+        - :smile:
+        - :heart:
+        
+        FontAwesome Icons (Brands):  
+        
+        - :fontawesome-brands-github:
+        - :fontawesome-brands-discord:
+        
+        FontAwesome Icons (Regular)  
+        
+        - :fontawesome-regular-bell:
+        - :fontawesome-regular-bell-slash:
+        
+        FontAwesome Icons (Solid)  
+        
+        - :fontawesome-solid-bell:
+        - :fontawesome-solid-bell-slash:
+        
+        Material Design:
+        
+        - :material-sync:
+        - :material-warning:
+        
+        Octicons:
+        
+        - :octicons-repo-24:
+        - :octicons-git-pull-request-24:
+
+## Buttons
+Using the List Attribute extension can we turn embedded Links (`[text](link)`) into buttons by appending `{: .md-button }` to it.
+
+!!! example "Button Example"
+    === "Markdown"
+        ```markdown
+        [To the Website](https://purrbot.site){: .md-button }
+        ```
+    
+    === "Result"
+        [To the Website](https://purrbot.site){: .md-button }
 
 ## Final Words
 Those are all the important parts you need to know about the markdown syntax for those documentations.  
