@@ -337,5 +337,5 @@ Using the List Attribute extension can we turn embedded Links (`[text](link)`) i
         [To the Website](https://purrbot.site){: .md-button }
 
 ## Final Words
-Those are all the important parts you need to know about the markdown syntax for those documentations.  
-Every other markdown format that wasn't mentioned here uses the default, most commonly known syntax (e.g. `*italic*` is *italic*, `**bold**` is **botld**, etc.)
+Those are all the important parts you need to know about the markdown syntax for the documentation.  
+Anything Markdown-related that wasn't mentioned here is assumed to be the normal formatting (e.g. `*italic*`, `**bold**`, etc.).
