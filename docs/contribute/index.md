@@ -10,7 +10,6 @@ description: Help us improving the bot, website or this Documentation!
 
 [purr]: https://github.com/purrbot-site/PurrBot
 [contributing_bot]: https://github.com/purrbot-site/PurrBot/blob/master/CONTRIBUTING.md
-[translations]: https://github.com/purrbot-site/PurrBot/blob/master/translations.md
 
 [imageapi]: https://github.com/purrbot-site/ImageAPI
 [crowdin]: https://lang.purrbot.site
@@ -38,4 +37,4 @@ You can find the source codes [here][imageapi].
 
 ## Translations
 We welcome every kind of translation. This even includes those that don't really exist (Are a joke-language like Klingon... No hate towards those guys).  
-To become a translator, read how to on the [translations.md][translations] file and join our [Discord], so that he can add you as a translator to the [Translation page][crowdin].
+To become a translator, read how to on the [translations](translate) page and join our [Discord], so that he can add you as a translator to the [Translation page][crowdin].
