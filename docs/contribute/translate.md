@@ -1,3 +1,8 @@
+---
+title: Translations
+description: Find out how you can translate the bot into another language.
+---
+
 # Translations
 \*Purr* is available in various languages.  
 Each of those languages was made with :heart:, effort and some letters by the community.
