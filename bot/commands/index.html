@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://docs.purrbot.site/bot/commands/">
       
       <link rel="shortcut icon" href="../../assets/img/logo.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
     
     
   
@@ -948,6 +948,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribute/translate/" class="md-nav__link">
+        Translations
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -1503,7 +1515,7 @@ The default prefix is <code>p.</code> but can be changed with the <a href="#pref
 <p class="admonition-title">Important</p>
 <ul>
 <li><code>Permission</code> means Discord permissions which the executor of the command (you) requires.</li>
-<li>To make the bot work properly will it require the following permissions:</li>
+<li>To make the bot work properly will it require the following permissions:<ul>
 <li><code>Read Messages</code></li>
 <li><code>Send Messages</code></li>
 <li><code>Embed Links</code></li>
@@ -1511,6 +1523,8 @@ The default prefix is <code>p.</code> but can be changed with the <a href="#pref
 <li><code>Add Reactions</code>  </li>
 <li><code>Use External Emojis</code><br />
   Additional permissions required for a command will be mentioned under <code>Bot Requires</code></li>
+</ul>
+</li>
 <li><code>&lt;argument&gt;</code> are required and <code>[argument]</code> are optional.</li>
 <li>If an argument has <code>...</code> does it indicate, that you can provide it multiple times.</li>
 </ul>
@@ -1969,51 +1983,51 @@ A list of currently worked on (and completed) translations can be found on <a hr
 Providing no arguments will show what the current settings are.</p>
 <details class="info"><summary>Command arguments</summary><ul>
 <li><code>bg set &lt;background&gt;</code><br />
-Change the background (<a href="../welcome-images#backgrounds">Available backhrounds</a>).</li>
+  Change the background (<a href="../welcome-images#backgrounds">Available backhrounds</a>).</li>
 <li><code>bg reset</code><br />
-Resets the background back to <a href="../welcome-images#color_white"><code>color_white</code></a>.</li>
+  Resets the background back to <a href="../welcome-images#color_white"><code>color_white</code></a>.</li>
 <li><code>channel set &lt;#channel&gt;</code><br />
-Set the channel for the welcome messages.</li>
+  Set the channel for the welcome messages.</li>
 <li><code>channel reset</code><br />
-Resets the the channel.</li>
+  Resets the the channel.</li>
 <li><code>color set &lt;color&gt;</code><br />
-Set the text color on the image. The format has to be either <code>rgb:r,g,b</code>, <code>hex:rrggbb</code> or <code>random</code>.</li>
+  Set the text color on the image. The format has to be either <code>rgb:r,g,b</code>, <code>hex:rrggbb</code> or <code>random</code>.</li>
 <li><code>color reset</code><br />
-Resets the color back to <code>hex:000000</code></li>
+  Resets the color back to <code>hex:000000</code></li>
 <li><code>icon set &lt;icon&gt;</code><br />
-Set the icon, which is displayed on the right side (<a href="../welcome-images#icons">Available icons</a>).</li>
+  Set the icon, which is displayed on the right side (<a href="../welcome-images#icons">Available icons</a>).</li>
 <li><code>icon reset</code><br />
-Resets the icon back to <a href="../welcome-images#purr"><code>purr</code></a>.</li>
+  Resets the icon back to <a href="../welcome-images#purr"><code>purr</code></a>.</li>
 <li><code>msg set &lt;message&gt;</code><br />
-Set the message shown in the welcome channel.</li>
+  Set the message shown in the welcome channel.</li>
 <li><code>msg reset</code><br />
-Resets the message back to <code>Welcome {mention}!</code></li>
+  Resets the message back to <code>Welcome {mention}!</code></li>
 <li><code>test</code><br />
-Create a preview of the current message (with placeholders parsed) and the image.</li>
+  Create a preview of the current message (with placeholders parsed) and the image.</li>
 </ul>
 </details>
 <details class="info"><summary>Placeholders</summary><p>The following placeholders can be used in the welcome message to display a different value.</p>
 <ul>
 <li><code>{count}</code> / <code>{members}</code><br />
-Displays the current amount of members on the Discord (i.e. <code>1000</code>).</li>
+  Displays the current amount of members on the Discord (i.e. <code>1000</code>).</li>
 <li><code>{count_formatted}</code> / <code>{members_formatted}</code><br />
-Displays the current amount of members on the Discord in a formatted way (i.e. <code>1,000</code>).</li>
+  Displays the current amount of members on the Discord in a formatted way (i.e. <code>1,000</code>).</li>
 <li><code>{guild}</code> / <code>{server}</code><br />
-Displays the name of the Discord.</li>
+  Displays the name of the Discord.</li>
 <li><code>{mention}</code><br />
-Mentions the joining Member.</li>
+  Mentions the joining Member.</li>
 <li><code>{name}</code> / <code>{username}</code><br />
-Displays the name of the joining Member.</li>
+  Displays the name of the joining Member.</li>
 <li><code>{c_mention:&lt;id&gt;}</code><br />
-Displays a channel as mention. <code>&lt;id&gt;</code> has to be the ID of the Text Channel (Other channel types won't work).</li>
+  Displays a channel as mention. <code>&lt;id&gt;</code> has to be the ID of the Text Channel (Other channel types won't work).</li>
 <li><code>{c_name:&lt;id&gt;}</code><br />
-Displays a channel's name. <code>&lt;id&gt;</code> has to be the ID of the channel.</li>
+  Displays a channel's name. <code>&lt;id&gt;</code> has to be the ID of the channel.</li>
 <li><code>{r_mention:&lt;id&gt;}</code><br />
-Displays a role as mention. <code>&lt;id&gt;</code> has to be the ID of the role.</li>
+  Displays a role as mention. <code>&lt;id&gt;</code> has to be the ID of the role.</li>
 <li><code>{r_name:&lt;id&gt;}</code><br />
-Displays a role's name. <code>&lt;id&gt;</code> has to be the ID of the role.</li>
+  Displays a role's name. <code>&lt;id&gt;</code> has to be the ID of the role.</li>
 <li><code>{tag}</code><br />
-Displays the tag (Username and discriminator) of the user.</li>
+  Displays the tag (Username and discriminator) of the user.</li>
 </ul>
 </details>
 <hr />
@@ -2388,10 +2402,10 @@ and provided under the
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.3981fc68.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ca5457b8.min.js"></script>
       
     
   </body>
