@@ -6,7 +6,7 @@
     margin-top: .4rem;
 }
 
-.md-header-nav__button.md-logo img, .md-header-nav__button.md-logo svg {
+.md-header__button.md-logo img, .md-header__button.md-logo svg {
     width: 2.4rem;
     height: 2.4rem;
 }
