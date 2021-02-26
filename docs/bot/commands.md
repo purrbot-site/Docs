@@ -10,13 +10,13 @@ The default prefix is `p.` but can be changed with the [prefix command](#prefix)
 !!! info "Important"
     - `Permission` means Discord permissions which the executor of the command (you) requires.
     - To make the bot work properly will it require the following permissions:
-      - `Read Messages`
-      - `Send Messages`
-      - `Embed Links`
-      - `Read Message History`
-      - `Add Reactions`  
-      - `Use External Emojis`  
-      Additional permissions required for a command will be mentioned under `Bot Requires`
+        - `Read Messages`
+        - `Send Messages`
+        - `Embed Links`
+        - `Read Message History`
+        - `Add Reactions`  
+        - `Use External Emojis`  
+          Additional permissions required for a command will be mentioned under `Bot Requires`
     - `<argument>` are required and `[argument]` are optional.
     - If an argument has `...` does it indicate, that you can provide it multiple times.
 
@@ -476,51 +476,51 @@ Providing no arguments will show what the current settings are.
 
 ??? info "Command arguments"
     - `bg set <background>`  
-    Change the background ([Available backhrounds](../welcome-images#backgrounds)).
+      Change the background ([Available backhrounds](../welcome-images#backgrounds)).
     - `bg reset`  
-    Resets the background back to [`color_white`](../welcome-images#color_white).
+      Resets the background back to [`color_white`](../welcome-images#color_white).
     - `channel set <#channel>`  
-    Set the channel for the welcome messages.
+      Set the channel for the welcome messages.
     - `channel reset`  
-    Resets the the channel.
+      Resets the the channel.
     - `color set <color>`  
-    Set the text color on the image. The format has to be either `rgb:r,g,b`, `hex:rrggbb` or `random`.
+      Set the text color on the image. The format has to be either `rgb:r,g,b`, `hex:rrggbb` or `random`.
     - `color reset`  
-    Resets the color back to `hex:000000`
+      Resets the color back to `hex:000000`
     - `icon set <icon>`  
-    Set the icon, which is displayed on the right side ([Available icons](../welcome-images#icons)).
+      Set the icon, which is displayed on the right side ([Available icons](../welcome-images#icons)).
     - `icon reset`  
-    Resets the icon back to [`purr`](../welcome-images#purr).
+      Resets the icon back to [`purr`](../welcome-images#purr).
     - `msg set <message>`  
-    Set the message shown in the welcome channel.
+      Set the message shown in the welcome channel.
     - `msg reset`  
-    Resets the message back to `Welcome {mention}!`
+      Resets the message back to `Welcome {mention}!`
     - `test`  
-    Create a preview of the current message (with placeholders parsed) and the image.
+      Create a preview of the current message (with placeholders parsed) and the image.
 
 ??? info "Placeholders"
     The following placeholders can be used in the welcome message to display a different value.
     
     - `{count}` / `{members}`  
-    Displays the current amount of members on the Discord (i.e. `1000`).
+      Displays the current amount of members on the Discord (i.e. `1000`).
     - `{count_formatted}` / `{members_formatted}`  
-    Displays the current amount of members on the Discord in a formatted way (i.e. `1,000`).
+      Displays the current amount of members on the Discord in a formatted way (i.e. `1,000`).
     - `{guild}` / `{server}`  
-    Displays the name of the Discord.
+      Displays the name of the Discord.
     - `{mention}`  
-    Mentions the joining Member.
+      Mentions the joining Member.
     - `{name}` / `{username}`  
-    Displays the name of the joining Member.
+      Displays the name of the joining Member.
     - `{c_mention:<id>}`  
-    Displays a channel as mention. `<id>` has to be the ID of the Text Channel (Other channel types won't work).
+      Displays a channel as mention. `<id>` has to be the ID of the Text Channel (Other channel types won't work).
     - `{c_name:<id>}`  
-    Displays a channel's name. `<id>` has to be the ID of the channel.
+      Displays a channel's name. `<id>` has to be the ID of the channel.
     - `{r_mention:<id>}`  
-    Displays a role as mention. `<id>` has to be the ID of the role.
+      Displays a role as mention. `<id>` has to be the ID of the role.
     - `{r_name:<id>}`  
-    Displays a role's name. `<id>` has to be the ID of the role.
+      Displays a role's name. `<id>` has to be the ID of the role.
     - `{tag}`  
-    Displays the tag (Username and discriminator) of the user.
+      Displays the tag (Username and discriminator) of the user.
 
 ----
 ## Category: Info

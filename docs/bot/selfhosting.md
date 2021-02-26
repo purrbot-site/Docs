@@ -24,7 +24,7 @@ This page explains how you can selfhost the bot for yourself.
     By selfhosting the bot will you agree to the following terms:
 	
     - You follow the [MIT-License] of the bot.
-    - This means that you give credit to the original author (Andre_601) and won't claim this code as your own.
+        - This means that you give credit to the original author (Andre_601) and won't claim this code as your own.
     - You aknowledge and agree that you won't receive any support for your selfhosted bot.
 
 ## Requirements
