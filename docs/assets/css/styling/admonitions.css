@@ -11,7 +11,7 @@
 }
 .md-typeset .example > .admonition-title::before,
 .md-typeset .example > summary::before {
-  background-color: rgb(43, 155, 70);
-  -webkit-mask-image: var(--md-admonition-icon--pied-piper);
-          mask-image: var(--md-admonition-icon--pied-piper);
+  background-color: #651fff;
+  -webkit-mask-image: var(--md-admonition-icon--example);
+          mask-image: var(--md-admonition-icon--example);
 }
