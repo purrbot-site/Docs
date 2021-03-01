@@ -19,6 +19,6 @@ description: Wiki about the Bot.
     - [Icons](welcome-images#icons)
 
 ## :fontawesome-regular-question-circle: Misc
-- [Credits](credits)
+- [Credits](../credits)
 - [FAQ](https://purrbot.site/discord)
 - [Selfhosting](selfhosting)
