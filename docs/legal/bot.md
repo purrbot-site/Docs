@@ -56,7 +56,7 @@ The bot may store the following information automatically when being invited to 
 - `prefix` with value `p.`
 - `welcome_background` with value `color_white`
 - `welcome_channel` with value `none`
-- `welcome_color` with value `hex:ffffff`
+- `welcome_color` with value `hex:000000`
 - `welcome_icon` with value `purr`
 - `welcome_message` with value `Welcome {mention}!`
 
