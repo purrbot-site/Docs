@@ -14,7 +14,7 @@ The welcome channel allows you to greet people with a message and image when the
     For simplicity reasons will the shown commands here use the default prefix (`p.`).  
     If you have set a different prefix, use that instead.
 
-??? "Video Tutorial"
+??? youtube "Video Tutorial"
     Here is a video explaining the steps below.
     
     <iframe width="560" height="315" src="https://www.youtube.com/embed/vfhSj-4PF1A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
