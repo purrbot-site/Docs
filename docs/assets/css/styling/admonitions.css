@@ -12,10 +12,13 @@
 .md-typeset details.youtube {
   border-color: rgb(255, 0, 0);
 }
+
 .md-typeset .youtube > .admonition-title,
 .md-typeset .youtube > summary {
   background-color: rgba(255, 0, 0, 0.1);
+  border-color: rgb(255, 0, 0);
 }
+
 .md-typeset .youtube > .admonition-title::before,
 .md-typeset .youtube > summary::before {
   background-color: rgb(255, 0, 0);
