@@ -53,7 +53,7 @@ The bot may store the following information automatically when being invited to 
 
 - `id` with the Server's ID as value.
 - `language` with value `en`
-- `prefix` with value `.`
+- `prefix` with value `p.`
 - `welcome_background` with value `color_white`
 - `welcome_channel` with value `none`
 - `welcome_color` with value `hex:ffffff`
