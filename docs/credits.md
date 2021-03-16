@@ -1,3 +1,8 @@
+---
+name: Credits
+description: Find out what awesome Open-Source Software makes *Purr* and the API work.
+---
+
 This page lists different credits for all the different things used by either \*Purr* or for other things on the purrbot.site GitHub organisation.
 
 ## Used Libraries and utilities 
