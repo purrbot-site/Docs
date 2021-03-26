@@ -15,3 +15,7 @@
 .md-typeset .admonition, .md-typeset details {
     box-shadow: 0 0.2rem 0.5rem rgb(0 0 0 / 30%), 0 0.025rem 0.05rem rgb(0 0 0 / 30%);
 }
+
+.md-typeset details:not([open]) {
+    box-shadow: 0 0.2rem 0.5rem rgb(0 0 0 / 30%), 0 0.025rem 0.05rem rgb(0 0 0 / 30%);
+}
