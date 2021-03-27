@@ -52,6 +52,7 @@ theme:
     accent: blue
   features:
   - navigation.tabs
+  - navigation.sections
   icon:
     repo: fontawesome/brands/github-square
 
