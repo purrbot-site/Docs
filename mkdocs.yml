@@ -21,12 +21,14 @@ nav:
   - API:
     - ImageAPI: api/index.md
   - Bot:
-    - Wiki: bot/index.md
-    - Commands: bot/commands.md
-    - FAQ: 'https://purrbot.site/discord'
-    - Selfhosting: bot/selfhosting.md
-    - Welcome Channel: bot/welcome-channel.md
-    - Welcome Images: bot/welcome-images.md
+    - General:
+      - Welcome: bot/index.md
+      - Commands: bot/commands.md
+      - FAQ: 'https://purrbot.site/discord'
+      - Selfhosting: bot/selfhosting.md
+    - Welcome-System:
+      - Setup: bot/welcome-channel.md
+      - Images: bot/welcome-images.md
   - Contributing:
     - Contribute: contribute/index.md
     - Formatting Help: contribute/formatting-help.md
@@ -50,6 +52,7 @@ theme:
     accent: blue
   features:
   - navigation.tabs
+  - navigation.sections
   icon:
     repo: fontawesome/brands/github-square
 
