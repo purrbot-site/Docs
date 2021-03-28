@@ -10,3 +10,7 @@
     width: 2.4rem;
     height: 2.4rem;
 }
+
+.md-nav__item--section > .md-nav > .md-nav__list {
+    margin-left: 0.5rem;
+}
