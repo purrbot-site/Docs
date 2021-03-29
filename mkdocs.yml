@@ -47,12 +47,24 @@ theme:
   logo: 'assets/img/logo.png'
   favicon: 'assets/img/logo.png'
   palette:
-    scheme: slate
-    primary: cyan
-    accent: blue
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: cyan
+      accent: blue
+      toggle:
+        icon: octicons/sun-24
+        name: "Switch to Dark Mode"
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: cyan
+      accent: blue
+      toggle:
+        icon: octicons/moon-24
+        name: "Switch to Light Mode"
   features:
   - navigation.tabs
   - navigation.sections
+  - navigation.top
   icon:
     repo: fontawesome/brands/github-square
 
