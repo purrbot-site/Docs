@@ -1021,7 +1021,7 @@ Alternatively could you set "beta" in the config.json to true, to set the bot as
         <span class="n">PostAction</span> <span class="n">post</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PostAction</span><span class="p">(</span><span class="n">getShardManager</span><span class="p">());</span>
         <span class="n">BotBlockAPI</span> <span class="n">botBlockAPI</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BotBlockAPI</span><span class="p">.</span><span class="na">Builder</span><span class="p">()</span>
                 <span class="p">.</span><span class="na">addAuthToken</span><span class="p">(</span>
-                        <span class="n">Site</span><span class="p">.</span><span class="na">BOTLIST_SPACE</span><span class="p">,</span>
+                        <span class="n">Site</span><span class="p">.</span><span class="na">DISCORDLIST_SPACE</span><span class="p">,</span>
                         <span class="n">getFileManager</span><span class="p">().</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;config&quot;</span><span class="p">,</span> <span class="s">&quot;tokens.botlist-space&quot;</span><span class="p">)</span>
                 <span class="p">)</span>
                 <span class="p">.</span><span class="na">addAuthToken</span><span class="p">(</span>
@@ -1093,13 +1093,13 @@ Alternatively could you set "beta" in the config.json to true, to set the bot as
 
 <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Commands</span><span class="p">.</span><span class="na">CommandInfo</span><span class="o">&gt;</span> <span class="nf">getCommands</span><span class="p">(){</span>
     <span class="n">List</span><span class="o">&lt;</span><span class="n">Commands</span><span class="p">.</span><span class="na">CommandInfo</span><span class="o">&gt;</span> <span class="n">commandInfoList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-    <span class="k">for</span><span class="p">(</span><span class="n">site</span><span class="p">.</span><span class="na">purrbot</span><span class="p">.</span><span class="na">bot</span><span class="p">.</span><span class="na">commands</span><span class="p">.</span><span class="na">Command</span> <span class="n">command</span> <span class="p">:</span> <span class="n">commandLoader</span><span class="p">.</span><span class="na">getCommands</span><span class="p">()){</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">Command</span> <span class="n">command</span> <span class="p">:</span> <span class="n">commandLoader</span><span class="p">.</span><span class="na">getCommands</span><span class="p">()){</span>
         <span class="k">if</span><span class="p">(</span><span class="n">command</span><span class="p">.</span><span class="na">getAttribute</span><span class="p">(</span><span class="s">&quot;category&quot;</span><span class="p">).</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;owner&quot;</span><span class="p">))</span>
             <span class="k">continue</span><span class="p">;</span>
 
         <span class="n">commandInfoList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Commands</span><span class="p">.</span><span class="na">CommandInfo</span><span class="p">(</span>
                 <span class="n">command</span><span class="p">.</span><span class="na">getDescription</span><span class="p">().</span><span class="na">name</span><span class="p">(),</span>
-                <span class="n">langUtils</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;en&quot;</span><span class="p">,</span> <span class="n">command</span><span class="p">.</span><span class="na">getDescription</span><span class="p">().</span><span class="na">description</span><span class="p">()),</span>
+                <span class="n">setPlaceholders</span><span class="p">(</span><span class="n">langUtils</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;en&quot;</span><span class="p">,</span> <span class="n">command</span><span class="p">.</span><span class="na">getDescription</span><span class="p">().</span><span class="na">description</span><span class="p">())),</span>
                 <span class="n">command</span><span class="p">.</span><span class="na">getAttribute</span><span class="p">(</span><span class="s">&quot;category&quot;</span><span class="p">)</span>
         <span class="p">));</span>
     <span class="p">}</span>
