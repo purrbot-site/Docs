@@ -128,13 +128,13 @@ public void startUpdater(){
 
 private List<Commands.CommandInfo> getCommands(){
     List<Commands.CommandInfo> commandInfoList = new ArrayList<>();
-    for(site.purrbot.bot.commands.Command command : commandLoader.getCommands()){
+    for(Command command : commandLoader.getCommands()){
         if(command.getAttribute("category").equals("owner"))
             continue;
         
         commandInfoList.add(new Commands.CommandInfo(
                 command.getDescription().name(),
-                langUtils.getString("en", command.getDescription().description()),
+                setPlaceholders(langUtils.getString("en", command.getDescription().description())),
                 command.getAttribute("category")
         ));
     }
