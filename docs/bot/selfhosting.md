@@ -56,7 +56,7 @@ public void startUpdater(){
         PostAction post = new PostAction(getShardManager());
         BotBlockAPI botBlockAPI = new BotBlockAPI.Builder()
                 .addAuthToken(
-                        Site.BOTLIST_SPACE,
+                        Site.DISCORDLIST_SPACE,
                         getFileManager().getString("config", "tokens.botlist-space")
                 )
                 .addAuthToken(
