@@ -1,7 +1,9 @@
 [badge]: https://forthebadge.com/images/badges/made-with-markdown.svg
 
 [purr]: https://purrbot.site/github
+[purrbotapi]: https://github.com/purrbot-site/PurrBotAPI
 
+[CONTRIBUTING.md]: https://github.com/purrbot-site/Docs/blob/master/CONTRIBUTING.md
 [formatting help]: https://docs.purrbot.site/contribute/formatting-help
 
 [MkDocs]: https://www.mkdocs.org
