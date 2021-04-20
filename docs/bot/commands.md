@@ -72,7 +72,7 @@ The default prefix is `p.` but can be changed with the [prefix command](#prefix)
 - [Threesome](#threesome)
 
 ----
-## Category: Fun
+## Fun { #category-fun }
 
 ### Bite
 > **Permission**: `None`  
@@ -416,7 +416,7 @@ Lets you wag your tail (in excitement hopefully).
 Lets you tickle one or multiple users.
 
 ----
-## Category: Guild
+## Guild { #category-guild }
 
 ### Language
 > **Permission**: `Manage Server`  
@@ -446,7 +446,7 @@ A list of currently worked on (and completed) translations can be found on https
 > - `p.Prefix <set <prefix>>`
 > - `p.Prefix <reset>`
 
-Lets you change or reset the bots prefix for your guild. (Default one is `.`)
+Lets you change or reset the bots prefix for your guild. (Default one is `p.`)
 
 ----
 ### Welcome
@@ -523,7 +523,7 @@ Providing no arguments will show what the current settings are.
       Displays the tag (Username and discriminator) of the user.
 
 ----
-## Category: Info
+## Info { #category-info }
 
 ### Donate
 > **Permission**: `None`  
@@ -712,7 +712,7 @@ Shows statistics of the bot.
 Shows information about yourself or a mentioned user.
 
 ----
-## Category: NSFW
+## NSFW { #category-nsfw }
 
 ### Blowjob
 > **Permission**: `None`  
