@@ -35,6 +35,11 @@ The color blue. (`#2980B9`)
 
 ![image](https://purrbot.site/img/sfw/background/img/color_blue.png)
 
+#### color_blurple
+The **original** Blurple from before the Discord rebranding (`#7289DA`)
+
+![image](https://purrbot.site/img/sfw/background/img/color_blurple.png)
+
 #### color_green
 The color green. (`#27AE60`)
 
