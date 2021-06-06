@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://docs.purrbot.site/api/">
       
       <link rel="icon" href="../assets/img/logo.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.6">
     
     
   
@@ -24,10 +24,10 @@
   
 
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bde7dde4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.875de78c.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
         
       
     
@@ -2087,7 +2087,7 @@ An error is returned for the following cases:</p>
 </div>
 <h3 id="api-quote">/api/quote<a class="headerlink" href="#api-quote" title="Permanent link">&para;</a></h3>
 <div class="tabbed-set" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><label for="__tabbed_8_1">Empty JSON Body/No JSON</label><div class="tabbed-content">
-<p><strong>Status-Code</strong>: 403<br />
+<p><strong>Status-Code</strong>: <a href="https://httpstatuses.com/400">400</a><br />
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;details&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/api/quote&quot;</span><span class="p">,</span>
@@ -2100,7 +2100,7 @@ An error is returned for the following cases:</p>
 </code></pre></div></p>
 </div>
 <input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><label for="__tabbed_8_2">Malformed JSON/Invalid Values</label><div class="tabbed-content">
-<p><strong>Status-Code</strong>: 500<br />
+<p><strong>Status-Code</strong>: <a href="https://httpstatuses.com/500">500</a><br />
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;details&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/api/quote&quot;</span><span class="p">,</span>
@@ -2115,6 +2115,7 @@ An error is returned for the following cases:</p>
 </div>
 <h3 id="api-status">/api/status<a class="headerlink" href="#api-status" title="Permanent link">&para;</a></h3>
 <div class="tabbed-set" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><label for="__tabbed_9_1">Empty JSON Body/No JSON</label><div class="tabbed-content">
+<p><strong>Status-Code</strong>: <a href="https://httpstatuses.com/400">400</a><br />
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;details&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/api/status&quot;</span><span class="p">,</span>
@@ -2124,9 +2125,10 @@ An error is returned for the following cases:</p>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
   <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Received invalid or empty JSON Body.&quot;</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></p>
 </div>
 <input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><label for="__tabbed_9_2">Malformed JSON/Invalid Values</label><div class="tabbed-content">
+<p><strong>Status-Code</strong>: <a href="https://httpstatuses.com/500">500</a><br />
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;details&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/api/status&quot;</span><span class="p">,</span>
@@ -2136,12 +2138,12 @@ An error is returned for the following cases:</p>
   <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
   <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Couldn&#39;t generate Image. Make sure the values are valid!&quot;</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></p>
 </div>
 </div>
 <h3 id="api-img">/api/img/*<a class="headerlink" href="#api-img" title="Permanent link">&para;</a></h3>
 <div class="tabbed-set" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><label for="__tabbed_10_1">Invalid Path (No API endpoint)</label><div class="tabbed-content">
-<p><strong>Status-Code</strong>: 403<br />
+<p><strong>Status-Code</strong>: <a href="https://httpstatuses.com/403">403</a><br />
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;details&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/api/img/:path&quot;</span><span class="p">,</span>
@@ -2154,7 +2156,7 @@ An error is returned for the following cases:</p>
 </code></pre></div></p>
 </div>
 <input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><label for="__tabbed_10_2">No Images available</label><div class="tabbed-content">
-<p><strong>Status-Code</strong>: 403<br />
+<p><strong>Status-Code</strong>: <a href="https://httpstatuses.com/404">404</a><br />
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;details&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/api/img/:path&quot;</span><span class="p">,</span>
@@ -2233,10 +2235,10 @@ and provided under the
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.4fa0e4ee.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.1d3bfcf1.min.js"></script>
+      <script src="../assets/javascripts/bundle.34eae1b6.min.js"></script>
       
     
   </body>
