@@ -609,7 +609,7 @@ An error is returned for the following cases:
 ### /api/quote { #api-quote }
 
 === "Empty JSON Body/No JSON"
-    **Status-Code**: 403  
+    **Status-Code**: [400]  
     ```json
     {
       "details": {
@@ -623,7 +623,7 @@ An error is returned for the following cases:
     ```
 
 === "Malformed JSON/Invalid Values"
-    **Status-Code**: 500  
+    **Status-Code**: [500]  
     ```json
     {
       "details": {
@@ -639,7 +639,7 @@ An error is returned for the following cases:
 ### /api/status { #api-status }
 
 === "Empty JSON Body/No JSON"
-    **Status-Code**: 403  
+    **Status-Code**: [400]  
     ```json
     {
       "details": {
@@ -653,7 +653,7 @@ An error is returned for the following cases:
     ```
 
 === "Malformed JSON/Invalid Values"
-    **Status-Code**: 500  
+    **Status-Code**: [500]  
     ```json
     {
       "details": {
@@ -669,7 +669,7 @@ An error is returned for the following cases:
 ### /api/img/* { #api-img }
 
 === "Invalid Path (No API endpoint)"
-    **Status-Code**: 403  
+    **Status-Code**: [403]  
     ```json
     {
       "details": {
@@ -683,7 +683,7 @@ An error is returned for the following cases:
     ```
 
 === "No Images available"
-    **Status-Code**: 403  
+    **Status-Code**: [404]  
     ```json
     {
       "details": {
@@ -695,3 +695,8 @@ An error is returned for the following cases:
       "message": "The selected API path does not contain any images!"
     }
     ```
+
+[400]: https://httpstatuses.com/400
+[403]: https://httpstatuses.com/403
+[404]: https://httpstatuses.com/404
+[500]: https://httpstatuses.com/500
