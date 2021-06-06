@@ -639,6 +639,7 @@ An error is returned for the following cases:
 ### /api/status { #api-status }
 
 === "Empty JSON Body/No JSON"
+    **Status-Code**: 403  
     ```json
     {
       "details": {
@@ -652,6 +653,7 @@ An error is returned for the following cases:
     ```
 
 === "Malformed JSON/Invalid Values"
+    **Status-Code**: 500  
     ```json
     {
       "details": {
