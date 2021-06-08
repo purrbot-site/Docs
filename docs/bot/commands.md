@@ -770,8 +770,10 @@ Returns a random gif of someone cumming.
 **This command can only be run in NSFW-labeled channels!**
 
 Asks the mentioned user to have sex with you.  
-When no arguments are provided can the mentioned user choose which type of sex would be used.  
+When no arguments are provided can the mentioned user choose which type of sex they want.  
 Providing `--anal`, `--normal`, `--yaoi` or `--yuri` however pre-selects the option.
+
+The user can accept or deny the request.
 
 ----
 ### Lewd
@@ -807,7 +809,7 @@ Gives an image of a lewd Neko.
 **This command can only be run in NSFW-Labeled channels!**
 
 Asks the mentioned user to let you licking their pussy.  
-The mentioned user can accept or deny the request by clicking on the corresponding reactions of the message.
+The user can accept or deny the request.
 
 ----
 ### Solo
@@ -844,4 +846,5 @@ Gives a gif of a girl *playing* with herself.
 **This command can only be run in NSFW-labeled channels!**
 
 Similar to [Fuck](#fuck) but allows you to ask two people at once.  
-By default will the threesome be with 2 females and 1 male. Providing `--fff` or `--mmf` will change it to a threesome with 3 females or a threesome with 1 female and 2 males respectively.
+By default will the threesome be with 2 females and 1 male. Providing `--fff` or `--mmf` will change it to a threesome with 3 females or a threesome with 1 female and 2 males respectively.  
+The users can accept or deny the request.
