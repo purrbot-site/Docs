@@ -35,7 +35,7 @@ You need to have [RethinkDB] installed and running on your server, where the bot
 This also includes creating databases and tables to later set in the config.json.
 
 ### Java
-You need **at least** Java 8 to be installed and working. Newer versions of Java should work too.
+You need **at least** Java 11 to be installed and working. Newer versions of Java should work too.
 
 ## Setup
 When you made sure, that the [requirements](#requirements) are met, can you continue with preparing the code.
@@ -70,10 +70,6 @@ public void startUpdater(){
                 .addAuthToken(
                         Site.DISCORD_BOATS,
                         getFileManager().getString("config", "tokens.discord-boats")
-                )
-		.addAuthToken(
-                        Site.DISCORDBOTLIST_COM,
-                        getFileManager().getString("config", "tokens.discordbotlist-com")
                 )
                 .build();
 
