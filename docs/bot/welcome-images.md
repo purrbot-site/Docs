@@ -4,6 +4,7 @@ description: All available Welcome images.
 ---
 
 [discord]: https://purrbot.site/discord
+[patreon]: https://patreon.com/andre_601
 
 [fluxpoint]: https://fluxpoint.dev
 [waifu]: https://fluxpoint.dev/waifu
@@ -22,6 +23,15 @@ If you have suggestions for new backgrounds or icons, feel free to join our [Dis
 ## Backgrounds
 The background is across the entire image and behind the avatar, text and icon.
 
+### Booster Reward
+These backrgounds are only available as a reward for boosting the [Discord Server][discord].
+
+#### booster
+Background with Booster colour and icons.
+
+![image](https://purrbot.site/images/boost/booster_background.png)
+
+----
 ### Colors
 Simple one color-backgrounds.
 
@@ -98,6 +108,11 @@ A red gradient (bright red).
 ### Other {: #other-backgrounds }
 Other available options.
 
+#### custom {: #custom-background }
+This is a Patreon-exclusive option.  
+Users that support us through [Patreon][patreon] gain access to use any image they want by providing a URL instead of a name.  
+The only requirements are, that the image has the right dimensions (`2000x350`)
+
 #### rainbow
 A rainbow gradient.
 
@@ -109,6 +124,14 @@ The option `random` picks one of the above backgrounds randomly for each new ima
 ----
 ## Icons
 Icons can be seen on the right side of the image.
+
+### Booster Reward
+These icons are only available as a reward for boosting the [Discord Server][discord].
+
+#### booster
+Icon Wumpus on it.
+
+![image](https://purrbot.site/images/boost/booster_icon.png)
 
 ### Nekos
 Neko related icons.
@@ -171,6 +194,12 @@ The main character holo.
 ----
 ### Other {: #other-icons }
 Other available options.
+
+#### custom {: #custom-icon }
+This is a Patreon-exclusive option.
+
+Users that support us through [Patreon][patreon] gain access to use any image they want by providing a URL instead of a name.  
+The only requirements are, that the image has the right dimensions (`320x320`)
 
 #### random
 The option `random` picks one of the above icons randomly for each new image.
