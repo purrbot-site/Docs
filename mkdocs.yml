@@ -73,6 +73,8 @@ extra_css:
 
 extra:
   social:
+    - icon: 'fontawesome/brands/patreon'
+      link: 'https://patreon.com/andre_601'
     - icon: 'fontawesome/brands/github'
       link: 'https://github.com/purrbot-site'
     - icon: 'fontawesome/brands/twitter'

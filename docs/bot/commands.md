@@ -3,6 +3,8 @@ title: Commands
 description: List of all Commands the Bot currently offers.
 ---
 
+[patreon]: https://patreon.com/andre_601
+
 # General info
 This page lists all available commands of the bot.  
 The default prefix is `p.` but can be changed with the [prefix command](#prefix)
@@ -459,13 +461,13 @@ Lets you change or reset the bots prefix for your guild. (Default one is `p.`)
 > 
 > **Usage**:
 >
-> - `p.Welcome [bg set <background>]`
+> - `p.Welcome [bg set <background|url>]`
 > - `p.Welcome [bg reset]`
 > - `p.Welcome [channel set <#channel>]`
 > - `p.Welcome [channel reset]`
 > - `p.Welcome [color set <color>]`
 > - `p.Welcome [color reset]`
-> - `p.Welcome [icon set <icon>]`
+> - `p.Welcome [icon set <icon|url>]`
 > - `p.Welcome [icon reset]`
 > - `p.Welcome [msg set <message>]`
 > - `p.Welcome [msg reset]`
@@ -475,8 +477,9 @@ Lets you set different parts of Purr's welcome-feature.
 Providing no arguments will show what the current settings are.
 
 ??? info "Command arguments"
-    - `bg set <background>`  
-      Change the background ([Available backhrounds](../welcome-images#backgrounds)).
+    - `bg set <background|url>`  
+      Change the background ([Available backhrounds](../welcome-images#backgrounds)).  
+      [Tier 2 and Tier 3 Patrons][patreon] can also use any kind of image, by providing a URL.
     - `bg reset`  
       Resets the background back to [`color_white`](../welcome-images#color_white).
     - `channel set <#channel>`  
@@ -488,7 +491,8 @@ Providing no arguments will show what the current settings are.
     - `color reset`  
       Resets the color back to `hex:000000`
     - `icon set <icon>`  
-      Set the icon, which is displayed on the right side ([Available icons](../welcome-images#icons)).
+      Set the icon, which is displayed on the right side ([Available icons](../welcome-images#icons)).  
+      [Tier 2 and Tier 3 Patrons][patreon] can also use any kind of image, by providing a URL.
     - `icon reset`  
       Resets the icon back to [`purr`](../welcome-images#purr).
     - `msg set <message>`  
