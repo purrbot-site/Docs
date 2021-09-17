@@ -25,7 +25,7 @@ These API endpoints can only be used through `POST` requests.
 !!! info
     - **Responses**:
         - Success: `Image`
-        - [Failure: `JSON`](#apiquote)
+        - [Failure: `JSON`](#api-quote)
 
 #### Fields { #fields-quote }
 
@@ -100,7 +100,7 @@ These API endpoints can only be used through `POST` requests.
 !!! info
     - **Responses**:
         - Success: `Image`
-        - [Failure: `JSON`](#apistatus)
+        - [Failure: `JSON`](#api-status)
 
 #### Fields { #fields-status }
 
