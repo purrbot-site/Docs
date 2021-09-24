@@ -61,18 +61,21 @@ Reset this using `p.welcome color reset`
 
 You can set your very own welcome message that is shown next to the image.  
 To do that run `p.welcome msg set <message>` where `<message>` can be anything you want.  
-You can also use placeholders in the message:
 
-- `{count}` / `{members}` The member count of the Discord (e.g. 1000).
-- `{count_formatted}` / `{members_formatted}` The member count of the Discord but formatted (e.g. 1,000).
-- `{guild}` / `{server}` The name of the Discord.
-- `{mention}` The joined user as a mention.
-- `{name}` / `{username}` The name of the joined user.
-- `{c_mention:<id>}` A channel-mention. `<id>` has to be a Text Channel id (Other channel types won't work).
-- `{c_name:<id>}` The name of a channel. `<id>` has to be a channel id.
-- `{r_mention:<id>}` A role-mention. `<id>` has to be a role id.
-- `{r_name:<id>}` The name of a role. `<id>` has to be a role id.
-- `{tag}` The tag (username and discriminator) of the user.
+### Placeholders
+
+| Placeholder:                                | Description:                                                                | Example Output: |
+| ------------------------------------------- | --------------------------------------------------------------------------- | --------------- |
+| `{count}` / `{members}`                     | The current amount of members on the Discord server.                        | 1000            |
+| `{count_formatted}` / `{members_formatted}` | The current amount of members on the Discord server, but formatted.         | 1,000           |
+| `{guild}` / `{server}`                      | The name of the server.                                                     | SomeDiscord     |
+| `{mention}`                                 | Mention of the user that joined the server.                                 | @SomeUser       |
+| `{name}` / `{username}`                     | The name of the user that joined the server.                                | SomeUser        |
+| `{c_mention:<id>}`                          | A mention of the provided channel ID. Works with text and voice.            | #SomeChannel    |
+| `{c_name:<id>}`                             | The name of the provided channel ID. Works with any channel and categories. | SomeChannel     |
+| `{r_mention:<id>}`                          | A mention of the provided role ID.                                          | @SomeRole       |
+| `{r_name:<id>}`                             | The name of the provided role ID.                                           | SomeRole        |
+| `{tag}`                                     | The tag of the user that joined the server.                                 | SomeUser#1234   |
 
 Reset this using `p.welcome msg reset`
 
