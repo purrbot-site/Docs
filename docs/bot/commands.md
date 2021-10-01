@@ -7,7 +7,7 @@ description: List of all Commands the Bot currently offers.
 
 # General info
 This page lists all available commands of the bot.  
-The default prefix is `p.` but can be changed with the [prefix command](#prefix)
+The commands are offered through Discord's Slash commands feature, meaning they all are prefixed with `/`
 
 !!! info "Important"
     - `Permission` means Discord permissions which the executor of the command (you) requires.
@@ -20,7 +20,6 @@ The default prefix is `p.` but can be changed with the [prefix command](#prefix)
         - `Use External Emojis`  
           Additional permissions required for a command will be mentioned under `Bot Requires`
     - `<argument>` are required and `[argument]` are optional.
-    - If an argument has `...` does it indicate, that you can provide it multiple times.
 
 ### [Fun](#category-fun)
 - [Bite](#bite)
@@ -28,18 +27,13 @@ The default prefix is `p.` but can be changed with the [prefix command](#prefix)
 - [Cry](#cry)
 - [Cuddle](#cuddle)
 - [Dance](#dance)
-- [Eevee](#eevee)
 - [Feed](#feed)
 - [Fluff](#fluff)
-- [Holo](#holo)
 - [Hug](#hug)
 - [Kiss](#kiss)
-- [Kitsune](#kitsune)
 - [Lick](#lick)
-- [Neko](#neko)
 - [Pat](#pat)
 - [Poke](#poke)
-- [Senko](#senko)
 - [Ship](#ship)
 - [Slap](#slap)
 - [Smile](#smile)
@@ -48,7 +42,6 @@ The default prefix is `p.` but can be changed with the [prefix command](#prefix)
 
 ### [Guild](#category-guild)
 - [Language](#language)
-- [Prefix](#prefix)
 - [Welcome](#welcome)
 
 ### [Info](#category-info)
@@ -80,189 +73,117 @@ The default prefix is `p.` but can be changed with the [prefix command](#prefix)
 > **Permission**: `None`  
 > **Bot requires**: `None`
 >
-> **Aliases**:
->
-> - `Nibble`
-> - `Nom`
->
 > **Usage**:
 >
-> - `p.Bite <@user ...>`
+> - `/bite <user: user> [user: user2] [user: user3]`
 
-Lets you bite one or multiple mentioned users.
+Lets you bite up to 3 users.
 
 ----
 ### Blush
 > **Permission**: `None`  
 > **Bot requires**: `None`
 >
-> **Aliases**:
->
-> - `Blushing`
->
 > **Usage**:
 >
-> - `p.Blush`
+> - `/lush`
 
-Lets you blush.
+Makes you blush. \>////\<
 
 ----
 ### Cry
 > **Permission**: `None`  
 > **Bot requires**: `None`
 >
-> **Aliases**:
->
-> - `Sad`
-> - `Sob`
->
 > **Usage**:
 >
-> - `p.Cry`
+> - `/cry`
 
-Lets you cry. :cry:
+Makes you cry. :cry:
 
 ----
 ### Cuddle
 > **Permission**: `None`  
 > **Bot requires**: `None`  
 > 
-> **Aliases**:
->
-> - `Cuddles`
-> - `Snuggle`
-> - `Snuggles`
-> - `Squeeze`
-> 
 > **Usage**:
 >
-> - `p.Cuddle <@user ...>`
+> - `/cuddle <user: user> [user: user2] [user: user3]`
 
-Lets you cuddle one or multiple mentioned users.
+Lets you cuddle up to 3 user.
 
 ----
 ### Dance
 > **Permission**: `None`  
 > **Bot requires**: `None`
 >
-> **Aliases**:
-> 
-> - `Dancing`
->
 > **Usage**:
 >
-> - `p.Dance`
+> - `/dance`
 
-Gives a gif of someone dancing. ~(^-^)~
-
-----
-### Eevee
-> **Permission**: `None`  
-> **Bot requires**: `None`
->
-> **Aliases**: `None`
->
-> **Usage**:
->
-> - `p.Eevee`
-> - `p.Eevee [--gif]`
-
-Gives an image of the cute Pokémon Eevee. ([Example](https://purrbot.site/img/sfw/eevee/img/eevee_001.jpg))  
-`--gif` returns a gif of an Eevee.
+Makes you dance. ~(^-^)~
 
 ----
 ### Feed
 > **Permission**: `None`  
 > **Bot requires**: `None`
 > 
-> **Aliases**:
->
-> - `Food`
-> - `Eat`
-> 
 > **Usage**:
 >
-> - `p.Feed <@user>`
+> - `/feed <user: user>`
 
-Lets you feed someone.  
-The asked user can either accept or deny the request.
+Allows you to give another user some food.  
+The asked user can accept or deny the request.
 
 ----
 ### Fluff
 > **Permission**: `None`  
 > **Bot requires**: `None`
 >
-> **Aliases**:
->
-> - `Fluffing`
->
 > **Usage**:
 >
-> - `p.Fluff <@user>`
+> - `/fluff <user: user>`
 
-Lets you ask someone if you can fluff their tail.  
-The asked user can either accept or deny the request.
-
-----
-### Holo
-> **Permission**: `None`  
-> **Bot requires**: `None`
-> 
-> **Aliases**:
->
-> - `Spiceandwolf`  
-> 
-> **Usage**:
->
-> - `p.Holo`
-
-Gives an image of Holo from the manga and anime "Spice & Wolf". ([Example](https://purrbot.site/img/sfw/holo/img/holo_001.jpg))
+Allows you to fluff the tail of another user.  
+The asked user can accept or deny the request.
 
 ----
 ### Hug
 > **Permission**: `None`  
 > **Bot requires**: `None`  
 > 
-> **Aliases**:
->
-> - `Hugging`  
-> 
 > **Usage**:
 >
-> - `p.Hug <@user ...>`
+> - `/hug <user: user> [user: user2] [user: user3]`
 
-Lets you hug one or multiple mentioned user.
+Lets you hug up to 3 user.
+
+----
+### Img
+> **Permission**: `None`
+> **Bot requires**: `None`
+> 
+> **Usages**:
+> 
+> - `/img eevee [boolean: gif]`
+> - `/img holo`
+> - `/img kitsune`
+> - `/img neko [boolean: gif]`
+> - `/img okami`
+> - `/img senko`
+
+Gives you an image (or gif if available) of an Eevee, Holo from "Spice and Wolf", a kitsune (Fox girl), a neko (Cat girl), a okami (Wolf girl) or Senko-San from "Sewayaki Kitsune no Senko-San".
 
 ----
 ### Kiss
 > **Permission**: `None`  
 > **Bot requires**: `None`  
 > 
-> **Aliases**:
->
-> - `Kissu`
-> - `Love`  
-> 
 > **Usage**:
 >
-> - `p.Kiss <@user ...>`
+> - `/kiss <user: user> [user: user2] [user: user3]`
 
-Lets you kiss one or multiple mentioned user.
-
-----
-### Kitsune
-> **Permission**: `None`  
-> **Bot requires**: `None`  
-> 
-> **Aliases**:
->
-> - `Foxgirl`  
-> 
-> **Usage**:
->
-> - `p.Kitsune`
-
-Gives an image of a kitsune (fox girl). ([Example](https://purrbot.site/img/sfw/kitsune/img/kitsune_001.jpg))
+Lets you kiss up to 3 user.
 
 ----
 ### Lick
@@ -273,149 +194,89 @@ Gives an image of a kitsune (fox girl). ([Example](https://purrbot.site/img/sfw/
 >
 > **Usage**:
 >
-> - `p.Lick <@user ...>`
+> - `/lick <user: user> [user: user2] [user: user3]`
 
-Lets you lick one or multiple mentioned user.
-
-----
-### Neko
-> **Permission**: `None`  
-> **Bot requires**: `None`
-> 
-> **Aliases**:
->
-> - `Catgirl`
-> 
-> **Usage**:
->
-> - `p.Neko`
-> - `p.Neko [--gif]`
-
-Gives an image of a Neko (cat girl). ([Example](https://purrbot.site/img/sfw/neko/img/neko_001.jpg))  
-`[--gif]` returns a gif of a Neko.
+Lets you lick up to 3 user.
 
 ----
 ### Pat
 > **Permission**: `None`  
-> **Bot requires**: `None`  
-> 
-> **Aliases**:
->
-> - `Patting`
-> - `Pet`
+> **Bot requires**: `None`
 > 
 > **Usage**:
 >
-> - `p.Pat <@user ...>`
+> - `/pat <user: user> [user: user2] [user: user3]`
 
-Lets you pat one or multiple mentioned user.
+Lets you pat up to 3 user.
 
 ----
 ### Poke
 > **Permission**: `None`  
-> **Bot requires**: `None`  
-> 
-> **Aliases**:
->
-> - `Poking`
-> 
-> **Usage**:
->
-> - `p.Poke <@user ...>`
-
-Lets you poke one or multiple mentioned user.
-
-----
-### Senko
-> **Permission**: `None`  
 > **Bot requires**: `None`
->
-> **Aliases**:
->
-> - `Senko-san`
->
+> 
 > **Usage**:
 >
-> - `p.Senko`
+> - `/poke <user: user> [user: user2] [user: user3]`
 
-Gives a random image of the divine messenger Senko-San ([Example](https://purrbot.site/img/sfw/senko/img/senko_001.jpg))
+Lets you poke up to 3 user.
 
 ----
 ### Ship
 > **Permission**: `None`  
 > **Bot requires**:
 >
-> - `Attach files` (optional for showing a image)  
-> 
-> **Aliases**:
->
-> - `Shipping`
+> - `Attach files` (optional for showing a image)
 > 
 > **Usage**:
 >
-> - `p.Ship <@user>`
-> - `p.Ship <@user1> [@user2]`
+> - `/ship <user: user> [user: user2]`
 
-Will make the bot show how likely you match with someone else.  
-You can optionally mention a second user to instead ship those two with each other.
+Will ship you with the provided user.  
+If a second user is provided will it ship those two instead.
 
 ----
 ### Slap
 > **Permission**: `None`  
-> **Bot requires**: `None`  
-> 
-> **Aliases**: `None`
+> **Bot requires**: `None`
 > 
 > **Usage**:
 >
-> - `p.Slap <@user ...>`
+> - `/slap <user: user> [user: user2] [user: user3]`
 
-Lets you slap one or multiple mentioned user.
+Lets you slap up to 3 user.
 
 ----
 ### Smile
 > **Permission**: `None`
 > **Bot requires**: `None`
 >
-> **Aliases**:
->
-> - `Grinning`
-> - `Grin`
->
 > **Usage**:
 >
-> - `p.Smile`
+> - `/smile`
 
-Lets you Smile. :)
-
-----
-### Tail
-> **Permission**: `None`
-> **Bot requires**: `None`
->
-> **Aliases**:
->
-> - `Wag`
-> - `Wagging`
->
-> **Usage**:
->
-> - `p.Tail`
-
-Lets you wag your tail (in excitement hopefully).
+Makes you Smile. :)
 
 ----
 ### Tickle
 > **Permission**: `None`  
-> **Bot requires**: `None`  
-> 
-> **Aliases**: `None`
+> **Bot requires**: `None`
 > 
 > **Usage**:
 >
-> - `p.Tickle <@user ...>`
+> - `/tickle <user: user> [user: user2] [user: user3]`
 
-Lets you tickle one or multiple users.
+Lets you tickle up to 3 user.
+
+----
+### Wag
+> **Permission**: `None`
+> **Bot requires**: `None`
+>
+> **Usage**:
+>
+> - `/wag`
+
+Makes you wag your tail.
 
 ----
 ## Guild { #category-guild }
@@ -424,31 +285,17 @@ Lets you tickle one or multiple users.
 > **Permission**: `Manage Server`  
 > **Bot requires**: `None`
 >
-> **Aliases**:
->
-> - `Lang`
->
 > **Usage**:
 >
-> - `p.Lang [set <language>]`
-> - `p.Lang [reset]`
+> - `/language list`
+> - `/language reset`
+> - `/language set <string: language>`
 
-Lets you change or reset the current language set in a Discord.  
-A list of currently worked on (and completed) translations can be found on https://lang.purrbot.site.
+Sets the language used by the bot for the Discord Server.  
+Use `/language list` to list all available languages and set one using `/language set <string: language>`.  
+Resset using `/language reset`.
 
-----
-### Prefix
-> **Permission**: `Manage server`  
-> **Bot requires**: `None`  
-> 
-> **Aliases**: `None`
-> 
-> **Usage**:
->
-> - `p.Prefix <set <prefix>>`
-> - `p.Prefix <reset>`
-
-Lets you change or reset the bots prefix for your guild. (Default one is `p.`)
+All translations are community-made and can be found under <https://lang.purrbot.site>.
 
 ----
 ### Welcome
@@ -461,49 +308,39 @@ Lets you change or reset the bots prefix for your guild. (Default one is `p.`)
 > 
 > **Usage**:
 >
-> - `p.Welcome [bg set <background|url>]`
-> - `p.Welcome [bg reset]`
-> - `p.Welcome [channel set <#channel>]`
-> - `p.Welcome [channel reset]`
-> - `p.Welcome [color set <color>]`
-> - `p.Welcome [color reset]`
-> - `p.Welcome [icon set <icon|url>]`
-> - `p.Welcome [icon reset]`
-> - `p.Welcome [msg set <message>]`
-> - `p.Welcome [msg reset]`
-> - `p.Welcome [test]`
+> - `/welcome background <string: background>`
+> - `/welcome channel <textchannel: channel>`
+> - `/welcome color <string: color`
+> - `/welcome icon <string icon>`
+> - `/welcome info`
+> - `/welcome message <string: message>`
+> - `/welcome reset <all|background|channel|color|icon|message>`
+> - `/welcome test`
 
-Lets you set different parts of Purr's welcome-feature.  
-Providing no arguments will show what the current settings are.
+Lets you configure \*Purr\*'s welcome-system.
 
-??? info "Command arguments"
-    - `bg set <background|url>`  
-      Change the background ([Available backhrounds](../welcome-images#backgrounds)).  
-      [Tier 2 and Tier 3 Patrons][patreon] can also use any kind of image, by providing a URL.
-    - `bg reset`  
-      Resets the background back to [`color_white`](../welcome-images#color_white).
-    - `channel set <#channel>`  
-      Set the channel for the welcome messages.
-    - `channel reset`  
-      Resets the the channel.
-    - `color set <color>`  
-      Set the text color on the image. The format has to be either `rgb:r,g,b`, `hex:rrggbb` or `random`.
-    - `color reset`  
-      Resets the color back to `hex:000000`
-    - `icon set <icon>`  
-      Set the icon, which is displayed on the right side ([Available icons](../welcome-images#icons)).  
-      [Tier 2 and Tier 3 Patrons][patreon] can also use any kind of image, by providing a URL.
-    - `icon reset`  
-      Resets the icon back to [`purr`](../welcome-images#purr).
-    - `msg set <message>`  
-      Set the message shown in the welcome channel.
-    - `msg reset`  
-      Resets the message back to `Welcome {mention}!`
+??? info "Arguments"
+    - `background <string: background>`  
+      Sets the [Welcome background](../welcome-images#backgrounds) to use.  
+      As a Server booster will you have access to the `booster` background and as a [Tier 2 or Tier 3 Patreon][patreon] can you set any Image you like through a URL.
+    - `channel <textchannel: channel>`  
+      Sets the TextChannel that should be used for the welcome messages. Please make sure the bot has sufficient permissions in the selected channel.
+    - `color <string: color>`  
+      Sets the text colot used in the image. Supported formats are `hex:rrggbb` (i.e. `hex:ffffff`), `rgb:r,g,b` (i.e. `rgb:255,255,255`) and `random`.
+    - `icon <string: icon>`  
+      Sets the [welcome icon](../welcome-images#icons) to use.  
+      As a Server booster will you have access to the `booster` icon and as a [Tier 2 or Tier 3 Patreon][patreon] can you set any image you like through a URL.
+    - `info`  
+      Shows the current settings of the welcome-system and also gives a preview of the image used.
+    - `message <string: message>`  
+      Sets the message to use alongside the images. You can use placeholders (Listed below) for more customization.
+    - `reset <all|background|channel|color|icon|message>`  
+      Reset either all or parts of the welcome-system to their default values.
     - `test`  
-      Create a preview of the current message (with placeholders parsed) and the image.
+      Creates a message with image similar to what will be used for joining users.
 
 ??? info "Placeholders"
-    The following placeholders can be used in the welcome message to display a different value.
+    The following placeholders can be used in the welcome message to display different values.
     
     - `{count}` / `{members}`  
       Displays the current amount of members on the Discord (i.e. `1000`).
@@ -533,222 +370,128 @@ Providing no arguments will show what the current settings are.
 > **Permission**: `None`  
 > **Bot requires**: `None`
 > 
-> **Aliases**:
->
-> - `Donation`
-> - `Donations`
-> - `Donators`
-> 
 > **Arguments**:
 >
-> - `p.Donate`
+> - `/donate`
 
-Gives you information on how you can donate and what awesome people donated so far :heart:.
-
-----
-### Emote
-> **Permission**: `None`  
-> **Bot requires**: `None`
-> 
-> **Aliases**:
->
-> - `E`
-> 
-> **Arguments**:
->
-> - `p.Emote <:emote:>`
-> - `p.Emote <--search>`
-
-Gives information about a provided emote.  
-If the `--search` argument is used will the bot check the past 100 messages for any emotes and return all it can find.  
-This will **not** return unicode emojis!
-
-----
-### Guild
-> **Permission**: `None`  
-> **Bot requires**: `None`  
-> 
-> **Aliases**:
->
-> - `Guildinfo`
-> - `Server`
-> - `Serverinfo`
-> 
-> **Usage**:
->
-> - `p.Guild`
-
-Provides basic information about the guild.
-
-----
-### Help
-> **Permission**: `None`  
-> **Bot requires**: `None`
-> 
-> **Aliases**:
->
-> - `Command`
-> - `Commands`
-> 
-> **Usage**:
->
-> - `p.Help`
-> - `p.Help [command]`
-> - `p.Help [cat:<category>]`
-
-Lists all available commands, or gives information about one, when specified.  
-You can also use `cat:<category>` to list all commands of the specified category. `<category>` can also be a translated category, if your server [uses a different language](#language).
+Shows information on how you can donate.  
+Also lists all current Server booster and donators :heart:.
 
 ----
 ### Info
 > **Permission**: `None`  
-> **Bot requires**: `None`  
-> 
-> **Aliases**:
->
-> - `Infos`
-> - `Information`
+> **Bot requires**: `None`
 > 
 > **Usage**:
 >
-> - `p.Info`
-> - `p.Info [--dm]`
+> - `/info [boolean: dm]`
 
-Provides basic information about the bot.  
-Use `--dm` to send the info to your DMs.
+Gives information about the bot.  
+If you provided `true` as argument will the info be send to your Direct Messages.
 
 ----
 ### Invite
 > **Permission**: `None`  
-> **Bot requires**: `None`  
-> 
-> **Aliases**:
->
-> - `Links`
+> **Bot requires**: `None`
 > 
 > **Usage**:
 >
-> - `p.Invite`
-> - `p.Invite [--dm]`
+> - `/invite [boolean: dm]`
 
-Sends you links to invite the bot, or join the support-Discord.  
-Use `--dm` to send the links to your DMs.
+Gives you an invite for the bot and to the support server.  
+If you provided `true` as argument will the invite be send to your Direct Messages.
 
 ----
 ### Ping
 > **Permission**: `None`  
-> **Bot requires**: `None`  
-> 
-> **Aliases**: `None`
+> **Bot requires**: `None`
 > 
 > **Usage**:
 >
-> - `p.Ping`
+> - `/ping`
 
 Returns the delay of editing the message, the delay to the API and the WebSocket delay in milliseconds.
 
 ----
-### Quote
+### Purrhelp
 > **Permission**: `None`  
 > **Bot requires**: `None`
 > 
-> **Aliases**: `None`
+> **Usage**:
+>
+> - `/purrhelp`
+
+Gives a link to this page here.
+
+----
+### Serverinfo
+> **Permission**: `None`  
+> **Bot requires**: `None`
 > 
 > **Usage**:
 >
-> - `p.Quote <MessageID>`
-> - `p.Quote <MessageID> [#channel]`
+> - `/serverinfo`
 
-Quotes a message from a user, using the [ImageAPI](/api#quote) to generate an image looking like a Discord-message.  
-`<MessageID>` is the ID of the message that should be quoted.  
-`[#channel]` is only needed, if the message is in a channel that isn't the same as the one you execute the command in.
-
-The bot won't quote messages from NSFW channels when the channel you're using the command in isn't one.
+Provides basic information about the server you're on.
 
 ----
 ### Shards
 > **Permission**: `None`  
 > **Bot requires**: `None`
 >
-> **Aliases**:
->
-> - `Shard`
-> - `Shardinfo`
->
 > **Usage**:
 >
-> - `p.Shards`
+> - `/shards`
 
 Lists all shards, their status, ping and Guild count.
 
 ----
 ### Stats
 > **Permission**: `None`  
-> **Bot requires**: `None`  
-> 
-> **Aliases**:
->
-> - `Stat`
-> - `Statistic`
-> - `Statistics`
+> **Bot requires**: `None`
 > 
 > **Usage**:
 >
-> - `p.Stats`
+> - `/stats`
 
 Shows statistics of the bot.
 
 ----
 ### User
 > **Permission**: `None`  
-> **Bot requires**: `None`  
-> 
-> **Aliases**:
->
-> - `Member`
-> - `Userinfo`
-> - `Userstats`
+> **Bot requires**: `None`
 > 
 > **Usage**:
 >
-> - `p.User [@user]`
+> - `/user [user: user]`
 
-Shows information about yourself or a mentioned user.
+Shows information about a user.  
+If you provided another user will information about them be shown instead.
 
 ----
 ## NSFW { #category-nsfw }
 
 ### Blowjob
 > **Permission**: `None`  
-> **Bot requires**: `None`  
-> 
-> **Aliases**:
->
-> - `Bj`
-> - `Bjob`
-> - `Succ`
+> **Bot requires**: `None`
 > 
 > **Usage**:
 >
-> - `p.Blowjob <@user>`
+> - `/blowjob <user: user>`
 
 **This command can only be run in NSFW-labeled channels!**
 
-Lets you ask the mentioned user, if you can give them a blowjob.  
-The user can accept or deny the request.
+Allows you to give another user a blowjob.  
+The asked user can accept or deny the request.
 
 ----
 ### Cum
 > **Permission**: `None`  
-> **Bot requires**: `None`  
-> 
-> **Aliases**:
->
-> - `Cumming`
+> **Bot requires**: `None`
 > 
 > **Usage**:
 >
-> - `p.Cum`
+> - `/cum`
 
 **This command can only be run in NSFW-labeled channels!**
 
@@ -757,98 +500,71 @@ Returns a random gif of someone cumming.
 ----
 ### Fuck
 > **Permission**: `None`  
-> **Bot requires**: `None`  
-> 
-> **Aliases**:
->
-> - `Sex`
+> **Bot requires**: `None`
 > 
 > **Usage**:
 >
-> - `p.Fuck <@user>`
-> - `p.Fuck <@user> --anal`
-> - `p.Fuck <@user> --normal`
-> - `p.Fuck <@user> --yaoi`
-> - `p.Fuck <@user> --yuri`
+> - `/fuck <user: user> [anal|normal|yaoi|yuri]`
 
 **This command can only be run in NSFW-labeled channels!**
 
-Asks the mentioned user to have sex with you.  
-When no arguments are provided can the mentioned user choose which type of sex they want.  
-Providing `--anal`, `--normal`, `--yaoi` or `--yuri` however pre-selects the option.
+Allows you to have sex with another user.  
+The asked user can accept or deny the request.
 
-The user can accept or deny the request.
+If no second argument is given can the asked user select the type, otherwise they can only accept or deny the request.
 
 ----
-### Lewd
+### Lewdneko
 > **Permission**: `None`  
 > **Bot requires**: `None`
 > 
-> **Aliases**: `None`
-> 
 > **Usage**:
 >
-> - `p.Lewd`
-> - `p.Lewd --gif`
+> - `/lewdneko [boolean: gif]`
 
 **This command can only be run in NSFW-labeled channels!**
 
-Gives an image of a lewd Neko.  
-`--gif` returns a gif of a lewd neko.
+Gives an image or gif of a lewd Neko.
 
 ----
 ### Pussylick
 > **Permission**: `None`  
 > **Bot requires**: `None`
 >
-> **Aliases**:
->
-> - `plick`
-> - `cunni`
->
 > **Usage**:
 >
-> - `p.Pussylick <@user>`
+> - `/pussylick <user: user>`
 
 **This command can only be run in NSFW-Labeled channels!**
 
-Asks the mentioned user to let you licking their pussy.  
-The user can accept or deny the request.
+Allows you to lick the pussy of another user.  
+The asked user can accept or deny the request.
 
 ----
-### Solo
+### Sologirl
 > **Permission**: `None`  
-> **Bot requires**: `None`  
-> 
-> **Aliases**:
->
-> - `girl`
+> **Bot requires**: `None`
 > 
 > **Usage**:
 >
-> - `p.Solo`
+> - `/sologirl`
 
 **This command can only be run in NSFW-labeled channels!**
 
-Gives a gif of a girl *playing* with herself.
+Gives a gif of a girl *"playing"* with herself.
 
 ----
 ### Threesome
 > **Permission**: `None`  
 > **Bot requires**: `None`
 >
-> **Aliases**:
->
-> - `3some`
->
 > **Usage**:
->
-> - `p.Threesome <@user1> <@user2>`
-> - `p.Threesome <@user1> <@user2> --fff`
-> - `p.Threesome <@user1> <@user2> --mmf`
+> 
+> - `/threesome <user: user> <user: user2> [fff|ffm|mmf]`
 
 **This command can only be run in NSFW-labeled channels!**
 
-Similar to [Fuck](#fuck) but allows you to ask two people at once.  
-By default will the threesome be with 2 females and 1 male. Providing `--fff` or `--mmf` will change it to a threesome with 3 females or a threesome with 1 female and 2 males respectively.  
-The users can accept or deny the request.
+Allows you to have sex with **2** users.  
+The asked users can accept or deny the request. If only one denies the request will it be denied as a whole.
+
+If no 3rd argument is given will `ffm` (2 females, 1 male) be used, otherwise can `fff` (3 females, 0 males) or `mmf` (1 female, 2 males) be used.
