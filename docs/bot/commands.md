@@ -308,7 +308,7 @@ All translations are community-made and can be found under <https://lang.purrbot
 > - `/welcome background <String: background>`
 > - `/welcome channel <TextChannel: channel>`
 > - `/welcome color <String: color`
-> - `/welcome icon <String icon>`
+> - `/welcome icon <String: icon>`
 > - `/welcome info`
 > - `/welcome message <String: message>`
 > - `/welcome reset <Choice: all|background|channel|color|icon|message>`
