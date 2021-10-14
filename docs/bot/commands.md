@@ -74,7 +74,7 @@ The commands are offered through Discord's Slash commands feature, meaning they 
 >
 > **Usage**:
 >
-> - `/bite <user: user> [user: user2] [user: user3]`
+> - `/bite <User: user> [User: user2] [User: user3]`
 
 Lets you bite up to 3 users.
 
@@ -85,7 +85,7 @@ Lets you bite up to 3 users.
 >
 > **Usage**:
 >
-> - `/lush`
+> - `/blush`
 
 Makes you blush. \>////\<
 
@@ -107,7 +107,7 @@ Makes you cry. :cry:
 > 
 > **Usage**:
 >
-> - `/cuddle <user: user> [user: user2] [user: user3]`
+> - `/cuddle <User: user> [User: user2] [User: user3]`
 
 Lets you cuddle up to 3 user.
 
@@ -129,7 +129,7 @@ Makes you dance. ~(^-^)~
 > 
 > **Usage**:
 >
-> - `/feed <user: user>`
+> - `/feed <User: user>`
 
 Allows you to give another user some food.  
 The asked user can accept or deny the request.
@@ -141,7 +141,7 @@ The asked user can accept or deny the request.
 >
 > **Usage**:
 >
-> - `/fluff <user: user>`
+> - `/fluff <User: user>`
 
 Allows you to fluff the tail of another user.  
 The asked user can accept or deny the request.
@@ -149,25 +149,25 @@ The asked user can accept or deny the request.
 ----
 ### Hug
 > **Permission**: `None`  
-> **Bot requires**: `None`  
+> **Bot requires**: `None`
 > 
 > **Usage**:
 >
-> - `/hug <user: user> [user: user2] [user: user3]`
+> - `/hug <User: user> [User: user2] [User: user3]`
 
 Lets you hug up to 3 user.
 
 ----
 ### Img
-> **Permission**: `None`
+> **Permission**: `None`  
 > **Bot requires**: `None`
 > 
 > **Usages**:
 > 
-> - `/img eevee [boolean: gif]`
+> - `/img eevee [Boolean: gif]`
 > - `/img holo`
 > - `/img kitsune`
-> - `/img neko [boolean: gif]`
+> - `/img neko [Boolean: gif]`
 > - `/img okami`
 > - `/img senko`
 
@@ -180,7 +180,7 @@ Gives you an image (or gif if available) of an Eevee, Holo from "Spice and Wolf"
 > 
 > **Usage**:
 >
-> - `/kiss <user: user> [user: user2] [user: user3]`
+> - `/kiss <User: user> [User: user2] [User: user3]`
 
 Lets you kiss up to 3 user.
 
@@ -193,7 +193,7 @@ Lets you kiss up to 3 user.
 >
 > **Usage**:
 >
-> - `/lick <user: user> [user: user2] [user: user3]`
+> - `/lick <User: user> [User: user2] [User: user3]`
 
 Lets you lick up to 3 user.
 
@@ -204,7 +204,7 @@ Lets you lick up to 3 user.
 > 
 > **Usage**:
 >
-> - `/pat <user: user> [user: user2] [user: user3]`
+> - `/pat <User: user> [User: user2] [User: user3]`
 
 Lets you pat up to 3 user.
 
@@ -215,7 +215,7 @@ Lets you pat up to 3 user.
 > 
 > **Usage**:
 >
-> - `/poke <user: user> [user: user2] [user: user3]`
+> - `/poke <User: user> [User: user2] [User: user3]`
 
 Lets you poke up to 3 user.
 
@@ -228,7 +228,7 @@ Lets you poke up to 3 user.
 > 
 > **Usage**:
 >
-> - `/ship <user: user> [user: user2]`
+> - `/ship <User: user> [User: user2]`
 
 Will ship you with the provided user.  
 If a second user is provided will it ship those two instead.
@@ -240,7 +240,7 @@ If a second user is provided will it ship those two instead.
 > 
 > **Usage**:
 >
-> - `/slap <user: user> [user: user2] [user: user3]`
+> - `/slap <User: user> [User: user2] [User: user3]`
 
 Lets you slap up to 3 user.
 
@@ -262,7 +262,7 @@ Makes you Smile. :)
 > 
 > **Usage**:
 >
-> - `/tickle <user: user> [user: user2] [user: user3]`
+> - `/tickle <User: user> [User: user2] [User: user3]`
 
 Lets you tickle up to 3 user.
 
@@ -288,10 +288,10 @@ Makes you wag your tail.
 >
 > - `/language list`
 > - `/language reset`
-> - `/language set <string: language>`
+> - `/language set <String: language>`
 
 Sets the language used by the bot for the Discord Server.  
-Use `/language list` to list all available languages and set one using `/language set <string: language>`.  
+Use `/language list` to list all available languages and set one using `/language set <String: language>`.  
 Resset using `/language reset`.
 
 All translations are community-made and can be found under <https://lang.purrbot.site>.
@@ -303,37 +303,35 @@ All translations are community-made and can be found under <https://lang.purrbot
 >
 > - `Attach files` (Used for welcome-images. See [Welcome images](../welcome-images) for examples)
 > 
-> **Aliases**: `None`
-> 
 > **Usage**:
 >
-> - `/welcome background <string: background>`
-> - `/welcome channel <textchannel: channel>`
-> - `/welcome color <string: color`
-> - `/welcome icon <string icon>`
+> - `/welcome background <String: background>`
+> - `/welcome channel <TextChannel: channel>`
+> - `/welcome color <String: color`
+> - `/welcome icon <String icon>`
 > - `/welcome info`
-> - `/welcome message <string: message>`
-> - `/welcome reset <all|background|channel|color|icon|message>`
+> - `/welcome message <String: message>`
+> - `/welcome reset <Choice: all|background|channel|color|icon|message>`
 > - `/welcome test`
 
 Lets you configure \*Purr\*'s welcome-system.
 
 ??? info "Arguments"
-    - `background <string: background>`  
+    - `background <String: background>`  
       Sets the [Welcome background](../welcome-images#backgrounds) to use.  
       As a Server booster will you have access to the `booster` background and as a [Tier 2 or Tier 3 Patreon][patreon] can you set any Image you like through a URL.
-    - `channel <textchannel: channel>`  
+    - `channel <TextChannel: channel>`  
       Sets the TextChannel that should be used for the welcome messages. Please make sure the bot has sufficient permissions in the selected channel.
-    - `color <string: color>`  
+    - `color <String: color>`  
       Sets the text colot used in the image. Supported formats are `hex:rrggbb` (i.e. `hex:ffffff`), `rgb:r,g,b` (i.e. `rgb:255,255,255`) and `random`.
-    - `icon <string: icon>`  
+    - `icon <String: icon>`  
       Sets the [welcome icon](../welcome-images#icons) to use.  
       As a Server booster will you have access to the `booster` icon and as a [Tier 2 or Tier 3 Patreon][patreon] can you set any image you like through a URL.
     - `info`  
       Shows the current settings of the welcome-system and also gives a preview of the image used.
-    - `message <string: message>`  
+    - `message <String: message>`  
       Sets the message to use alongside the images. You can use placeholders (Listed below) for more customization.
-    - `reset <all|background|channel|color|icon|message>`  
+    - `reset <Choice: all|background|channel|color|icon|message>`  
       Reset either all or parts of the welcome-system to their default values.
     - `test`  
       Creates a message with image similar to what will be used for joining users.
@@ -369,7 +367,7 @@ Lets you configure \*Purr\*'s welcome-system.
 > **Permission**: `None`  
 > **Bot requires**: `None`
 > 
-> **Arguments**:
+> **Usage**:
 >
 > - `/donate`
 
@@ -383,7 +381,7 @@ Also lists all current Server booster and donators :heart:.
 > 
 > **Usage**:
 >
-> - `/info [boolean: dm]`
+> - `/info [Boolean: dm]`
 
 Gives information about the bot.  
 If you provided `true` as argument will the info be send to your Direct Messages.
@@ -395,7 +393,7 @@ If you provided `true` as argument will the info be send to your Direct Messages
 > 
 > **Usage**:
 >
-> - `/invite [boolean: dm]`
+> - `/invite [Boolean: dm]`
 
 Gives you an invite for the bot and to the support server.  
 If you provided `true` as argument will the invite be send to your Direct Messages.
@@ -462,7 +460,7 @@ Shows statistics of the bot.
 > 
 > **Usage**:
 >
-> - `/user [user: user]`
+> - `/user [User: user]`
 
 Shows information about a user.  
 If you provided another user will information about them be shown instead.
@@ -476,7 +474,7 @@ If you provided another user will information about them be shown instead.
 > 
 > **Usage**:
 >
-> - `/blowjob <user: user>`
+> - `/blowjob <User: user>`
 
 **This command can only be run in NSFW-labeled channels!**
 
@@ -503,7 +501,7 @@ Returns a random gif of someone cumming.
 > 
 > **Usage**:
 >
-> - `/fuck <user: user> [anal|normal|yaoi|yuri]`
+> - `/fuck <User: user> [Choice: anal|normal|yaoi|yuri]`
 
 **This command can only be run in NSFW-labeled channels!**
 
@@ -519,7 +517,7 @@ If no second argument is given can the asked user select the type, otherwise the
 > 
 > **Usage**:
 >
-> - `/lewdneko [boolean: gif]`
+> - `/lewdneko [Boolean: gif]`
 
 **This command can only be run in NSFW-labeled channels!**
 
@@ -532,7 +530,7 @@ Gives an image or gif of a lewd Neko.
 >
 > **Usage**:
 >
-> - `/pussylick <user: user>`
+> - `/pussylick <User: user>`
 
 **This command can only be run in NSFW-Labeled channels!**
 
@@ -559,7 +557,7 @@ Gives a gif of a girl *"playing"* with herself.
 >
 > **Usage**:
 > 
-> - `/threesome <user: user> <user: user2> [fff|ffm|mmf]`
+> - `/threesome <User: user> <User: user2> [Choice: fff|ffm|mmf]`
 
 **This command can only be run in NSFW-labeled channels!**
 
