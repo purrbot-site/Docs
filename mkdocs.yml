@@ -27,8 +27,10 @@ nav:
       - FAQ: 'https://purrbot.site/discord'
       - Selfhosting: bot/selfhosting.md
     - Welcome-System:
-      - Setup: bot/welcome-channel.md
-      - Images: bot/welcome-images.md
+      - Setup: bot/welcome/welcome-channel.md
+      - Images: bot/welcome/welcome-images.md
+    - Changelogs:
+      - v3.x: bot/changelogs/changelog_v3.md
   - Contributing:
     - Contribute: contribute/index.md
     - Formatting Help: contribute/formatting-help.md
