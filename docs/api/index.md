@@ -58,7 +58,6 @@ These API endpoints can only be used through `POST` requests.
 6.  **Type:** String  
     **Default:** Someone  
     The username to display.
-
 === "Success"
     **Type:** :octicons-image-24: `Image`  
     **Example:**  
