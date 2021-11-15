@@ -31,7 +31,7 @@ These API endpoints can only be used through `POST` requests.
 #### Request { #quote-request }
 
 === "Body"
-    ```json5
+    ```json5 title="JSON Body Example"
     {
       "avatar": "https://cdn.discordapp.com/avatars/204232208049766400/dfaaefa54a2804addb1f494da7aa904d.png", // (1)
       "dateFormat": "dd. MMM yyyy", // (2)
@@ -63,6 +63,14 @@ These API endpoints can only be used through `POST` requests.
 6.  **Type:** String  
     **Default:** Someone  
     The username to display.
+
+=== "Success"
+    **Type:** `Image`  
+    **Example:**  
+    ![quote](/assets/img/quote.png)
+
+=== "Failure"
+    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
 
 ### /status
 *Adds a status icon to the provided Avatar.*
@@ -565,9 +573,9 @@ Returns a random Yuri (Lesbian) sex Gif.
 
 ----
 
-## Failed Requests
-The API will return a JSON body whenever a request failed.  
-An error is returned for the following cases:
+## Possible Errors
+Whenever a request fails, either by an error on the client's end or caused by the API itself, will you receive a JSON Body with information regarding the error.
+
 
 !!! note "Note"
     Following placeholders are used in the below examples and may look different per-request:
