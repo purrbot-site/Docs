@@ -3,6 +3,7 @@ title: API
 description: Detailed information about the ImageAPI.
 ---
 
+[def_avatar]: https://purrbot.site/assets/img/api/unknown.png"
 [SimpleDateFormat]: https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
 
 # API Documentation
@@ -27,72 +28,41 @@ These API endpoints can only be used through `POST` requests.
         - Success: `Image`
         - [Failure: `JSON`](#api-quote)
 
-#### Fields { #fields-quote }
+#### Request { #quote-request }
 
-=== "avatar"
-    **Type**: String  
-    **Default**: https://purrbot.site/assets/img/api/unknown.png
-    
-    **Description**:  
-    The URL of the avatar to display in the image. The image will be resized to 217x217 pixels.
-    
-=== "dateFormat"
-    **Type**: String  
-    **Default**: `dd. MMM yyyy hh:mm:ss zzz`
-    
-    **Description**:  
-    The format in which the date should be displayed.  
-    This uses the [SimpleDateFormat] from Java.
-    
-=== "message"
-    **Type**: String  
-    **Default**: `Some message`
-    
-    **Description**:  
-    The actual message that should be displayed.  
-    Note that this will **NOT** render markdown and can only render a few selected emojis (No Discord emotes).
-    
-=== "nameColor"
-    **Type**: String  
-    **Default**: `hex:ffffff`
-    
-    **Description**:  
-    The color in which the username should be displayed.  
-    Supported are `hex:rrggbb`, `rgb:r,g,b` or the raw Color value.
-    
-=== "timestamp"
-    **Type**: Number  
-    **Default**: Current time of the request
-    
-    **Description**:  
-    The date of the message as epoch milliseconds.
-    
-=== "username"
-    **Type**: String  
-    **Default**: `Someone`
-    
-    **Description**:  
-    The username to display.
-
-#### Example { #example-quote }
-
-=== "Request"
-    <br>
-    This request was made on march, 9th 2020.  
-    ```json
+=== "Body"
+    ```json5
     {
-      "avatar": "https://cdn.discordapp.com/avatars/204232208049766400/dfaaefa54a2804addb1f494da7aa904d.png",
-      "message": "This is an example message.",
-      "nameColor": "hex:ffffff",
-      "dateFormat": "dd. MMM yyyy",
-      "username": "Andre_601"
+      "avatar": "https://cdn.discordapp.com/avatars/204232208049766400/dfaaefa54a2804addb1f494da7aa904d.png", // (1)
+      "dateFormat": "dd. MMM yyyy", // (2)
+      "message": "This is an example message.", // (3)
+      "nameColor": "hex:ffffff", // (4)
+      "timestamp": 1583708400, // (5)
+      "username": "Andre_601", // (6)
     }
     ```
-    
-=== "Response"
-    <br>
-    ![quote](/assets/img/quote.png)
-    
+
+1.  **Type:** String  
+    **Default:** [`https://purrbot.site/assets/img/api/unknown.png`][def_avatar]
+    This has to be a direct URL to an image.
+2.  **Type:** String  
+    **Default:** `dd. MMM yyyy hh:mm:yyyy`  
+    Sets the format in which the timestamp should be formatted.  
+    This uses the [SimpleDateFormat] provided by Java.
+3.  **Type:** String  
+    **Default:** `Some message`  
+    The message that should be displayed.  
+    Due to multiple limitations are formatting options (i.e. `**bold**`) NOT supported!
+4.  **Type:** String  
+    **Default:** `hex:ffffff`  
+    Sets the colour in which the username should be displayed.  
+    Supported formats are `hex:rrggbb`, `rgb:r,g,b` or the raw colour value.
+5.  **Type:** Number  
+    **Default:** *Current time of request*  
+    The Epoch millis timestamp which will be used together with the `dateFormat` to display the actual date.
+6.  **Type:** String  
+    **Default:** Someone  
+    The username to display.
 
 ### /status
 *Adds a status icon to the provided Avatar.*
