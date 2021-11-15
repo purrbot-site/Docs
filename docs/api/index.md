@@ -23,11 +23,6 @@ These API endpoints can only be used through `POST` requests.
 ### /quote
 *Generates images that look like Discord messages.*
 
-!!! info
-    - **Responses**:
-        - Success: `Image`
-        - [Failure: `JSON`](#api-quote)
-
 #### Request { #quote-request }
 
 === "Body"
@@ -65,7 +60,7 @@ These API endpoints can only be used through `POST` requests.
     The username to display.
 
 === "Success"
-    **Type:** `Image`  
+    **Type:** :octicons-image-24: `Image`  
     **Example:**  
     ![quote](/assets/img/quote.png)
 
