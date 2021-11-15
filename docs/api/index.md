@@ -37,27 +37,27 @@ These API endpoints can only be used through `POST` requests.
     }
     ```
 
-1.  **Type:** String  
-    **Default:** [`https://purrbot.site/assets/img/api/unknown.png`][def_avatar]  
-    This has to be a direct URL to an image.
-2.  **Type:** String  
-    **Default:** `dd. MMM yyyy hh:mm:yyyy`  
-    Sets the format in which the timestamp should be formatted.  
-    This uses the [SimpleDateFormat] provided by Java.
-3.  **Type:** String  
-    **Default:** `Some message`  
-    The message that should be displayed.  
-    Due to multiple limitations are formatting options (i.e. `**bold**`) NOT supported!
-4.  **Type:** String  
-    **Default:** `hex:ffffff`  
-    Sets the colour in which the username should be displayed.  
-    Supported formats are `hex:rrggbb`, `rgb:r,g,b` or the raw colour value.
-5.  **Type:** Number  
-    **Default:** *Current time of request*  
-    The Epoch millis timestamp which will be used together with the `dateFormat` to display the actual date.
-6.  **Type:** String  
-    **Default:** Someone  
-    The username to display.
+    1.  **Type:** String  
+        **Default:** [`https://purrbot.site/assets/img/api/unknown.png`][def_avatar]  
+        This has to be a direct URL to an image.
+    2.  **Type:** String  
+        **Default:** `dd. MMM yyyy hh:mm:yyyy`  
+        Sets the format in which the timestamp should be formatted.  
+        This uses the [SimpleDateFormat] provided by Java.
+    3.  **Type:** String  
+        **Default:** `Some message`  
+        The message that should be displayed.  
+        Due to multiple limitations are formatting options (i.e. `**bold**`) NOT supported!
+    4.  **Type:** String  
+        **Default:** `hex:ffffff`  
+        Sets the colour in which the username should be displayed.  
+        Supported formats are `hex:rrggbb`, `rgb:r,g,b` or the raw colour value.
+    5.  **Type:** Number  
+        **Default:** *Current time of request*  
+        The Epoch millis timestamp which will be used together with the `dateFormat` to display the actual date.
+    6.  **Type:** String  
+        **Default:** Someone  
+        The username to display.
 === "Success"
     **Type:** :octicons-image-24: `Image`  
     **Example:**  
