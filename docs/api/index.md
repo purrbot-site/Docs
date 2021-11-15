@@ -26,7 +26,7 @@ These API endpoints can only be used through `POST` requests.
 #### Request { #quote-request }
 
 === "Body"
-    ```json5 title="JSON Body Example"
+    ```js title="JSON Body Example"
     {
       "avatar": "https://cdn.discordapp.com/avatars/204232208049766400/dfaaefa54a2804addb1f494da7aa904d.png", // (1)
       "dateFormat": "dd. MMM yyyy", // (2)
