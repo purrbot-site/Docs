@@ -38,7 +38,7 @@ These API endpoints can only be used through `POST` requests.
     ```
 
 1.  **Type:** String  
-    **Default:** [`https://purrbot.site/assets/img/api/unknown.png`][def_avatar]
+    **Default:** [`https://purrbot.site/assets/img/api/unknown.png`][def_avatar]  
     This has to be a direct URL to an image.
 2.  **Type:** String  
     **Default:** `dd. MMM yyyy hh:mm:yyyy`  
