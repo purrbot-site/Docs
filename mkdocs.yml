@@ -85,8 +85,6 @@ extra:
 markdown_extensions:
   - attr_list
   - admonition
-  - codehilite:
-      guess_lang: false
   - toc:
       permalink: true
   - meta
@@ -101,3 +99,4 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
