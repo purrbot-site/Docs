@@ -32,7 +32,7 @@ To get more information about a value, click the :material-numeric-1-circle: **N
       "message": "This is an example message.", // (3)
       "nameColor": "hex:ffffff", // (4)
       "timestamp": 1583708400, // (5)
-      "username": "Andre_601", // (6)
+      "username": "Andre_601" // (6)
     }
     ```
 
