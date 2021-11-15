@@ -90,7 +90,8 @@ markdown_extensions:
       permalink: true
   - meta
   - pymdownx.superfences
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.details
   - pymdownx.magiclink:
       repo_url_shortener: true
