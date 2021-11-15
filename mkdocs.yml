@@ -66,6 +66,7 @@ theme:
   - navigation.tabs.sticky
   - navigation.sections
   - navigation.top
+  - content.code.annotate
   icon:
     repo: fontawesome/brands/github-square
 
