@@ -298,7 +298,7 @@ Returns a random Image of Holo (Spice & Wolf).
     ```js
     {
       "error": false,
-      "link": "https://purrbot.site/img/sfw/holo/img/holo.jpg",
+      "link": "https://purrbot.site/img/sfw/holo/img/holo_001.jpg",
       "time": 0
     }
     ```
