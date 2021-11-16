@@ -66,6 +66,7 @@ theme:
   - navigation.tabs.sticky
   - navigation.sections
   - navigation.top
+  - content.code.annotate
   icon:
     repo: fontawesome/brands/github-square
 
@@ -84,13 +85,12 @@ extra:
 markdown_extensions:
   - attr_list
   - admonition
-  - codehilite:
-      guess_lang: false
   - toc:
       permalink: true
   - meta
   - pymdownx.superfences
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.details
   - pymdownx.magiclink:
       repo_url_shortener: true
@@ -99,3 +99,4 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
