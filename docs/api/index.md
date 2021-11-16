@@ -843,7 +843,8 @@ To get more information about a value, click the :material-numeric-1-circle: **N
 ### /api/quote { #error-api-quote }
 
 === "Empty JSON Body/No JSON"
-    **Status-Code**: [400]  
+    **Status-Code**: [400]
+    
     ```js
     {
       "details": {
@@ -861,7 +862,8 @@ To get more information about a value, click the :material-numeric-1-circle: **N
     3.  The User-Agent you used.
 
 === "Malformed JSON/Invalid Values"
-    **Status-Code**: [500]  
+    **Status-Code**: [500]
+    
     ```js
     {
       "details": {
@@ -881,7 +883,8 @@ To get more information about a value, click the :material-numeric-1-circle: **N
 ### /api/status { #error-api-status }
 
 === "Empty JSON Body/No JSON"
-    **Status-Code**: [400]  
+    **Status-Code**: [400]
+    
     ```js
     {
       "details": {
@@ -899,7 +902,8 @@ To get more information about a value, click the :material-numeric-1-circle: **N
     3.  The User-Agent you used.
 
 === "Malformed JSON/Invalid Values"
-    **Status-Code**: [500]  
+    **Status-Code**: [500]
+    
     ```js
     {
       "details": {
@@ -919,7 +923,8 @@ To get more information about a value, click the :material-numeric-1-circle: **N
 ### /api/img/* { #error-api-img }
 
 === "Invalid Path (No API endpoint)"
-    **Status-Code**: [403]  
+    **Status-Code**: [403]
+    
     ```js
     {
       "details": {
@@ -937,7 +942,8 @@ To get more information about a value, click the :material-numeric-1-circle: **N
     3.  The User-Agent you used.
 
 === "No Images available"
-    **Status-Code**: [404]  
+    **Status-Code**: [404]
+    
     ```js
     {
       "details": {
