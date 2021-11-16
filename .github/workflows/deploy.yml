@@ -5,6 +5,7 @@ on:
     paths: 
     - 'docs/**'
     - '**.yml'
+    - 'theme/**'
     branches:
     - master
 
