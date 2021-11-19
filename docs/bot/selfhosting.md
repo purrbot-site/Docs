@@ -8,8 +8,7 @@ description: Want to selfhost the Bot? This page explains the details.
 [RethinkDB]: https://rethinkdb.com
 
 [PurrBot.java]: https://github.com/purrbot-site/PurrBot/blob/master/src/main/java/site/purrbot/bot/PurrBot.java
-[HttpUtil.java]: 
-[PurrBot.java]: https://github.com/purrbot-site/PurrBot/blob/master/src/main/java/site/purrbot/bot/util/HttpUtil.java
+[HttpUtil.java]: https://github.com/purrbot-site/PurrBot/blob/master/src/main/java/site/purrbot/bot/util/HttpUtil.java
 [IDs.java]: https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/constants/IDs.java
 [Emotes.java]: https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/constants/Emotes.java
 [Roles.java]: https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/constants/Roles.java
