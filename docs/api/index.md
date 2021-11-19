@@ -75,8 +75,8 @@ To get more information about a value, click the :material-numeric-1-circle: **N
     ```js title="JSON Body Example"
     {
       "avatar": "https://cdn.discordapp.com/avatars/204232208049766400/dfaaefa54a2804addb1f494da7aa904d.png", // (1)
-      "mobile": false,
-      "status": "online"
+      "mobile": false, // (2)
+      "status": "online" // (3)
     }
     ```
     
