@@ -9,15 +9,10 @@ This page lists different credits for all the different things used by either \*
 
 [Caffeine]: https://github.com/ben-manes/caffeine
 [Discord-Webhooks]: https://github.com/MinnDevelopment/discord-webhooks
-[DServices4J]: https://github.com/DiscordServices/DServices4J
 [Gson]: https://github.com/google/gson
-[JavaBotBlockAPI]: https://github.com/botblock/JavaBotBlockAPI
 [JDA]: https://github.com/DV8FromTheWorld/JDA
 [jda-command]: https://github.com/rainestormee/jda-command
 [RethinkDB]: https://github.com/rethinkdb/rethinkdb
-
-[BotBlock.org]: https://botblock.org
-[Discordservices.net]: https://discordservices.net
 
 [MkDocs]: https://github.com/mkdocs/mkdocs
 [MkDocs-Material]: https://github.com/squidfunk/mkdocs-material
@@ -30,9 +25,7 @@ Thanks to the following people, who provide their libraries used by \*Purr*
 | ------------------ | ---------------- | ---------- | ------------------------------------------------------------- |
 | [Caffeine]         | @ben-manes       | Apache 2.0 | Caching various different information.                        |
 | [Discord-Webhooks] | @MinnDevelopment | Apache 2.0 | Sending Webhook messages in Discord.                          |
-| [DServices4J]      | @Andre601        | MIT        | Posting Guild counts and other info to [Discordservices.net]. |
 | [Gson]             | @google          | Apache 2.0 | Parsing and (de)serialization of JSON.                        |
-| [JavaBotBlockAPI]  | @Andre601        | MIT        | Posting Guild counts through [BotBlock.org].                  |
 | [JDA]              | @DV8FromTheWorld | Apache 2.0 | Logging into Discord and using their API.                     |
 | [jda-command]      | @rainestormee    | Apache 2.0 | Adding and managing commands in Discord.                      |
 | [RethinkDB]        | @RethinkDB       | Apache 2.0 | Database management.                                          |
