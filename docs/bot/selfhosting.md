@@ -50,7 +50,7 @@ Alternatively could you set "beta" in the config.json to true, to set the bot as
 
 When making changes to the code should you remove or uncomment the following code-snippets in [PurrBot.java]:
 
-```java title="[PurrBot.java]"
+```java title="PurrBot.java"
 public void startUpdater(){
     scheduler.scheduleAtFixedRate(() -> {
         getShardManager().setActivity(Activity.of(
