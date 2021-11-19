@@ -3,11 +3,12 @@ title: Selfhosting
 description: Want to selfhost the Bot? This page explains the details.
 ---
 
-[PurrBot.java]: https://github.com/purrbot-site/PurrBot/blob/master/src/main/java/site/purrbot/bot/PurrBot.java
 [MIT-License]: https://github.com/Andre601/PurrBot/blob/master/LICENSE
 
 [RethinkDB]: https://rethinkdb.com
 
+[PurrBot.java]: https://github.com/purrbot-site/PurrBot/blob/master/src/main/java/site/purrbot/bot/PurrBot.java
+[HttpUtil.java]: https://github.com/purrbot-site/PurrBot/blob/master/src/main/java/site/purrbot/bot/util/HttpUtil.java
 [IDs.java]: https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/constants/IDs.java
 [Emotes.java]: https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/constants/Emotes.java
 [Roles.java]: https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/constants/Roles.java
@@ -49,103 +50,64 @@ Alternatively could you set "beta" in the config.json to true, to set the bot as
 
 When making changes to the code should you remove or uncomment the following code-snippets in [PurrBot.java]:
 
-```java
+```java title="PurrBot.java"
 public void startUpdater(){
-    
-    if(!isBeta()){
-        PostAction post = new PostAction(getShardManager());
-        BotBlockAPI botBlockAPI = new BotBlockAPI.Builder()
-                .addAuthToken(
-                        Site.DISCORDLIST_SPACE,
-                        getFileManager().getString("config", "tokens.botlist-space")
-                )
-                .addAuthToken(
-                        Site.DISCORD_BOTS_GG,
-                        getFileManager().getString("config", "tokens.discord-bots-gg")
-                )
-                .addAuthToken(
-                        Site.DISCORDEXTREMELIST_XYZ,
-                        getFileManager().getString("config", "tokens.discordextremelist-xyz")
-                )
-                .addAuthToken(
-                        Site.DISCORD_BOATS,
-                        getFileManager().getString("config", "tokens.discord-boats")
-                )
-                .build();
-
-        DServices4J dServices4J = new DServices4J.Builder()
-                .setToken(getFileManager().getString("config", "tokens.discordservices-net"))
-                .setId(IDs.PURR)
-                .build();
-        Commands commands = dServices4J.getCommands();
-        Stats stats = dServices4J.getStats();
-        
-        commands.addCommands(getCommands());
-        try{
-            commands.postCommands();
-        }catch(IOException | RatelimitedException ex){
-            logger.warn("Could not post Commands", ex);
-        }
-
-        scheduler.scheduleAtFixedRate(() -> {
-    
-            getShardManager().setActivity(Activity.of(
-                    Activity.ActivityType.WATCHING,
-                    getMessageUtil().getBotGame(getShardManager().getGuildCache().size())
-            ));
-    
-            if(isBeta())
-                return;
-    
-            try{
-                post.postGuilds(getShardManager(), botBlockAPI);
-            }catch(Exception ex){
-                logger.warn("Not able to post guild counts!", ex);
-            }
-            
-            try{
-                stats.postStats(
-                        getShardManager().getGuildCache().size(),
-                        getShardManager().getShardCache().size()
-                );
-            }catch(IOException | RatelimitedException ex){
-                logger.warn("Could not post Server stats", ex);
-            }
-        }, 1, 5, TimeUnit.MINUTES);
-    }else{
-        scheduler.scheduleAtFixedRate(() -> 
-                getShardManager().setActivity(Activity.of(
-                        Activity.ActivityType.WATCHING,
-                        getMessageUtil().getBotGame(getShardManager().getGuildCache().size())
-                ))
-        , 1, 5, TimeUnit.MINUTES);
-    }
-}
-
-private List<Commands.CommandInfo> getCommands(){
-    List<Commands.CommandInfo> commandInfoList = new ArrayList<>();
-    for(Command command : commandLoader.getCommands()){
-        if(command.getAttribute("category").equals("owner"))
-            continue;
-        
-        commandInfoList.add(new Commands.CommandInfo(
-                command.getDescription().name(),
-                setPlaceholders(langUtils.getString("en", command.getDescription().description())),
-                command.getAttribute("category")
+    scheduler.scheduleAtFixedRate(() -> {
+        getShardManager().setActivity(Activity.of(
+            Activity.ActivityType.WATCHING,
+            getMessageUtil().getBotGame(getShardManager().getGuildCache().size())
         ));
-    }
-    
-    return commandInfoList;
+        
+        if(isBeta()) // (1)
+            return;
+        
+        long guilds = getShardManager().getGuildCache().size();
+        long shards = getShardManager().getShardCache().size();
+        
+        logger.info("Posting Guild Stats to Bot lists...");
+        for(HttpUtil.BotList botList : HttpUtil.BotList.values()){
+            getHttpUtil().postServerStats(
+                "*Purr*",
+                "6875",
+                guilds,
+                shards,
+                botList,
+                getFileManager().getString("config", botList.getTokenPath())
+            ).whenComplete((botListResult, ex) -> {
+                if(botListResult == null || !botListResult.isSuccess() || ex != null){
+                    logger.warn("Error while posting Guild stats to bot list {}!", botList.getName());
+                    if(botListResult == null){
+                        logger.warn("BotListResult is null!");
+                        return;
+                    }
+                    
+                    if(ex != null){
+                        ex.printStackTrace();
+                        return;
+                    }
+                    
+                    logger.info("Response Code: {}", botListResult.getResponseCode());
+                    logger.info("Response Message: {}", botListResult.getResponseMessage());
+                    return;
+                }
+                
+                logger.info("Successfully posted stats to {}!", botListResult.getBotList());
+            });
+        }
+    }, 1, 5, TimeUnit.MINUTES);
 }
 ```
+
+1.  To disable posting to Bot list, either set the bot into beta mode through the [`config.json`](#config) or put everything after this if and before the `}, 1, 5, TimeUnit.MINUTES);` into comments.  
+    You can also update the `BotList` enum in the [`HttpUtil,java`][HttpUtil.java] to post to different bot lists.
 
 ### Update some classes {: #update-classes }
 You need to update values in specific classes to make your version work without issues.  
 Namely you have to alter the content of the following classes:
 
-- [IDs.java] (Contains various IDs of users or Guilds)
-- [Emotes.java] (Contains different emotes used in commands)
-- [Links.java] (Contains various links of the bot)
+- [`IDs.java`][IDs.java] (Contains various IDs of users or Guilds)
+- [`Emotes.java`][Emotes.java] (Contains different emotes used in commands)
+- [`Links.java`][Links.java] (Contains various links of the bot)
 
 ### Build jar file {: #build-jar }
 When you're done with your changes, make sure to execute `gradlew clean shadowJar` to build a shaded jar containing all dependnencies required.
@@ -174,8 +136,7 @@ On first startup will it generate with the below default values.
         "botlist-space": "botlist-token",
         "discordextremelist-xyz": "debl-token",
         "discord-boats": "discord-boats-token",
-        "discordservices-net": "discordservices-net-token",
-        "discordbotlist-com": "discordbotlist-com-token"
+        "discordservices-net": "discordservices-net-token"
       },
       
       "database": {
@@ -202,6 +163,6 @@ If you followed the previous step on preparing the bot will you only need to set
 ### Other files
 The bot also has other files, which you can alter to your liking.
 
-- [random.json] contains various messages and links used for (often) random responses.
-- [data.json] contains data such as current guild blacklist, special users and more.
+- [`random.json`][random.json] contains various messages and links used for (often) random responses.
+- [`data.json`][data.json] contains data such as current guild blacklist, special users and more.
 - Various [lang-files] used for the different command responses of the bot.

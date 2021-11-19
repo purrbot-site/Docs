@@ -3,7 +3,7 @@ title: API
 description: Detailed information about the ImageAPI.
 ---
 
-[def_avatar]: https://purrbot.site/assets/img/api/unknown.png"
+[def_avatar]: https://purrbot.site/assets/img/api/unknown.png
 [SimpleDateFormat]: https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
 
 # API Documentation
@@ -74,9 +74,9 @@ To get more information about a value, click the :material-numeric-1-circle: **N
 === "Request Body"
     ```js title="JSON Body Example"
     {
-      "avatar": "", // (1)
-      "mobile": false,
-      "status": "online"
+      "avatar": "https://cdn.discordapp.com/avatars/204232208049766400/dfaaefa54a2804addb1f494da7aa904d.png", // (1)
+      "mobile": false, // (2)
+      "status": "online" // (3)
     }
     ```
     
@@ -86,7 +86,7 @@ To get more information about a value, click the :material-numeric-1-circle: **N
     2.  **Type:** Boolean  
         **Default:** `false`  
         Will display a mobile phone icon instead of the usual indicators when set to `true`.
-    3.  **Type:** String
+    3.  **Type:** String  
         **Default:** `offline`  
         Set the status to display as icon. Supported are `online`, `idle`, `do_not_disturb`/`dnd` and `offline`.
 
@@ -112,7 +112,7 @@ Returns a Random [Welcome Background](/bot/welcome-images#backgrounds).
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/background/img/color_black.png",
@@ -131,7 +131,7 @@ Returns a random Bite Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/bite/gif/bite_001.gif",
@@ -150,7 +150,7 @@ Returns a random blush Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/blush/gif/blush_001.gif",
@@ -169,7 +169,7 @@ Returns a random Cry Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/cry/gif/cry_001.gif",
@@ -188,7 +188,7 @@ Returns a random Cuddle Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/cuddle/gif/cuddle_001.gif",
@@ -207,7 +207,7 @@ Returns a random Dance Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/dance/gif/dance_001.gif",
@@ -227,7 +227,7 @@ Returns either a random Eevee Image or Gif.
 === "Response (GIF)"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/eevee/gif/eevee_001.gif",
@@ -238,7 +238,7 @@ Returns either a random Eevee Image or Gif.
 === "Response (IMG)"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/eevee/img/eevee_001.jpg",
@@ -257,7 +257,7 @@ Returns a random Feeding Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/feed/gif/feed_001.gif",
@@ -276,7 +276,7 @@ Returns a random Fluffing Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/fluff/gif/fluff_001.gif",
@@ -295,7 +295,7 @@ Returns a random Image of Holo (Spice & Wolf).
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/holo/img/holo_001.jpg",
@@ -314,7 +314,7 @@ Returns a random Hug Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/hug/gif/hug_001.gif",
@@ -333,7 +333,7 @@ Returns a random [Welcome Icon](/bot/welcome-images#icons)
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/icon/img/holo.png",
@@ -352,7 +352,7 @@ Returns a random Kiss Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/kiss/gif/kiss_001.gif",
@@ -371,7 +371,7 @@ Returns a random Image of a Kitsune (Fox girl).
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/kitsune/img/kitsune_001.gif",
@@ -390,7 +390,7 @@ Returns a random Lick Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/lick/gif/lick_001.gif",
@@ -410,7 +410,7 @@ Returns either a random Neko Image or Gif.
 === "Response (GIF)"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/neko/gif/neko_001.gif",
@@ -421,7 +421,7 @@ Returns either a random Neko Image or Gif.
 === "Response (IMG)"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/neko/img/neko_001.jpg",
@@ -440,7 +440,7 @@ Returns a random Image of an Okami (Wolf girl).
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/okami/img/okami_001.jpg",
@@ -459,7 +459,7 @@ Returns a random Pat Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/pat/gif/pat_001.gif",
@@ -478,7 +478,7 @@ Returns a random Poke Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/poke/gif/poke_001.gif",
@@ -497,7 +497,7 @@ Returns a random Image of Senko-San.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/senko/img/senko_001.jpg",
@@ -516,7 +516,7 @@ Returns a random Slap Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/slap/gif/slap_001.gif",
@@ -535,7 +535,7 @@ Returns a random Smile Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/smile/gif/smile_001.gif",
@@ -554,7 +554,7 @@ Returns a random Tail wagging Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/tail/gif/tail_001.gif",
@@ -573,7 +573,7 @@ Returns a random Tickle Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/sfw/tickle/gif/tickle_001.gif",
@@ -599,7 +599,7 @@ Returns a random Anal-sex Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/nsfw/anal/gif/anal_001.gif",
@@ -618,7 +618,7 @@ Returns a random Blowjob Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/nsfw/blowjob/gif/blowjob_001.gif",
@@ -637,7 +637,7 @@ Returns a random Cumming Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/nsfw/cum/gif/cum_001.gif",
@@ -656,7 +656,7 @@ Returns a random Sex Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/nsfw/fuck/gif/fuck_001.gif",
@@ -676,7 +676,7 @@ Returns either a random lewd Neko Image or Gif.
 === "Response (GIF)"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/nsfw/neko/gif/neko_001.gif",
@@ -687,7 +687,7 @@ Returns either a random lewd Neko Image or Gif.
 === "Response (IMG)"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/nsfw/neko/img/neko_001.jpg",
@@ -706,7 +706,7 @@ Returns a random Pussy licking Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/nsfw/pussylick/gif/pussylick_001.gif",
@@ -725,7 +725,7 @@ Returns a random Girl masturbating Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/nsfw/solo/gif/solo_001.gif",
@@ -744,7 +744,7 @@ Returns a random Threesome (only Female) Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/nsfw/threesome_fff/gif/threesome_001.gif",
@@ -763,7 +763,7 @@ Returns a random Threesome (2 Female, 1 Male) Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/nsfw/threesome_ffm/gif/threesome_001.gif",
@@ -782,7 +782,7 @@ Returns a random Threesome (2 Male, 1 Female) Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/nsfw/threesome_mmf/gif/threesome_001.gif",
@@ -801,7 +801,7 @@ Returns a Random Yaoi (Gay) sex Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/nsfw/yaoi/gif/yaoi_001.gif",
@@ -820,7 +820,7 @@ Returns a random Yuri (Lesbian) sex Gif.
 === "Response"
     **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
-    ```js
+    ```js title="JSON Body Example"
     {
       "error": false,
       "link": "https://purrbot.site/img/nsfw/yuri/gif/yuri_001.gif",
@@ -845,7 +845,7 @@ To get more information about a value, click the :material-numeric-1-circle: **N
 === "Empty JSON Body/No JSON"
     **Status-Code**: [400]
     
-    ```js
+    ```js title="JSON Body Example"
     {
       "details": {
         "path": "/api/quote", // (1)
@@ -864,7 +864,7 @@ To get more information about a value, click the :material-numeric-1-circle: **N
 === "Malformed JSON/Invalid Values"
     **Status-Code**: [500]
     
-    ```js
+    ```js title="JSON Body Example"
     {
       "details": {
         "path": "/api/quote", // (1)
@@ -885,7 +885,7 @@ To get more information about a value, click the :material-numeric-1-circle: **N
 === "Empty JSON Body/No JSON"
     **Status-Code**: [400]
     
-    ```js
+    ```js title="JSON Body Example"
     {
       "details": {
         "path": "/api/status", // (1)
@@ -904,7 +904,7 @@ To get more information about a value, click the :material-numeric-1-circle: **N
 === "Malformed JSON/Invalid Values"
     **Status-Code**: [500]
     
-    ```js
+    ```js title="JSON Body Example"
     {
       "details": {
         "path": "/api/status", // (1)
@@ -925,7 +925,7 @@ To get more information about a value, click the :material-numeric-1-circle: **N
 === "Invalid Path (No API endpoint)"
     **Status-Code**: [403]
     
-    ```js
+    ```js title="JSON Body Example"
     {
       "details": {
         "path": "/api/img/:path", // (1)
@@ -944,7 +944,7 @@ To get more information about a value, click the :material-numeric-1-circle: **N
 === "No Images available"
     **Status-Code**: [404]
     
-    ```js
+    ```js title="JSON Body Example"
     {
       "details": {
         "path": "/api/img/:path", // (1)
