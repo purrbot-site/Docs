@@ -86,7 +86,7 @@ To get more information about a value, click the :material-numeric-1-circle: **N
     2.  **Type:** Boolean  
         **Default:** `false`  
         Will display a mobile phone icon instead of the usual indicators when set to `true`.
-    3.  **Type:** String
+    3.  **Type:** String  
         **Default:** `offline`  
         Set the status to display as icon. Supported are `online`, `idle`, `do_not_disturb`/`dnd` and `offline`.
 
