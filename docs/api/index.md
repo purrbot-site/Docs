@@ -3,7 +3,7 @@ title: API
 description: Detailed information about the ImageAPI.
 ---
 
-[def_avatar]: https://purrbot.site/assets/img/api/unknown.png"
+[def_avatar]: https://purrbot.site/assets/img/api/unknown.png
 [SimpleDateFormat]: https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
 
 # API Documentation
