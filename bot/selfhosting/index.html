@@ -1095,101 +1095,63 @@ This also includes creating databases and tables to later set in the config.json
 <p>You need to alter specific parts of the code, to prevent errors from appearing.<br />
 Alternatively could you set "beta" in the config.json to true, to set the bot as Beta-Bot, disabling certain functionalities such as posting stats to Bot Lists.</p>
 <p>When making changes to the code should you remove or uncomment the following code-snippets in <a href="https://github.com/purrbot-site/PurrBot/blob/master/src/main/java/site/purrbot/bot/PurrBot.java">PurrBot.java</a>:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">startUpdater</span><span class="p">(){</span>
-
-    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">isBeta</span><span class="p">()){</span>
-        <span class="n">PostAction</span> <span class="n">post</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PostAction</span><span class="p">(</span><span class="n">getShardManager</span><span class="p">());</span>
-        <span class="n">BotBlockAPI</span> <span class="n">botBlockAPI</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BotBlockAPI</span><span class="p">.</span><span class="na">Builder</span><span class="p">()</span>
-                <span class="p">.</span><span class="na">addAuthToken</span><span class="p">(</span>
-                        <span class="n">Site</span><span class="p">.</span><span class="na">DISCORDLIST_SPACE</span><span class="p">,</span>
-                        <span class="n">getFileManager</span><span class="p">().</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;config&quot;</span><span class="p">,</span> <span class="s">&quot;tokens.botlist-space&quot;</span><span class="p">)</span>
-                <span class="p">)</span>
-                <span class="p">.</span><span class="na">addAuthToken</span><span class="p">(</span>
-                        <span class="n">Site</span><span class="p">.</span><span class="na">DISCORD_BOTS_GG</span><span class="p">,</span>
-                        <span class="n">getFileManager</span><span class="p">().</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;config&quot;</span><span class="p">,</span> <span class="s">&quot;tokens.discord-bots-gg&quot;</span><span class="p">)</span>
-                <span class="p">)</span>
-                <span class="p">.</span><span class="na">addAuthToken</span><span class="p">(</span>
-                        <span class="n">Site</span><span class="p">.</span><span class="na">DISCORDEXTREMELIST_XYZ</span><span class="p">,</span>
-                        <span class="n">getFileManager</span><span class="p">().</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;config&quot;</span><span class="p">,</span> <span class="s">&quot;tokens.discordextremelist-xyz&quot;</span><span class="p">)</span>
-                <span class="p">)</span>
-                <span class="p">.</span><span class="na">addAuthToken</span><span class="p">(</span>
-                        <span class="n">Site</span><span class="p">.</span><span class="na">DISCORD_BOATS</span><span class="p">,</span>
-                        <span class="n">getFileManager</span><span class="p">().</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;config&quot;</span><span class="p">,</span> <span class="s">&quot;tokens.discord-boats&quot;</span><span class="p">)</span>
-                <span class="p">)</span>
-                <span class="p">.</span><span class="na">build</span><span class="p">();</span>
-
-        <span class="n">DServices4J</span> <span class="n">dServices4J</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DServices4J</span><span class="p">.</span><span class="na">Builder</span><span class="p">()</span>
-                <span class="p">.</span><span class="na">setToken</span><span class="p">(</span><span class="n">getFileManager</span><span class="p">().</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;config&quot;</span><span class="p">,</span> <span class="s">&quot;tokens.discordservices-net&quot;</span><span class="p">))</span>
-                <span class="p">.</span><span class="na">setId</span><span class="p">(</span><span class="n">IDs</span><span class="p">.</span><span class="na">PURR</span><span class="p">)</span>
-                <span class="p">.</span><span class="na">build</span><span class="p">();</span>
-        <span class="n">Commands</span> <span class="n">commands</span> <span class="o">=</span> <span class="n">dServices4J</span><span class="p">.</span><span class="na">getCommands</span><span class="p">();</span>
-        <span class="n">Stats</span> <span class="n">stats</span> <span class="o">=</span> <span class="n">dServices4J</span><span class="p">.</span><span class="na">getStats</span><span class="p">();</span>
-
-        <span class="n">commands</span><span class="p">.</span><span class="na">addCommands</span><span class="p">(</span><span class="n">getCommands</span><span class="p">());</span>
-        <span class="k">try</span><span class="p">{</span>
-            <span class="n">commands</span><span class="p">.</span><span class="na">postCommands</span><span class="p">();</span>
-        <span class="p">}</span><span class="k">catch</span><span class="p">(</span><span class="n">IOException</span> <span class="o">|</span> <span class="n">RatelimitedException</span> <span class="n">ex</span><span class="p">){</span>
-            <span class="n">logger</span><span class="p">.</span><span class="na">warn</span><span class="p">(</span><span class="s">&quot;Could not post Commands&quot;</span><span class="p">,</span> <span class="n">ex</span><span class="p">);</span>
-        <span class="p">}</span>
-
-        <span class="n">scheduler</span><span class="p">.</span><span class="na">scheduleAtFixedRate</span><span class="p">(()</span> <span class="o">-&gt;</span> <span class="p">{</span>
-
-            <span class="n">getShardManager</span><span class="p">().</span><span class="na">setActivity</span><span class="p">(</span><span class="n">Activity</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
-                    <span class="n">Activity</span><span class="p">.</span><span class="na">ActivityType</span><span class="p">.</span><span class="na">WATCHING</span><span class="p">,</span>
-                    <span class="n">getMessageUtil</span><span class="p">().</span><span class="na">getBotGame</span><span class="p">(</span><span class="n">getShardManager</span><span class="p">().</span><span class="na">getGuildCache</span><span class="p">().</span><span class="na">size</span><span class="p">())</span>
-            <span class="p">));</span>
-
-            <span class="k">if</span><span class="p">(</span><span class="n">isBeta</span><span class="p">())</span>
-                <span class="k">return</span><span class="p">;</span>
-
-            <span class="k">try</span><span class="p">{</span>
-                <span class="n">post</span><span class="p">.</span><span class="na">postGuilds</span><span class="p">(</span><span class="n">getShardManager</span><span class="p">(),</span> <span class="n">botBlockAPI</span><span class="p">);</span>
-            <span class="p">}</span><span class="k">catch</span><span class="p">(</span><span class="n">Exception</span> <span class="n">ex</span><span class="p">){</span>
-                <span class="n">logger</span><span class="p">.</span><span class="na">warn</span><span class="p">(</span><span class="s">&quot;Not able to post guild counts!&quot;</span><span class="p">,</span> <span class="n">ex</span><span class="p">);</span>
-            <span class="p">}</span>
-
-            <span class="k">try</span><span class="p">{</span>
-                <span class="n">stats</span><span class="p">.</span><span class="na">postStats</span><span class="p">(</span>
-                        <span class="n">getShardManager</span><span class="p">().</span><span class="na">getGuildCache</span><span class="p">().</span><span class="na">size</span><span class="p">(),</span>
-                        <span class="n">getShardManager</span><span class="p">().</span><span class="na">getShardCache</span><span class="p">().</span><span class="na">size</span><span class="p">()</span>
-                <span class="p">);</span>
-            <span class="p">}</span><span class="k">catch</span><span class="p">(</span><span class="n">IOException</span> <span class="o">|</span> <span class="n">RatelimitedException</span> <span class="n">ex</span><span class="p">){</span>
-                <span class="n">logger</span><span class="p">.</span><span class="na">warn</span><span class="p">(</span><span class="s">&quot;Could not post Server stats&quot;</span><span class="p">,</span> <span class="n">ex</span><span class="p">);</span>
-            <span class="p">}</span>
-        <span class="p">},</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">TimeUnit</span><span class="p">.</span><span class="na">MINUTES</span><span class="p">);</span>
-    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-        <span class="n">scheduler</span><span class="p">.</span><span class="na">scheduleAtFixedRate</span><span class="p">(()</span> <span class="o">-&gt;</span> 
-                <span class="n">getShardManager</span><span class="p">().</span><span class="na">setActivity</span><span class="p">(</span><span class="n">Activity</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
-                        <span class="n">Activity</span><span class="p">.</span><span class="na">ActivityType</span><span class="p">.</span><span class="na">WATCHING</span><span class="p">,</span>
-                        <span class="n">getMessageUtil</span><span class="p">().</span><span class="na">getBotGame</span><span class="p">(</span><span class="n">getShardManager</span><span class="p">().</span><span class="na">getGuildCache</span><span class="p">().</span><span class="na">size</span><span class="p">())</span>
-                <span class="p">))</span>
-        <span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">TimeUnit</span><span class="p">.</span><span class="na">MINUTES</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Commands</span><span class="p">.</span><span class="na">CommandInfo</span><span class="o">&gt;</span> <span class="nf">getCommands</span><span class="p">(){</span>
-    <span class="n">List</span><span class="o">&lt;</span><span class="n">Commands</span><span class="p">.</span><span class="na">CommandInfo</span><span class="o">&gt;</span> <span class="n">commandInfoList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-    <span class="k">for</span><span class="p">(</span><span class="n">Command</span> <span class="n">command</span> <span class="p">:</span> <span class="n">commandLoader</span><span class="p">.</span><span class="na">getCommands</span><span class="p">()){</span>
-        <span class="k">if</span><span class="p">(</span><span class="n">command</span><span class="p">.</span><span class="na">getAttribute</span><span class="p">(</span><span class="s">&quot;category&quot;</span><span class="p">).</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;owner&quot;</span><span class="p">))</span>
-            <span class="k">continue</span><span class="p">;</span>
-
-        <span class="n">commandInfoList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Commands</span><span class="p">.</span><span class="na">CommandInfo</span><span class="p">(</span>
-                <span class="n">command</span><span class="p">.</span><span class="na">getDescription</span><span class="p">().</span><span class="na">name</span><span class="p">(),</span>
-                <span class="n">setPlaceholders</span><span class="p">(</span><span class="n">langUtils</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;en&quot;</span><span class="p">,</span> <span class="n">command</span><span class="p">.</span><span class="na">getDescription</span><span class="p">().</span><span class="na">description</span><span class="p">())),</span>
-                <span class="n">command</span><span class="p">.</span><span class="na">getAttribute</span><span class="p">(</span><span class="s">&quot;category&quot;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">PurrBot.java</span><pre><span></span><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">startUpdater</span><span class="p">(){</span>
+    <span class="n">scheduler</span><span class="p">.</span><span class="na">scheduleAtFixedRate</span><span class="p">(()</span> <span class="o">-&gt;</span> <span class="p">{</span>
+        <span class="n">getShardManager</span><span class="p">().</span><span class="na">setActivity</span><span class="p">(</span><span class="n">Activity</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
+            <span class="n">Activity</span><span class="p">.</span><span class="na">ActivityType</span><span class="p">.</span><span class="na">WATCHING</span><span class="p">,</span>
+            <span class="n">getMessageUtil</span><span class="p">().</span><span class="na">getBotGame</span><span class="p">(</span><span class="n">getShardManager</span><span class="p">().</span><span class="na">getGuildCache</span><span class="p">().</span><span class="na">size</span><span class="p">())</span>
         <span class="p">));</span>
-    <span class="p">}</span>
 
-    <span class="k">return</span> <span class="n">commandInfoList</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">isBeta</span><span class="p">())</span> <span class="c1">// (1)</span>
+            <span class="k">return</span><span class="p">;</span>
+
+        <span class="kt">long</span> <span class="n">guilds</span> <span class="o">=</span> <span class="n">getShardManager</span><span class="p">().</span><span class="na">getGuildCache</span><span class="p">().</span><span class="na">size</span><span class="p">();</span>
+        <span class="kt">long</span> <span class="n">shards</span> <span class="o">=</span> <span class="n">getShardManager</span><span class="p">().</span><span class="na">getShardCache</span><span class="p">().</span><span class="na">size</span><span class="p">();</span>
+
+        <span class="n">logger</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;Posting Guild Stats to Bot lists...&quot;</span><span class="p">);</span>
+        <span class="k">for</span><span class="p">(</span><span class="n">HttpUtil</span><span class="p">.</span><span class="na">BotList</span> <span class="n">botList</span> <span class="p">:</span> <span class="n">HttpUtil</span><span class="p">.</span><span class="na">BotList</span><span class="p">.</span><span class="na">values</span><span class="p">()){</span>
+            <span class="n">getHttpUtil</span><span class="p">().</span><span class="na">postServerStats</span><span class="p">(</span>
+                <span class="s">&quot;*Purr*&quot;</span><span class="p">,</span>
+                <span class="s">&quot;6875&quot;</span><span class="p">,</span>
+                <span class="n">guilds</span><span class="p">,</span>
+                <span class="n">shards</span><span class="p">,</span>
+                <span class="n">botList</span><span class="p">,</span>
+                <span class="n">getFileManager</span><span class="p">().</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;config&quot;</span><span class="p">,</span> <span class="n">botList</span><span class="p">.</span><span class="na">getTokenPath</span><span class="p">())</span>
+            <span class="p">).</span><span class="na">whenComplete</span><span class="p">((</span><span class="n">botListResult</span><span class="p">,</span> <span class="n">ex</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">{</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">botListResult</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="o">!</span><span class="n">botListResult</span><span class="p">.</span><span class="na">isSuccess</span><span class="p">()</span> <span class="o">||</span> <span class="n">ex</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">){</span>
+                    <span class="n">logger</span><span class="p">.</span><span class="na">warn</span><span class="p">(</span><span class="s">&quot;Error while posting Guild stats to bot list {}!&quot;</span><span class="p">,</span> <span class="n">botList</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+                    <span class="k">if</span><span class="p">(</span><span class="n">botListResult</span> <span class="o">==</span> <span class="kc">null</span><span class="p">){</span>
+                        <span class="n">logger</span><span class="p">.</span><span class="na">warn</span><span class="p">(</span><span class="s">&quot;BotListResult is null!&quot;</span><span class="p">);</span>
+                        <span class="k">return</span><span class="p">;</span>
+                    <span class="p">}</span>
+
+                    <span class="k">if</span><span class="p">(</span><span class="n">ex</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">){</span>
+                        <span class="n">ex</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+                        <span class="k">return</span><span class="p">;</span>
+                    <span class="p">}</span>
+
+                    <span class="n">logger</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;Response Code: {}&quot;</span><span class="p">,</span> <span class="n">botListResult</span><span class="p">.</span><span class="na">getResponseCode</span><span class="p">());</span>
+                    <span class="n">logger</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;Response Message: {}&quot;</span><span class="p">,</span> <span class="n">botListResult</span><span class="p">.</span><span class="na">getResponseMessage</span><span class="p">());</span>
+                    <span class="k">return</span><span class="p">;</span>
+                <span class="p">}</span>
+
+                <span class="n">logger</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;Successfully posted stats to {}!&quot;</span><span class="p">,</span> <span class="n">botListResult</span><span class="p">.</span><span class="na">getBotList</span><span class="p">());</span>
+            <span class="p">});</span>
+        <span class="p">}</span>
+    <span class="p">},</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">TimeUnit</span><span class="p">.</span><span class="na">MINUTES</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
+<ol>
+<li>To disable posting to Bot list, either set the bot into beta mode through the <a href="#config"><code>config.json</code></a> or put everything after this if and before the <code>}, 1, 5, TimeUnit.MINUTES);</code> into comments.<br />
+    You can also update the <code>BotList</code> enum in the <a href="https://github.com/purrbot-site/PurrBot/blob/master/src/main/java/site/purrbot/bot/util/HttpUtil.java"><code>HttpUtil,java</code></a> to post to different bot lists.</li>
+</ol>
 <h3 id="update-classes">Update some classes<a class="headerlink" href="#update-classes" title="Permanent link">&para;</a></h3>
 <p>You need to update values in specific classes to make your version work without issues.<br />
 Namely you have to alter the content of the following classes:</p>
 <ul>
-<li><a href="https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/constants/IDs.java">IDs.java</a> (Contains various IDs of users or Guilds)</li>
-<li><a href="https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/constants/Emotes.java">Emotes.java</a> (Contains different emotes used in commands)</li>
-<li><a href="https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/constants/Links.java">Links.java</a> (Contains various links of the bot)</li>
+<li><a href="https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/constants/IDs.java"><code>IDs.java</code></a> (Contains various IDs of users or Guilds)</li>
+<li><a href="https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/constants/Emotes.java"><code>Emotes.java</code></a> (Contains different emotes used in commands)</li>
+<li><a href="https://github.com/Andre601/PurrBot/blob/master/src/main/java/site/purrbot/bot/constants/Links.java"><code>Links.java</code></a> (Contains various links of the bot)</li>
 </ul>
 <h3 id="build-jar">Build jar file<a class="headerlink" href="#build-jar" title="Permanent link">&para;</a></h3>
 <p>When you're done with your changes, make sure to execute <code>gradlew clean shadowJar</code> to build a shaded jar containing all dependnencies required.</p>
@@ -1216,8 +1178,7 @@ On first startup will it generate with the below default values.</p>
     <span class="nt">&quot;botlist-space&quot;</span><span class="p">:</span> <span class="s2">&quot;botlist-token&quot;</span><span class="p">,</span>
     <span class="nt">&quot;discordextremelist-xyz&quot;</span><span class="p">:</span> <span class="s2">&quot;debl-token&quot;</span><span class="p">,</span>
     <span class="nt">&quot;discord-boats&quot;</span><span class="p">:</span> <span class="s2">&quot;discord-boats-token&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;discordservices-net&quot;</span><span class="p">:</span> <span class="s2">&quot;discordservices-net-token&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;discordbotlist-com&quot;</span><span class="p">:</span> <span class="s2">&quot;discordbotlist-com-token&quot;</span>
+    <span class="nt">&quot;discordservices-net&quot;</span><span class="p">:</span> <span class="s2">&quot;discordservices-net-token&quot;</span>
   <span class="p">},</span>
 
   <span class="nt">&quot;database&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -1271,8 +1232,8 @@ If you followed the previous step on preparing the bot will you only need to set
 <h3 id="other-files">Other files<a class="headerlink" href="#other-files" title="Permanent link">&para;</a></h3>
 <p>The bot also has other files, which you can alter to your liking.</p>
 <ul>
-<li><a href="https://github.com/Andre601/PurrBot/blob/master/src/main/resources/random.json">random.json</a> contains various messages and links used for (often) random responses.</li>
-<li><a href="https://github.com/Andre601/PurrBot/blob/master/src/main/resources/data.json">data.json</a> contains data such as current guild blacklist, special users and more.</li>
+<li><a href="https://github.com/Andre601/PurrBot/blob/master/src/main/resources/random.json"><code>random.json</code></a> contains various messages and links used for (often) random responses.</li>
+<li><a href="https://github.com/Andre601/PurrBot/blob/master/src/main/resources/data.json"><code>data.json</code></a> contains data such as current guild blacklist, special users and more.</li>
 <li>Various <a href="https://github.com/Andre601/PurrBot/blob/master/src/main/resources/lang">lang-files</a> used for the different command responses of the bot.</li>
 </ul>
                 

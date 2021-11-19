@@ -1611,7 +1611,7 @@ The API is <a href="https://github.com/purrbot-site/ImageAPI">open source</a> an
 </code></pre></div>
 <ol>
 <li><strong>Type:</strong> String<br />
-<strong>Default:</strong> <a href="https://purrbot.site/assets/img/api/unknown.png&quot;"><code>https://purrbot.site/assets/img/api/unknown.png</code></a><br />
+<strong>Default:</strong> <a href="https://purrbot.site/assets/img/api/unknown.png"><code>https://purrbot.site/assets/img/api/unknown.png</code></a><br />
     This has to be a direct URL to an image.</li>
 <li><strong>Type:</strong> String<br />
 <strong>Default:</strong> <code>dd. MMM yyyy hh:mm:yyyy</code><br />
@@ -1651,20 +1651,20 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
-  <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="c1">// (1)</span>
-  <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;online&quot;</span>
+  <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;https://cdn.discordapp.com/avatars/204232208049766400/dfaaefa54a2804addb1f494da7aa904d.png&quot;</span><span class="p">,</span> <span class="c1">// (1)</span>
+  <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">// (2)</span>
+  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;online&quot;</span> <span class="c1">// (3)</span>
 <span class="p">}</span>
 </code></pre></div>
 <ol>
 <li><strong>Type:</strong> String<br />
-<strong>Default:</strong> <a href="https://purrbot.site/assets/img/api/unknown.png&quot;"><code>https://purrbot.site/assets/img/api/unknown.png</code></a><br />
+<strong>Default:</strong> <a href="https://purrbot.site/assets/img/api/unknown.png"><code>https://purrbot.site/assets/img/api/unknown.png</code></a><br />
     This has to be a direct URL to an image.</li>
 <li><strong>Type:</strong> Boolean<br />
 <strong>Default:</strong> <code>false</code><br />
     Will display a mobile phone icon instead of the usual indicators when set to <code>true</code>.</li>
-<li><strong>Type:</strong> String
-    <strong>Default:</strong> <code>offline</code><br />
+<li><strong>Type:</strong> String<br />
+<strong>Default:</strong> <code>offline</code><br />
     Set the status to display as icon. Supported are <code>online</code>, <code>idle</code>, <code>do_not_disturb</code>/<code>dnd</code> and <code>offline</code>.</li>
 </ol>
 </div>
@@ -1691,7 +1691,7 @@ You can access those endpoints through simple <code>GET</code> requests.</p>
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/background/img/color_black.png&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -1712,7 +1712,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/bite/gif/bite_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -1733,7 +1733,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/blush/gif/blush_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -1754,7 +1754,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/cry/gif/cry_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -1775,7 +1775,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/cuddle/gif/cuddle_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -1796,7 +1796,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/dance/gif/dance_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -1818,7 +1818,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/eevee/gif/eevee_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -1828,7 +1828,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/eevee/img/eevee_001.jpg&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -1849,7 +1849,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/feed/gif/feed_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -1870,7 +1870,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/fluff/gif/fluff_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -1891,7 +1891,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/holo/img/holo_001.jpg&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -1912,7 +1912,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/hug/gif/hug_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -1933,7 +1933,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/icon/img/holo.png&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -1954,7 +1954,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/kiss/gif/kiss_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -1975,7 +1975,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/kitsune/img/kitsune_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -1996,7 +1996,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/lick/gif/lick_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -2018,7 +2018,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/neko/gif/neko_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -2028,7 +2028,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/neko/img/neko_001.jpg&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -2049,7 +2049,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/okami/img/okami_001.jpg&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -2070,7 +2070,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/pat/gif/pat_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -2091,7 +2091,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/poke/gif/poke_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -2112,7 +2112,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/senko/img/senko_001.jpg&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -2133,7 +2133,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/slap/gif/slap_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -2154,7 +2154,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/smile/gif/smile_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -2175,7 +2175,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/tail/gif/tail_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -2196,7 +2196,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/sfw/tickle/gif/tickle_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -2222,7 +2222,7 @@ You can access those endpoints through simple <code>GET</code> requests.</p>
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -2243,7 +2243,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/blowjob/gif/blowjob_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -2264,7 +2264,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/cum/gif/cum_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -2285,7 +2285,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/fuck/gif/fuck_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -2307,7 +2307,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/neko/gif/neko_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -2317,7 +2317,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/neko/img/neko_001.jpg&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -2338,7 +2338,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/pussylick/gif/pussylick_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -2359,7 +2359,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/solo/gif/solo_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -2380,7 +2380,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/threesome_fff/gif/threesome_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -2401,7 +2401,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/threesome_ffm/gif/threesome_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -2422,7 +2422,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/threesome_mmf/gif/threesome_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -2443,7 +2443,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/yaoi/gif/yaoi_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -2464,7 +2464,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
 <strong>Example:</strong><br />
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://purrbot.site/img/nsfw/yuri/gif/yuri_001.gif&quot;</span><span class="p">,</span>
   <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mf">0</span>
@@ -2487,7 +2487,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Status-Code</strong>: <a href="https://httpstatuses.com/400">400</a></p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;details&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;path&quot;</span><span class="o">:</span> <span class="s2">&quot;/api/quote&quot;</span><span class="p">,</span> <span class="c1">// (1)</span>
     <span class="s2">&quot;content-type&quot;</span><span class="o">:</span> <span class="s2">&quot;:content-type&quot;</span><span class="p">,</span> <span class="c1">// (2)</span>
@@ -2505,7 +2505,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <div class="tabbed-block">
 <p><strong>Status-Code</strong>: <a href="https://httpstatuses.com/500">500</a></p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;details&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;path&quot;</span><span class="o">:</span> <span class="s2">&quot;/api/quote&quot;</span><span class="p">,</span> <span class="c1">// (1)</span>
     <span class="s2">&quot;content-type&quot;</span><span class="o">:</span> <span class="s2">&quot;:content-type&quot;</span><span class="p">,</span> <span class="c1">// (2)</span>
@@ -2528,7 +2528,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Status-Code</strong>: <a href="https://httpstatuses.com/400">400</a></p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;details&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;path&quot;</span><span class="o">:</span> <span class="s2">&quot;/api/status&quot;</span><span class="p">,</span> <span class="c1">// (1)</span>
     <span class="s2">&quot;content-type&quot;</span><span class="o">:</span> <span class="s2">&quot;:content-type&quot;</span><span class="p">,</span> <span class="c1">// (2)</span>
@@ -2546,7 +2546,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <div class="tabbed-block">
 <p><strong>Status-Code</strong>: <a href="https://httpstatuses.com/500">500</a></p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;details&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;path&quot;</span><span class="o">:</span> <span class="s2">&quot;/api/status&quot;</span><span class="p">,</span> <span class="c1">// (1)</span>
     <span class="s2">&quot;content-type&quot;</span><span class="o">:</span> <span class="s2">&quot;:content-type&quot;</span><span class="p">,</span> <span class="c1">// (2)</span>
@@ -2569,7 +2569,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Status-Code</strong>: <a href="https://httpstatuses.com/403">403</a></p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;details&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;path&quot;</span><span class="o">:</span> <span class="s2">&quot;/api/img/:path&quot;</span><span class="p">,</span> <span class="c1">// (1)</span>
     <span class="s2">&quot;content-type&quot;</span><span class="o">:</span> <span class="s2">&quot;:content-type&quot;</span><span class="p">,</span> <span class="c1">// (2)</span>
@@ -2587,7 +2587,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <div class="tabbed-block">
 <p><strong>Status-Code</strong>: <a href="https://httpstatuses.com/404">404</a></p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
   <span class="s2">&quot;details&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;path&quot;</span><span class="o">:</span> <span class="s2">&quot;/api/img/:path&quot;</span><span class="p">,</span> <span class="c1">// (1)</span>
     <span class="s2">&quot;content-type&quot;</span><span class="o">:</span> <span class="s2">&quot;:content-type&quot;</span><span class="p">,</span> <span class="c1">// (2)</span>
