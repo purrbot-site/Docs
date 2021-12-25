@@ -1,3 +1,7 @@
+---
+template: frontpage.html
+---
+
 # Welcome
 Welcome to the PurrBot Documentation!
 
