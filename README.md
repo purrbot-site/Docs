@@ -1,4 +1,4 @@
-[badge]: https://forthebadge.com/images/badges/made-with-markdown.svg
+[badge]: https://img.shields.io/badge/Made_with-Markdown-212121?style=for-the-badge&logo=markdown&labelColor=000
 
 [purr]: https://purrbot.site/github
 [purrbotapi]: https://github.com/purrbot-site/PurrBotAPI
