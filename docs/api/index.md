@@ -106,6 +106,42 @@ To get more information about a value, click the :material-numeric-1-circle: **N
 Contains images that are considered safe for work.  
 You can access those endpoints through simple `GET` requests.
 
+### /list/sfw/:path { #list-sfw }
+Lists all available images in the provided `:path`.  
+The path is the exact same as with the below endpoints. You only have to replace `/img` with `/list` in the URL.
+
+**Example:** [`/img/sfw/background/img`](#img-sfw-background-img) becomes [`/list/sfw/background/img`](https://purrbot.site/api/list/sfw/background/img)
+
+=== "Response"
+    **Type:** :octicon-file-code-24: `JSON`  
+    **Example:**  
+    ```json title="JSON Body Example"
+    {
+      "error": false,
+      "links": [
+        "https://purrbot.site/img/sfw/background/img/color_blue.png",
+        "https://purrbot.site/img/sfw/background/img/color_black.png",
+        "https://purrbot.site/img/sfw/background/img/color_blurple.png",
+        "https://purrbot.site/img/sfw/background/img/color_green.png",
+        "https://purrbot.site/img/sfw/background/img/color_grey.png",
+        "https://purrbot.site/img/sfw/background/img/color_red.png",
+        "https://purrbot.site/img/sfw/background/img/color_white.png",
+        "https://purrbot.site/img/sfw/background/img/gradient.png",
+        "https://purrbot.site/img/sfw/background/img/gradient_blue.png",
+        "https://purrbot.site/img/sfw/background/img/gradient_dark_red.png",
+        "https://purrbot.site/img/sfw/background/img/gradient_green.png",
+        "https://purrbot.site/img/sfw/background/img/gradient_orange.png",
+        "https://purrbot.site/img/sfw/background/img/gradient_red.png",
+        "https://purrbot.site/img/sfw/background/img/rainbow.png"
+      ],
+      "time": 0
+    ```
+    
+=== "Failure"
+    **Type:** :octicons-file-code-24: `JSON`  
+    **Example:**  
+    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
+
 ### [/img/sfw/background/img](https://purrbot.site/api/img/sfw/background/img) { #img-sfw-background-img }
 Returns a Random [Welcome Background](/bot/welcome-images#backgrounds).
 
@@ -593,6 +629,109 @@ Contains images that are considered Not Safe for work.
 If you are using those images on Discord, make sure to only share them in Channels marked as NSFW.  
 You can access those endpoints through simple `GET` requests.
 
+### /list/nsfw/:path { #list-nsfw }
+Lists all available images in the provided `:path`.  
+The path is the exact same as with the below endpoints. You only have to replace `/img` with `/list` in the URL.
+
+**Example:** [`/img/nsfw/anal/gif`](#img-nsfw-anal-gif) becomes [`/list/nsfw/anal/gif`](https://purrbot.site/api/list/nsfw/anal/gif)
+
+=== "Response"
+    **Type:** :octicon-file-code-24: `JSON`  
+    **Example:**  
+    ```json title="JSON Body Example"
+    {
+      "error": false,
+      "links": [
+        "https://purrbot.site/img/nsfw/anal/gif/anal_001.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_002.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_003.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_004.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_005.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_006.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_007.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_008.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_009.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_010.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_011.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_012.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_013.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_014.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_015.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_016.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_017.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_018.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_019.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_020.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_021.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_022.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_023.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_024.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_025.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_026.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_027.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_028.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_029.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_030.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_031.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_032.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_033.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_034.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_035.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_036.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_037.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_038.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_039.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_040.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_041.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_042.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_043.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_044.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_045.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_046.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_047.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_048.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_049.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_050.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_051.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_052.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_053.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_054.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_055.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_056.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_057.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_058.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_059.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_060.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_061.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_062.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_063.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_064.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_065.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_066.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_067.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_068.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_069.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_070.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_071.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_072.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_073.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_074.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_075.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_076.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_077.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_078.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_079.gif",
+        "https://purrbot.site/img/nsfw/anal/gif/anal_080.gif"
+      ],
+      "time": 0
+    ```
+    
+=== "Failure"
+    **Type:** :octicons-file-code-24: `JSON`  
+    **Example:**  
+    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
+
+
 ### [/img/nsfw/anal/gif](https://purrbot.site/api/img/nsfw/anal/gif) { #img-nsfw-anal-gif }
 Returns a random Anal-sex Gif.
 
@@ -920,7 +1059,7 @@ To get more information about a value, click the :material-numeric-1-circle: **N
     2.  The content-tyoe you provided. This **must** be `application/json`.
     3.  The User-Agent you used.
 
-### /api/img/* { #error-api-img }
+### /img/* { #error-img }
 
 === "Invalid Path (No API endpoint)"
     **Status-Code**: [403]
@@ -933,7 +1072,7 @@ To get more information about a value, click the :material-numeric-1-circle: **N
         "user-agent": ":user-agent" // (3)
       },
       "error": true,
-      "message": "The selected API path is not supported!"
+      "message": "The provided path is not valid."
     }
     ```
     
@@ -952,13 +1091,54 @@ To get more information about a value, click the :material-numeric-1-circle: **N
         "user-agent": ":user-agent" // (3)
       },
       "error": true,
-      "message": "The selected API path does not contain any images!"
+      "message": "The provided path does not contain any images."
     }
     ```
     
     1.  The Path you accessed. Example: `/api/img/sfw/background/img`
     2.  The content-tyoe you provided. This **must** be `application/json`.
     3.  The User-Agent you used.
+
+### /list/* { #error-list }
+
+=== "Invalid Path (No API endpoint)"
+    **Status-Code**: [403]
+    
+    ```js title="JSON Body Example"
+    {
+      "details": {
+        "path": "/api/list/:path", // (1)
+        "content-type": ":content-type", // (2)
+        "user-agent": ":user-agent" // (3)
+      },
+      "error": true,
+      "message": "The provided path is not valid."
+    }
+    ```
+    
+    1.  The Path you accessed. Example: `/api/list/sfw/background/img`
+    2.  The content-tyoe you provided. This **must** be `application/json`.
+    3.  The User-Agent you used.
+
+=== "No Images available"
+    **Status-Code**: [404]
+    
+    ```js title="JSON Body Example"
+    {
+      "details": {
+        "path": "/api/list/:path", // (1)
+        "content-type": ":content-type", // (2)
+        "user-agent": ":user-agent" // (3)
+      },
+      "error": true,
+      "message": "The provided path does not contain any images."
+    }
+    ```
+    
+    1.  The Path you accessed. Example: `/api/list/sfw/background/img`
+    2.  The content-tyoe you provided. This **must** be `application/json`.
+    3.  The User-Agent you used.
+
 
 [400]: https://httpstatuses.com/400
 [403]: https://httpstatuses.com/403
