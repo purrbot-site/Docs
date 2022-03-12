@@ -106,7 +106,7 @@ To get more information about a value, click the :material-numeric-1-circle: **N
 Contains images that are considered safe for work.  
 You can access those endpoints through simple `GET` requests.
 
-### /list/sfw/:path { #list-sfw }
+### /list/sfw/:path { #list-sfw-path }
 Lists all available images in the provided `:path`.  
 The path is the exact same as with the below endpoints. You only have to replace `/img` with `/list` in the URL.
 
@@ -629,7 +629,7 @@ Contains images that are considered Not Safe for work.
 If you are using those images on Discord, make sure to only share them in Channels marked as NSFW.  
 You can access those endpoints through simple `GET` requests.
 
-### /list/nsfw/:path { #list-nsfw }
+### /list/nsfw/:path { #list-nsfw-path }
 Lists all available images in the provided `:path`.  
 The path is the exact same as with the below endpoints. You only have to replace `/img` with `/list` in the URL.
 
