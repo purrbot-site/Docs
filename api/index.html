@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://docs.purrbot.site/api/">
       
       <link rel="icon" href="../assets/img/logo.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
     
     
   
@@ -23,7 +23,7 @@
   
 
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.e8d9bf0c.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2d9f7617.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
@@ -33,6 +33,7 @@
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
@@ -909,6 +910,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#list-sfw-path" class="md-nav__link">
+    /list/sfw/:path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#img-sfw-background-img" class="md-nav__link">
     /img/sfw/background/img
   </a>
@@ -1090,6 +1098,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#list-nsfw-path" class="md-nav__link">
+    /list/nsfw/:path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#img-nsfw-anal-gif" class="md-nav__link">
     /img/nsfw/anal/gif
   </a>
@@ -1201,8 +1216,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#error-api-img" class="md-nav__link">
-    /api/img/*
+  <a href="#error-img" class="md-nav__link">
+    /img/*
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-list" class="md-nav__link">
+    /list/*
   </a>
   
 </li>
@@ -1331,9 +1353,46 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <h2 id="get-sfw">GET <small>(SFW)</small><a class="headerlink" href="#get-sfw" title="Permanent link">&para;</a></h2>
 <p>Contains images that are considered safe for work.<br />
 You can access those endpoints through simple <code>GET</code> requests.</p>
+<h3 id="list-sfw-path">/list/sfw/:path<a class="headerlink" href="#list-sfw-path" title="Permanent link">&para;</a></h3>
+<p>Lists all available images in the provided <code>:path</code>.<br />
+The path is the exact same as with the below endpoints. You only have to replace <code>/img</code> with <code>/list</code> in the URL.</p>
+<p><strong>Example:</strong> <a href="#img-sfw-background-img"><code>/img/sfw/background/img</code></a> becomes <a href="https://purrbot.site/api/list/sfw/background/img"><code>/list/sfw/background/img</code></a></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Response</label><label for="__tabbed_3_2">Failure</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>Type:</strong> :octicon-file-code-24: <code>JSON</code><br />
+<strong>Example:</strong><br />
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/sfw/background/img/color_blue.png&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/sfw/background/img/color_black.png&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/sfw/background/img/color_blurple.png&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/sfw/background/img/color_green.png&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/sfw/background/img/color_grey.png&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/sfw/background/img/color_red.png&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/sfw/background/img/color_white.png&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/sfw/background/img/gradient.png&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/sfw/background/img/gradient_blue.png&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/sfw/background/img/gradient_dark_red.png&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/sfw/background/img/gradient_green.png&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/sfw/background/img/gradient_orange.png&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/sfw/background/img/gradient_red.png&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/sfw/background/img/rainbow.png&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
+<strong>Example:</strong><br />
+Please see the <a href="#possible-errors">Possible Errors</a> section for all errors this API may return.</p>
+</div>
+</div>
+</div>
 <h3 id="img-sfw-background-img"><a href="https://purrbot.site/api/img/sfw/background/img">/img/sfw/background/img</a><a class="headerlink" href="#img-sfw-background-img" title="Permanent link">&para;</a></h3>
 <p>Returns a Random <a href="/bot/welcome-images#backgrounds">Welcome Background</a>.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Response</label><label for="__tabbed_3_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Response</label><label for="__tabbed_4_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1354,7 +1413,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-sfw-bite-gif"><a href="https://purrbot.site/api/img/sfw/bite/gif">/img/sfw/bite/gif</a><a class="headerlink" href="#img-sfw-bite-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Bite Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Response</label><label for="__tabbed_4_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Response</label><label for="__tabbed_5_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1375,7 +1434,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-sfw-blush-gif"><a href="https://purrbot.site/api/img/sfw/blush/gif">/img/sfw/blush/gif</a><a class="headerlink" href="#img-sfw-blush-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random blush Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Response</label><label for="__tabbed_5_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Response</label><label for="__tabbed_6_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1396,7 +1455,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-sfw-cry-gif"><a href="https://purrbot.site/api/img/sfw/cry/gif">/img/sfw/cry/gif</a><a class="headerlink" href="#img-sfw-cry-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Cry Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Response</label><label for="__tabbed_6_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Response</label><label for="__tabbed_7_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1417,7 +1476,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-sfw-cuddle-gif"><a href="https://purrbot.site/api/img/sfw/cuddle/gif">/img/sfw/cuddle/gif</a><a class="headerlink" href="#img-sfw-cuddle-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Cuddle Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Response</label><label for="__tabbed_7_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Response</label><label for="__tabbed_8_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1438,7 +1497,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-sfw-dance-gif"><a href="https://purrbot.site/api/img/sfw/dance/gif">/img/sfw/dance/gif</a><a class="headerlink" href="#img-sfw-dance-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Dance Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Response</label><label for="__tabbed_8_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Response</label><label for="__tabbed_9_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1460,7 +1519,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <h3 id="img-sfw-eevee-type"><a href="https://purrbot.site/api/img/sfw/eevee/gif">/img/sfw/eevee/:type</a><a class="headerlink" href="#img-sfw-eevee-type" title="Permanent link">&para;</a></h3>
 <p>Returns either a random Eevee Image or Gif.<br />
 <code>:type</code> can be either <code>gif</code> for gifs or <code>img</code> for images.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:3"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><input id="__tabbed_9_3" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Response (GIF)</label><label for="__tabbed_9_2">Response (IMG)</label><label for="__tabbed_9_3">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:3"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><input id="__tabbed_10_3" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Response (GIF)</label><label for="__tabbed_10_2">Response (IMG)</label><label for="__tabbed_10_3">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1491,7 +1550,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-sfw-feed-gif"><a href="https://purrbot.site/api/img/sfw/feed/gif">/img/sfw/feed/gif</a><a class="headerlink" href="#img-sfw-feed-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Feeding Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Response</label><label for="__tabbed_10_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Response</label><label for="__tabbed_11_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1512,7 +1571,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-sfw-fluff-gif"><a href="https://purrbot.site/api/img/sfw/fluff/gif">/img/sfw/fluff/gif</a><a class="headerlink" href="#img-sfw-fluff-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Fluffing Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Response</label><label for="__tabbed_11_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Response</label><label for="__tabbed_12_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1533,7 +1592,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-sfw-holo-img"><a href="https://purrbot.site/api/img/sfw/holo/img">/img/sfw/holo/img</a><a class="headerlink" href="#img-sfw-holo-img" title="Permanent link">&para;</a></h3>
 <p>Returns a random Image of Holo (Spice &amp; Wolf).</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Response</label><label for="__tabbed_12_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Response</label><label for="__tabbed_13_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1554,7 +1613,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-sfw-hug-gif"><a href="https://purrbot.site/api/img/sfw/hug/gif">/img/sfw/hug/gif</a><a class="headerlink" href="#img-sfw-hug-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Hug Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Response</label><label for="__tabbed_13_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Response</label><label for="__tabbed_14_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1575,7 +1634,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-sfw-icon-img"><a href="https://purrbot.site/api/img/sfw/icon/img">/img/sfw/icon/img</a><a class="headerlink" href="#img-sfw-icon-img" title="Permanent link">&para;</a></h3>
 <p>Returns a random <a href="/bot/welcome-images#icons">Welcome Icon</a></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Response</label><label for="__tabbed_14_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Response</label><label for="__tabbed_15_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1596,7 +1655,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-sfw-kiss-gif"><a href="https://purrbot.site/api/img/sfw/kiss/gif">/img/sfw/kiss/gif</a><a class="headerlink" href="#img-sfw-kiss-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Kiss Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Response</label><label for="__tabbed_15_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Response</label><label for="__tabbed_16_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1617,7 +1676,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-sfw-kitsune-img"><a href="https://purrbot.site/api/img/sfw/kitsune/img">/img/sfw/kitsune/img</a><a class="headerlink" href="#img-sfw-kitsune-img" title="Permanent link">&para;</a></h3>
 <p>Returns a random Image of a Kitsune (Fox girl).</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Response</label><label for="__tabbed_16_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">Response</label><label for="__tabbed_17_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1638,7 +1697,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-sfw-lick-gif"><a href="https://purrbot.site/api/img/sfw/lick/gif">/img/sfw/lick/gif</a><a class="headerlink" href="#img-sfw-lick-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Lick Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">Response</label><label for="__tabbed_17_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:2"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">Response</label><label for="__tabbed_18_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1660,7 +1719,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <h3 id="img-sfw-neko-type"><a href="https://purrbot.site/api/img/sfw/neko/gif">/img/sfw/neko/:type</a><a class="headerlink" href="#img-sfw-neko-type" title="Permanent link">&para;</a></h3>
 <p>Returns either a random Neko Image or Gif.<br />
 <code>:type</code> can be either <code>gif</code> for gifs or <code>img</code> for images.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="18:3"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><input id="__tabbed_18_3" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">Response (GIF)</label><label for="__tabbed_18_2">Response (IMG)</label><label for="__tabbed_18_3">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:3"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><input id="__tabbed_19_3" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">Response (GIF)</label><label for="__tabbed_19_2">Response (IMG)</label><label for="__tabbed_19_3">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1691,7 +1750,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-sfw-okami-img"><a href="https://purrbot.site/api/img/sfw/okami/img">/img/sfw/okami/img</a><a class="headerlink" href="#img-sfw-okami-img" title="Permanent link">&para;</a></h3>
 <p>Returns a random Image of an Okami (Wolf girl).</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">Response</label><label for="__tabbed_19_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">Response</label><label for="__tabbed_20_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1712,7 +1771,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-sfw-pat-gif"><a href="https://purrbot.site/api/img/sfw/pat/gif">/img/sfw/pat/gif</a><a class="headerlink" href="#img-sfw-pat-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Pat Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">Response</label><label for="__tabbed_20_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">Response</label><label for="__tabbed_21_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1733,7 +1792,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-sfw-poke-gif"><a href="https://purrbot.site/api/img/sfw/poke/gif">/img/sfw/poke/gif</a><a class="headerlink" href="#img-sfw-poke-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Poke Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">Response</label><label for="__tabbed_21_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:2"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">Response</label><label for="__tabbed_22_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1754,7 +1813,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-sfw-senko-img"><a href="https://purrbot.site/api/img/sfw/senko/img">/img/sfw/senko/img</a><a class="headerlink" href="#img-sfw-senko-img" title="Permanent link">&para;</a></h3>
 <p>Returns a random Image of Senko-San.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="22:2"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">Response</label><label for="__tabbed_22_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:2"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><input id="__tabbed_23_2" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="__tabbed_23_1">Response</label><label for="__tabbed_23_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1775,7 +1834,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-sfw-slap-gif"><a href="https://purrbot.site/api/img/sfw/slap/gif">/img/sfw/slap/gif</a><a class="headerlink" href="#img-sfw-slap-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Slap Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="23:2"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><input id="__tabbed_23_2" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="__tabbed_23_1">Response</label><label for="__tabbed_23_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="24:2"><input checked="checked" id="__tabbed_24_1" name="__tabbed_24" type="radio" /><input id="__tabbed_24_2" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="__tabbed_24_1">Response</label><label for="__tabbed_24_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1796,7 +1855,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-sfw-smile-gif"><a href="https://purrbot.site/api/img/sfw/smile/gif">/img/sfw/smile/gif</a><a class="headerlink" href="#img-sfw-smile-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Smile Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="24:2"><input checked="checked" id="__tabbed_24_1" name="__tabbed_24" type="radio" /><input id="__tabbed_24_2" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="__tabbed_24_1">Response</label><label for="__tabbed_24_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="25:2"><input checked="checked" id="__tabbed_25_1" name="__tabbed_25" type="radio" /><input id="__tabbed_25_2" name="__tabbed_25" type="radio" /><div class="tabbed-labels"><label for="__tabbed_25_1">Response</label><label for="__tabbed_25_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1817,7 +1876,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-sfw-tail-gif"><a href="https://purrbot.site/api/img/sfw/tail/gif">/img/sfw/tail/gif</a><a class="headerlink" href="#img-sfw-tail-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Tail wagging Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="25:2"><input checked="checked" id="__tabbed_25_1" name="__tabbed_25" type="radio" /><input id="__tabbed_25_2" name="__tabbed_25" type="radio" /><div class="tabbed-labels"><label for="__tabbed_25_1">Response</label><label for="__tabbed_25_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="26:2"><input checked="checked" id="__tabbed_26_1" name="__tabbed_26" type="radio" /><input id="__tabbed_26_2" name="__tabbed_26" type="radio" /><div class="tabbed-labels"><label for="__tabbed_26_1">Response</label><label for="__tabbed_26_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1838,7 +1897,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-sfw-tickle-gif"><a href="https://purrbot.site/api/img/sfw/tickle/gif">/img/sfw/tickle/gif</a><a class="headerlink" href="#img-sfw-tickle-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Tickle Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="26:2"><input checked="checked" id="__tabbed_26_1" name="__tabbed_26" type="radio" /><input id="__tabbed_26_2" name="__tabbed_26" type="radio" /><div class="tabbed-labels"><label for="__tabbed_26_1">Response</label><label for="__tabbed_26_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="27:2"><input checked="checked" id="__tabbed_27_1" name="__tabbed_27" type="radio" /><input id="__tabbed_27_2" name="__tabbed_27" type="radio" /><div class="tabbed-labels"><label for="__tabbed_27_1">Response</label><label for="__tabbed_27_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1862,9 +1921,112 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <p>Contains images that are considered Not Safe for work.<br />
 If you are using those images on Discord, make sure to only share them in Channels marked as NSFW.<br />
 You can access those endpoints through simple <code>GET</code> requests.</p>
+<h3 id="list-nsfw-path">/list/nsfw/:path<a class="headerlink" href="#list-nsfw-path" title="Permanent link">&para;</a></h3>
+<p>Lists all available images in the provided <code>:path</code>.<br />
+The path is the exact same as with the below endpoints. You only have to replace <code>/img</code> with <code>/list</code> in the URL.</p>
+<p><strong>Example:</strong> <a href="#img-nsfw-anal-gif"><code>/img/nsfw/anal/gif</code></a> becomes <a href="https://purrbot.site/api/list/nsfw/anal/gif"><code>/list/nsfw/anal/gif</code></a></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="28:2"><input checked="checked" id="__tabbed_28_1" name="__tabbed_28" type="radio" /><input id="__tabbed_28_2" name="__tabbed_28" type="radio" /><div class="tabbed-labels"><label for="__tabbed_28_1">Response</label><label for="__tabbed_28_2">Failure</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>Type:</strong> :octicon-file-code-24: <code>JSON</code><br />
+<strong>Example:</strong><br />
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_001.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_002.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_003.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_004.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_005.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_006.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_007.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_008.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_009.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_010.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_011.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_012.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_013.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_014.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_015.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_016.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_017.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_018.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_019.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_020.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_021.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_022.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_023.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_024.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_025.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_026.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_027.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_028.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_029.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_030.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_031.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_032.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_033.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_034.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_035.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_036.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_037.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_038.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_039.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_040.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_041.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_042.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_043.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_044.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_045.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_046.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_047.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_048.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_049.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_050.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_051.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_052.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_053.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_054.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_055.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_056.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_057.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_058.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_059.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_060.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_061.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_062.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_063.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_064.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_065.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_066.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_067.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_068.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_069.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_070.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_071.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_072.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_073.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_074.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_075.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_076.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_077.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_078.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_079.gif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;https://purrbot.site/img/nsfw/anal/gif/anal_080.gif&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
+<strong>Example:</strong><br />
+Please see the <a href="#possible-errors">Possible Errors</a> section for all errors this API may return.</p>
+</div>
+</div>
+</div>
 <h3 id="img-nsfw-anal-gif"><a href="https://purrbot.site/api/img/nsfw/anal/gif">/img/nsfw/anal/gif</a><a class="headerlink" href="#img-nsfw-anal-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Anal-sex Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="27:2"><input checked="checked" id="__tabbed_27_1" name="__tabbed_27" type="radio" /><input id="__tabbed_27_2" name="__tabbed_27" type="radio" /><div class="tabbed-labels"><label for="__tabbed_27_1">Response</label><label for="__tabbed_27_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="29:2"><input checked="checked" id="__tabbed_29_1" name="__tabbed_29" type="radio" /><input id="__tabbed_29_2" name="__tabbed_29" type="radio" /><div class="tabbed-labels"><label for="__tabbed_29_1">Response</label><label for="__tabbed_29_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1885,7 +2047,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-nsfw-blowjob-gif"><a href="https://purrbot.site/api/img/nsfw/blowjob/gif">/img/nsfw/blowjob/gif</a><a class="headerlink" href="#img-nsfw-blowjob-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Blowjob Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="28:2"><input checked="checked" id="__tabbed_28_1" name="__tabbed_28" type="radio" /><input id="__tabbed_28_2" name="__tabbed_28" type="radio" /><div class="tabbed-labels"><label for="__tabbed_28_1">Response</label><label for="__tabbed_28_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="30:2"><input checked="checked" id="__tabbed_30_1" name="__tabbed_30" type="radio" /><input id="__tabbed_30_2" name="__tabbed_30" type="radio" /><div class="tabbed-labels"><label for="__tabbed_30_1">Response</label><label for="__tabbed_30_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1906,7 +2068,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-nsfw-cum-gif"><a href="https://purrbot.site/api/img/nsfw/cum/gif">/img/nsfw/cum/gif</a><a class="headerlink" href="#img-nsfw-cum-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Cumming Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="29:2"><input checked="checked" id="__tabbed_29_1" name="__tabbed_29" type="radio" /><input id="__tabbed_29_2" name="__tabbed_29" type="radio" /><div class="tabbed-labels"><label for="__tabbed_29_1">Response</label><label for="__tabbed_29_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="31:2"><input checked="checked" id="__tabbed_31_1" name="__tabbed_31" type="radio" /><input id="__tabbed_31_2" name="__tabbed_31" type="radio" /><div class="tabbed-labels"><label for="__tabbed_31_1">Response</label><label for="__tabbed_31_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1927,7 +2089,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-nsfw-fuck-gif"><a href="https://purrbot.site/api/img/nsfw/fuck/gif">/img/nsfw/fuck/gif</a><a class="headerlink" href="#img-nsfw-fuck-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Sex Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="30:2"><input checked="checked" id="__tabbed_30_1" name="__tabbed_30" type="radio" /><input id="__tabbed_30_2" name="__tabbed_30" type="radio" /><div class="tabbed-labels"><label for="__tabbed_30_1">Response</label><label for="__tabbed_30_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="32:2"><input checked="checked" id="__tabbed_32_1" name="__tabbed_32" type="radio" /><input id="__tabbed_32_2" name="__tabbed_32" type="radio" /><div class="tabbed-labels"><label for="__tabbed_32_1">Response</label><label for="__tabbed_32_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1949,7 +2111,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <h3 id="img-nsfw-neko-type"><a href="https://purrbot.site/api/img/nsfw/neko/gif">/img/nsfw/neko/:type</a><a class="headerlink" href="#img-nsfw-neko-type" title="Permanent link">&para;</a></h3>
 <p>Returns either a random lewd Neko Image or Gif.<br />
 <code>:type</code> can be either <code>gif</code> for gifs or <code>img</code> for images.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="31:3"><input checked="checked" id="__tabbed_31_1" name="__tabbed_31" type="radio" /><input id="__tabbed_31_2" name="__tabbed_31" type="radio" /><input id="__tabbed_31_3" name="__tabbed_31" type="radio" /><div class="tabbed-labels"><label for="__tabbed_31_1">Response (GIF)</label><label for="__tabbed_31_2">Response (IMG)</label><label for="__tabbed_31_3">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="33:3"><input checked="checked" id="__tabbed_33_1" name="__tabbed_33" type="radio" /><input id="__tabbed_33_2" name="__tabbed_33" type="radio" /><input id="__tabbed_33_3" name="__tabbed_33" type="radio" /><div class="tabbed-labels"><label for="__tabbed_33_1">Response (GIF)</label><label for="__tabbed_33_2">Response (IMG)</label><label for="__tabbed_33_3">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -1980,7 +2142,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-nsfw-pussylick-gif"><a href="https://purrbot.site/api/img/nsfw/pussylick/gif">/img/nsfw/pussylick/gif</a><a class="headerlink" href="#img-nsfw-pussylick-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Pussy licking Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="32:2"><input checked="checked" id="__tabbed_32_1" name="__tabbed_32" type="radio" /><input id="__tabbed_32_2" name="__tabbed_32" type="radio" /><div class="tabbed-labels"><label for="__tabbed_32_1">Response</label><label for="__tabbed_32_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="34:2"><input checked="checked" id="__tabbed_34_1" name="__tabbed_34" type="radio" /><input id="__tabbed_34_2" name="__tabbed_34" type="radio" /><div class="tabbed-labels"><label for="__tabbed_34_1">Response</label><label for="__tabbed_34_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -2001,7 +2163,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-nsfw-solo-gif"><a href="https://purrbot.site/api/img/nsfw/solo/gif">/img/nsfw/solo/gif</a><a class="headerlink" href="#img-nsfw-solo-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Girl masturbating Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="33:2"><input checked="checked" id="__tabbed_33_1" name="__tabbed_33" type="radio" /><input id="__tabbed_33_2" name="__tabbed_33" type="radio" /><div class="tabbed-labels"><label for="__tabbed_33_1">Response</label><label for="__tabbed_33_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="35:2"><input checked="checked" id="__tabbed_35_1" name="__tabbed_35" type="radio" /><input id="__tabbed_35_2" name="__tabbed_35" type="radio" /><div class="tabbed-labels"><label for="__tabbed_35_1">Response</label><label for="__tabbed_35_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -2022,7 +2184,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-nsfw-threesome_fff-gif"><a href="https://purrbot.site/api/img/nsfw/threesome_fff/gif">/img/nsfw/threesome_fff/gif</a><a class="headerlink" href="#img-nsfw-threesome_fff-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Threesome (only Female) Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="34:2"><input checked="checked" id="__tabbed_34_1" name="__tabbed_34" type="radio" /><input id="__tabbed_34_2" name="__tabbed_34" type="radio" /><div class="tabbed-labels"><label for="__tabbed_34_1">Response</label><label for="__tabbed_34_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="36:2"><input checked="checked" id="__tabbed_36_1" name="__tabbed_36" type="radio" /><input id="__tabbed_36_2" name="__tabbed_36" type="radio" /><div class="tabbed-labels"><label for="__tabbed_36_1">Response</label><label for="__tabbed_36_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -2043,7 +2205,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-nsfw-threesome_ffm-gif"><a href="https://purrbot.site/api/img/nsfw/threesome_ffm/gif">/img/nsfw/threesome_ffm/gif</a><a class="headerlink" href="#img-nsfw-threesome_ffm-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Threesome (2 Female, 1 Male) Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="35:2"><input checked="checked" id="__tabbed_35_1" name="__tabbed_35" type="radio" /><input id="__tabbed_35_2" name="__tabbed_35" type="radio" /><div class="tabbed-labels"><label for="__tabbed_35_1">Response</label><label for="__tabbed_35_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="37:2"><input checked="checked" id="__tabbed_37_1" name="__tabbed_37" type="radio" /><input id="__tabbed_37_2" name="__tabbed_37" type="radio" /><div class="tabbed-labels"><label for="__tabbed_37_1">Response</label><label for="__tabbed_37_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -2064,7 +2226,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-nsfw-threesome_mmf-gif"><a href="https://purrbot.site/api/img/nsfw/threesome_mmf/gif">/img/nsfw/threesome_mmf/gif</a><a class="headerlink" href="#img-nsfw-threesome_mmf-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Threesome (2 Male, 1 Female) Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="36:2"><input checked="checked" id="__tabbed_36_1" name="__tabbed_36" type="radio" /><input id="__tabbed_36_2" name="__tabbed_36" type="radio" /><div class="tabbed-labels"><label for="__tabbed_36_1">Response</label><label for="__tabbed_36_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="38:2"><input checked="checked" id="__tabbed_38_1" name="__tabbed_38" type="radio" /><input id="__tabbed_38_2" name="__tabbed_38" type="radio" /><div class="tabbed-labels"><label for="__tabbed_38_1">Response</label><label for="__tabbed_38_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -2085,7 +2247,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-nsfw-yaoi-gif"><a href="https://purrbot.site/api/img/nsfw/yaoi/gif">/img/nsfw/yaoi/gif</a><a class="headerlink" href="#img-nsfw-yaoi-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a Random Yaoi (Gay) sex Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="37:2"><input checked="checked" id="__tabbed_37_1" name="__tabbed_37" type="radio" /><input id="__tabbed_37_2" name="__tabbed_37" type="radio" /><div class="tabbed-labels"><label for="__tabbed_37_1">Response</label><label for="__tabbed_37_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="39:2"><input checked="checked" id="__tabbed_39_1" name="__tabbed_39" type="radio" /><input id="__tabbed_39_2" name="__tabbed_39" type="radio" /><div class="tabbed-labels"><label for="__tabbed_39_1">Response</label><label for="__tabbed_39_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -2106,7 +2268,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 <h3 id="img-nsfw-yuri-gif"><a href="https://purrbot.site/api/img/nsfw/yuri/gif">/img/nsfw/yuri/gif</a><a class="headerlink" href="#img-nsfw-yuri-gif" title="Permanent link">&para;</a></h3>
 <p>Returns a random Yuri (Lesbian) sex Gif.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="38:2"><input checked="checked" id="__tabbed_38_1" name="__tabbed_38" type="radio" /><input id="__tabbed_38_2" name="__tabbed_38" type="radio" /><div class="tabbed-labels"><label for="__tabbed_38_1">Response</label><label for="__tabbed_38_2">Failure</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="40:2"><input checked="checked" id="__tabbed_40_1" name="__tabbed_40" type="radio" /><input id="__tabbed_40_2" name="__tabbed_40" type="radio" /><div class="tabbed-labels"><label for="__tabbed_40_1">Response</label><label for="__tabbed_40_2">Failure</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Type:</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0V3zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> <code>JSON</code><br />
@@ -2130,7 +2292,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 <p>Whenever a request fails, either by an error on the client's end or caused by the API itself, will you receive a JSON Body with information regarding the error.</p>
 <p>To get more information about a value, click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 7v2h2v8h2V7h-4m2-5a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2z"/></svg></span> <strong>Number Icon</strong> next to the value to get a text box with useful information such as type and default value.</p>
 <h3 id="error-api-quote">/api/quote<a class="headerlink" href="#error-api-quote" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="39:2"><input checked="checked" id="__tabbed_39_1" name="__tabbed_39" type="radio" /><input id="__tabbed_39_2" name="__tabbed_39" type="radio" /><div class="tabbed-labels"><label for="__tabbed_39_1">Empty JSON Body/No JSON</label><label for="__tabbed_39_2">Malformed JSON/Invalid Values</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="41:2"><input checked="checked" id="__tabbed_41_1" name="__tabbed_41" type="radio" /><input id="__tabbed_41_2" name="__tabbed_41" type="radio" /><div class="tabbed-labels"><label for="__tabbed_41_1">Empty JSON Body/No JSON</label><label for="__tabbed_41_2">Malformed JSON/Invalid Values</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Status-Code</strong>: <a href="https://httpstatuses.com/400">400</a></p>
@@ -2171,7 +2333,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 </div>
 <h3 id="error-api-status">/api/status<a class="headerlink" href="#error-api-status" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="40:2"><input checked="checked" id="__tabbed_40_1" name="__tabbed_40" type="radio" /><input id="__tabbed_40_2" name="__tabbed_40" type="radio" /><div class="tabbed-labels"><label for="__tabbed_40_1">Empty JSON Body/No JSON</label><label for="__tabbed_40_2">Malformed JSON/Invalid Values</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="42:2"><input checked="checked" id="__tabbed_42_1" name="__tabbed_42" type="radio" /><input id="__tabbed_42_2" name="__tabbed_42" type="radio" /><div class="tabbed-labels"><label for="__tabbed_42_1">Empty JSON Body/No JSON</label><label for="__tabbed_42_2">Malformed JSON/Invalid Values</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Status-Code</strong>: <a href="https://httpstatuses.com/400">400</a></p>
@@ -2211,8 +2373,8 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
 </div>
 </div>
 </div>
-<h3 id="error-api-img">/api/img/*<a class="headerlink" href="#error-api-img" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="41:2"><input checked="checked" id="__tabbed_41_1" name="__tabbed_41" type="radio" /><input id="__tabbed_41_2" name="__tabbed_41" type="radio" /><div class="tabbed-labels"><label for="__tabbed_41_1">Invalid Path (No API endpoint)</label><label for="__tabbed_41_2">No Images available</label></div>
+<h3 id="error-img">/img/*<a class="headerlink" href="#error-img" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="43:2"><input checked="checked" id="__tabbed_43_1" name="__tabbed_43" type="radio" /><input id="__tabbed_43_2" name="__tabbed_43" type="radio" /><div class="tabbed-labels"><label for="__tabbed_43_1">Invalid Path (No API endpoint)</label><label for="__tabbed_43_2">No Images available</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Status-Code</strong>: <a href="https://httpstatuses.com/403">403</a></p>
@@ -2223,7 +2385,7 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
     <span class="s2">&quot;user-agent&quot;</span><span class="o">:</span> <span class="s2">&quot;:user-agent&quot;</span> <span class="c1">// (3)</span>
   <span class="p">},</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;The selected API path is not supported!&quot;</span>
+  <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;The provided path is not valid.&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
 <ol>
@@ -2241,11 +2403,52 @@ Please see the <a href="#possible-errors">Possible Errors</a> section for all er
     <span class="s2">&quot;user-agent&quot;</span><span class="o">:</span> <span class="s2">&quot;:user-agent&quot;</span> <span class="c1">// (3)</span>
   <span class="p">},</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;The selected API path does not contain any images!&quot;</span>
+  <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;The provided path does not contain any images.&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
 <ol>
 <li>The Path you accessed. Example: <code>/api/img/sfw/background/img</code></li>
+<li>The content-tyoe you provided. This <strong>must</strong> be <code>application/json</code>.</li>
+<li>The User-Agent you used.</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="error-list">/list/*<a class="headerlink" href="#error-list" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="44:2"><input checked="checked" id="__tabbed_44_1" name="__tabbed_44" type="radio" /><input id="__tabbed_44_2" name="__tabbed_44" type="radio" /><div class="tabbed-labels"><label for="__tabbed_44_1">Invalid Path (No API endpoint)</label><label for="__tabbed_44_2">No Images available</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>Status-Code</strong>: <a href="https://httpstatuses.com/403">403</a></p>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
+  <span class="s2">&quot;details&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;path&quot;</span><span class="o">:</span> <span class="s2">&quot;/api/list/:path&quot;</span><span class="p">,</span> <span class="c1">// (1)</span>
+    <span class="s2">&quot;content-type&quot;</span><span class="o">:</span> <span class="s2">&quot;:content-type&quot;</span><span class="p">,</span> <span class="c1">// (2)</span>
+    <span class="s2">&quot;user-agent&quot;</span><span class="o">:</span> <span class="s2">&quot;:user-agent&quot;</span> <span class="c1">// (3)</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;The provided path is not valid.&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>The Path you accessed. Example: <code>/api/list/sfw/background/img</code></li>
+<li>The content-tyoe you provided. This <strong>must</strong> be <code>application/json</code>.</li>
+<li>The User-Agent you used.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p><strong>Status-Code</strong>: <a href="https://httpstatuses.com/404">404</a></p>
+<div class="highlight"><span class="filename">JSON Body Example</span><pre><span></span><code><span class="p">{</span>
+  <span class="s2">&quot;details&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;path&quot;</span><span class="o">:</span> <span class="s2">&quot;/api/list/:path&quot;</span><span class="p">,</span> <span class="c1">// (1)</span>
+    <span class="s2">&quot;content-type&quot;</span><span class="o">:</span> <span class="s2">&quot;:content-type&quot;</span><span class="p">,</span> <span class="c1">// (2)</span>
+    <span class="s2">&quot;user-agent&quot;</span><span class="o">:</span> <span class="s2">&quot;:user-agent&quot;</span> <span class="c1">// (3)</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;The provided path does not contain any images.&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>The Path you accessed. Example: <code>/api/list/sfw/background/img</code></li>
 <li>The content-tyoe you provided. This <strong>must</strong> be <code>application/json</code>.</li>
 <li>The User-Agent you used.</li>
 </ol>
@@ -2330,7 +2533,7 @@ and provided under the
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "content.code.annotate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
-      <script src="../assets/javascripts/bundle.b88e97c5.min.js"></script>
+      <script src="../assets/javascripts/bundle.467223ff.min.js"></script>
       
     
   </body>
