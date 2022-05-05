@@ -19,7 +19,7 @@ The API is [open source](https://github.com/purrbot-site/ImageAPI) and contribut
 ## POST
 The below API endpoints require you to make a `POST` request to them. a default `GET` request will automatically redirect to the respective documentation (this page).
 
-To get more information about a value, click the :material-numeric-1-circle: **Number Icon** next to the value to get a text box with useful information such as type and default value.
+To get more information about a value, click the :material-plus-circle: **Plus Icon** next to the value to get a text box with useful information such as type and default value.
 
 ### /quote
 *Generates images that look like Discord messages.*
@@ -113,7 +113,7 @@ The path is the exact same as with the below endpoints. You only have to replace
 **Example:** [`/img/sfw/background/img`](#img-sfw-background-img) becomes [`/list/sfw/background/img`](https://purrbot.site/api/list/sfw/background/img)
 
 === "Response"
-    **Type:** :octicon-file-code-24: `JSON`  
+    **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
     ```json title="JSON Body Example"
     {
@@ -636,7 +636,7 @@ The path is the exact same as with the below endpoints. You only have to replace
 **Example:** [`/img/nsfw/anal/gif`](#img-nsfw-anal-gif) becomes [`/list/nsfw/anal/gif`](https://purrbot.site/api/list/nsfw/anal/gif)
 
 === "Response"
-    **Type:** :octicon-file-code-24: `JSON`  
+    **Type:** :octicons-file-code-24: `JSON`  
     **Example:**  
     ```json title="JSON Body Example"
     {
@@ -977,7 +977,7 @@ Returns a random Yuri (Lesbian) sex Gif.
 ## Possible Errors
 Whenever a request fails, either by an error on the client's end or caused by the API itself, will you receive a JSON Body with information regarding the error.
 
-To get more information about a value, click the :material-numeric-1-circle: **Number Icon** next to the value to get a text box with useful information such as type and default value.
+To get more information about a value, click the :material-plus-circle: **Plus Icon** next to the value to get a text box with useful information such as type and default value.
 
 ### /api/quote { #error-api-quote }
 
