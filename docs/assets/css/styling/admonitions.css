@@ -34,3 +34,33 @@
   -webkit-mask-image: var(--md-admonition-icon--youtube);
           mask-image: var(--md-admonition-icon--youtube);
 }
+
+.md-typeset .admonition.api-get,
+.md-typeset details.api-get {
+  border-color: rgb(68, 138, 255);
+}
+
+.md-typeset .api-get > .admonition-title,
+.md-typeset .api-get > summary {
+  background-color: rgba(68, 138, 255, 0.1);
+}
+
+.md-typeset .api-get > .admonition-title::before,
+.md-typeset .api-get > summary::before {
+  content: "GET";
+}
+
+.md-typeset .admonition.api-post,
+.md-typeset details.api-post {
+  border-color: rgb(0, 200, 83);
+}
+
+.md-typeset .api-post > .admonition-title,
+.md-typeset .api-post > summary {
+  background-color: rgba(0, 200, 83, 0.1);
+}
+
+.md-typeset .api-post > .admonition-title::before,
+.md-typeset .api-post > summary::before {
+  content: "POST";
+}
