@@ -13,7 +13,7 @@
   --md-admonition-icon--quote: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M3.25 4a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 01.75.75v3.19l3.72-3.72a.75.75 0 01.53-.22h10a.25.25 0 00.25-.25V4.25a.25.25 0 00-.25-.25H3.25zm-1.75.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 01-1.75 1.75h-9.69l-3.573 3.573A1.457 1.457 0 015 21.043V18.5H3.25a1.75 1.75 0 01-1.75-1.75V4.25z"></path></svg>');
   
   --md-admonition-icon--youtube: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>');
-
+  
   --md-clipboard-icon: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M2 9.75C2 8.784 2.784 8 3.75 8h2.5a.75.75 0 010 1.5h-2.5a.25.25 0 00-.25.25v10.5c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25v-2.5a.75.75 0 011.5 0v2.5A1.75 1.75 0 0114.25 22H3.75A1.75 1.75 0 012 20.25V9.75z"></path><path fill-rule="evenodd" d="M8 3.75C8 2.784 8.784 2 9.75 2h10.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0120.25 16H9.75A1.75 1.75 0 018 14.25V3.75zm1.75-.25a.25.25 0 00-.25.25v10.5c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V3.75a.25.25 0 00-.25-.25H9.75z"></path></svg>');
 }
 
@@ -43,11 +43,17 @@
 .md-typeset .api-get > .admonition-title,
 .md-typeset .api-get > summary {
   background-color: rgba(68, 138, 255, 0.1);
+  padding-left: 4rem !important;
+  font-size: .9rem;
 }
 
 .md-typeset .api-get > .admonition-title::before,
 .md-typeset .api-get > summary::before {
   content: "GET";
+  -webkit-mask-image: none;
+          mask-image: none;
+  background-color: transparent;
+  top: auto;
 }
 
 .md-typeset .admonition.api-post,
@@ -58,9 +64,15 @@
 .md-typeset .api-post > .admonition-title,
 .md-typeset .api-post > summary {
   background-color: rgba(0, 200, 83, 0.1);
+  padding-left: 4rem !important;
+  font-size: .9rem;
 }
 
 .md-typeset .api-post > .admonition-title::before,
 .md-typeset .api-post > summary::before {
   content: "POST";
+  -webkit-mask-image: none;
+          mask-image: none;
+  background-color: transparent;
+  top: auto;
 }
