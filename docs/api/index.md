@@ -1,1146 +1,1001 @@
 ---
 title: API
 description: Detailed information about the ImageAPI.
+
+hide:
+  - navigation
+  - toc
 ---
 
-[def_avatar]: https://purrbot.site/assets/img/api/unknown.png
+[source]: https://github.com/purrbot-site/ImageAPI
 [SimpleDateFormat]: https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
 
 # API Documentation
-The ImageAPI was created to be a replacement for the nekos.life API in the bot \*Purr\*.  
-It is publicly available to use.
 
-Since version 1.2.0 of this API can you also find the endpoints of the former PurrBotAPI in this one.  
-The API is [open source](https://github.com/purrbot-site/ImageAPI) and contributions are always welcome.
+The ImageAPI was created as a replacement for your common Image APIs such as nekos.life.  
+Endpoints are available to use without any authentication required.
+
+The [Source code][source] is publicly available and contributions are always welcome.
 
 !!! note "Base URL"
     https://purrbot.site/api
 
-## POST
-The below API endpoints require you to make a `POST` request to them. a default `GET` request will automatically redirect to the respective documentation (this page).
+## Sections
 
-To get more information about a value, click the :material-plus-circle: **Plus Icon** next to the value to get a text box with useful information such as type and default value.
-
-### /quote
-*Generates images that look like Discord messages.*
-
-=== "Request Body"
-    ```js title="JSON Body Example"
-    {
-      "avatar": "https://cdn.discordapp.com/avatars/204232208049766400/dfaaefa54a2804addb1f494da7aa904d.png", // (1)
-      "dateFormat": "dd. MMM yyyy", // (2)
-      "message": "This is an example message.", // (3)
-      "nameColor": "hex:ffffff", // (4)
-      "timestamp": 1583708400, // (5)
-      "username": "Andre_601" // (6)
-    }
-    ```
-
-    1.  **Type:** String  
-        **Default:** [`https://purrbot.site/assets/img/api/unknown.png`][def_avatar]  
-        This has to be a direct URL to an image.
-    2.  **Type:** String  
-        **Default:** `dd. MMM yyyy hh:mm:yyyy`  
-        Sets the format in which the timestamp should be formatted.  
-        This uses the [SimpleDateFormat] provided by Java.
-    3.  **Type:** String  
-        **Default:** `Some message`  
-        The message that should be displayed.  
-        Due to multiple limitations are formatting options (i.e. `**bold**`) NOT supported!
-    4.  **Type:** String  
-        **Default:** `hex:ffffff`  
-        Sets the colour in which the username should be displayed.  
-        Supported formats are `hex:rrggbb`, `rgb:r,g,b` or the raw colour value.
-    5.  **Type:** Number  
-        **Default:** *Current time of request*  
-        The Epoch millis timestamp which will be used together with the `dateFormat` to display the actual date.
-    6.  **Type:** String  
-        **Default:** Someone  
-        The username to display.
-
-=== "Success"
-    **Type:** :octicons-image-24: `Image`  
-    **Example:**  
-    ![quote](/assets/img/quote.png)
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### /status
-*Adds a status icon to the provided Avatar.*
-
-=== "Request Body"
-    ```js title="JSON Body Example"
-    {
-      "avatar": "https://cdn.discordapp.com/avatars/204232208049766400/dfaaefa54a2804addb1f494da7aa904d.png", // (1)
-      "mobile": false, // (2)
-      "status": "online" // (3)
-    }
-    ```
-    
-    1.  **Type:** String  
-        **Default:** [`https://purrbot.site/assets/img/api/unknown.png`][def_avatar]  
-        This has to be a direct URL to an image.
-    2.  **Type:** Boolean  
-        **Default:** `false`  
-        Will display a mobile phone icon instead of the usual indicators when set to `true`.
-    3.  **Type:** String  
-        **Default:** `offline`  
-        Set the status to display as icon. Supported are `online`, `idle`, `do_not_disturb`/`dnd` and `offline`.
-
-=== "Success"
-    **Type:** :octicons-image-24: `Image`  
-    **Example:**  
-    ![status](/assets/img/status.png){ width="80" }
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
+- [Safe for Work (SFW) Endpoints](#sfw-endpoints)
+- [Not Safe for Work (NSFW) Endpoints](#nsfw-endpoints)
 
 ----
 
-## GET <small>(SFW)</small>
-Contains images that are considered safe for work.  
-You can access those endpoints through simple `GET` requests.
+## Safe for Work (SFW) Endpoints { #sfw-endpoints }
 
-### /list/sfw/:path { #list-sfw-path }
-Lists all available images in the provided `:path`.  
-The path is the exact same as with the below endpoints. You only have to replace `/img` with `/list` in the URL.
-
-**Example:** [`/img/sfw/background/img`](#img-sfw-background-img) becomes [`/list/sfw/background/img`](https://purrbot.site/api/list/sfw/background/img)
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```json title="JSON Body Example"
+??? api-post "/quote"
+    Generates an image that mimics a Discord message.
+    
+    <h3>Request</h3>
+    
+    **Type:** :octicons-file-code-24: `application/json`  
+    **Note:** All Options are optional. You still need to provide an empty JSON Object (`{}`) on the request.
+    
+    <h4>Body</h4>
+    
+    | Name       | Type         | Default                                         | Notes                                |
+    | ---------- | ------------ | ----------------------------------------------- | ------------------------------------ |
+    | avatar     | String (URL) | https://purrbot.site/assets/img/api/unknown.png |                                      |
+    | dateFormat | String       | `dd. MMM yyyy`                                  | Uses [SimpleDateFormat]              |
+    | message    | String       | `This is an example message.`                   |                                      |
+    | nameColor  | String       | `hex:ffffff`                                    | Supported: `rgb:r,g,b`, `hex:rrggbb` |
+    | timestamp  | Integer      | `Current time`                                  |                                      |
+    | username   | String       | `Someone`                                       |                                      |
+    
+    
+    ```json title="Example"
     {
-      "error": false,
-      "links": [
-        "https://purrbot.site/img/sfw/background/img/color_blue.png",
-        "https://purrbot.site/img/sfw/background/img/color_black.png",
-        "https://purrbot.site/img/sfw/background/img/color_blurple.png",
-        "https://purrbot.site/img/sfw/background/img/color_green.png",
-        "https://purrbot.site/img/sfw/background/img/color_grey.png",
-        "https://purrbot.site/img/sfw/background/img/color_red.png",
-        "https://purrbot.site/img/sfw/background/img/color_white.png",
-        "https://purrbot.site/img/sfw/background/img/gradient.png",
-        "https://purrbot.site/img/sfw/background/img/gradient_blue.png",
-        "https://purrbot.site/img/sfw/background/img/gradient_dark_red.png",
-        "https://purrbot.site/img/sfw/background/img/gradient_green.png",
-        "https://purrbot.site/img/sfw/background/img/gradient_orange.png",
-        "https://purrbot.site/img/sfw/background/img/gradient_red.png",
-        "https://purrbot.site/img/sfw/background/img/rainbow.png"
-      ],
-      "time": 0
+      "avatar": "https://cdn.discordapp.com/avatars/204232208049766400/dfaaefa54a2804addb1f494da7aa904d.png",
+      "dateFormat": "dd. MMM yyyy",
+      "message": "This is an example message.",
+      "nameColor": "hex:ffffff",
+      "timestamp": 1583708400,
+      "username": "Andre_601"
+    }
     ```
     
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-image-24: `image/png`
+        
+        ![quote](/assets/img/quote.png)
+        
+    ??? failure "400"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "details": {
+            "path": "/api/quote",
+            "content-type": ":your-content-type",
+            "user-agent": ":your-user-agent"
+          },
+          "error": true,
+          "message": "Received invalid or empty JSON Body."
+        }
+        ```
+        
+    ??? failure "500"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "details": {
+            "path": "/api/quote",
+            "content-type": ":your-content-type",
+            "user-agent": ":your-user-agent"
+          },
+          "error": true,
+          "message": "Couldn't generate Image. Make sure the values are valid!"
+        }
+        ```
 
-### [/img/sfw/background/img](https://purrbot.site/api/img/sfw/background/img) { #img-sfw-background-img }
-Returns a Random [Welcome Background](/bot/welcome-images#backgrounds).
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
+??? api-post "/status"
+    Generates an image that displays an avatar with a Status icon.
+    
+    <h3>Request</h3>
+    
+    **Type:** :octicons-file-code-24: `application/json`
+    
+    <h4>Body</h4>
+    
+    | Name       | Type         | Default                                         | Notes                                                            |
+    | ---------- | ------------ | ----------------------------------------------- | ---------------------------------------------------------------- |
+    | avatar     | String (URL) | https://purrbot.site/assets/img/api/unknown.png |                                                                  |
+    | mobile     | Boolean      | `false`                                         | Changes the icon to a phone. Not used with status `offline`.     |
+    | status     | String       | `offline`                                       | Supported: `online`, `idle`, `do_not_disturb`/`dnd` or `offline` |
+    
+    
+    ```json title="Example"
     {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/background/img/color_black.png",
-      "time": 0
+      "avatar": "https://cdn.discordapp.com/avatars/204232208049766400/dfaaefa54a2804addb1f494da7aa904d.png",
+      "mobile": false,
+      "status": "online"
     }
     ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/sfw/bite/gif](https://purrbot.site/api/img/sfw/bite/gif) { #img-sfw-bite-gif }
-Returns a random Bite Gif.
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/bite/gif/bite_001.gif",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/sfw/blush/gif](https://purrbot.site/api/img/sfw/blush/gif) { #img-sfw-blush-gif }
-Returns a random blush Gif.
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/blush/gif/blush_001.gif",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/sfw/cry/gif](https://purrbot.site/api/img/sfw/cry/gif) { #img-sfw-cry-gif }
-Returns a random Cry Gif.
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/cry/gif/cry_001.gif",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/sfw/cuddle/gif](https://purrbot.site/api/img/sfw/cuddle/gif) { #img-sfw-cuddle-gif }
-Returns a random Cuddle Gif.
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/cuddle/gif/cuddle_001.gif",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/sfw/dance/gif](https://purrbot.site/api/img/sfw/dance/gif) { #img-sfw-dance-gif }
-Returns a random Dance Gif.
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/dance/gif/dance_001.gif",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/sfw/eevee/:type](https://purrbot.site/api/img/sfw/eevee/gif) { #img-sfw-eevee-type }
-Returns either a random Eevee Image or Gif.  
-`:type` can be either `gif` for gifs or `img` for images.
-
-=== "Response (GIF)"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/eevee/gif/eevee_001.gif",
-      "time": 0
-    }
-    ```
-
-=== "Response (IMG)"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/eevee/img/eevee_001.jpg",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/sfw/feed/gif](https://purrbot.site/api/img/sfw/feed/gif) { #img-sfw-feed-gif }
-Returns a random Feeding Gif.
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/feed/gif/feed_001.gif",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/sfw/fluff/gif](https://purrbot.site/api/img/sfw/fluff/gif) { #img-sfw-fluff-gif }
-Returns a random Fluffing Gif.
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/fluff/gif/fluff_001.gif",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/sfw/holo/img](https://purrbot.site/api/img/sfw/holo/img) { #img-sfw-holo-img }
-Returns a random Image of Holo (Spice & Wolf).
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/holo/img/holo_001.jpg",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/sfw/hug/gif](https://purrbot.site/api/img/sfw/hug/gif) { #img-sfw-hug-gif }
-Returns a random Hug Gif.
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/hug/gif/hug_001.gif",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/sfw/icon/img](https://purrbot.site/api/img/sfw/icon/img) { #img-sfw-icon-img }
-Returns a random [Welcome Icon](/bot/welcome-images#icons)
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/icon/img/holo.png",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/sfw/kiss/gif](https://purrbot.site/api/img/sfw/kiss/gif) { #img-sfw-kiss-gif }
-Returns a random Kiss Gif.
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/kiss/gif/kiss_001.gif",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/sfw/kitsune/img](https://purrbot.site/api/img/sfw/kitsune/img) { #img-sfw-kitsune-img }
-Returns a random Image of a Kitsune (Fox girl).
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/kitsune/img/kitsune_001.gif",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/sfw/lick/gif](https://purrbot.site/api/img/sfw/lick/gif) { #img-sfw-lick-gif }
-Returns a random Lick Gif.
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/lick/gif/lick_001.gif",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/sfw/neko/:type](https://purrbot.site/api/img/sfw/neko/gif) { #img-sfw-neko-type }
-Returns either a random Neko Image or Gif.  
-`:type` can be either `gif` for gifs or `img` for images.
-
-=== "Response (GIF)"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/neko/gif/neko_001.gif",
-      "time": 0
-    }
-    ```
-
-=== "Response (IMG)"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/neko/img/neko_001.jpg",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/sfw/okami/img](https://purrbot.site/api/img/sfw/okami/img) { #img-sfw-okami-img }
-Returns a random Image of an Okami (Wolf girl).
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/okami/img/okami_001.jpg",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/sfw/pat/gif](https://purrbot.site/api/img/sfw/pat/gif) { #img-sfw-pat-gif }
-Returns a random Pat Gif.
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/pat/gif/pat_001.gif",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/sfw/poke/gif](https://purrbot.site/api/img/sfw/poke/gif) { #img-sfw-poke-gif }
-Returns a random Poke Gif.
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/poke/gif/poke_001.gif",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/sfw/senko/img](https://purrbot.site/api/img/sfw/senko/img) { #img-sfw-senko-img }
-Returns a random Image of Senko-San.
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/senko/img/senko_001.jpg",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/sfw/slap/gif](https://purrbot.site/api/img/sfw/slap/gif) { #img-sfw-slap-gif }
-Returns a random Slap Gif.
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/slap/gif/slap_001.gif",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/sfw/smile/gif](https://purrbot.site/api/img/sfw/smile/gif) { #img-sfw-smile-gif }
-Returns a random Smile Gif.
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/smile/gif/smile_001.gif",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/sfw/tail/gif](https://purrbot.site/api/img/sfw/tail/gif) { #img-sfw-tail-gif }
-Returns a random Tail wagging Gif.
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/tail/gif/tail_001.gif",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/sfw/tickle/gif](https://purrbot.site/api/img/sfw/tickle/gif) { #img-sfw-tickle-gif }
-Returns a random Tickle Gif.
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/sfw/tickle/gif/tickle_001.gif",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-image-24: `image/png`
+        
+        ![status](/assets/img/status.png)
+        
+    ??? failure "400"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "details": {
+            "path": "/api/status",
+            "content-type": ":your-content-type",
+            "user-agent": ":your-user-agent"
+          },
+          "error": true,
+          "message": "Received invalid or empty JSON Body."
+        }
+        ```
+        
+    ??? failure "500"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "details": {
+            "path": "/api/status",
+            "content-type": ":your-content-type",
+            "user-agent": ":your-user-agent"
+          },
+          "error": true,
+          "message": "Couldn't generate Image. Make sure the values are valid!"
+        }
+        ```
 
 ----
 
-## GET <small>(NSFW)</small>
-Contains images that are considered Not Safe for work.  
-If you are using those images on Discord, make sure to only share them in Channels marked as NSFW.  
-You can access those endpoints through simple `GET` requests.
-
-### /list/nsfw/:path { #list-nsfw-path }
-Lists all available images in the provided `:path`.  
-The path is the exact same as with the below endpoints. You only have to replace `/img` with `/list` in the URL.
-
-**Example:** [`/img/nsfw/anal/gif`](#img-nsfw-anal-gif) becomes [`/list/nsfw/anal/gif`](https://purrbot.site/api/list/nsfw/anal/gif)
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```json title="JSON Body Example"
-    {
-      "error": false,
-      "links": [
-        "https://purrbot.site/img/nsfw/anal/gif/anal_001.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_002.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_003.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_004.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_005.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_006.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_007.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_008.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_009.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_010.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_011.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_012.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_013.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_014.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_015.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_016.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_017.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_018.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_019.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_020.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_021.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_022.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_023.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_024.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_025.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_026.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_027.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_028.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_029.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_030.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_031.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_032.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_033.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_034.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_035.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_036.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_037.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_038.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_039.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_040.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_041.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_042.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_043.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_044.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_045.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_046.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_047.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_048.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_049.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_050.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_051.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_052.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_053.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_054.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_055.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_056.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_057.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_058.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_059.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_060.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_061.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_062.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_063.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_064.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_065.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_066.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_067.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_068.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_069.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_070.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_071.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_072.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_073.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_074.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_075.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_076.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_077.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_078.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_079.gif",
-        "https://purrbot.site/img/nsfw/anal/gif/anal_080.gif"
-      ],
-      "time": 0
-    ```
+??? api-get "/img/sfw/background/img"
+    Returns a randomly selected [Welcome Background Image](/bot/welcome-images#backgrounds)
     
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/background/img/color_black.png",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+        
+    --8<-- "api-img-errors.md"
 
+??? api-get "/img/sfw/bite/gif"
+    Returns a randomly selected Bite Gif.
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/bite/gif/bite_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+        
+    --8<-- "api-img-errors.md"
 
-### [/img/nsfw/anal/gif](https://purrbot.site/api/img/nsfw/anal/gif) { #img-nsfw-anal-gif }
-Returns a random Anal-sex Gif.
+??? api-get "/img/sfw/blush/gif"
+    Returns a randomly selected Blush Gif.
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/blush/gif/blush_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+        
+    --8<-- "api-img-errors.md"
 
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/nsfw/anal/gif/anal_001.gif",
-      "time": 0
-    }
-    ```
+??? api-get "/img/sfw/comfy/gif"
+    Returns a randomly selected Comfy Gif.
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/comfy/gif/comfy_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+        
+    --8<-- "api-img-errors.md"
 
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
+??? api-get "/img/sfw/cry/gif"
+    Returns a randomly selected Cry Gif.
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/cry/gif/cry_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+        
+    --8<-- "api-img-errors.md"
 
-### [/img/nsfw/blowjob/gif](https://purrbot.site/api/img/nsfw/blowjob/gif) { #img-nsfw-blowjob-gif }
-Returns a random Blowjob Gif.
+??? api-get "/img/sfw/cuddle/gif"
+    Returns a randomly selected Cuddle Gif.
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/cuddle/gif/cuddle_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+        
+    --8<-- "api-img-errors.md"
 
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/nsfw/blowjob/gif/blowjob_001.gif",
-      "time": 0
-    }
-    ```
+??? api-get "/img/sfw/dance/gif"
+    Returns a randomly selected Dance Gif.
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/dance/gif/dance_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+        
+    --8<-- "api-img-errors.md"
 
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
+??? api-get "/img/sfw/eevee/{type}"
+    Returns a randomly selected Eevee Image/Gif.
+    
+    <h3>Parameters</h3>
+    
+    | Name | Description                                          |
+    | ---- | ---------------------------------------------------- |
+    | type | The Image type to return. Supported: `gif` or `img`. |
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example Gif"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/eevee/gif/eevee_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+        
+        ```json title="Example Image"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/eevee/img/eevee_001.jpg",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+        
+    --8<-- "api-img-errors.md"
 
-### [/img/nsfw/cum/gif](https://purrbot.site/api/img/nsfw/cum/gif) { #img-nsfw-cum-gif }
-Returns a random Cumming Gif.
+??? api-get "/img/sfw/feed/gif"
+    Returns a randomly selected Feeding Gif.
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/feed/gif/feed_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+        
+    --8<-- "api-img-errors.md"
 
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/nsfw/cum/gif/cum_001.gif",
-      "time": 0
-    }
-    ```
+??? api-get "/img/sfw/fluff/gif"
+    Returns a randomly selected Blush Gif.
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/fluff/gif/fluff_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+        
+    --8<-- "api-img-errors.md"
 
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
+??? api-get "/img/sfw/holo/img"
+    Returns a randomly selected Image of Holo from "Spice and Wolf".
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/holo/img/holo_001.jpg",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+        
+    --8<-- "api-img-errors.md"
 
-### [/img/nsfw/fuck/gif](https://purrbot.site/api/img/nsfw/fuck/gif) { #img-nsfw-fuck-gif }
-Returns a random Sex Gif.
+??? api-get "/img/sfw/hug/gif"
+    Returns a randomly selected Hug Gif.
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/hug/gif/hug_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+        
+    --8<-- "api-img-errors.md"
 
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/nsfw/fuck/gif/fuck_001.gif",
-      "time": 0
-    }
-    ```
+??? api-get "/img/sfw/icon/img"
+    Returns a randomly selected [Welcome Icon](/bot/welcome-images#icons).
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/icon/img/holo.jpg",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
+??? api-get "/img/sfw/kiss/gif"
+    Returns a randomly selected Kissing Gif.
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/kiss/gif/kiss_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
-### [/img/nsfw/neko/:type](https://purrbot.site/api/img/nsfw/neko/gif) { #img-nsfw-neko-type }
-Returns either a random lewd Neko Image or Gif.  
-`:type` can be either `gif` for gifs or `img` for images.
+??? api-get "/img/sfw/kitsune/img"
+    Returns a randomly selected Kitsune (Fox Girl) Image.
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/kitsune/img/kitsune_001.jpg",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
-=== "Response (GIF)"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/nsfw/neko/gif/neko_001.gif",
-      "time": 0
-    }
-    ```
+??? api-get "/img/sfw/lick/gif"
+    Returns a randomly selected Licking Gif.
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/lick/gif/lick_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
-=== "Response (IMG)"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/nsfw/neko/img/neko_001.jpg",
-      "time": 0
-    }
-    ```
+??? api-get "/img/sfw/neko/{type}"
+    Returns a randomly selected Neko Gif or Image.
+    
+    <h3>Parameters</h3>
+    
+    | Name | Description                                          |
+    | ---- | ---------------------------------------------------- |
+    | type | The Image type to return. Supported: `gif` or `img`. |
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example Gif"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/neko/gif/neko_001.gif",
+          "time": 0
+        }
+        ```
+        
+        ```json title="Example Image"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/neko/img/neko_001.jpg",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
+??? api-get "/img/sfw/okami/img"
+    Returns a randomly selected Okami (Wolf Girl) Image.
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/okami/img/okami_001.jpg",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
-### [/img/nsfw/pussylick/gif](https://purrbot.site/api/img/nsfw/pussylick/gif) { #img-nsfw-pussylick-gif }
-Returns a random Pussy licking Gif.
+??? api-get "/img/sfw/pat/gif"
+    Returns a randomly selected patting Gif.
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/pat/gif/pat_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/nsfw/pussylick/gif/pussylick_001.gif",
-      "time": 0
-    }
-    ```
+??? api-get "/img/sfw/poke/gif"
+    Returns a randomly selected poking Gif.
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/poke/gif/poke_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
+??? api-get "/img/sfw/senko/img"
+    Returns a randomly selected Image from Senko-San.
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/senko/img/senko_001.jpg",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
-### [/img/nsfw/solo/gif](https://purrbot.site/api/img/nsfw/solo/gif) { #img-nsfw-solo-gif }
-Returns a random Girl masturbating Gif.
+??? api-get "/img/sfw/slap/gif"
+    Returns a randomly selected slapping Gif.
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/slap/gif/slap_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/nsfw/solo/gif/solo_001.gif",
-      "time": 0
-    }
-    ```
+??? api-get "/img/sfw/smile/gif"
+    Returns a randomly selected smiling Gif.
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/smile/gif/smile_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
+??? api-get "/img/sfw/tail/gif"
+    Returns a randomly selected Tail wagging Gif.
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/tail/gif/tail_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
-### [/img/nsfw/threesome_fff/gif](https://purrbot.site/api/img/nsfw/threesome_fff/gif) { #img-nsfw-threesome_fff-gif }
-Returns a random Threesome (only Female) Gif.
+??? api-get "/img/sfw/tickle/gif"
+    Returns a randomly selected tickling Gif.
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/tickle/gif/tickle_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/nsfw/threesome_fff/gif/threesome_001.gif",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/nsfw/threesome_ffm/gif](https://purrbot.site/api/img/nsfw/threesome_ffm/gif) { #img-nsfw-threesome_ffm-gif }
-Returns a random Threesome (2 Female, 1 Male) Gif.
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/nsfw/threesome_ffm/gif/threesome_001.gif",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/nsfw/threesome_mmf/gif](https://purrbot.site/api/img/nsfw/threesome_mmf/gif) { #img-nsfw-threesome_mmf-gif }
-Returns a random Threesome (2 Male, 1 Female) Gif.
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/nsfw/threesome_mmf/gif/threesome_001.gif",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/nsfw/yaoi/gif](https://purrbot.site/api/img/nsfw/yaoi/gif) { #img-nsfw-yaoi-gif }
-Returns a Random Yaoi (Gay) sex Gif.
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/nsfw/yaoi/gif/yaoi_001.gif",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
-
-### [/img/nsfw/yuri/gif](https://purrbot.site/api/img/nsfw/yuri/gif) { #img-nsfw-yuri-gif }
-Returns a random Yuri (Lesbian) sex Gif.
-
-=== "Response"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    ```js title="JSON Body Example"
-    {
-      "error": false,
-      "link": "https://purrbot.site/img/nsfw/yuri/gif/yuri_001.gif",
-      "time": 0
-    }
-    ```
-
-=== "Failure"
-    **Type:** :octicons-file-code-24: `JSON`  
-    **Example:**  
-    Please see the [Possible Errors](#possible-errors) section for all errors this API may return.
+??? api-get "/list/sfw/{path}"
+    Returns a list of all images from the provided `{path}`.
+    
+    <h3>Parameters</h3>
+    
+    | Name | Description                                                                                       |
+    | ---- | ------------------------------------------------------------------------------------------------- |
+    | path | The path to the image folder. Available paths are the same as with all the `/api/img/` endpoints. |
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/nsfw/",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
 ----
 
-## Possible Errors
-Whenever a request fails, either by an error on the client's end or caused by the API itself, will you receive a JSON Body with information regarding the error.
+## Not Safe for Work (NSFW) Endpoints { #nsfw-endpoints }
 
-To get more information about a value, click the :material-plus-circle: **Plus Icon** next to the value to get a text box with useful information such as type and default value.
+??? api-get "/img/nsfw/anal/gif"
+    Returns a randomly selected Anal-Sex Gif.
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/nsfw/anal/gif/anal_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
-### /api/quote { #error-api-quote }
+??? api-get "/img/nsfw/blowjob/gif"
+    Returns a randomly selected Blowjob Gif.
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/nsfw/blowjob/gif/blowjob_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
-=== "Empty JSON Body/No JSON"
-    **Status-Code**: [400]
+??? api-get "/img/nsfw/cum/gif"
+    Returns a randomly selected Cumming Gif.
     
-    ```js title="JSON Body Example"
-    {
-      "details": {
-        "path": "/api/quote", // (1)
-        "content-type": ":content-type", // (2)
-        "user-agent": ":user-agent" // (3)
-      },
-      "error": true,
-      "message": "Received invalid or empty JSON Body."
-    }
-    ```
+    <h3>Response</h3>
     
-    1.  The Path you accessed. This should be `/api/quote` for this endoint.
-    2.  The content-tyoe you provided. This **must** be `application/json`.
-    3.  The User-Agent you used.
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/nsfw/cum/gif/cum_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
-=== "Malformed JSON/Invalid Values"
-    **Status-Code**: [500]
+??? api-get "/img/nsfw/fuck/gif"
+    Returns a randomly selected Sex Gif.
     
-    ```js title="JSON Body Example"
-    {
-      "details": {
-        "path": "/api/quote", // (1)
-        "content-type": ":content-type", // (2)
-        "user-agent": ":user-agent" // (3)
-      },
-      "error": true,
-      "message": "Couldn't generate Image. Make sure the values are valid!"
-    }
-    ```
+    <h3>Response</h3>
     
-    1.  The Path you accessed. This should be `/api/quote` for this endoint.
-    2.  The content-tyoe you provided. This **must** be `application/json`.
-    3.  The User-Agent you used.
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/nsfw/fuck/gif/fuck_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
-### /api/status { #error-api-status }
+??? api-get "/img/nsfw/neko/{type}"
+    Returns a randomly selected NSFW Neko Gif or Image.
+    
+    <h3>Parameters</h3>
+    
+    | Name | Description                                         |
+    | ---- | --------------------------------------------------- |
+    | type | The Image type to return. Supported: `gif` or `img` |
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example Gif"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/nsfw/neko/gif/neko_001.gif",
+          "time": 0
+        }
+        ```
+        
+        ```json title="Example Image"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/nsfw/neko/img/neko_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
-=== "Empty JSON Body/No JSON"
-    **Status-Code**: [400]
+??? api-get "/img/nsfw/pussylick/gif"
+    Returns a randomly selected Pussy licking Gif.
     
-    ```js title="JSON Body Example"
-    {
-      "details": {
-        "path": "/api/status", // (1)
-        "content-type": ":content-type", // (2)
-        "user-agent": ":user-agent" // (3)
-      },
-      "error": true,
-      "message": "Received invalid or empty JSON Body."
-    }
-    ```
+    <h3>Response</h3>
     
-    1.  The Path you accessed. This should be `/api/quote` for this endoint.
-    2.  The content-tyoe you provided. This **must** be `application/json`.
-    3.  The User-Agent you used.
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/nsfw/pussylick/gif/pussylick_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
-=== "Malformed JSON/Invalid Values"
-    **Status-Code**: [500]
+??? api-get "/img/nsfw/solo/gif"
+    Returns a randomly selected Gif of a Female masturbating.
     
-    ```js title="JSON Body Example"
-    {
-      "details": {
-        "path": "/api/status", // (1)
-        "content-type": ":content-type", // (2)
-        "user-agent": ":user-agent" // (3)
-      },
-      "error": true,
-      "message": "Couldn't generate Image. Make sure the values are valid!"
-    }
-    ```
+    <h3>Response</h3>
     
-    1.  The Path you accessed. This should be `/api/quote` for this endoint.
-    2.  The content-tyoe you provided. This **must** be `application/json`.
-    3.  The User-Agent you used.
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/nsfw/solo/gif/solo_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
-### /img/* { #error-img }
+??? api-get "/img/nsfw/threesome_fff/gif"
+    Returns a randomly selected Threesome Gif with just females.
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/nsfw/threesome_fff/gif/threesome_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
-=== "Invalid Path (No API endpoint)"
-    **Status-Code**: [403]
+??? api-get "/img/nsfw/threesome_ffm/gif"
+    Returns a randomly selected Threesome Gif with 2 females and 1 male.
     
-    ```js title="JSON Body Example"
-    {
-      "details": {
-        "path": "/api/img/:path", // (1)
-        "content-type": ":content-type", // (2)
-        "user-agent": ":user-agent" // (3)
-      },
-      "error": true,
-      "message": "The provided path is not valid."
-    }
-    ```
+    <h3>Response</h3>
     
-    1.  The Path you accessed. Example: `/api/img/sfw/background/img`
-    2.  The content-tyoe you provided. This **must** be `application/json`.
-    3.  The User-Agent you used.
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/nsfw/threesome_ffm/gif/threesome_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
-=== "No Images available"
-    **Status-Code**: [404]
+??? api-get "/img/nsfw/threesome_mmf/gif"
+    Returns a randomly selected Threesome Gif with 2 male and 1 female.
     
-    ```js title="JSON Body Example"
-    {
-      "details": {
-        "path": "/api/img/:path", // (1)
-        "content-type": ":content-type", // (2)
-        "user-agent": ":user-agent" // (3)
-      },
-      "error": true,
-      "message": "The provided path does not contain any images."
-    }
-    ```
+    <h3>Response</h3>
     
-    1.  The Path you accessed. Example: `/api/img/sfw/background/img`
-    2.  The content-tyoe you provided. This **must** be `application/json`.
-    3.  The User-Agent you used.
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/nsfw/threesome_mmf/gif/threesome_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
-### /list/* { #error-list }
-
-=== "Invalid Path (No API endpoint)"
-    **Status-Code**: [403]
+??? api-get "/img/nsfw/yaoi/gif"
+    Returns a randomly selected Yaoi (Gay Hentai) Gif.
     
-    ```js title="JSON Body Example"
-    {
-      "details": {
-        "path": "/api/list/:path", // (1)
-        "content-type": ":content-type", // (2)
-        "user-agent": ":user-agent" // (3)
-      },
-      "error": true,
-      "message": "The provided path is not valid."
-    }
-    ```
+    <h3>Response</h3>
     
-    1.  The Path you accessed. Example: `/api/list/sfw/background/img`
-    2.  The content-tyoe you provided. This **must** be `application/json`.
-    3.  The User-Agent you used.
-
-=== "No Images available"
-    **Status-Code**: [404]
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/nsfw/yaoi/gif/yaoi_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
     
-    ```js title="JSON Body Example"
-    {
-      "details": {
-        "path": "/api/list/:path", // (1)
-        "content-type": ":content-type", // (2)
-        "user-agent": ":user-agent" // (3)
-      },
-      "error": true,
-      "message": "The provided path does not contain any images."
-    }
-    ```
+    --8<-- "api-img-errors.md"
+
+??? api-get "/img/nsfw/yuri/gif"
+    Returns a randomly selected Yuri (Lesbian Hentai) Gif.
     
-    1.  The Path you accessed. Example: `/api/list/sfw/background/img`
-    2.  The content-tyoe you provided. This **must** be `application/json`.
-    3.  The User-Agent you used.
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/nsfw/yuri/gif/yuri_001.gif",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
 
-
-[400]: https://httpstatuses.com/400
-[403]: https://httpstatuses.com/403
-[404]: https://httpstatuses.com/404
-[500]: https://httpstatuses.com/500
+??? api-get "/list/nsfw/{path}"
+    Returns a list of all images from the provided `{path}`
+    
+    <h3>Parameters</h3>
+    
+    | Name | Description                                                                                       |
+    | ---- | ------------------------------------------------------------------------------------------------- |
+    | path | The path to the image folder. Available paths are the same as with all the `/api/img/` endpoints. |
+    
+    <h3>Response</h3>
+    
+    ??? success "200"
+        **Type:** :octicons-file-code-24: `application/json`
+        
+        ```json title="Example"
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/nsfw/",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
