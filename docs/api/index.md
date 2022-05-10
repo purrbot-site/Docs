@@ -82,6 +82,8 @@ The [Source code][source] is publicly available and contributions are always wel
         }
         ```
         
+        --8<-- "api-error-scheme.md"
+        
     ??? failure "500"
         **Type:** :octicons-file-code-24: `application/json`
         
@@ -96,6 +98,8 @@ The [Source code][source] is publicly available and contributions are always wel
           "message": "Couldn't generate Image. Make sure the values are valid!"
         }
         ```
+        
+        --8<-- "api-error-scheme.md"
 
 ??? api-post "/status"
     Generates an image that displays an avatar with a Status icon.
@@ -143,6 +147,8 @@ The [Source code][source] is publicly available and contributions are always wel
         }
         ```
         
+        --8<-- "api-error-scheme.md"
+        
     ??? failure "500"
         **Type:** :octicons-file-code-24: `application/json`
         
@@ -157,6 +163,8 @@ The [Source code][source] is publicly available and contributions are always wel
           "message": "Couldn't generate Image. Make sure the values are valid!"
         }
         ```
+        
+        --8<-- "api-error-scheme.md"
 
 ----
 
@@ -707,12 +715,34 @@ The [Source code][source] is publicly available and contributions are always wel
         ```json title="Example"
         {
           "error": false,
-          "link": "https://purrbot.site/img/nsfw/",
+          "links": [
+            "https://purrbot.site/img/sfw/background/img/color_black.png",
+            "https://purrbot.site/img/sfw/background/img/color_blue.png",
+            "https://purrbot.site/img/sfw/background/img/color_blurple.png",
+            "https://purrbot.site/img/sfw/background/img/color_green.png",
+            "https://purrbot.site/img/sfw/background/img/color_grey.png",
+            "https://purrbot.site/img/sfw/background/img/color_red.png",
+            "https://purrbot.site/img/sfw/background/img/color_white.png",
+            "https://purrbot.site/img/sfw/background/img/gradient.png",
+            "https://purrbot.site/img/sfw/background/img/gradient_blue.png",
+            "https://purrbot.site/img/sfw/background/img/gradient_dark_red.png",
+            "https://purrbot.site/img/sfw/background/img/gradient_green.png",
+            "https://purrbot.site/img/sfw/background/img/gradient_orange.png",
+            "https://purrbot.site/img/sfw/background/img/gradient_red.png",
+            "https://purrbot.site/img/sfw/background/img/rainbow.png"
+          ],
           "time": 0
         }
         ```
         
-        --8<-- "api-img-success-scheme.md"
+        <h4>Scheme</h4>
+        
+        - `error`: Boolean  
+          Always returns false for successful requests.
+        - `links`: Array
+          Array of Strings representing URLs to the Images/Gifs found in the directory.
+        - `time`: Integer
+          Time in milliseconds it took for the API to process the request.
     
     --8<-- "api-img-errors.md"
 
@@ -991,11 +1021,98 @@ The [Source code][source] is publicly available and contributions are always wel
         ```json title="Example"
         {
           "error": false,
-          "link": "https://purrbot.site/img/nsfw/",
+          "links": [
+            "https://purrbot.site/img/nsfw/anal/gif/anal_001.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_002.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_003.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_004.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_005.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_006.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_007.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_008.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_009.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_010.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_011.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_012.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_013.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_014.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_015.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_016.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_017.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_018.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_019.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_020.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_021.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_022.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_023.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_024.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_025.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_026.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_027.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_028.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_029.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_030.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_031.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_032.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_033.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_034.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_035.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_036.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_037.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_038.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_039.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_040.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_041.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_042.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_043.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_044.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_045.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_046.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_047.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_048.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_049.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_050.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_051.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_052.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_053.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_054.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_055.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_056.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_057.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_058.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_059.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_060.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_061.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_062.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_063.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_064.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_065.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_066.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_067.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_068.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_069.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_070.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_071.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_072.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_073.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_074.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_075.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_076.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_077.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_078.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_079.gif",
+            "https://purrbot.site/img/nsfw/anal/gif/anal_080.gif"
           "time": 0
         }
         ```
         
-        --8<-- "api-img-success-scheme.md"
+        <h4>Scheme</h4>
+        
+        - `error`: Boolean  
+          Always returns false for successful requests.
+        - `links`: Array
+          Array of Strings representing URLs to the Images/Gifs found in the directory.
+        - `time`: Integer
+          Time in milliseconds it took for the API to process the request.
     
     --8<-- "api-img-errors.md"
