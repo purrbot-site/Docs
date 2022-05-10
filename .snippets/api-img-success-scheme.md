@@ -1,7 +1,7 @@
 <h4>Scheme</h4>
 
 - `error`: Boolean  
-  Always returns true for successful requests.
+  Always returns false for successful requests.
 - `link`: String (URL)  
   URL to the randomly selected Image/Gif.
 - `time`: Integer  
