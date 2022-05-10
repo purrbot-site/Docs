@@ -29,13 +29,16 @@ The [Source code][source] is publicly available and contributions are always wel
 
 ## Safe for Work (SFW) Endpoints { #sfw-endpoints }
 
-??? api-post "/quote"
-    Generates an image that mimics a Discord message.
-    
+??? api-post "/quote <span class='description'>Generates an image that mimics a Discord message.</span>"
     <h3>Request</h3>
     
-    **Type:** :octicons-file-code-24: `application/json`  
-    **Note:** All Options are optional. You still need to provide an empty JSON Object (`{}`) on the request.
+    <h4>Type</h4>
+    
+    :octicons-file-code-24: `application/json`  
+    
+    <h4>Note</h4>
+    
+    You must provide an empty JSON body (`{}`) if you want to use the default values.
     
     <h4>Body</h4>
     
@@ -63,12 +66,15 @@ The [Source code][source] is publicly available and contributions are always wel
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-image-24: `image/png`
+    
+        <h4>Type</h4>
+        
+        :octicons-image-24: `image/png`
         
         ![quote](/assets/img/quote.png)
         
     ??? failure "400"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -85,7 +91,7 @@ The [Source code][source] is publicly available and contributions are always wel
         --8<-- "api-error-scheme.md"
         
     ??? failure "500"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -101,9 +107,7 @@ The [Source code][source] is publicly available and contributions are always wel
         
         --8<-- "api-error-scheme.md"
 
-??? api-post "/status"
-    Generates an image that displays an avatar with a Status icon.
-    
+??? api-post "/status <span class='description'>Generates an image that displays an avatar with a Status icon.</span>"
     <h3>Request</h3>
     
     **Type:** :octicons-file-code-24: `application/json`
@@ -128,12 +132,15 @@ The [Source code][source] is publicly available and contributions are always wel
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-image-24: `image/png`
+    
+        <h4>Type</h4>
         
-        ![status](/assets/img/status.png)
+        :octicons-image-24: `image/png`
+        
+        ![status](/assets/img/status.png){ width="25%" height="auto" }
         
     ??? failure "400"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -150,7 +157,7 @@ The [Source code][source] is publicly available and contributions are always wel
         --8<-- "api-error-scheme.md"
         
     ??? failure "500"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -168,13 +175,11 @@ The [Source code][source] is publicly available and contributions are always wel
 
 ----
 
-??? api-get "/img/sfw/background/img"
-    Returns a randomly selected [Welcome Background Image](/bot/welcome-images#backgrounds)
-    
+??? api-get "/img/sfw/background/img <span class='description'>Returns a randomly selected Welcome Background Image.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -188,13 +193,11 @@ The [Source code][source] is publicly available and contributions are always wel
         
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/sfw/bite/gif"
-    Returns a randomly selected Bite Gif.
-    
+??? api-get "/img/sfw/bite/gif <span class='description'>Returns a randomly selected Bite Gif.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -208,13 +211,11 @@ The [Source code][source] is publicly available and contributions are always wel
         
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/sfw/blush/gif"
-    Returns a randomly selected Blush Gif.
-    
+??? api-get "/img/sfw/blush/gif <span class='description'>Returns a randomly selected Blush Gif.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -228,13 +229,11 @@ The [Source code][source] is publicly available and contributions are always wel
         
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/sfw/comfy/gif"
-    Returns a randomly selected Comfy Gif.
-    
+??? api-get "/img/sfw/comfy/gif <span class='description'>Returns a randomly selected Comfy Gif.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -248,13 +247,11 @@ The [Source code][source] is publicly available and contributions are always wel
         
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/sfw/cry/gif"
-    Returns a randomly selected Cry Gif.
-    
+??? api-get "/img/sfw/cry/gif <span class='description'>Returns a randomly selected Cry Gif.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -268,13 +265,11 @@ The [Source code][source] is publicly available and contributions are always wel
         
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/sfw/cuddle/gif"
-    Returns a randomly selected Cuddle Gif.
-    
+??? api-get "/img/sfw/cuddle/gif <span class='description'>Returns a randomly selected Cuddle Gif.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -288,13 +283,11 @@ The [Source code][source] is publicly available and contributions are always wel
         
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/sfw/dance/gif"
-    Returns a randomly selected Dance Gif.
-    
+??? api-get "/img/sfw/dance/gif <span class='description'>Returns a randomly selected Dance Gif.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -308,9 +301,7 @@ The [Source code][source] is publicly available and contributions are always wel
         
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/sfw/eevee/{type}"
-    Returns a randomly selected Eevee Image/Gif.
-    
+??? api-get "/img/sfw/eevee/{type} <span class='description'>Returns a randomly selected Eevee Image/Gif.</span>"
     <h3>Parameters</h3>
     
     | Name | Description                                          |
@@ -320,7 +311,7 @@ The [Source code][source] is publicly available and contributions are always wel
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example Gif"
         {
@@ -344,13 +335,11 @@ The [Source code][source] is publicly available and contributions are always wel
         
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/sfw/feed/gif"
-    Returns a randomly selected Feeding Gif.
-    
+??? api-get "/img/sfw/feed/gif <span class='description'>Returns a randomly selected Feeding Gif.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -364,13 +353,11 @@ The [Source code][source] is publicly available and contributions are always wel
         
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/sfw/fluff/gif"
-    Returns a randomly selected Blush Gif.
-    
+??? api-get "/img/sfw/fluff/gif <span class='description'>Returns a randomly selected Blush Gif.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -384,13 +371,11 @@ The [Source code][source] is publicly available and contributions are always wel
         
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/sfw/holo/img"
-    Returns a randomly selected Image of Holo from "Spice and Wolf".
-    
+??? api-get "/img/sfw/holo/img <span class='description'>Returns a randomly selected Image of Holo from 'Spice and Wolf'</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -404,13 +389,11 @@ The [Source code][source] is publicly available and contributions are always wel
         
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/sfw/hug/gif"
-    Returns a randomly selected Hug Gif.
-    
+??? api-get "/img/sfw/hug/gif <span class='description'>Returns a randomly selected hugging Gif.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -424,13 +407,11 @@ The [Source code][source] is publicly available and contributions are always wel
         
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/sfw/icon/img"
-    Returns a randomly selected [Welcome Icon](/bot/welcome-images#icons).
-    
+??? api-get "/img/sfw/icon/img <span class='description'>Returns a randomly selected Welcome Icon.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -444,13 +425,11 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/sfw/kiss/gif"
-    Returns a randomly selected Kissing Gif.
-    
+??? api-get "/img/sfw/kiss/gif <span class='description'>Returns a randomly selected kissing Gif.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -464,13 +443,11 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/sfw/kitsune/img"
-    Returns a randomly selected Kitsune (Fox Girl) Image.
-    
+??? api-get "/img/sfw/kitsune/img <span class='description'>Returns a randomly selected Kitsune (Fox Girl) Image.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -484,13 +461,11 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/sfw/lick/gif"
-    Returns a randomly selected Licking Gif.
-    
+??? api-get "/img/sfw/lick/gif <span class='description'>Returns a randomly selected licking Gif</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -504,9 +479,7 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/sfw/neko/{type}"
-    Returns a randomly selected Neko Gif or Image.
-    
+??? api-get "/img/sfw/neko/{type} <span class='description'>Returns a randomly selected Neko (Cat Girl) Gif or Image.</span>"
     <h3>Parameters</h3>
     
     | Name | Description                                          |
@@ -516,7 +489,7 @@ The [Source code][source] is publicly available and contributions are always wel
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example Gif"
         {
@@ -538,13 +511,11 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/sfw/okami/img"
-    Returns a randomly selected Okami (Wolf Girl) Image.
-    
+??? api-get "/img/sfw/okami/img <span class='description'>Returns a randomly selected Okami (Wolf Girl) Image.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -558,13 +529,11 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/sfw/pat/gif"
-    Returns a randomly selected patting Gif.
-    
+??? api-get "/img/sfw/pat/gif <span class='description'>Returns a randomly selected patting Gif.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -578,13 +547,11 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/sfw/poke/gif"
-    Returns a randomly selected poking Gif.
-    
+??? api-get "/img/sfw/poke/gif <span class='description'>Returns a randomly selected poking Gif.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -598,13 +565,11 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/sfw/senko/img"
-    Returns a randomly selected Image from Senko-San.
-    
+??? api-get "/img/sfw/senko/img <span class='description'>Returns a randomly selected Image of Senko-San.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -618,13 +583,11 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/sfw/slap/gif"
-    Returns a randomly selected slapping Gif.
-    
+??? api-get "/img/sfw/slap/gif <span class='description'>Returns a randomly selected slapping Gif.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -638,13 +601,11 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/sfw/smile/gif"
-    Returns a randomly selected smiling Gif.
-    
+??? api-get "/img/sfw/smile/gif <span class='description'>Returns a randomly selected smiling Gif.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -658,13 +619,11 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/sfw/tail/gif"
-    Returns a randomly selected Tail wagging Gif.
-    
+??? api-get "/img/sfw/tail/gif <span class='description'>Returns a randomly selected tail wagging Gif.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -678,13 +637,11 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/sfw/tickle/gif"
-    Returns a randomly selected tickling Gif.
-    
+??? api-get "/img/sfw/tickle/gif <span class='description'>Returns a randomly selected tickling Gif.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -698,9 +655,7 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/list/sfw/{path}"
-    Returns a list of all images from the provided `{path}`.
-    
+??? api-get "/list/sfw/{path} <span class='description'>Lists all found images of the specified {path}</span>"
     <h3>Parameters</h3>
     
     | Name | Description                                                                                       |
@@ -710,7 +665,7 @@ The [Source code][source] is publicly available and contributions are always wel
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -750,13 +705,11 @@ The [Source code][source] is publicly available and contributions are always wel
 
 ## Not Safe for Work (NSFW) Endpoints { #nsfw-endpoints }
 
-??? api-get "/img/nsfw/anal/gif"
-    Returns a randomly selected Anal-Sex Gif.
-    
+??? api-get "/img/nsfw/anal/gif <span class='description'>Returns a randomly selected Anal-Sex Gif</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -770,13 +723,11 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/nsfw/blowjob/gif"
-    Returns a randomly selected Blowjob Gif.
-    
+??? api-get "/img/nsfw/blowjob/gif <span class='description'>Returns a randomly selected blowjob Gif.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -790,13 +741,11 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/nsfw/cum/gif"
-    Returns a randomly selected Cumming Gif.
-    
+??? api-get "/img/nsfw/cum/gif <span class='description'>Returns a randomly selected cumming Gif.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -810,13 +759,11 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/nsfw/fuck/gif"
-    Returns a randomly selected Sex Gif.
-    
+??? api-get "/img/nsfw/fuck/gif <span class='description'>Returns a randomly selected Sex Gif.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -830,9 +777,7 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/nsfw/neko/{type}"
-    Returns a randomly selected NSFW Neko Gif or Image.
-    
+??? api-get "/img/nsfw/neko/{type} <span class='description'>Returns a randomly selected NSFW Neko (Cat Girl) Gif or Image.</span>"
     <h3>Parameters</h3>
     
     | Name | Description                                         |
@@ -842,7 +787,7 @@ The [Source code][source] is publicly available and contributions are always wel
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example Gif"
         {
@@ -864,13 +809,11 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/nsfw/pussylick/gif"
-    Returns a randomly selected Pussy licking Gif.
-    
+??? api-get "/img/nsfw/pussylick/gif <span class='description'>Returns a randomly selected pussy licking Gif.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -884,13 +827,11 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/nsfw/solo/gif"
-    Returns a randomly selected Gif of a Female masturbating.
-    
+??? api-get "/img/nsfw/solo/gif <span class='description'>Returns a randomly selected Gif of a female masturbating.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -904,13 +845,11 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/nsfw/threesome_fff/gif"
-    Returns a randomly selected Threesome Gif with just females.
-    
+??? api-get "/img/nsfw/threesome_fff/gif <span class='description'>Returns a randomly selected Threesome Gif (Females only).</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -924,13 +863,11 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/nsfw/threesome_ffm/gif"
-    Returns a randomly selected Threesome Gif with 2 females and 1 male.
-    
+??? api-get "/img/nsfw/threesome_ffm/gif <span class='description'>Returns a randomly selected Threesome Gif (2 Females, 1 Male).</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -944,13 +881,11 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/nsfw/threesome_mmf/gif"
-    Returns a randomly selected Threesome Gif with 2 male and 1 female.
-    
+??? api-get "/img/nsfw/threesome_mmf/gif <span class='description'>Returns a randomly selected Threesome Gif (1 Female, 2 Males).</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -964,13 +899,11 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/nsfw/yaoi/gif"
-    Returns a randomly selected Yaoi (Gay Hentai) Gif.
-    
+??? api-get "/img/nsfw/yaoi/gif <span class='description'>Returns a randomly selected Yaoi (Gay Hentai) Gif.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -984,13 +917,11 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/img/nsfw/yuri/gif"
-    Returns a randomly selected Yuri (Lesbian Hentai) Gif.
-    
+??? api-get "/img/nsfw/yuri/gif <span class='description'>Returns a randomly selected Yuri (Lesbian Hentai) Gif.</span>"
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
@@ -1004,9 +935,7 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
-??? api-get "/list/nsfw/{path}"
-    Returns a list of all images from the provided `{path}`
-    
+??? api-get "/list/nsfw/{path} <span class='description'>Lists all found images of the specified {path}</span>"
     <h3>Parameters</h3>
     
     | Name | Description                                                                                       |
@@ -1016,7 +945,7 @@ The [Source code][source] is publicly available and contributions are always wel
     <h3>Response</h3>
     
     ??? success "200"
-        **Type:** :octicons-file-code-24: `application/json`
+        --8<-- "api-response-header.md"
         
         ```json title="Example"
         {
