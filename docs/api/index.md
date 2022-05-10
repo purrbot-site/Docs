@@ -82,6 +82,8 @@ The [Source code][source] is publicly available and contributions are always wel
         }
         ```
         
+        --8<-- "api-error-scheme.md"
+        
     ??? failure "500"
         **Type:** :octicons-file-code-24: `application/json`
         
@@ -96,6 +98,8 @@ The [Source code][source] is publicly available and contributions are always wel
           "message": "Couldn't generate Image. Make sure the values are valid!"
         }
         ```
+        
+        --8<-- "api-error-scheme.md"
 
 ??? api-post "/status"
     Generates an image that displays an avatar with a Status icon.
@@ -143,6 +147,8 @@ The [Source code][source] is publicly available and contributions are always wel
         }
         ```
         
+        --8<-- "api-error-scheme.md"
+        
     ??? failure "500"
         **Type:** :octicons-file-code-24: `application/json`
         
@@ -157,6 +163,8 @@ The [Source code][source] is publicly available and contributions are always wel
           "message": "Couldn't generate Image. Make sure the values are valid!"
         }
         ```
+        
+        --8<-- "api-error-scheme.md"
 
 ----
 
