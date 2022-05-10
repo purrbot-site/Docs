@@ -9,7 +9,8 @@
         "user-agent": ":your-user-agent"
       },
       "error": true,
-      "message": "The provided path is not valid."
+      "message": "The provided path is not valid.",
+      "time": 0
     }
     ```
     
@@ -27,6 +28,8 @@
       Always returns true for errors.
     - `message`: String  
       The reason why the request failed.
+    - `time`: Integer
+      Time in milliseconds it took for the API to process the request.
     
 ??? failure "404"
     **Type:** :octicons-file-code-24: `application/json`
@@ -39,7 +42,8 @@
         "user-agent": ":your-user-agent"
       },
       "error": true,
-      "message": "The provided path does not contain any images."
+      "message": "The provided path does not contain any images.",
+      "time": 0
     }
     ```
     
@@ -57,3 +61,5 @@
       Always returns true for errors.
     - `message`: String  
       The reason why the request failed.
+    - `time`: Integer
+      Time in milliseconds it took for the API to process the request.
