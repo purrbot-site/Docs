@@ -54,6 +54,7 @@
           mask-image: none;
   background-color: transparent;
   top: auto;
+  color: rgb(68, 138, 255);
 }
 
 .md-typeset .admonition.api-post,
@@ -75,4 +76,5 @@
           mask-image: none;
   background-color: transparent;
   top: auto;
+  color: rgb(0, 200, 83);
 }
