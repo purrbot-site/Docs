@@ -1,5 +1,5 @@
 ??? failure "403"
-    **Type:** :octicons-file-code-24: `application/json`
+    --8<-- "api-response-header.md"
     
     ```json title="Example"
     {
@@ -17,7 +17,7 @@
     --8<-- "api-error-scheme.md"
     
 ??? failure "404"
-    **Type:** :octicons-file-code-24: `application/json`
+    --8<-- "api-response-header.md"
     
     ```json title="Example"
     {
