@@ -11,7 +11,6 @@ description: The Terms of Service and Privacy Policy of the Discord Bot.
 [language]: https://discord.com/developers/docs/dispatch/field-values#predefined-field-values-accepted-locales
 
 # Bot
-This page covers the Terms of Service (Terms) and Privacy Policy of the Discord Bot \*Purr*
 
 ## Terms of Service
 

@@ -5,7 +5,8 @@ description: List of all Commands the Bot currently offers.
 
 [patreon]: https://patreon.com/andre_601
 
-# General info
+# Commands
+
 This page lists all available commands of the bot.  
 The default prefix is `p.` but can be changed with the [prefix command](#prefix)
 
