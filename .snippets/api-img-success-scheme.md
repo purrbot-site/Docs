@@ -5,4 +5,4 @@
 - `link`: String (URL)  
   URL to the randomly selected Image/Gif.
 - `time`: Integer  
-  Time in miliseconds it took for the API to process the request.
+  Time in milliseconds it took for the API to process the request.
