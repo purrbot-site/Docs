@@ -28,7 +28,7 @@
       Always returns true for errors.
     - `message`: String  
       The reason why the request failed.
-    - `time`: Integer
+    - `time`: Integer  
       Time in milliseconds it took for the API to process the request.
     
 ??? failure "404"
@@ -61,5 +61,5 @@
       Always returns true for errors.
     - `message`: String  
       The reason why the request failed.
-    - `time`: Integer
+    - `time`: Integer  
       Time in milliseconds it took for the API to process the request.
