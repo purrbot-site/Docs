@@ -1,6 +1,6 @@
 ---
 title: API
-description: Detailed information about the ImageAPI.
+description: 'Documentation about the ImageAPI located under https://purrbot.site/api'
 
 hide:
   - navigation
