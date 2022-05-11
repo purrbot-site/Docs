@@ -8,7 +8,8 @@ on:
       - synchronize
 
 jobs:
-  build:
+  deploy-preview:
+    name: Create Deploy-Preview
     runs-on: ubuntu-latest
     steps:
       - uses: peter-evans/find-comment@v2
