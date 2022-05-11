@@ -6,6 +6,7 @@ on:
     - 'docs/**'
     - '**.yml'
     - 'theme/**'
+    - '!.github/**'
     branches:
     - master
 
