@@ -135,7 +135,6 @@ On first startup will it generate with the below default values.
         "discord-bots-gg": "dbgg-token",
         "botlist-space": "botlist-token",
         "discordextremelist-xyz": "debl-token",
-        "discord-boats": "discord-boats-token",
         "discordservices-net": "discordservices-net-token"
       },
       
