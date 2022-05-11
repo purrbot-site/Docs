@@ -27,8 +27,6 @@ Please take a look at our [CONTRIBUTING.md] file and also the [formatting help] 
 ## Builds
 We use [Netlify] to generate and deploy previews of Pull requests in order to see, if the PR in question would break something in terms of look and design.
 
-[![netlifyImg]][netlify]
-
 ## Credits
 A big thank you goes to the following people/groups:
 - [MkDocs] for providing the software, to generate documentation.
