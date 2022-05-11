@@ -25,10 +25,7 @@ jobs:
           body: |-
             ## Deploy Preview
             
-            | Name   | Link               |
-            | ------ | ------------------ |
-            | Status | Building...        |
-            | Commit | ${{ github.sha }}  |
+            Building preview of Pull request. Please wait...
           comment-id: ${{ steps.find-comment.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}
           token: ${{ secrets.BOT }}
@@ -55,7 +52,7 @@ jobs:
           destination_dir: ./${{ github.repository }}/${{ github.event.pull_request.number }}
           external_repository: gh-pages-deploy/Deploy-Previews
       - name: Delay comment update by 1 minute
-        run: sleep 1m
+        run: sleep 30s
         shell: bash
       - uses: peter-evans/create-or-update-comment@v2
         name: Update comment.
@@ -63,9 +60,10 @@ jobs:
           body: |-
             ## Deploy Preview
             
+            Deploy-Preview complete!
+            
             | Name   | Link                                                                                                               |
             | ------ | ------------------------------------------------------------------------------------------------------------------ |
-            | Status | Ready!                                                                                                             |
             | Commit | ${{ github.sha }}                                                                                                  |
             | Link   | https://gh-pages-deploy.github.io/Deploy-Previews/${{ github.repository }}/${{ github.event.pull_request.number }} |
             | Logs   | ${{ github.server_url }}/${{ github.repository }}/actions/run/${{ github.run_id }}                                 |
@@ -79,9 +77,10 @@ jobs:
           body: |-
             ## Deploy Preview
             
+            Deploy-Preview failed!
+            
             | Name   | Link                                                                                               |
             | ------ | -------------------------------------------------------------------------------------------------- |
-            | Status | Deployment failed!                                                                                 |
             | Commit | ${{ github.sha }}                                                                                  |
             | Logs   | ${{ github.server_url }}/${{ github.repository }}/actions/run/${{ github.run_id }}                 |
           comment-id: ${{ steps.comment.outputs.comment-id }}
