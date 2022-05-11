@@ -1,6 +1,6 @@
 ---
 title: API
-description: Detailed information about the ImageAPI.
+description: 'Documentation about the ImageAPI located under https://purrbot.site/api'
 
 hide:
   - navigation
@@ -20,7 +20,7 @@ The [Source code][source] is publicly available and contributions are always wel
 !!! note "Base URL"
     https://purrbot.site/api
 
-## Sections
+## Categories
 
 - [Safe for Work (SFW) Endpoints](#sfw-endpoints)
 - [Not Safe for Work (NSFW) Endpoints](#nsfw-endpoints)
@@ -694,9 +694,9 @@ The [Source code][source] is publicly available and contributions are always wel
         
         - `error`: Boolean  
           Always returns false for successful requests.
-        - `links`: Array
+        - `links`: Array  
           Array of Strings representing URLs to the Images/Gifs found in the directory.
-        - `time`: Integer
+        - `time`: Integer  
           Time in milliseconds it took for the API to process the request.
     
     --8<-- "api-img-errors.md"
@@ -1039,9 +1039,9 @@ The [Source code][source] is publicly available and contributions are always wel
         
         - `error`: Boolean  
           Always returns false for successful requests.
-        - `links`: Array
+        - `links`: Array  
           Array of Strings representing URLs to the Images/Gifs found in the directory.
-        - `time`: Integer
+        - `time`: Integer  
           Time in milliseconds it took for the API to process the request.
     
     --8<-- "api-img-errors.md"
