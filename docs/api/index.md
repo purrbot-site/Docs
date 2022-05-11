@@ -20,7 +20,7 @@ The [Source code][source] is publicly available and contributions are always wel
 !!! note "Base URL"
     https://purrbot.site/api
 
-## Sections
+## Categories
 
 - [Safe for Work (SFW) Endpoints](#sfw-endpoints)
 - [Not Safe for Work (NSFW) Endpoints](#nsfw-endpoints)
