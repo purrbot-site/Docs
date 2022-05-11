@@ -13,8 +13,10 @@
 
 [pymdown]: https://github.com/facelessuser/pymdown-extensions/
 
-[netlifyImg]: https://www.netlify.com/img/press/logos/full-logo-light.svg
-[netlify]: https://www.netlify.com
+[workflow]: https://github.com/purrbot-site/Docs/blob/master/.github/workflows/deploy-preview.yml
+[blueedgetechno]: https://github.com/blueedgetechno
+[win11react]: https://github.com/blueedgetechno/win11React
+[win11react-action]: https://github.com/blueedgetechno/win11React/blob/master/.github/workflows/PR-Preview.yml
 
 # Docs
 ![badge]
@@ -24,8 +26,9 @@ Documentation for [\*Purr*][purr] and the [PurrBotAPI] made in Markdown.
 ## Contributions
 Please take a look at our [CONTRIBUTING.md] file and also the [formatting help] on our documentation.
 
-## Builds
-We use [Netlify] to generate and deploy previews of Pull requests in order to see, if the PR in question would break something in terms of look and design.
+## Build Previews
+We use a [custom Workflow][workflow] to create previews of Pull requests.  
+The setup is inspired by the one used by [blueedgetechno] for [win11React][win11react] ([File][win11react-action])
 
 ## Credits
 A big thank you goes to the following people/groups:
