@@ -44,7 +44,7 @@ jobs:
           personal_token: ${{ secrets.BOT }}
           publish_dir: ./site
           destination_dir: ./${{ github.repository }}/${{ github.event.pull_request.number }}
-          external-repository: gh-pages-deploy/Deploy-Previews
+          external_repository: gh-pages-deploy/Deploy-Previews
       - name: Delay comment update by 1 minute
         run: sleep 1m
         shell: bash
