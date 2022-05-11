@@ -24,10 +24,10 @@ jobs:
           body: |-
             ## Deploy Preview
             
-            | Name   | Link           |
-            | ------ | -------------- |
-            | Status | Building...    |
-            | Commit | ${GITHUB_SHA}  |
+            | Name   | Link               |
+            | ------ | ------------------ |
+            | Status | Building...        |
+            | Commit | ${{ github.sha }}  |
           comment-id: ${{ steps.find-comment.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}
           token: ${{ secrets.BOT }}
@@ -65,7 +65,7 @@ jobs:
             | Name   | Link                                                                                                               |
             | ------ | ------------------------------------------------------------------------------------------------------------------ |
             | Status | Ready!                                                                                                             |
-            | Commit | ${GITHUB_SHA}                                                                                                      |
+            | Commit | ${{ github.sha }}                                                                                                  |
             | Link   | https://gh-pages-deploy.github.io/Deploy-Previews/${{ github.repository }}/${{ github.event.pull_request.number }} |
             | Logs   | ${{ github.server_url }}/${{ github.repository }}/actions/run/${{ github.run_id }}                                 |
           comment-id: ${{ steps.comment.outputs.comment-id }}
@@ -81,7 +81,7 @@ jobs:
             | Name   | Link                                                                                               |
             | ------ | -------------------------------------------------------------------------------------------------- |
             | Status | Deployment failed!                                                                                 |
-            | Commit | ${GITHUB_SHA}                                                                                      |
+            | Commit | ${{ github.sha }}                                                                                  |
             | Logs   | ${{ github.server_url }}/${{ github.repository }}/actions/run/${{ github.run_id }}                 |
           comment-id: ${{ steps.comment.outputs.comment-id }}
           edit-mode: replace
