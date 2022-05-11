@@ -54,12 +54,12 @@ jobs:
           body: |-
             ## Deploy Preview
             
-            | Name   | Link                                                                                               |
-            | ------ | -------------------------------------------------------------------------------------------------- |
-            | Status | Ready!                                                                                             |
-            | Commit | ${GITHUB_SHA}                                                                                      |
-            | Link   | https://gh-pages-deploy.github.io/${{ github.repository }}/${{ github.event.pull_request.number }} |
-            | Logs   | ${{ github.server_url }}/${{ github.repository }}/actions/run/${{ github.run_id }}                 |
+            | Name   | Link                                                                                                               |
+            | ------ | ------------------------------------------------------------------------------------------------------------------ |
+            | Status | Ready!                                                                                                             |
+            | Commit | ${GITHUB_SHA}                                                                                                      |
+            | Link   | https://gh-pages-deploy.github.io/Deploy-Previews/${{ github.repository }}/${{ github.event.pull_request.number }} |
+            | Logs   | ${{ github.server_url }}/${{ github.repository }}/actions/run/${{ github.run_id }}                                 |
           comment-id: ${{ steps.comment.outputs.comment-id }}
           edit-mode: replace
           token: ${{ secrets.BOT }}
