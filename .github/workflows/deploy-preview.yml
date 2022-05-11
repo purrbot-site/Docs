@@ -82,7 +82,7 @@ jobs:
             
             | Name   | Link                                                                                               |
             | ------ | -------------------------------------------------------------------------------------------------- |
-            | Commit | ${{ github.sha }}                                                                                  |
+            | Commit | ${{ github.event.pull_request.head.sha }}                                                          |
             | Logs   | ${{ github.server_url }}/${{ github.repository }}/actions/run/${{ github.run_id }}                 |
           comment-id: ${{ steps.comment.outputs.comment-id }}
           edit-mode: replace
