@@ -8,31 +8,42 @@ Welcome to the PurrBot Documentation!
 These pages cover various things for the API, the Bot and some other stuff.  
 Want to help improve those pages? Awesome! Just check out the [Contributing Section](#contributing) for how you can do this.
 
-## API
-Documentation about the various APIs available under the domain purrbot.site
+## Pages
 
-[:fontawesome-solid-book: API Documentation](api){: .md-button }
-
-## Wiki
-General wiki about the Bot \*Purr*, her commands and various other information.
-
-[:fontawesome-solid-book: Bot Wiki](bot){: .md-button }
-
-## Contributing
-Pages about how to contribute towards the documentation, bot and the APIs.  
-Also contains information about how formatting works in these documentations.
-
-[:fontawesome-solid-file-signature: Contributing Guide](/contribute){: .md-button }
-
-## Credits
-See what Software is behind both the bot and this documentation.
-
-[:fontawesome-solid-heart: Credits Page](credits){: .md-button }
-
-## Legal
-All the legal details about the Bot, API and website.
-
-[:fontawesome-solid-gavel: Legal Page](legal){: .md-button }
+<div class="mdx-grid-container">
+  <div class="mdx-grid-wrapper">
+    <div class="mdx-grid-child">
+      <h3 id="api">API<a class="headerlink" href="#api" title="Permanent link">¶</a></h3>
+      <p>Documentation about the <a href="https://github.com/purrbot-site/ImageAPI" target="_blank">open source ImageAPI</a>.</p>
+      
+      <a class="md-button" href="./api">Go to page</a>
+    </div>
+    <div class="mdx-grid-child">
+      <h3 id="wiki">Wiki<a class="headerlink" href="#wiki" title="Permanent link">¶</a></h3>
+      <p>Complete documentation of the Bot *Purr* including all commands and features it has.</p>
+      
+      <a class="md-button" href="./bot">Go to page</a>
+    </div>
+    <div class="mdx-grid-child">
+      <h3 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permanent link">¶</a></h3>
+      <p>Want to contribute to the API, the bot or this page? Head over to the contributing page to learn how.</p>
+      
+      <a class="md-button" href="./contribute">Go to page</a>
+    </div>
+    <div class="mdx-grid-child">
+      <h3 id="credits">Credits<a class="headerlink" href="#credits" title="Permanent link">¶</a></h3>
+      <p>The bot and this website wouldn't be possible with the help of awesome open-source projects!</p>
+      
+      <a class="md-button" href="./credits">Go to page</a>
+    </div>
+    <div class="mdx-grid-child">
+      <h3 id="legal">Legal<a class="headerlink" href="#legal" title="Permanent link">¶</a></h3>
+      <p>Various legal bits and pieces such as Terms of Service and Privacy Policy of the bot.</p>
+      
+      <a class="md-button" href="./legal">Go to page</a>
+    </div>
+  </div>
+</div>
 
 ## Other links
 **Social**
