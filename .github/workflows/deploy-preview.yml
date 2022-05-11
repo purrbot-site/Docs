@@ -14,7 +14,7 @@ jobs:
       - uses: peter-evans/create-or-update-comment@v2
         id: comment
         name: Create initial comment
-        width:
+        with:
           body: |-
             ## Deploy Preview
             
@@ -50,7 +50,7 @@ jobs:
         shell: bash
       - uses: peter-evans/create-or-update-comment@v2
         name: Update comment.
-        width:
+        with:
           body: |-
             ## Deploy Preview
             
@@ -66,7 +66,7 @@ jobs:
       - if: ${{ failure() }}
         uses: peter-evans/create-or-update-comment@v2
         name: Update comment.
-        width:
+        with:
           body: |-
             ## Deploy Preview
             
