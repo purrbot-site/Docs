@@ -33,7 +33,7 @@ Reset this using `p.welcome channel reset`
 > **Default**: [`color_white`](../welcome-images#color_white)
 
 Set a background that will be used on the image.  
-The syntax is `p.welcome bg set <background>` where `<background>` is one of the [available backgrounds](/bot/welcome-images#backgrounds).
+The syntax is `p.welcome bg set <background>` where `<background>` is one of the [available backgrounds](../welcome-images#backgrounds).
 
 Reset this using `p.welcome bg reset`
 
@@ -42,7 +42,7 @@ Reset this using `p.welcome bg reset`
 > **Default**: [`purr`](../welcome-images#purr)
 
 You can set an icon, which is shown on the right side of the image.  
-Use `p.welcome icon set <icon>` where `<icon>` is one of the [available icons](/bot/welcome-images#icons).
+Use `p.welcome icon set <icon>` where `<icon>` is one of the [available icons](../welcome-images#icons).
 
 Reset this using `p.welcome icon reset`
 
