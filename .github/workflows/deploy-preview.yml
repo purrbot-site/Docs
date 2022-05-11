@@ -31,6 +31,7 @@ jobs:
           comment-id: ${{ steps.find-comment.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}
           token: ${{ secrets.BOT }}
+          edit-mode: replace
       - uses: actions/checkout@v3
         name: Checkout Code
         with:
