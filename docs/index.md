@@ -11,12 +11,12 @@ Want to help improve those pages? Awesome! Just check out the [Contributing Sect
 ## API
 Documentation about the various APIs available under the domain purrbot.site
 
-[:fontawesome-solid-book: API Documentation](/api){: .md-button }
+[:fontawesome-solid-book: API Documentation](api){: .md-button }
 
 ## Wiki
 General wiki about the Bot \*Purr*, her commands and various other information.
 
-[:fontawesome-solid-book: Bot Wiki](/bot){: .md-button }
+[:fontawesome-solid-book: Bot Wiki](bot){: .md-button }
 
 ## Contributing
 Pages about how to contribute towards the documentation, bot and the APIs.  
@@ -27,12 +27,12 @@ Also contains information about how formatting works in these documentations.
 ## Credits
 See what Software is behind both the bot and this documentation.
 
-[:fontawesome-solid-heart: Credits Page](/credits){: .md-button }
+[:fontawesome-solid-heart: Credits Page](credits){: .md-button }
 
 ## Legal
 All the legal details about the Bot, API and website.
 
-[:fontawesome-solid-gavel: Legal Page](/legal){: .md-button }
+[:fontawesome-solid-gavel: Legal Page](legal){: .md-button }
 
 ## Other links
 **Social**

@@ -108,6 +108,17 @@ Lets you bite one or multiple mentioned users.
 Lets you blush.
 
 ----
+### Comfy
+> **Permission**: `None`  
+> **Bot requires**: `None`
+> 
+> **Usage**:
+> 
+> - `p.Comfy`
+
+Lets you show others that you're feeling comfy right now.
+
+----
 ### Cry
 > **Permission**: `None`  
 > **Bot requires**: `None`
