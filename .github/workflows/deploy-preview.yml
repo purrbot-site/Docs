@@ -51,7 +51,7 @@ jobs:
           publish_dir: ./site
           destination_dir: ./${{ github.repository }}/${{ github.event.pull_request.number }}
           external_repository: gh-pages-deploy/Deploy-Previews
-          commit_message: 'Pushing deploy preview for Pull request ${{ github.repository }}#${{ github.event.pull_request.number }}'
+          full_commit_message: 'Pushing deploy preview for Pull request ${{ github.event.pull_request.number }} from ${{ github.repository }}'
       - name: Delay comment update by 30 seconds
         run: sleep 30s
         shell: bash
