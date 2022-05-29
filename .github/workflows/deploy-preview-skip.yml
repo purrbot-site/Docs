@@ -8,14 +8,30 @@ on:
       - synchronize
     paths:
       - '.github/**'
-      - '!.snippets/**'
-      - '!docs/**'
-      - '!theme/**'
-      - '!mkdocs.yml'
-      - 'requirements.txt'
+      - 'CODE_OF_CONDUCT.md'
+      - 'CONTRIBUTING.md'
+      - 'LICENSE'
+      - 'README.md'
 
 jobs:
   deploy-preview:
+    name: Skip Deploy preview
     runs-on: ubuntu-latest
     steps:
-      - run: 'echo "Skipping Deploy Preview"'
+      - uses: peter-evans/find-comment@v2
+        id: find-comment
+        name: Find Comment
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: gh-pages-deploy
+      - uses: peter-evans/create-or-update-comment@v2
+        name: Create Comment
+        with:
+          body: |-
+            ## Deploy Preview
+            
+            Skipping Deploy Preview.
+          comment-id: ${{ steps.find-comment.outputs.comment-id }}
+          issue-number: ${{ github.event.pull_request.number }}
+          token: ${{ secrets.BOT }}
+          edit-mode: replace
