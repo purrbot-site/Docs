@@ -1,7 +1,7 @@
 [badge]: https://img.shields.io/badge/Made_with-Markdown-212121?style=for-the-badge&logo=markdown&labelColor=000
 
 [purr]: https://purrbot.site/github
-[purrbotapi]: https://github.com/purrbot-site/PurrBotAPI
+[imageapi]: https://github.com/purrbot-site/ImageAPI
 
 [CONTRIBUTING.md]: https://github.com/purrbot-site/Docs/blob/master/CONTRIBUTING.md
 [formatting help]: https://docs.purrbot.site/contribute/formatting-help
@@ -21,7 +21,7 @@
 # Docs
 ![badge]
 
-Documentation for [\*Purr*][purr] and the [PurrBotAPI] made in Markdown.
+Documentation for [\*Purr*][purr] and the [ImageAPI] made in Markdown.
 
 ## Contributions
 Please take a look at our [CONTRIBUTING.md] file and also the [formatting help] on our documentation.
