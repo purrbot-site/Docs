@@ -5,7 +5,8 @@ description: List of all Commands the Bot currently offers.
 
 [patreon]: https://patreon.com/andre_601
 
-# General info
+# Commands
+
 This page lists all available commands of the bot.  
 The commands are offered through Discord's Slash commands feature, meaning they all are prefixed with `/`
 
@@ -88,6 +89,17 @@ Lets you bite up to 3 users.
 > - `/blush`
 
 Makes you blush. \>////\<
+
+----
+### Comfy
+> **Permission**: `None`  
+> **Bot requires**: `None`
+> 
+> **Usage**:
+> 
+> - `p.Comfy`
+
+Lets you show others that you're feeling comfy right now.
 
 ----
 ### Cry

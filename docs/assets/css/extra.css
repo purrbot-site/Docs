@@ -1,4 +1,6 @@
-@import "styling/colors.css";
-@import "styling/animations.css";
-@import "styling/padding.css";
 @import "styling/admonitions.css";
+@import "styling/animations.css";
+@import "styling/colors.css";
+@import "styling/frontpage.css";
+@import "styling/links.css";
+@import "styling/padding.css";
