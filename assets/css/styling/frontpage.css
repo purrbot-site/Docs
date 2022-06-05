@@ -24,7 +24,7 @@
 
 /* Grid stuff */
 .mdx-grid-container {
-    background-color: var(--md-admonition-bg-color);
+    background-color: hsla(var(--md-hue),0%,100%,0.025);
     padding: 1rem;
 }
 
