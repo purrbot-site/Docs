@@ -69,7 +69,7 @@ theme:
   - navigation.top
   - content.code.annotate
   icon:
-    repo: fontawesome/brands/github-square
+    repo: fontawesome/brands/square-github
     admonition:
       note: octicons/pencil-16
       abstract: octicons/multi-select-16
