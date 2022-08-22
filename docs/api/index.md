@@ -885,6 +885,7 @@ The [Source code][source] is publicly available and contributions are always wel
             "https://purrbot.site/img/nsfw/anal/gif/anal_078.gif",
             "https://purrbot.site/img/nsfw/anal/gif/anal_079.gif",
             "https://purrbot.site/img/nsfw/anal/gif/anal_080.gif"
+          ],
           "time": 0
         }
         ```
