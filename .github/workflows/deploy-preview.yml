@@ -13,6 +13,8 @@ on:
       - 'LICENSE'
       - 'README.md'
 
+concurrency: "deploy-preview"
+
 jobs:
   deploy-preview:
     runs-on: ubuntu-latest
