@@ -744,7 +744,7 @@ Shows information about yourself or a mentioned user.
 >
 > - `p.Blowjob <@user>`
 
-**This command can only be run in NSFW-labeled channels!**
+!!! danger "Command can only be executed in an Age-gated Channel"
 
 Lets you ask the mentioned user, if you can give them a blowjob.  
 The user can accept or deny the request.
@@ -762,7 +762,7 @@ The user can accept or deny the request.
 >
 > - `p.Cum`
 
-**This command can only be run in NSFW-labeled channels!**
+!!! danger "Command can only be executed in an Age-gated Channel"
 
 Returns a random gif of someone cumming.
 
@@ -783,7 +783,7 @@ Returns a random gif of someone cumming.
 > - `p.Fuck <@user> --yaoi`
 > - `p.Fuck <@user> --yuri`
 
-**This command can only be run in NSFW-labeled channels!**
+!!! danger "Command can only be executed in an Age-gated Channel"
 
 Asks the mentioned user to have sex with you.  
 When no arguments are provided can the mentioned user choose which type of sex they want.  
@@ -803,7 +803,7 @@ The user can accept or deny the request.
 > - `p.Lewd`
 > - `p.Lewd --gif`
 
-**This command can only be run in NSFW-labeled channels!**
+!!! danger "Command can only be executed in an Age-gated Channel"
 
 Gives an image of a lewd Neko.  
 `--gif` returns a gif of a lewd neko.
@@ -822,7 +822,7 @@ Gives an image of a lewd Neko.
 >
 > - `p.Pussylick <@user>`
 
-**This command can only be run in NSFW-Labeled channels!**
+!!! danger "Command can only be executed in an Age-gated Channel"
 
 Asks the mentioned user to let you licking their pussy.  
 The user can accept or deny the request.
@@ -840,7 +840,7 @@ The user can accept or deny the request.
 >
 > - `p.Solo`
 
-**This command can only be run in NSFW-labeled channels!**
+!!! danger "Command can only be executed in an Age-gated Channel"
 
 Gives a gif of a girl *playing* with herself.
 
@@ -859,7 +859,7 @@ Gives a gif of a girl *playing* with herself.
 > - `p.Threesome <@user1> <@user2> --fff`
 > - `p.Threesome <@user1> <@user2> --mmf`
 
-**This command can only be run in NSFW-labeled channels!**
+!!! danger "Command can only be executed in an Age-gated Channel"
 
 Similar to [Fuck](#fuck) but allows you to ask two people at once.  
 By default will the threesome be with 2 females and 1 male. Providing `--fff` or `--mmf` will change it to a threesome with 3 females or a threesome with 1 female and 2 males respectively.  
