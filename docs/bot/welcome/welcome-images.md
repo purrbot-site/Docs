@@ -26,7 +26,7 @@ The background is across the entire image and behind the avatar, text and icon.
 ### Booster Reward
 These backrgounds are only available as a reward for boosting the [Discord Server][discord].
 
-#### booster
+#### booster {: #booster-background}
 Background with Booster colour and icons.
 
 ![image](https://purrbot.site/images/boost/booster_background.png)
@@ -110,7 +110,7 @@ Other available options.
 
 #### custom {: #custom-background }
 This is a Patreon-exclusive option.  
-Users that support us through [Patreon][patreon] gain access to use any image they want by providing a URL instead of a name.  
+Users that support us through [Patreon][patreon] as a Tier 2 or Tier 3 member gain access to use any image they want by providing a URL instead of a name.  
 The only requirements are, that the image has the right dimensions (`2000x350`)
 
 #### rainbow
@@ -128,7 +128,7 @@ Icons can be seen on the right side of the image.
 ### Booster Reward
 These icons are only available as a reward for boosting the [Discord Server][discord].
 
-#### booster
+#### booster {: #booster-icon }
 Icon Wumpus on it.
 
 ![image](https://purrbot.site/images/boost/booster_icon.png)
@@ -198,7 +198,7 @@ Other available options.
 #### custom {: #custom-icon }
 This is a Patreon-exclusive option.
 
-Users that support us through [Patreon][patreon] gain access to use any image they want by providing a URL instead of a name.  
+Users that support us through [Patreon][patreon] as a Tier 2 or Tier 3 member gain access to use any image they want by providing a URL instead of a name.  
 The only requirements are, that the image has the right dimensions (`320x320`)
 
 #### random
