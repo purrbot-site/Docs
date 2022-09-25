@@ -1,5 +1,3 @@
-[badge]: https://img.shields.io/badge/Made_with-Markdown-212121?style=for-the-badge&logo=markdown&labelColor=000
-
 [docs]: https://docs.purrbot.site
 [wiki]: https://docs.purrbot.site/bot
 [api-docs]: https://docs.purrbot.site/api
@@ -22,7 +20,9 @@
 [pymdownx]: https://github.com/facelessuser/pymdown-extensions/
 
 # Docs
-![badge]
+<a href="https://www.mkdocs.org" target="_blank">
+  <img alt="mkdocs" src="https://raw.githubusercontent.com/intergrav/devins-badges/v2/assets/cozy/built-with/mkdocs_vector.svg" height="64">
+</a>
 
 This is the source of the [PurrBot Documentation][docs] containing the [Wiki of \*Purr*][wiki] and [ImageAPI documentation][api-docs].  
 The content is made in Markdown, build using [MkDocs][mkdocs] with the [Material for MkDocs theme][mkdocs-material] and hosted using [GitHub Pages][gh-pages].
