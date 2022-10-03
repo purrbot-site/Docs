@@ -93,11 +93,11 @@ extra_css:
 
 extra:
   social:
-    - icon: 'fontawesome/brands/patreon'
+    - icon: 'simple/patreon'
       link: 'https://patreon.com/andre_601'
-    - icon: 'fontawesome/brands/github'
+    - icon: 'simple/github'
       link: 'https://github.com/purrbot-site'
-    - icon: 'fontawesome/brands/twitter'
+    - icon: 'simple/twitter'
       link: 'https://twitter.com/TruePurrBot'
 
 markdown_extensions:
