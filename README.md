@@ -21,7 +21,7 @@
 
 # Docs
 <a href="https://www.mkdocs.org" target="_blank">
-  <img alt="mkdocs" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@2/assets/cozy/built-with/mkdocs_vector.svg" height="64">
+  <img alt="mkdocs" align="right" height="64" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@2/assets/cozy/built-with/mkdocs_vector.svg">
 </a>
 
 This is the source of the [PurrBot Documentation][docs] containing the [Wiki of \*Purr*][wiki] and [ImageAPI documentation][api-docs].  
