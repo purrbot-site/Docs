@@ -437,6 +437,24 @@ The [Source code][source] is publicly available and contributions are always wel
     
     --8<-- "api-img-errors.md"
 
+??? api-get "/img/sfw/shiro/img <span class='description'>Returns a randomly selected Image of Shiro.</span>"
+    <h3>Response</h3>
+    
+    ??? success "200"
+        --8<-- "api-response-header.md"
+        
+        ```json
+        {
+          "error": false,
+          "link": "https://purrbot.site/img/sfw/shiro/img/shiro_001.jpg",
+          "time": 0
+        }
+        ```
+        
+        --8<-- "api-img-success-scheme.md"
+    
+    --8<-- "api-img-errors.md"
+
 ??? api-get "/img/sfw/slap/gif <span class='description'>Returns a randomly selected slapping Gif.</span>"
     <h3>Response</h3>
     
