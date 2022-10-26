@@ -42,6 +42,7 @@ The default prefix is `p.` but can be changed with the [prefix command](#prefix)
 - [Poke](#poke)
 - [Senko](#senko)
 - [Ship](#ship)
+- [Shiro](#shiro)
 - [Slap](#slap)
 - [Smile](#smile)
 - [Tail](#tail)
@@ -69,7 +70,7 @@ The default prefix is `p.` but can be changed with the [prefix command](#prefix)
 - [Blowjob](#blowjob)
 - [Cum](#cum)
 - [Fuck](#fuck)
-- [Lewd](#lewd)
+- [Neko](#neko-nsfw)
 - [Pussylick](#pussylick)
 - [Solo](#solo)
 - [Threesome](#threesome)
@@ -306,6 +307,9 @@ Lets you lick one or multiple mentioned user.
 Gives an image of a Neko (cat girl). ([Example](https://purrbot.site/img/sfw/neko/img/neko_001.jpg))  
 `[--gif]` returns a gif of a Neko.
 
+!!! note
+    Since [version 2.41.0](https://github.com/purrbot-site/PurrBot/pull/520) does this bot also include the [NSFW version](#neko-nsfw) through an optional `--nsfw` argument.
+
 ----
 ### Pat
 > **Permission**: `None`  
@@ -370,6 +374,19 @@ Gives a random image of the divine messenger Senko-San ([Example](https://purrbo
 
 Will make the bot show how likely you match with someone else.  
 You can optionally mention a second user to instead ship those two with each other.
+
+----
+### Shiro
+> **Permission**: `None`  
+> **Bot requires**: `None`  
+> 
+> **Aliases**: `None`
+> 
+> **Usage**:
+>
+> - `p.Shiro`
+
+Gets a random image of the divine Messenger Shiro ([Example](https://purrbot.site/img/sfw/shiro/img/shiro_001.jpg))
 
 ----
 ### Slap
@@ -792,16 +809,18 @@ Providing `--anal`, `--normal`, `--yaoi` or `--yuri` however pre-selects the opt
 The user can accept or deny the request.
 
 ----
-### Lewd
+### Neko { #neko-nsfw }
 > **Permission**: `None`  
 > **Bot requires**: `None`
 > 
-> **Aliases**: `None`
+> **Aliases**:
+> 
+> - `Catgirl`
 > 
 > **Usage**:
 >
-> - `p.Lewd`
-> - `p.Lewd --gif`
+> - `p.Neko --nsfw`
+> - `p.Neko --nsfw --gif`
 
 !!! danger "Command can only be executed in an Age-gated Channel"
 
