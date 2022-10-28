@@ -872,8 +872,13 @@ The bot won't quote messages, if the channel it is located in is marked as Age-g
     
     - `p.shards`
 
-Lists the shards the bot currently has including their ping, number of servers and connection status.  
-For more info on what a shard actually is, read the official description in the [Discord Developer Documentation][shard_info].
+Lists the shards the bot currently has including their ping, number of servers and connection status.
+
+??? question "What is a shard?"
+    Quote from the [Discord Developer Documentation][shard_info]:
+    > As apps grow and are added to an increasing number of guilds, some developers may find it necessary to divide portions of their app's operations across multiple processes. As such, the Gateway implements a method of user-controlled guild sharding which allows apps to split events across a number of Gateway connections. Guild sharding is entirely controlled by an app, and requires no state-sharing between separate connections to operate. While all apps can enable sharding, it's not necessary for apps in a smaller number of guilds.
+    
+    tl;dr: Shards are - in most simplistic terms - separate gateway connections to Discord, which receive updates and events only for themself and not other shards.
 
 ----
 ### Stats
