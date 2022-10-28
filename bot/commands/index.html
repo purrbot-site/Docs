@@ -825,6 +825,19 @@
     Welcome
   </a>
   
+    <nav class="md-nav" aria-label="Welcome">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#placeholders" class="md-nav__link">
+    Placeholders
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1585,6 +1598,19 @@
     Welcome
   </a>
   
+    <nav class="md-nav" aria-label="Welcome">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#placeholders" class="md-nav__link">
+    Placeholders
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1767,22 +1793,25 @@
 <h1 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h1>
 <p>This page lists all available commands of the bot.<br />
 The default prefix is <code>p.</code> but can be changed with the <a href="#prefix">prefix command</a></p>
-<div class="admonition info">
+<div class="admonition warning">
 <p class="admonition-title">Important</p>
 <ul>
 <li><code>Permission</code> means Discord permissions which the executor of the command (you) requires.</li>
-<li>To make the bot work properly will it require the following permissions:<ul>
+<li><code>Bot requires</code> will mention <strong>addtional</strong> permissions needed on top of the following ones:<ul>
 <li><code>Read Messages</code></li>
 <li><code>Send Messages</code></li>
 <li><code>Embed Links</code></li>
 <li><code>Read Message History</code></li>
 <li><code>Add Reactions</code>  </li>
-<li><code>Use External Emojis</code><br />
-  Additional permissions required for a command will be mentioned under <code>Bot Requires</code></li>
+<li><code>Use External Emojis</code></li>
 </ul>
 </li>
-<li><code>&lt;argument&gt;</code> are required and <code>[argument]</code> are optional.</li>
-<li>If an argument has <code>...</code> does it indicate, that you can provide it multiple times.</li>
+<li>Arguments surrounded by <code>&lt;&gt;</code> are required while those surrounded with <code>[]</code> are optional.<ul>
+<li>You don't need to include the <code>&lt;&gt;</code> and <code>[]</code> for an argument!</li>
+<li>Order of the arguments is not important unless mentioned.</li>
+<li>Arguments containing <code>...</code> mean you can add as many as you like.</li>
+</ul>
+</li>
 </ul>
 </div>
 <h3 id="fun"><a href="#category-fun">Fun</a><a class="headerlink" href="#fun" title="Permanent link">&para;</a></h3>
@@ -1844,812 +1873,1006 @@ The default prefix is <code>p.</code> but can be changed with the <a href="#pref
 <hr />
 <h2 id="category-fun">Fun<a class="headerlink" href="#category-fun" title="Permanent link">&para;</a></h2>
 <h3 id="bite">Bite<a class="headerlink" href="#bite" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code></p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Nibble</code></li>
 <li><code>Nom</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Bite &lt;@user ...&gt;</code></li>
+<li><code>&lt;@user ...&gt;</code> - The User(s) to bite. Needs to be a mention.</li>
 </ul>
-</blockquote>
-<p>Lets you bite one or multiple mentioned users.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.bite @user</code></li>
+</ul>
+</div>
+<p>Bites the mentioned users.</p>
 <hr />
 <h3 id="blush">Blush<a class="headerlink" href="#blush" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code></p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Blushing</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong> <code>None</code></p>
+<p><strong>Examples:</strong></p>
 <ul>
-<li><code>p.Blush</code></li>
+<li><code>p.blush</code></li>
 </ul>
-</blockquote>
+</div>
 <p>Lets you blush.</p>
 <hr />
 <h3 id="comfy">Comfy<a class="headerlink" href="#comfy" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code></p>
-<p><strong>Usage</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong> <code>None</code></p>
+<p><strong>Arguments:</strong> <code>None</code></p>
+<p><strong>Examples:</strong></p>
 <ul>
-<li><code>p.Comfy</code></li>
+<li><code>p.comfy</code></li>
 </ul>
-</blockquote>
+</div>
 <p>Lets you show others that you're feeling comfy right now.</p>
 <hr />
 <h3 id="cry">Cry<a class="headerlink" href="#cry" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code></p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Sad</code></li>
 <li><code>Sob</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong> <code>None</code></p>
+<p><strong>Examples:</strong></p>
 <ul>
-<li><code>p.Cry</code></li>
+<li><code>p.cry</code></li>
 </ul>
-</blockquote>
+</div>
 <p>Lets you cry. <img alt="😢" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f622.svg" title=":cry:" /></p>
 <hr />
 <h3 id="cuddle">Cuddle<a class="headerlink" href="#cuddle" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code>  </p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Cuddles</code></li>
 <li><code>Snuggle</code></li>
 <li><code>Snuggles</code></li>
 <li><code>Squeeze</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Cuddle &lt;@user ...&gt;</code></li>
+<li><code>&lt;@user ...&gt;</code> - The User(s) to cuddle. Needs to be a mention.</li>
 </ul>
-</blockquote>
-<p>Lets you cuddle one or multiple mentioned users.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.cuddle @user</code></li>
+</ul>
+</div>
+<p>Cuddles the mentioned users.</p>
 <hr />
 <h3 id="dance">Dance<a class="headerlink" href="#dance" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code></p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Dancing</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong> <code>None</code></p>
+<p><strong>Examples:</strong></p>
 <ul>
-<li><code>p.Dance</code></li>
+<li><code>p.dance</code></li>
 </ul>
-</blockquote>
-<p>Gives a gif of someone dancing. ~(^-^)~</p>
+</div>
+<p>Lets you show to others that you're dancing. ~(^-^)~</p>
 <hr />
 <h3 id="eevee">Eevee<a class="headerlink" href="#eevee" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code></p>
-<p><strong>Aliases</strong>: <code>None</code></p>
-<p><strong>Usage</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong> <code>None</code></p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Eevee</code></li>
-<li><code>p.Eevee [--gif]</code></li>
+<li><code>[--gif]</code> - Receive a gif instead of an image.</li>
 </ul>
-</blockquote>
-<p>Gives an image of the cute Pokémon Eevee. (<a href="https://purrbot.site/img/sfw/eevee/img/eevee_001.jpg">Example</a>)<br />
-<code>--gif</code> returns a gif of an Eevee.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.eevee</code></li>
+<li><code>p.eevee --gif</code></li>
+</ul>
+</div>
+<p>Gives you a random image/gif of the Pokémon Eevee. (<a href="https://purrbot.site/img/sfw/eevee/img/eevee_001.jpg">Example (Image)</a>)</p>
 <hr />
 <h3 id="feed">Feed<a class="headerlink" href="#feed" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code></p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Food</code></li>
 <li><code>Eat</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Feed &lt;@user&gt;</code></li>
+<li><code>&lt;@user&gt;</code> - The User to feed. Needs to be a mention.</li>
 </ul>
-</blockquote>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.feed @user</code></li>
+</ul>
+</div>
 <p>Lets you feed someone.<br />
 The asked user can either accept or deny the request.</p>
 <hr />
 <h3 id="fluff">Fluff<a class="headerlink" href="#fluff" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code></p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Fluffing</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Fluff &lt;@user&gt;</code></li>
+<li><code>&lt;@user&gt;</code> - The User to fluff. Needs to be a mention.</li>
 </ul>
-</blockquote>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.fluff @user</code></li>
+</ul>
+</div>
 <p>Lets you ask someone if you can fluff their tail.<br />
 The asked user can either accept or deny the request.</p>
 <hr />
 <h3 id="holo">Holo<a class="headerlink" href="#holo" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code></p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
-<li><code>Spiceandwolf</code>  </li>
+<li><code>Spiceandwolf</code></li>
+<li><code>Nom</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong> <code>None</code></p>
+<p><strong>Examples:</strong></p>
 <ul>
-<li><code>p.Holo</code></li>
+<li><code>p.holo</code></li>
 </ul>
-</blockquote>
+</div>
 <p>Gives an image of Holo from the manga and anime "Spice &amp; Wolf". (<a href="https://purrbot.site/img/sfw/holo/img/holo_001.jpg">Example</a>)</p>
 <hr />
 <h3 id="hug">Hug<a class="headerlink" href="#hug" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code>  </p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
-<li><code>Hugging</code>  </li>
+<li><code>Hugging</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Hug &lt;@user ...&gt;</code></li>
+<li><code>&lt;@user ...&gt;</code> - The User(s) to hug. Needs to be a mention.</li>
 </ul>
-</blockquote>
-<p>Lets you hug one or multiple mentioned user.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.hug @user</code></li>
+</ul>
+</div>
+<p>Hugs the mentioned users.</p>
 <hr />
 <h3 id="kiss">Kiss<a class="headerlink" href="#kiss" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code>  </p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Kissu</code></li>
-<li><code>Love</code>  </li>
+<li><code>Love</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Kiss &lt;@user ...&gt;</code></li>
+<li><code>&lt;@user ...&gt;</code> - The User(s) to kiss. Needs to be a mention.</li>
 </ul>
-</blockquote>
-<p>Lets you kiss one or multiple mentioned user.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.kiss @user</code></li>
+</ul>
+</div>
+<p>Kisses the mentioned users</p>
 <hr />
 <h3 id="kitsune">Kitsune<a class="headerlink" href="#kitsune" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code>  </p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
-<li><code>Foxgirl</code>  </li>
+<li><code>Foxgirl</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong> <code>None</code></p>
+<p><strong>Examples:</strong></p>
 <ul>
-<li><code>p.Kitsune</code></li>
+<li><code>p.kitsune</code></li>
 </ul>
-</blockquote>
-<p>Gives an image of a kitsune (fox girl). (<a href="https://purrbot.site/img/sfw/kitsune/img/kitsune_001.jpg">Example</a>)</p>
+</div>
+<p>Gives a random image of a kitsune (fox girl). (<a href="https://purrbot.site/img/sfw/kitsune/img/kitsune_001.jpg">Example</a>)</p>
 <hr />
 <h3 id="lick">Lick<a class="headerlink" href="#lick" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code></p>
-<p><strong>Aliases</strong>: <code>None</code>  </p>
-<p><strong>Usage</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong> <code>None</code></p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Lick &lt;@user ...&gt;</code></li>
+<li><code>&lt;@user ...&gt;</code> - The User(s) to lick. Needs to be a mention.</li>
 </ul>
-</blockquote>
-<p>Lets you lick one or multiple mentioned user.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.lick @user</code></li>
+</ul>
+</div>
+<p>Licks the mentioned users.</p>
 <hr />
 <h3 id="neko">Neko<a class="headerlink" href="#neko" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code></p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Catgirl</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Neko</code></li>
-<li><code>p.Neko [--gif]</code></li>
+<li><code>[--gif]</code> - Receive a gif instead of an image.</li>
 </ul>
-</blockquote>
-<p>Gives an image of a Neko (cat girl). (<a href="https://purrbot.site/img/sfw/neko/img/neko_001.jpg">Example</a>)<br />
-<code>[--gif]</code> returns a gif of a Neko.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Since <a href="https://github.com/purrbot-site/PurrBot/pull/520">version 2.41.0</a> does this bot also include the <a href="#neko-nsfw">NSFW version</a> through an optional <code>--nsfw</code> argument.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.neko</code></li>
+<li><code>p.neko --gif</code></li>
+</ul>
 </div>
+<p>Gives an image of a Neko (cat girl). (<a href="https://purrbot.site/img/sfw/neko/img/neko_001.jpg">Example (Image)</a>)</p>
 <hr />
 <h3 id="pat">Pat<a class="headerlink" href="#pat" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code>  </p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Patting</code></li>
 <li><code>Pet</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Pat &lt;@user ...&gt;</code></li>
+<li><code>&lt;@user ...&gt;</code> - The User(s) to pat. Needs to be a mention.</li>
 </ul>
-</blockquote>
-<p>Lets you pat one or multiple mentioned user.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.pat @user</code></li>
+</ul>
+</div>
+<p>Pats the mentioned users.</p>
 <hr />
 <h3 id="poke">Poke<a class="headerlink" href="#poke" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code>  </p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
+<li><code>Boop</code></li>
 <li><code>Poking</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Poke &lt;@user ...&gt;</code></li>
+<li><code>&lt;@user ...&gt;</code> - The User(s) to poke. Needs to be a mention.</li>
 </ul>
-</blockquote>
-<p>Lets you poke one or multiple mentioned user.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.poke @user</code></li>
+</ul>
+</div>
+<p>Pokes the mentioned users.</p>
 <hr />
 <h3 id="senko">Senko<a class="headerlink" href="#senko" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code></p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Senko-san</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong> <code>None</code></p>
+<p><strong>Examples:</strong></p>
 <ul>
-<li><code>p.Senko</code></li>
+<li><code>p.senko</code></li>
 </ul>
-</blockquote>
-<p>Gives a random image of the divine messenger Senko-San (<a href="https://purrbot.site/img/sfw/senko/img/senko_001.jpg">Example</a>)</p>
+</div>
+<p>Gives a random image of Senko-San from the anime and manga "Sewayaki Kitsune no Senko-San". (<a href="https://purrbot.site/img/sfw/senko/img/senko_001.jpg">Example</a>)</p>
 <hr />
 <h3 id="ship">Ship<a class="headerlink" href="#ship" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong></p>
 <ul>
-<li><code>Attach files</code> (optional for showing a image)  </li>
+<li><code>Attach Files</code> - Required to also display an image. Command works without it.</li>
 </ul>
-<p><strong>Aliases</strong>:</p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Shipping</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Ship &lt;@user&gt;</code></li>
-<li><code>p.Ship &lt;@user1&gt; [@user2]</code></li>
+<li><code>&lt;@user1&gt;</code> - The user to ship with. Needs to be a mention.</li>
+<li><code>[@user2]</code> - A second user to ship first one with. Needs to be a mention. Defaults to you if not set.</li>
 </ul>
-</blockquote>
-<p>Will make the bot show how likely you match with someone else.<br />
-You can optionally mention a second user to instead ship those two with each other.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.ship @user</code></li>
+<li><code>p.ship @user @user2</code></li>
+</ul>
+</div>
+<p>Ships you (or the second user if provided) with the mentioned user.<br />
+Returns an image (if permissions is given) showing a percentage between 0 and 100 percent.</p>
 <hr />
 <h3 id="shiro">Shiro<a class="headerlink" href="#shiro" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code>  </p>
-<p><strong>Aliases</strong>: <code>None</code></p>
-<p><strong>Usage</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong> <code>None</code></p>
+<p><strong>Arguments:</strong> <code>None</code></p>
+<p><strong>Examples:</strong></p>
 <ul>
-<li><code>p.Shiro</code></li>
+<li><code>p.shiro</code></li>
 </ul>
-</blockquote>
-<p>Gets a random image of the divine Messenger Shiro (<a href="https://purrbot.site/img/sfw/shiro/img/shiro_001.jpg">Example</a>)</p>
+</div>
+<p>Gives a random image of Shiro from the anime and manga "Sewayaki Kitsune no Senko-san". (<a href="https://purrbot.site/img/sfw/shiro/img/shiro_001.jpg">Example</a>)</p>
 <hr />
 <h3 id="slap">Slap<a class="headerlink" href="#slap" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code>  </p>
-<p><strong>Aliases</strong>: <code>None</code></p>
-<p><strong>Usage</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong> <code>None</code></p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Slap &lt;@user ...&gt;</code></li>
+<li><code>&lt;@user ...&gt;</code> - The User(s) to slap. Needs to be a mention.</li>
 </ul>
-</blockquote>
-<p>Lets you slap one or multiple mentioned user.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.slap @user</code></li>
+</ul>
+</div>
+<p>Slaps the mentioned users.</p>
 <hr />
 <h3 id="smile">Smile<a class="headerlink" href="#smile" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code>
-<strong>Bot requires</strong>: <code>None</code></p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
-<li><code>Grinning</code></li>
 <li><code>Grin</code></li>
+<li><code>Grinning</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong> <code>None</code></p>
+<p><strong>Examples:</strong></p>
 <ul>
-<li><code>p.Smile</code></li>
+<li><code>p.smile</code></li>
 </ul>
-</blockquote>
+</div>
 <p>Lets you Smile. :)</p>
 <hr />
 <h3 id="tail">Tail<a class="headerlink" href="#tail" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code>
-<strong>Bot requires</strong>: <code>None</code></p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Wag</code></li>
 <li><code>Wagging</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong> <code>None</code></p>
+<p><strong>Examples:</strong></p>
 <ul>
-<li><code>p.Tail</code></li>
+<li><code>p.tail</code></li>
 </ul>
-</blockquote>
+</div>
 <p>Lets you wag your tail (in excitement hopefully).</p>
 <hr />
 <h3 id="tickle">Tickle<a class="headerlink" href="#tickle" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code>  </p>
-<p><strong>Aliases</strong>: <code>None</code></p>
-<p><strong>Usage</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong> <code>None</code></p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Tickle &lt;@user ...&gt;</code></li>
+<li><code>&lt;@user ...&gt;</code> - The User(s) to tickle. Needs to be a mention.</li>
 </ul>
-</blockquote>
-<p>Lets you tickle one or multiple users.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.tickle @user</code></li>
+</ul>
+</div>
+<p>Tickles the mentioned users.</p>
 <hr />
 <h2 id="category-guild">Guild<a class="headerlink" href="#category-guild" title="Permanent link">&para;</a></h2>
 <h3 id="language">Language<a class="headerlink" href="#language" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>Manage Server</code><br />
-<strong>Bot requires</strong>: <code>None</code></p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>Manage Server</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Lang</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Lang [set &lt;language&gt;]</code></li>
-<li><code>p.Lang [reset]</code></li>
+<li><code>[set &lt;language&gt;]</code> - Sets the language used to the specified one. <code>&lt;language&gt;</code> is the language you want to use.</li>
+<li><code>[reset]</code> - Resets the language back to <code>en</code> (English).</li>
 </ul>
-</blockquote>
-<p>Lets you change or reset the current language set in a Discord.<br />
-A list of currently worked on (and completed) translations can be found on <a href="https://lang.purrbot.site">https://lang.purrbot.site</a>.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.language</code></li>
+<li><code>p.language set en-owo</code></li>
+<li><code>p.language reset</code></li>
+</ul>
+</div>
+<p>Allows to set a different language to use in a specific server.<br />
+If no arguments are provided will all available languages be listed.</p>
+<p>A list of currently worked on (and perhaps completed) translations can be found at <a href="https://lang.purrbot.site">https://lang.purrbot.site</a>.</p>
 <hr />
 <h3 id="prefix">Prefix<a class="headerlink" href="#prefix" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>Manage server</code><br />
-<strong>Bot requires</strong>: <code>None</code>  </p>
-<p><strong>Aliases</strong>: <code>None</code></p>
-<p><strong>Usage</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>Manage Server</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong> <code>None</code></p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Prefix &lt;set &lt;prefix&gt;&gt;</code></li>
-<li><code>p.Prefix &lt;reset&gt;</code></li>
+<li><code>&lt;set &lt;prefix&gt;&gt;</code> - The new prefix to use for commands. <code>&lt;prefix&gt;</code> is the new prefix you want to use.</li>
+<li><code>&lt;reset&gt;</code> - Resets the prefix back to <code>p.</code></li>
 </ul>
-</blockquote>
-<p>Lets you change or reset the bots prefix for your guild. (Default one is <code>p.</code>)</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.prefix set !</code></li>
+<li><code>p.prefix reset</code></li>
+</ul>
+</div>
+<p>Allows to change the prefix used for commands in your server.<br />
+By default is <code>p.</code> used.</p>
 <hr />
 <h3 id="welcome">Welcome<a class="headerlink" href="#welcome" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>Manage server</code><br />
-<strong>Bot requires</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>Manage Server</code><br />
+<strong>Bot requires:</strong></p>
 <ul>
-<li><code>Attach files</code> (Used for welcome-images. See <a href="../welcome-images">Welcome images</a> for examples)</li>
+<li><code>Attach Files</code> - Required to display the welcome image for joining users.</li>
 </ul>
-<p><strong>Aliases</strong>: <code>None</code></p>
-<p><strong>Usage</strong>:</p>
+<p><strong>Aliases:</strong> <code>None</code></p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Welcome [bg set &lt;background|url&gt;]</code></li>
-<li><code>p.Welcome [bg reset]</code></li>
-<li><code>p.Welcome [channel set &lt;#channel&gt;]</code></li>
-<li><code>p.Welcome [channel reset]</code></li>
-<li><code>p.Welcome [color set &lt;color&gt;]</code></li>
-<li><code>p.Welcome [color reset]</code></li>
-<li><code>p.Welcome [icon set &lt;icon|url&gt;]</code></li>
-<li><code>p.Welcome [icon reset]</code></li>
-<li><code>p.Welcome [msg set &lt;message&gt;]</code></li>
-<li><code>p.Welcome [msg reset]</code></li>
-<li><code>p.Welcome [test]</code></li>
+<li><code>[bg set &lt;background&gt;]</code> - Sets the background to the specified one. <code>&lt;background&gt;</code> needs to be the <a href="../welcome-images#backgrounds">name of an existing background</a> to use. <a href="https://patreon.com/andre_601">Tier 2/3 Patreons</a> can set an image URL to use.</li>
+<li><code>[bg reset]</code> - Resets the background to <a href="../welcome-images/#color_white"><code>color_white</code></a>.</li>
+<li><code>[channel set &lt;#channel&gt;]</code> - Sets the channel to send welcome messages in. <code>&lt;#channel&gt;</code> needs to be a Channel mention where the bot can send messages in.</li>
+<li><code>[channel reset]</code> - Resets the channel back to <code>none</code>.</li>
+<li><code>[color set &lt;color&gt;]</code> - Sets the color to use for the text in the image. <code>&lt;color&gt;</code> needs to either be in the format <code>rgb:r,g,b</code>, <code>hex:rrggbb</code> or just <code>random</code> for randomized colours.</li>
+<li><code>[color reset]</code> - Resets the color back to <code>hex:000000</code> (Black).</li>
+<li><code>[icon set &lt;icon&gt;]</code> - Sets the icon to the specified one. <code>&lt;icon&gt;</code> needs to be the <a href="../welcome-images#icons">name of an existing icon</a> to use. <a href="https://patreon.com/andre_601">Tier 2/3 Patreons</a> can set an image URL to use.</li>
+<li><code>[icon reset]</code> - Resets the icon back to <a href="../welcome-images#purr"><code>purr</code></a>.</li>
+<li><code>[msg set &lt;message&gt;]</code> - Sets the message to greet joining users with. <code>&lt;message&gt;</code> can be any String you like and even have <a href="#placeholders">Placeholders</a>.</li>
+<li><code>[msg reset]</code> - Resets the message back to <code>Welcome {mention}!</code></li>
+<li><code>[test]</code> - Generates a message with the image using you as the user.</li>
 </ul>
-</blockquote>
-<p>Lets you set different parts of Purr's welcome-feature.<br />
-Providing no arguments will show what the current settings are.</p>
-<details class="info">
-<summary>Command arguments</summary>
+<p><strong>Examples:</strong></p>
 <ul>
-<li><code>bg set &lt;background|url&gt;</code><br />
-  Change the background (<a href="../welcome-images#backgrounds">Available backhrounds</a>).<br />
-<a href="https://patreon.com/andre_601">Tier 2 and Tier 3 Patrons</a> can also use any kind of image, by providing a URL.</li>
-<li><code>bg reset</code><br />
-  Resets the background back to <a href="../welcome-images#color_white"><code>color_white</code></a>.</li>
-<li><code>channel set &lt;#channel&gt;</code><br />
-  Set the channel for the welcome messages.</li>
-<li><code>channel reset</code><br />
-  Resets the the channel.</li>
-<li><code>color set &lt;color&gt;</code><br />
-  Set the text color on the image. The format has to be either <code>rgb:r,g,b</code>, <code>hex:rrggbb</code> or <code>random</code>.</li>
-<li><code>color reset</code><br />
-  Resets the color back to <code>hex:000000</code></li>
-<li><code>icon set &lt;icon&gt;</code><br />
-  Set the icon, which is displayed on the right side (<a href="../welcome-images#icons">Available icons</a>).<br />
-<a href="https://patreon.com/andre_601">Tier 2 and Tier 3 Patrons</a> can also use any kind of image, by providing a URL.</li>
-<li><code>icon reset</code><br />
-  Resets the icon back to <a href="../welcome-images#purr"><code>purr</code></a>.</li>
-<li><code>msg set &lt;message&gt;</code><br />
-  Set the message shown in the welcome channel.</li>
-<li><code>msg reset</code><br />
-  Resets the message back to <code>Welcome {mention}!</code></li>
-<li><code>test</code><br />
-  Create a preview of the current message (with placeholders parsed) and the image.</li>
+<li><code>p.welcome bg set color_black</code></li>
+<li><code>p.welcome bg reset</code></li>
+<li><code>p.welcome channel set #welcome</code></li>
+<li><code>p.welcome channel reset</code></li>
+<li><code>p.welcome color set hex:ffffff</code></li>
+<li><code>p.welcome color reset</code></li>
+<li><code>p.welcome icon set neko_hug</code></li>
+<li><code>p.welcome icon reset</code></li>
+<li><code>p.welcome msg set Welcome to our server {name}! You're member {count_formatted}</code></li>
+<li><code>p.welcome msg reset</code></li>
+<li><code>p.welcome test</code></li>
 </ul>
-</details>
-<details class="info">
-<summary>Placeholders</summary>
-<p>The following placeholders can be used in the welcome message to display a different value.</p>
-<ul>
-<li><code>{count}</code> / <code>{members}</code><br />
-  Displays the current amount of members on the Discord (i.e. <code>1000</code>).</li>
-<li><code>{count_formatted}</code> / <code>{members_formatted}</code><br />
-  Displays the current amount of members on the Discord in a formatted way (i.e. <code>1,000</code>).</li>
-<li><code>{guild}</code> / <code>{server}</code><br />
-  Displays the name of the Discord.</li>
-<li><code>{mention}</code><br />
-  Mentions the joining Member.</li>
-<li><code>{name}</code> / <code>{username}</code><br />
-  Displays the name of the joining Member.</li>
-<li><code>{c_mention:&lt;id&gt;}</code><br />
-  Displays a channel as mention. <code>&lt;id&gt;</code> has to be the ID of the Text Channel (Other channel types won't work).</li>
-<li><code>{c_name:&lt;id&gt;}</code><br />
-  Displays a channel's name. <code>&lt;id&gt;</code> has to be the ID of the channel.</li>
-<li><code>{r_mention:&lt;id&gt;}</code><br />
-  Displays a role as mention. <code>&lt;id&gt;</code> has to be the ID of the role.</li>
-<li><code>{r_name:&lt;id&gt;}</code><br />
-  Displays a role's name. <code>&lt;id&gt;</code> has to be the ID of the role.</li>
-<li><code>{tag}</code><br />
-  Displays the tag (Username and discriminator) of the user.</li>
-</ul>
-</details>
+</div>
+<p>Allows you to setup the welcome system of the bot.<br />
+Note that if your server is using Member verification, will the bot only send a welcome message when the user passed said verification.</p>
+<h4 id="placeholders">Placeholders<a class="headerlink" href="#placeholders" title="Permanent link">&para;</a></h4>
+<p>The following placeholders can be used freely in the message sub-command and will be replaced with their respecitve values.</p>
+<table>
+<thead>
+<tr>
+<th>Placeholder</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>{count}</code> / <code>{members}</code></td>
+<td>Displays the number of members in a server.</td>
+<td><code>1000</code></td>
+</tr>
+<tr>
+<td><code>{count_formatted}</code> / <code>{members_formatted}</code></td>
+<td>Displays the number of members in a server, with the number being formatted.</td>
+<td><code>1,000</code></td>
+</tr>
+<tr>
+<td><code>{guild}</code> / <code>{server}</code></td>
+<td>Displays the name of the server.</td>
+<td><code>Awesome Server</code></td>
+</tr>
+<tr>
+<td><code>{mention}</code> / <code>{mention}</code></td>
+<td>Mentions the member that joined.</td>
+<td><code>@user</code></td>
+</tr>
+<tr>
+<td><code>{name}</code> / <code>{username}</code></td>
+<td>Displays the name of the member that joined</td>
+<td><code>user</code></td>
+</tr>
+<tr>
+<td><code>{c_mention:&lt;id&gt;}</code></td>
+<td>Mentions the channel provided by its <code>&lt;id&gt;</code>. Only Text Channels work.</td>
+<td><code>#chat</code></td>
+</tr>
+<tr>
+<td><code>{c_name:&lt;id&gt;}</code></td>
+<td>Displays the name of the channel provided by its <code>&lt;id&gt;</code>.</td>
+<td><code>chat</code></td>
+</tr>
+<tr>
+<td><code>{r_mention:&lt;id&gt;}</code></td>
+<td>Mentions the role provided by its <code>&lt;id&gt;</code></td>
+<td><code>@Greeters</code></td>
+</tr>
+<tr>
+<td><code>{r_name:&lt;id&gt;}</code></td>
+<td>Displays the name of the role provided by its <code>&lt;id&gt;</code></td>
+<td><code>Greeters</code></td>
+</tr>
+<tr>
+<td><code>{tag}</code></td>
+<td>Displays the tag (<code>username#discriminator</code>) of the member that joined</td>
+<td><code>user#1234</code></td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="category-info">Info<a class="headerlink" href="#category-info" title="Permanent link">&para;</a></h2>
 <h3 id="donate">Donate<a class="headerlink" href="#donate" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code></p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Donation</code></li>
 <li><code>Donations</code></li>
 <li><code>Donators</code></li>
 </ul>
-<p><strong>Arguments</strong>:</p>
+<p><strong>Arguments:</strong> <code>None</code></p>
+<p><strong>Examples:</strong></p>
 <ul>
-<li><code>p.Donate</code></li>
+<li><code>p.donate</code></li>
 </ul>
-</blockquote>
+</div>
 <p>Gives you information on how you can donate and what awesome people donated so far <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" />.</p>
 <hr />
 <h3 id="emote">Emote<a class="headerlink" href="#emote" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code></p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>E</code></li>
 </ul>
-<p><strong>Arguments</strong>:</p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Emote &lt;:emote:&gt;</code></li>
-<li><code>p.Emote &lt;--search&gt;</code></li>
+<li><code>&lt;:emote:&gt;</code> - The Emote to get more information from. Needs to be a custom Emoji (Not unicode Emoji).</li>
+<li><code>&lt;--search&gt;</code> - Searches in the past 100 messages for any custom Emojis and lists them.</li>
 </ul>
-</blockquote>
-<p>Gives information about a provided emote.<br />
-If the <code>--search</code> argument is used will the bot check the past 100 messages for any emotes and return all it can find.<br />
-This will <strong>not</strong> return unicode emojis!</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.emote :coolEmoji:</code></li>
+<li><code>p.emote --search</code></li>
+</ul>
+</div>
+<p>Gives you information about the emoji you provided, or about all the emojis that have been found in the previous 100 messages of a channel.<br />
+Some information such as Server may not be available, unless the bot is on the server the emote comes from.</p>
 <hr />
 <h3 id="guild_1">Guild<a class="headerlink" href="#guild_1" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code>  </p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Guildinfo</code></li>
 <li><code>Server</code></li>
 <li><code>Serverinfo</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong> <code>None</code></p>
+<p><strong>Examples:</strong></p>
 <ul>
-<li><code>p.Guild</code></li>
+<li><code>p.guild</code></li>
 </ul>
-</blockquote>
-<p>Provides basic information about the guild.</p>
+</div>
+<p>Gives information about the server you used the command in.</p>
 <hr />
 <h3 id="help">Help<a class="headerlink" href="#help" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code></p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Command</code></li>
 <li><code>Commands</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong> <code>None</code></p>
+<p><strong>Examples:</strong></p>
 <ul>
-<li><code>p.Help</code></li>
-<li><code>p.Help [command]</code></li>
-<li><code>p.Help [cat:&lt;category&gt;]</code></li>
+<li><code>p.help</code></li>
 </ul>
-</blockquote>
-<p>Lists all available commands, or gives information about one, when specified.<br />
-You can also use <code>cat:&lt;category&gt;</code> to list all commands of the specified category. <code>&lt;category&gt;</code> can also be a translated category, if your server <a href="#language">uses a different language</a>.</p>
+</div>
+<p>Gives you a link to the site you're currently reading.</p>
 <hr />
 <h3 id="info_1">Info<a class="headerlink" href="#info_1" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code>  </p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Infos</code></li>
 <li><code>Information</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Info</code></li>
-<li><code>p.Info [--dm]</code></li>
+<li><code>[--dm]</code> - Sends the info to your Direct Messages.</li>
 </ul>
-</blockquote>
-<p>Provides basic information about the bot.<br />
-Use <code>--dm</code> to send the info to your DMs.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.info</code></li>
+<li><code>p.info --dm</code></li>
+</ul>
+</div>
+<p>Gives you information about the bot (Version, Library used, bot lists, etc).</p>
 <hr />
 <h3 id="invite">Invite<a class="headerlink" href="#invite" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code>  </p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Links</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Invite</code></li>
-<li><code>p.Invite [--dm]</code></li>
+<li><code>[--dm]</code> - Sends the Invite info to your Direct Messages.</li>
 </ul>
-</blockquote>
-<p>Sends you links to invite the bot, or join the support-Discord.<br />
-Use <code>--dm</code> to send the links to your DMs.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.invite</code></li>
+<li><code>p.invite --dm</code></li>
+</ul>
+</div>
+<p>Gives you information on how to invite the bot.</p>
 <hr />
 <h3 id="ping">Ping<a class="headerlink" href="#ping" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code>  </p>
-<p><strong>Aliases</strong>: <code>None</code></p>
-<p><strong>Usage</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong> <code>None</code></p>
+<p><strong>Arguments:</strong> <code>None</code></p>
+<p><strong>Examples:</strong></p>
 <ul>
-<li><code>p.Ping</code></li>
+<li><code>p.ping</code></li>
 </ul>
-</blockquote>
-<p>Returns the delay of editing the message, the delay to the API and the WebSocket delay in milliseconds.</p>
+</div>
+<p>Checks the connection to Discord and how long it takes to edit a message and displays it to you.</p>
 <hr />
 <h3 id="quote">Quote<a class="headerlink" href="#quote" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code></p>
-<p><strong>Aliases</strong>: <code>None</code></p>
-<p><strong>Usage</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong> <code>None</code></p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Quote &lt;MessageID&gt;</code></li>
-<li><code>p.Quote &lt;MessageID&gt; [#channel]</code></li>
+<li><code>&lt;messageId&gt;</code> - The ID of the message to quote.</li>
+<li><code>[#channel]</code> - Channel to search in for the message. Needs to be a channel mention. Only required if the message is not in the same channel where you use the command in.</li>
 </ul>
-</blockquote>
-<p>Quotes a message from a user, using the <a href="/api#quote">ImageAPI</a> to generate an image looking like a Discord-message.<br />
-<code>&lt;MessageID&gt;</code> is the ID of the message that should be quoted.<br />
-<code>[#channel]</code> is only needed, if the message is in a channel that isn't the same as the one you execute the command in.</p>
-<p>The bot won't quote messages from NSFW channels when the channel you're using the command in isn't one.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.quote 123456789123456789</code></li>
+<li><code>p.quote 123456789123456789 #otherchannel</code></li>
+</ul>
+</div>
+<p>Gets the message using the provided message ID and quotes it.<br />
+The bot won't quote messages, if the channel it is located in is marked as Age-gated (NSFW) while the channel you used the command in is not.</p>
 <hr />
 <h3 id="shards">Shards<a class="headerlink" href="#shards" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code></p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Shard</code></li>
 <li><code>Shardinfo</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong> <code>None</code></p>
+<p><strong>Examples:</strong></p>
 <ul>
-<li><code>p.Shards</code></li>
+<li><code>p.shards</code></li>
 </ul>
-</blockquote>
-<p>Lists all shards, their status, ping and Guild count.</p>
+</div>
+<p>Lists the shards the bot currently has including their ping, number of servers and connection status.<br />
+For more info on what a shard actually is, read the official description in the <a href="https://discord.com/developers/docs/topics/gateway#sharding">Discord Developer Documentation</a>.</p>
 <hr />
 <h3 id="stats">Stats<a class="headerlink" href="#stats" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code>  </p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Stat</code></li>
 <li><code>Statistic</code></li>
 <li><code>Statistics</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong> <code>None</code></p>
+<p><strong>Examples:</strong></p>
 <ul>
-<li><code>p.Stats</code></li>
+<li><code>p.stats</code></li>
 </ul>
-</blockquote>
-<p>Shows statistics of the bot.</p>
+</div>
+<p>Gives some statistics about the bot such as total number of servers, shards, RAM usage and how long it has been running since last restart.</p>
 <hr />
 <h3 id="user">User<a class="headerlink" href="#user" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code>  </p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Member</code></li>
 <li><code>Userinfo</code></li>
 <li><code>Userstats</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.User [@user]</code></li>
+<li><code>[@user]</code> - Optional user to get information from. Needs to be a mention. Defaults to you if no user is provided.</li>
 </ul>
-</blockquote>
-<p>Shows information about yourself or a mentioned user.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.user</code></li>
+<li><code>p.user @user</code></li>
+</ul>
+</div>
+<p>Shows information about yourself or another user, if provided.</p>
 <hr />
 <h2 id="category-nsfw">NSFW<a class="headerlink" href="#category-nsfw" title="Permanent link">&para;</a></h2>
 <h3 id="blowjob">Blowjob<a class="headerlink" href="#blowjob" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code>  </p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition danger">
+<p class="admonition-title">This command can only be executed in an Age-gated (NSFW) channel!</p>
+</div>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Bj</code></li>
 <li><code>Bjob</code></li>
 <li><code>Succ</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Blowjob &lt;@user&gt;</code></li>
+<li><code>&lt;@user&gt;</code> - The User(s) to give a Blowjob. Needs to be a mention.</li>
 </ul>
-</blockquote>
-<div class="admonition danger">
-<p class="admonition-title">Command can only be executed in an Age-gated Channel</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.blowjob @user</code></li>
+</ul>
 </div>
-<p>Lets you ask the mentioned user, if you can give them a blowjob.<br />
+<p>Askes the mentioned user, if you can give them a blowjob.<br />
 The user can accept or deny the request.</p>
 <hr />
 <h3 id="cum">Cum<a class="headerlink" href="#cum" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code>  </p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition danger">
+<p class="admonition-title">This command can only be executed in an Age-gated (NSFW) channel!</p>
+</div>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Cumming</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong> <code>None</code></p>
+<p><strong>Examples:</strong></p>
 <ul>
-<li><code>p.Cum</code></li>
+<li><code>p.cum</code></li>
 </ul>
-</blockquote>
-<div class="admonition danger">
-<p class="admonition-title">Command can only be executed in an Age-gated Channel</p>
 </div>
 <p>Returns a random gif of someone cumming.</p>
 <hr />
 <h3 id="fuck">Fuck<a class="headerlink" href="#fuck" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code>  </p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition danger">
+<p class="admonition-title">This command can only be executed in an Age-gated (NSFW) channel!</p>
+</div>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Sex</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Fuck &lt;@user&gt;</code></li>
-<li><code>p.Fuck &lt;@user&gt; --anal</code></li>
-<li><code>p.Fuck &lt;@user&gt; --normal</code></li>
-<li><code>p.Fuck &lt;@user&gt; --yaoi</code></li>
-<li><code>p.Fuck &lt;@user&gt; --yuri</code></li>
+<li><code>&lt;@user&gt;</code> - The User to have sex with. Needs to be a mention.</li>
+<li><code>[--anal]</code> - Pre-selects analsex as option.</li>
+<li><code>[--normal]</code> - Pre-selects normal sex as option.</li>
+<li><code>[--yaoi]</code> - Pre-selects Yaoi (Gay) sex as option.</li>
+<li><code>[--yuri]</code> - Pre-selects Yuri (Lesbian) sex as option.</li>
 </ul>
-</blockquote>
-<div class="admonition danger">
-<p class="admonition-title">Command can only be executed in an Age-gated Channel</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.fuck @user</code></li>
+<li><code>p.fuck @user --anal</code></li>
+<li><code>p.fuck @user --normal</code></li>
+<li><code>p.fuck @user --yaoi</code></li>
+<li><code>p.fuck @user --yuri</code></li>
+</ul>
 </div>
-<p>Asks the mentioned user to have sex with you.<br />
-When no arguments are provided can the mentioned user choose which type of sex they want.<br />
-Providing <code>--anal</code>, <code>--normal</code>, <code>--yaoi</code> or <code>--yuri</code> however pre-selects the option.</p>
-<p>The user can accept or deny the request.</p>
+<p>Asks the mentioned user if they want to have sex with you.</p>
+<p>If no other argument was provided can the asked user select between anal, normal, yaoi (Gay) or Yuri (Lesbian) sex, or deny the request.<br />
+When one of the options has been provided can the asked user only accept or deny the request.</p>
 <hr />
 <h3 id="neko-nsfw">Neko<a class="headerlink" href="#neko-nsfw" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code></p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition danger">
+<p class="admonition-title">This command can only be executed in an Age-gated (NSFW) channel!</p>
+</div>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>Catgirl</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Neko --nsfw</code></li>
-<li><code>p.Neko --nsfw --gif</code></li>
+<li><code>&lt;--nsfw&gt;</code> - Gives a nsfw neko image or gif.</li>
+<li><code>[--gif]</code> - Returns a gif instead of an image.</li>
 </ul>
-</blockquote>
-<div class="admonition danger">
-<p class="admonition-title">Command can only be executed in an Age-gated Channel</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.neko --nsfw</code></li>
+<li><code>p.neko --nsfw --gif</code></li>
+</ul>
 </div>
-<p>Gives an image of a lewd Neko.<br />
-<code>--gif</code> returns a gif of a lewd neko.</p>
+<p>Gives a random image or gif of a NSFW Neko (Cat girl)</p>
 <hr />
 <h3 id="pussylick">Pussylick<a class="headerlink" href="#pussylick" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code></p>
-<p><strong>Aliases</strong>:</p>
-<ul>
-<li><code>plick</code></li>
-<li><code>cunni</code></li>
-</ul>
-<p><strong>Usage</strong>:</p>
-<ul>
-<li><code>p.Pussylick &lt;@user&gt;</code></li>
-</ul>
-</blockquote>
 <div class="admonition danger">
-<p class="admonition-title">Command can only be executed in an Age-gated Channel</p>
+<p class="admonition-title">This command can only be executed in an Age-gated (NSFW) channel!</p>
 </div>
-<p>Asks the mentioned user to let you licking their pussy.<br />
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
+<ul>
+<li><code>Plick</code></li>
+<li><code>Cunni</code></li>
+</ul>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;@user&gt;</code> - The User to the pussy of. Needs to be a mention.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.pussylick @user</code></li>
+</ul>
+</div>
+<p>Asks the mentioned user if you can lick their pussy.<br />
 The user can accept or deny the request.</p>
 <hr />
 <h3 id="solo">Solo<a class="headerlink" href="#solo" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code>  </p>
-<p><strong>Aliases</strong>:</p>
-<ul>
-<li><code>girl</code></li>
-</ul>
-<p><strong>Usage</strong>:</p>
-<ul>
-<li><code>p.Solo</code></li>
-</ul>
-</blockquote>
 <div class="admonition danger">
-<p class="admonition-title">Command can only be executed in an Age-gated Channel</p>
+<p class="admonition-title">This command can only be executed in an Age-gated (NSFW) channel!</p>
 </div>
-<p>Gives a gif of a girl <em>playing</em> with herself.</p>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
+<ul>
+<li><code>Girl</code></li>
+</ul>
+<p><strong>Arguments:</strong> <code>None</code></p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.solo</code></li>
+</ul>
+</div>
+<p>Gives a random gif of a girl masturbating.</p>
 <hr />
 <h3 id="threesome">Threesome<a class="headerlink" href="#threesome" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p><strong>Permission</strong>: <code>None</code><br />
-<strong>Bot requires</strong>: <code>None</code></p>
-<p><strong>Aliases</strong>:</p>
+<div class="admonition danger">
+<p class="admonition-title">This command can only be executed in an Age-gated (NSFW) channel!</p>
+</div>
+<div class="admonition summary">
+<p class="admonition-title">&nbsp;</p>
+<p><strong>Permission:</strong> <code>None</code><br />
+<strong>Bot requires:</strong> <code>None</code></p>
+<p><strong>Aliases:</strong></p>
 <ul>
 <li><code>3some</code></li>
 </ul>
-<p><strong>Usage</strong>:</p>
+<p><strong>Arguments:</strong></p>
 <ul>
-<li><code>p.Threesome &lt;@user1&gt; &lt;@user2&gt;</code></li>
-<li><code>p.Threesome &lt;@user1&gt; &lt;@user2&gt; --fff</code></li>
-<li><code>p.Threesome &lt;@user1&gt; &lt;@user2&gt; --mmf</code></li>
+<li><code>&lt;@user1&gt;</code> - The first user to ask for a threesome. Needs to be a mention.</li>
+<li><code>&lt;@user2&gt;</code> - The second user to ask for a threesome. Needs to be a mention.</li>
+<li><code>[--fff]</code> - Returns a random gif of 3 females having a threesome.</li>
+<li><code>[--mmf]</code> - Returns a random gif of 2 males and 1 female having a threesome.</li>
 </ul>
-</blockquote>
-<div class="admonition danger">
-<p class="admonition-title">Command can only be executed in an Age-gated Channel</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>p.threesome @user1 @user2</code></li>
+<li><code>p.threesome @user1 @user2 --fff</code></li>
+<li><code>p.threesome @user1 @user2 --mmf</code></li>
+</ul>
 </div>
-<p>Similar to <a href="#fuck">Fuck</a> but allows you to ask two people at once.<br />
-By default will the threesome be with 2 females and 1 male. Providing <code>--fff</code> or <code>--mmf</code> will change it to a threesome with 3 females or a threesome with 1 female and 2 males respectively.<br />
-The users can accept or deny the request.</p>
+<p>Askes two users if they want to have sex with you.<br />
+If no additional argument is provided, will the returned gif show 1 male and 2 females. This can be changed to only females with <code>--fff</code> or 2 males and 1 female with <code>--mmf</code>.<br />
+The users can accept or deny the request. Only when both accept will the command succeed.</p>
 
 
 
