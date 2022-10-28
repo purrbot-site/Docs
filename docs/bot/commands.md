@@ -79,19 +79,25 @@ The default prefix is `p.` but can be changed with the [prefix command](#prefix)
 ## Fun { #category-fun }
 
 ### Bite
-> **Permission**: `None`  
-> **Bot requires**: `None`
->
-> **Aliases**:
->
-> - `Nibble`
-> - `Nom`
->
-> **Usage**:
->
-> - `p.Bite <@user ...>`
 
-Lets you bite one or multiple mentioned users.
+!!! summary ""
+    **Permission:** `None`  
+    **Bot requires:** `None`
+    
+    **Aliases:**
+    
+    - `Nibble`
+    - `Nom`
+    
+    **Arguments:**
+    
+    - `<@user ...>` - The User(s) to bite. Needs to be a mention.
+    
+    **Examples:**
+    
+    - `p.bite @user`
+
+Bites the mentioned users.
 
 ----
 ### Blush
@@ -305,10 +311,10 @@ Lets you lick one or multiple mentioned user.
 > - `p.Neko [--gif]`
 
 Gives an image of a Neko (cat girl). ([Example](https://purrbot.site/img/sfw/neko/img/neko_001.jpg))  
-`[--gif]` returns a gif of a Neko.
+`--gif` returns a gif of a Neko.
 
 !!! note
-    Since [version 2.41.0](https://github.com/purrbot-site/PurrBot/pull/520) does this bot also include the [NSFW version](#neko-nsfw) through an optional `--nsfw` argument.
+    Since [version 2.41.0](https://github.com/purrbot-site/PurrBot/pull/520) does this command also include the [NSFW version](#neko-nsfw) through an optional `--nsfw` argument.
 
 ----
 ### Pat
@@ -458,7 +464,8 @@ Lets you tickle one or multiple users.
 > - `Lang`
 >
 > **Usage**:
->
+> 
+> - `p.Lang`
 > - `p.Lang [set <language>]`
 > - `p.Lang [reset]`
 
@@ -489,7 +496,8 @@ Lets you change or reset the bots prefix for your guild. (Default one is `p.`)
 > **Aliases**: `None`
 > 
 > **Usage**:
->
+> 
+> - `p.Welcome`
 > - `p.Welcome [bg set <background|url>]`
 > - `p.Welcome [bg reset]`
 > - `p.Welcome [channel set <#channel>]`
@@ -622,11 +630,8 @@ Provides basic information about the guild.
 > **Usage**:
 >
 > - `p.Help`
-> - `p.Help [command]`
-> - `p.Help [cat:<category>]`
 
-Lists all available commands, or gives information about one, when specified.  
-You can also use `cat:<category>` to list all commands of the specified category. `<category>` can also be a translated category, if your server [uses a different language](#language).
+Gives a link to this very page you're currently reading.
 
 ----
 ### Info
@@ -739,7 +744,8 @@ Shows statistics of the bot.
 > - `Userstats`
 > 
 > **Usage**:
->
+> 
+> - `p.User`
 > - `p.User [@user]`
 
 Shows information about yourself or a mentioned user.
@@ -795,10 +801,10 @@ Returns a random gif of someone cumming.
 > **Usage**:
 >
 > - `p.Fuck <@user>`
-> - `p.Fuck <@user> --anal`
-> - `p.Fuck <@user> --normal`
-> - `p.Fuck <@user> --yaoi`
-> - `p.Fuck <@user> --yuri`
+> - `p.Fuck <@user> [--anal]`
+> - `p.Fuck <@user> [--normal]`
+> - `p.Fuck <@user> [--yaoi]`
+> - `p.Fuck <@user> [--yuri]`
 
 !!! danger "Command can only be executed in an Age-gated Channel"
 
@@ -819,8 +825,8 @@ The user can accept or deny the request.
 > 
 > **Usage**:
 >
-> - `p.Neko --nsfw`
-> - `p.Neko --nsfw --gif`
+> - `p.Neko <--nsfw>`
+> - `p.Neko <--nsfw> [--gif]`
 
 !!! danger "Command can only be executed in an Age-gated Channel"
 
@@ -875,8 +881,8 @@ Gives a gif of a girl *playing* with herself.
 > **Usage**:
 >
 > - `p.Threesome <@user1> <@user2>`
-> - `p.Threesome <@user1> <@user2> --fff`
-> - `p.Threesome <@user1> <@user2> --mmf`
+> - `p.Threesome <@user1> <@user2> [--fff]`
+> - `p.Threesome <@user1> <@user2> [--mmf]`
 
 !!! danger "Command can only be executed in an Age-gated Channel"
 
