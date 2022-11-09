@@ -48,10 +48,11 @@ Want to help improve those pages? Awesome! Just check out the [Contributing Sect
 ## Other links
 **Social**
 
-- [:fontawesome-brands-discord: Discord](https://purrbot.site/discord)
-- [:fontawesome-brands-github: GitHub](https://purrbot.site/github)
-- [:fontawesome-brands-twitter: Twitter](https://purrbot.site/twitter)
-- [:fontawesome-brands-youtube: YouTube](https://purrbot.site/youtube)
+- [:simple-discord: Discord](https://purrbot.site/discord)
+- [:simple-github: GitHub](https://purrbot.site/github)
+- [:simple-twitter: Twitter](https://purrbot.site/twitter)
+- [:simple-youtube: YouTube](https://purrbot.site/youtube)
+- [:simple-mastodon: Mastodon](https://purrbot.site/mastodon)
 
 **Donate**
 
