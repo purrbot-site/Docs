@@ -41,3 +41,9 @@
     <title>{{ config.site_name }}</title>
   {% endif %}
 {% endblock %}
+
+{% block config %}
+  {{ super() }}
+  <link rel="stylesheet" href="{{ 'assets/stylesheets/extra.0d2c79a8.min.css' | url }}">
+  <script src="{{ 'assets/javascripts/extra/bundle.5f09fbc3.min.js' | url }}" defer></script>
+{% endblock %}
