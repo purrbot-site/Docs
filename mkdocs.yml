@@ -100,7 +100,7 @@ extra:
     - icon: 'simple/twitter'
       link: 'https://twitter.com/TruePurrBot'
     - icon: 'simple/mastodon'
-      link: 'https://blobfox.coffee/@purrbot'
+      link: 'https://botsin.space/@purrbot'
 
 markdown_extensions:
   - attr_list
