@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://docs.purrbot.site/contribute/formatting-help/">
       
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../translate/">
+      
       <link rel="icon" href="../../assets/img/logo.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.0">
     
     
   
@@ -23,11 +29,10 @@
   
 
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f79797b0.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
   
@@ -180,8 +185,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="blue"  aria-label="Switch to Dark Mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to Dark Mode" for="__palette_2" hidden>
@@ -189,8 +192,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="blue"  aria-label="Switch to Light Mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -1106,10 +1107,9 @@
                 
                   
 
-  <a href="https://github.com/purrbot-site/Docs/edit/master/docs/contribute/formatting-help.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="formatting-help">Formatting Help<a class="headerlink" href="#formatting-help" title="Permanent link">&para;</a></h1>
@@ -1126,15 +1126,15 @@ In order for the list to work will they require an empty line between the list, 
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>This list below will work.
 
-<span class="k">-</span> Entry 1
-<span class="k">-</span> Entry 2
-<span class="k">-</span> Entry 3
+<span class="k">-</span><span class="w"> </span>Entry 1
+<span class="k">-</span><span class="w"> </span>Entry 2
+<span class="k">-</span><span class="w"> </span>Entry 3
 
 ----  
 This list, however, won&#39;t work.
-<span class="k">-</span> Entry 1
-<span class="k">-</span> Entry 2
-<span class="k">-</span> Entry 3
+<span class="k">-</span><span class="w"> </span>Entry 1
+<span class="k">-</span><span class="w"> </span>Entry 2
+<span class="k">-</span><span class="w"> </span>Entry 3
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -1161,16 +1161,16 @@ This list, however, won&#39;t work.
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>Working indents:
 
-<span class="k">-</span> Entry 1
-    <span class="k">-</span> Entry 1.1
-<span class="k">-</span> Entry 2
+<span class="k">-</span><span class="w"> </span>Entry 1
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>Entry 1.1
+<span class="k">-</span><span class="w"> </span>Entry 2
 
 ----  
 Not working indents:
 
-<span class="k">-</span> Entry 1
-  <span class="k">-</span> Entry 1.1
-<span class="k">-</span> Entry 2
+<span class="k">-</span><span class="w"> </span>Entry 1
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Entry 1.1
+<span class="k">-</span><span class="w"> </span>Entry 2
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -1204,8 +1204,8 @@ Those are provided through <a href="https://www.mkdocs.org">MkDocs</a> and use a
 <div class="highlight"><pre><span></span><code>!!! info &quot;Title&quot;
     Rules about Markdown still apply.
 
-    <span class="k">-</span> F.e. Lists
-    <span class="k">-</span> Still need an empty line
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>F.e. Lists
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>Still need an empty line
 
 ----
 
@@ -1427,33 +1427,33 @@ As an example: Instead of <code>:octicon-repo:</code> would you use <code>:octic
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>Normal Emojis  
 
-<span class="k">-</span> :smile:
-<span class="k">-</span> :heart:
+<span class="k">-</span><span class="w"> </span>:smile:
+<span class="k">-</span><span class="w"> </span>:heart:
 
 FontAwesome Icons (Brands):  
 
-<span class="k">-</span> :fontawesome-brands-github:
-<span class="k">-</span> :fontawesome-brands-discord:
+<span class="k">-</span><span class="w"> </span>:fontawesome-brands-github:
+<span class="k">-</span><span class="w"> </span>:fontawesome-brands-discord:
 
 FontAwesome Icons (Regular)  
 
-<span class="k">-</span> :fontawesome-regular-bell:
-<span class="k">-</span> :fontawesome-regular-bell-slash:
+<span class="k">-</span><span class="w"> </span>:fontawesome-regular-bell:
+<span class="k">-</span><span class="w"> </span>:fontawesome-regular-bell-slash:
 
 FontAwesome Icons (Solid)  
 
-<span class="k">-</span> :fontawesome-solid-bell:
-<span class="k">-</span> :fontawesome-solid-bell-slash:
+<span class="k">-</span><span class="w"> </span>:fontawesome-solid-bell:
+<span class="k">-</span><span class="w"> </span>:fontawesome-solid-bell-slash:
 
 Material Design:
 
-<span class="k">-</span> :material-sync:
-<span class="k">-</span> :material-alert:
+<span class="k">-</span><span class="w"> </span>:material-sync:
+<span class="k">-</span><span class="w"> </span>:material-alert:
 
 Octicons:
 
-<span class="k">-</span> :octicons-repo-24:
-<span class="k">-</span> :octicons-git-pull-request-24:
+<span class="k">-</span><span class="w"> </span>:octicons-repo-24:
+<span class="k">-</span><span class="w"> </span>:octicons-git-pull-request-24:
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -1645,15 +1645,14 @@ and provided under the
     </div>
     
     
-  <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+  <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
   <link rel="stylesheet" href="../../assets/stylesheets/extra.0d2c79a8.min.css">
   <script src="../../assets/javascripts/extra/bundle.5f09fbc3.min.js" defer></script>
 
     
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
-    
     
   </body>
 </html>

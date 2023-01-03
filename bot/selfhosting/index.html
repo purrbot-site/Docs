@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://docs.purrbot.site/bot/selfhosting/">
       
+      
+        <link rel="prev" href="../commands/">
+      
+      
+        <link rel="next" href="../welcome-channel/">
+      
       <link rel="icon" href="../../assets/img/logo.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.0">
     
     
   
@@ -23,11 +29,10 @@
   
 
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f79797b0.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
   
@@ -180,8 +185,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="blue"  aria-label="Switch to Dark Mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to Dark Mode" for="__palette_2" hidden>
@@ -189,8 +192,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="blue"  aria-label="Switch to Light Mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -1128,10 +1129,9 @@
                 
                   
 
-  <a href="https://github.com/purrbot-site/Docs/edit/master/docs/bot/selfhosting.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
   <h1>Selfhosting</h1>
@@ -1164,51 +1164,51 @@ This also includes creating databases and tables to later set in the config.json
 <p>You need to alter specific parts of the code, to prevent errors from appearing.<br />
 Alternatively could you set "beta" in the config.json to true, to set the bot as Beta-Bot, disabling certain functionalities such as posting stats to Bot Lists.</p>
 <p>When making changes to the code should you remove or uncomment the following code-snippets in <a href="https://github.com/purrbot-site/PurrBot/blob/master/src/main/java/site/purrbot/bot/PurrBot.java">PurrBot.java</a>:</p>
-<div class="highlight"><span class="filename">PurrBot.java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">startUpdater</span><span class="p">(){</span><span class="w"></span>
-<span class="w">    </span><span class="n">scheduler</span><span class="p">.</span><span class="na">scheduleAtFixedRate</span><span class="p">(()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">getShardManager</span><span class="p">().</span><span class="na">setActivity</span><span class="p">(</span><span class="n">Activity</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="w"></span>
-<span class="w">            </span><span class="n">Activity</span><span class="p">.</span><span class="na">ActivityType</span><span class="p">.</span><span class="na">WATCHING</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="n">getMessageUtil</span><span class="p">().</span><span class="na">getBotGame</span><span class="p">(</span><span class="n">getShardManager</span><span class="p">().</span><span class="na">getGuildCache</span><span class="p">().</span><span class="na">size</span><span class="p">())</span><span class="w"></span>
-<span class="w">        </span><span class="p">));</span><span class="w"></span>
+<div class="highlight"><span class="filename">PurrBot.java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">startUpdater</span><span class="p">(){</span>
+<span class="w">    </span><span class="n">scheduler</span><span class="p">.</span><span class="na">scheduleAtFixedRate</span><span class="p">(()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">getShardManager</span><span class="p">().</span><span class="na">setActivity</span><span class="p">(</span><span class="n">Activity</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
+<span class="w">            </span><span class="n">Activity</span><span class="p">.</span><span class="na">ActivityType</span><span class="p">.</span><span class="na">WATCHING</span><span class="p">,</span>
+<span class="w">            </span><span class="n">getMessageUtil</span><span class="p">().</span><span class="na">getBotGame</span><span class="p">(</span><span class="n">getShardManager</span><span class="p">().</span><span class="na">getGuildCache</span><span class="p">().</span><span class="na">size</span><span class="p">())</span>
+<span class="w">        </span><span class="p">));</span>
 
-<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">isBeta</span><span class="p">())</span><span class="w"> </span><span class="c1">// (1)</span><span class="w"></span>
-<span class="w">            </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">isBeta</span><span class="p">())</span><span class="w"> </span><span class="c1">// (1)</span>
+<span class="w">            </span><span class="k">return</span><span class="p">;</span>
 
-<span class="w">        </span><span class="kt">long</span><span class="w"> </span><span class="n">guilds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getShardManager</span><span class="p">().</span><span class="na">getGuildCache</span><span class="p">().</span><span class="na">size</span><span class="p">();</span><span class="w"></span>
-<span class="w">        </span><span class="kt">long</span><span class="w"> </span><span class="n">shards</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getShardManager</span><span class="p">().</span><span class="na">getShardCache</span><span class="p">().</span><span class="na">size</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="kt">long</span><span class="w"> </span><span class="n">guilds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getShardManager</span><span class="p">().</span><span class="na">getGuildCache</span><span class="p">().</span><span class="na">size</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">long</span><span class="w"> </span><span class="n">shards</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getShardManager</span><span class="p">().</span><span class="na">getShardCache</span><span class="p">().</span><span class="na">size</span><span class="p">();</span>
 
-<span class="w">        </span><span class="n">logger</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;Posting Guild Stats to Bot lists...&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="n">HttpUtil</span><span class="p">.</span><span class="na">BotList</span><span class="w"> </span><span class="n">botList</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">HttpUtil</span><span class="p">.</span><span class="na">BotList</span><span class="p">.</span><span class="na">values</span><span class="p">()){</span><span class="w"></span>
-<span class="w">            </span><span class="n">getHttpUtil</span><span class="p">().</span><span class="na">postServerStats</span><span class="p">(</span><span class="w"></span>
-<span class="w">                </span><span class="s">&quot;*Purr*&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                </span><span class="s">&quot;6875&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                </span><span class="n">guilds</span><span class="p">,</span><span class="w"></span>
-<span class="w">                </span><span class="n">shards</span><span class="p">,</span><span class="w"></span>
-<span class="w">                </span><span class="n">botList</span><span class="p">,</span><span class="w"></span>
-<span class="w">                </span><span class="n">getFileManager</span><span class="p">().</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;config&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">botList</span><span class="p">.</span><span class="na">getTokenPath</span><span class="p">())</span><span class="w"></span>
-<span class="w">            </span><span class="p">).</span><span class="na">whenComplete</span><span class="p">((</span><span class="n">botListResult</span><span class="p">,</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">botListResult</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="n">botListResult</span><span class="p">.</span><span class="na">isSuccess</span><span class="p">()</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">ex</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">){</span><span class="w"></span>
-<span class="w">                    </span><span class="n">logger</span><span class="p">.</span><span class="na">warn</span><span class="p">(</span><span class="s">&quot;Error while posting Guild stats to bot list {}!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">botList</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span><span class="w"></span>
-<span class="w">                    </span><span class="k">if</span><span class="p">(</span><span class="n">botListResult</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">){</span><span class="w"></span>
-<span class="w">                        </span><span class="n">logger</span><span class="p">.</span><span class="na">warn</span><span class="p">(</span><span class="s">&quot;BotListResult is null!&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">                        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
-<span class="w">                    </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="n">logger</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;Posting Guild Stats to Bot lists...&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="n">HttpUtil</span><span class="p">.</span><span class="na">BotList</span><span class="w"> </span><span class="n">botList</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">HttpUtil</span><span class="p">.</span><span class="na">BotList</span><span class="p">.</span><span class="na">values</span><span class="p">()){</span>
+<span class="w">            </span><span class="n">getHttpUtil</span><span class="p">().</span><span class="na">postServerStats</span><span class="p">(</span>
+<span class="w">                </span><span class="s">&quot;*Purr*&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;6875&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="n">guilds</span><span class="p">,</span>
+<span class="w">                </span><span class="n">shards</span><span class="p">,</span>
+<span class="w">                </span><span class="n">botList</span><span class="p">,</span>
+<span class="w">                </span><span class="n">getFileManager</span><span class="p">().</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;config&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">botList</span><span class="p">.</span><span class="na">getTokenPath</span><span class="p">())</span>
+<span class="w">            </span><span class="p">).</span><span class="na">whenComplete</span><span class="p">((</span><span class="n">botListResult</span><span class="p">,</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">botListResult</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="n">botListResult</span><span class="p">.</span><span class="na">isSuccess</span><span class="p">()</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">ex</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">){</span>
+<span class="w">                    </span><span class="n">logger</span><span class="p">.</span><span class="na">warn</span><span class="p">(</span><span class="s">&quot;Error while posting Guild stats to bot list {}!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">botList</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+<span class="w">                    </span><span class="k">if</span><span class="p">(</span><span class="n">botListResult</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">){</span>
+<span class="w">                        </span><span class="n">logger</span><span class="p">.</span><span class="na">warn</span><span class="p">(</span><span class="s">&quot;BotListResult is null!&quot;</span><span class="p">);</span>
+<span class="w">                        </span><span class="k">return</span><span class="p">;</span>
+<span class="w">                    </span><span class="p">}</span>
 
-<span class="w">                    </span><span class="k">if</span><span class="p">(</span><span class="n">ex</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">){</span><span class="w"></span>
-<span class="w">                        </span><span class="n">ex</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w"></span>
-<span class="w">                        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
-<span class="w">                    </span><span class="p">}</span><span class="w"></span>
+<span class="w">                    </span><span class="k">if</span><span class="p">(</span><span class="n">ex</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">){</span>
+<span class="w">                        </span><span class="n">ex</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+<span class="w">                        </span><span class="k">return</span><span class="p">;</span>
+<span class="w">                    </span><span class="p">}</span>
 
-<span class="w">                    </span><span class="n">logger</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;Response Code: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">botListResult</span><span class="p">.</span><span class="na">getResponseCode</span><span class="p">());</span><span class="w"></span>
-<span class="w">                    </span><span class="n">logger</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;Response Message: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">botListResult</span><span class="p">.</span><span class="na">getResponseMessage</span><span class="p">());</span><span class="w"></span>
-<span class="w">                    </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
-<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">                    </span><span class="n">logger</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;Response Code: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">botListResult</span><span class="p">.</span><span class="na">getResponseCode</span><span class="p">());</span>
+<span class="w">                    </span><span class="n">logger</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;Response Message: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">botListResult</span><span class="p">.</span><span class="na">getResponseMessage</span><span class="p">());</span>
+<span class="w">                    </span><span class="k">return</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
 
-<span class="w">                </span><span class="n">logger</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;Successfully posted stats to {}!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">botListResult</span><span class="p">.</span><span class="na">getBotList</span><span class="p">());</span><span class="w"></span>
-<span class="w">            </span><span class="p">});</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">TimeUnit</span><span class="p">.</span><span class="na">MINUTES</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">                </span><span class="n">logger</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;Successfully posted stats to {}!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">botListResult</span><span class="p">.</span><span class="na">getBotList</span><span class="p">());</span>
+<span class="w">            </span><span class="p">});</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">TimeUnit</span><span class="p">.</span><span class="na">MINUTES</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div>
 <ol>
 <li>To disable posting to Bot list, either set the bot into beta mode through the <a href="#config"><code>config.json</code></a> or put everything after this if and before the <code>}, 1, 5, TimeUnit.MINUTES);</code> into comments.<br />
@@ -1229,32 +1229,32 @@ Namely you have to alter the content of the following classes:</p>
 On first startup will it generate with the below default values.</p>
 <details class="note">
 <summary>Default Config.json</summary>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;bot-token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TOKEN&quot;</span><span class="p">,</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;bot-token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TOKEN&quot;</span><span class="p">,</span>
 
-<span class="w">  </span><span class="nt">&quot;beta&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;debug&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;beta&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;debug&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
 
-<span class="w">  </span><span class="nt">&quot;webhooks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;guild&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;guild-webhook-url&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;log&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;log-webhook-url&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;webhooks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;guild&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;guild-webhook-url&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;log&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;log-webhook-url&quot;</span>
+<span class="w">  </span><span class="p">},</span>
 
-<span class="w">  </span><span class="nt">&quot;tokens&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;fluxpoint-dev&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;fluxpoint-dev-token&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;tokens&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;fluxpoint-dev&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;fluxpoint-dev-token&quot;</span><span class="p">,</span>
 
-<span class="w">    </span><span class="nt">&quot;discord-bots-gg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dbgg-token&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;botlist-space&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;botlist-token&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;discordextremelist-xyz&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;debl-token&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;discordservices-net&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;discordservices-net-token&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;discord-bots-gg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dbgg-token&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;botlist-space&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;botlist-token&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;discordextremelist-xyz&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;debl-token&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;discordservices-net&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;discordservices-net-token&quot;</span>
+<span class="w">  </span><span class="p">},</span>
 
-<span class="w">  </span><span class="nt">&quot;database&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;ip&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DatabaseName&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;guildTable&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GuildTable&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;database&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;ip&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DatabaseName&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;guildTable&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GuildTable&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 </details>
 <p>Note that you don't have to set values for every option in the config.json.<br />
@@ -1439,15 +1439,14 @@ and provided under the
     </div>
     
     
-  <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+  <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
   <link rel="stylesheet" href="../../assets/stylesheets/extra.0d2c79a8.min.css">
   <script src="../../assets/javascripts/extra/bundle.5f09fbc3.min.js" defer></script>
 
     
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
-    
     
   </body>
 </html>
