@@ -28,9 +28,5 @@ You may opt out by not utilizing the API as described above.
 ## Privacy Policy
 
 ### Used Information
-The API may use sensitive information such as username, nickname, avatar or content of a message to provide core functionalities.  
-These information will only be used when provided by an end user directly.
-
-### Stored Information
-No sensitive information - As described in Discord's Developer Terms of Service - is stored.  
-The APIs may log anonymous information, such as performed requests, type of request, time of execution and towards which endpoint. This information cannot be traced back to any individual and is not shared with any 3rd-party site or service.
+The API does not utilize any sensitive information as described by Discord's Developer Terms of Service.  
+It may log anonymous information regarding the retrieved request. This information cannot be traced back towards an individual.
