@@ -1,0 +1,28 @@
+.swagger-ui .opblock.opblock-get .opblock-summary-method, .swagger-ui .opblock.opblock-get .tab-header .tab-item.active h4 span::after {
+    background: rgb(68, 138, 255);
+}
+
+.swagger-ui .opblock.opblock-get {
+    border-color: rgb(68, 138, 255);
+}
+
+.swagger-ui .response-control-media-type--accept-controller select {
+    border-color: #00c853;
+}
+
+.swagger-ui .download-url-wrapper .failed, .swagger-ui .filter .failed, .swagger-ui .model-deprecated-warning, .swagger-ui .parameter__deprecated, .swagger-ui .parameter__name.required span, .swagger-ui table.model tr.property-row .star {
+    color: #ff5252;
+}
+
+.swagger-ui .parameter__name.required::after {
+    color: #ff5252;
+}
+
+.swagger-ui .markdown code, .swagger-ui .renderedMarkdown code {
+    background-color: hsla(232,15%,15%,1);
+    color: hsla(232,18%,86%,1);
+}
+
+.swagger-ui .info a, .swagger-ui .info a:hover, .swagger-ui .scopes h2 a {
+    color: #00BDD6;
+}

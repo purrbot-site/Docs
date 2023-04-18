@@ -102,6 +102,13 @@ extra:
     - icon: 'simple/mastodon'
       link: 'https://botsin.space/@purrbot'
 
+plugins:
+  - search
+  - swagger-ui-tag:
+      tryItOutEnabled: false
+      extra_css:
+        - assets/css/styling/swagger.css
+
 markdown_extensions:
   - attr_list
   - admonition
