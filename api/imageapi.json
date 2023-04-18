@@ -1,0 +1,2874 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Purrbot Image API",
+    "description": "The Purrbot Image API is an open-source API to provide randomly selected images or gifs based on the API path selected.<br>It was created as a replacement to commonly known APIs like nekos.life or weeb.sh, with the goal of having more control over the returned images for platforms like Discord.<br><br>Access is given free of charge without any authorization required.",
+    "termsOfService": "https://docs.purrbot.site/legal/api",
+    "contact": {
+      "email": "support@purrbot.site"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://github.com/purrbot-site/ImageAPI/blob/master/LICENSE"
+    },
+    "version": "1.7.0"
+  },
+  "servers": [
+    {
+      "url": "https://purrbot.site/api"
+    }
+  ],
+  "tags": [
+    {
+      "name": "sfw",
+      "description": "Safe for Work endpoints"
+    },
+    {
+      "name": "nsfw",
+      "description": "Not safe for Work endpoints"
+    }
+  ],
+  "paths": {
+    "/img/sfw/background/img": {
+      "get": {
+        "summary": "Get a random background image",
+        "description": "Returns a randomly selected background image used in the bots welcome feature.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/background/color_black.png",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/background/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/background",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/bite/gif": {
+      "get": {
+        "summary": "Get a random bite gif",
+        "description": "Returns a randomly selected bite gif.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/bite/gif/bite_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/bite/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/bite",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/blush/gif": {
+      "get": {
+        "summary": "Get a random blush gif",
+        "description": "Returns a randomly selected blush gif.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/blush/gif/blush_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/blush/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/blush",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/comfy/gif": {
+      "get": {
+        "summary": "Get a random comfy gif",
+        "description": "Returns a randomly selected comfy gif.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/comfy/gif/comfy_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/comfy/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/comfy",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/cry/gif": {
+      "get": {
+        "summary": "Get a random cry gif",
+        "description": "Returns a randomly selected cry gif.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/cry/gif/cry_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/cry/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/cry",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/cuddle/gif": {
+      "get": {
+        "summary": "Get a random cuddle gif",
+        "description": "Returns a randomly selected cuddle gif.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/cuddle/gif/cuddle_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/cuddle/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/cuddle",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/dance/gif": {
+      "get": {
+        "summary": "Get a random dance gif",
+        "description": "Returns a randomly selected dance gif.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/dance/gif/dance_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/dance/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/dance",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/eevee/{type}": {
+      "get": {
+        "summary": "Get a random Gif or Image of Eevee",
+        "description": "Returns a randomly selected Gif or Image of the Pokemon Eevee, depending on the provided `{type}`",
+        "tags": [
+          "sfw"
+        ],
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "description": "Type of media to return.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "gif",
+                "img"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "examples": {
+                  "Gif": {
+                    "value": {
+                      "link": "https://purrbot.site/img/sfw/eevee/gif/eevee_001.gif",
+                      "error": false,
+                      "time": 0
+                    }
+                  },
+                  "Img": {
+                    "value": {
+                      "link": "https://purrbot.site/img/sfw/eevee/img/eevee_001.jpg",
+                      "error": false,
+                      "time": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/eevee/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/eevee",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/fluff/gif": {
+      "get": {
+        "summary": "Get a random fluff gif",
+        "description": "Returns a randomly selected fluff gif.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/fluff/gif/fluff_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/fluff/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/fluff",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/holo/gif": {
+      "get": {
+        "summary": "Get a random holo gif",
+        "description": "Returns a randomly selected holo gif.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/holo/gif/holo_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/holo/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/holo",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/hug/gif": {
+      "get": {
+        "summary": "Get a random hug gif",
+        "description": "Returns a randomly selected hug gif.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/hug/gif/hug_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/hug/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/hug",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/icon/img": {
+      "get": {
+        "summary": "Get a random icon image",
+        "description": "Returns a randomly selected icon image used in the bots welcome feature.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/icon/img/icon_001.jpg",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/icon/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/icon",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/kiss/gif": {
+      "get": {
+        "summary": "Get a random kiss gif",
+        "description": "Returns a randomly selected kiss gif.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/kiss/gif/kiss_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/kiss/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/kiss",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/kitsune/img": {
+      "get": {
+        "summary": "Get a random kitsune image",
+        "description": "Returns a randomly selected kitsune image.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/kitsune/img/kitsune_001.jpg",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/kitsune/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/kitsune",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/lick/gif": {
+      "get": {
+        "summary": "Get a random lick gif",
+        "description": "Returns a randomly selected lick gif.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/lick/gif/lick_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/lick/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/lick",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/neko/{type}": {
+      "get": {
+        "summary": "Get a random Gif or Image of a Neko",
+        "description": "Returns a randomly selected Gif or Image of a Neko (Cat girl), depending on the provided `{type}`",
+        "tags": [
+          "sfw"
+        ],
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "description": "Type of media to return.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "gif",
+                "img"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "examples": {
+                  "Gif": {
+                    "value": {
+                      "link": "https://purrbot.site/img/sfw/neko/gif/neko_001.gif",
+                      "error": false,
+                      "time": 0
+                    }
+                  },
+                  "Img": {
+                    "value": {
+                      "link": "https://purrbot.site/img/sfw/neko/img/neko_001.jpg",
+                      "error": false,
+                      "time": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/neko/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/neko",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/okami/img": {
+      "get": {
+        "summary": "Get a random okami image",
+        "description": "Returns a randomly selected okami (Fox girl) image.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/okami/img/okami_001.jpg",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/okami/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/okami",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/pat/gif": {
+      "get": {
+        "summary": "Get a random pat gif",
+        "description": "Returns a randomly selected pat gif.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/pat/gif/pat_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/pat/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/pat",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/poke/gif": {
+      "get": {
+        "summary": "Get a random poke gif",
+        "description": "Returns a randomly selected poke gif.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/poke/gif/poke_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/poke/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/poke",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/senko/img": {
+      "get": {
+        "summary": "Get a random senko image",
+        "description": "Returns a randomly selected senko image.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/senko/img/_001.jpg",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/senko/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/senko",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/shiro/img": {
+      "get": {
+        "summary": "Get a random shiro image",
+        "description": "Returns a randomly selected shiro image.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/shiro/img/shiro_001.jpg",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/shiro/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/shiro",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/slap/gif": {
+      "get": {
+        "summary": "Get a random slap gif",
+        "description": "Returns a randomly selected slap gif.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/slap/gif/slap_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/slap/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/slap",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/smile/gif": {
+      "get": {
+        "summary": "Get a random smile gif",
+        "description": "Returns a randomly selected smile gif.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/smile/gif/smile_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/smile/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/smile",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/tail/gif": {
+      "get": {
+        "summary": "Get a random tail wagging gif",
+        "description": "Returns a randomly selected tail wagging gif.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/tail/gif/tail_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/tail/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/tail",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/tickle/gif": {
+      "get": {
+        "summary": "Get a random tickle gif",
+        "description": "Returns a randomly selected tickle gif.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/tickle/gif/tickle_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/tickle/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/tickle",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/list/sfw/{path}": {
+      "get": {
+        "summary": "Get all available images of the path",
+        "description": "Returns a list of all available images (as URLs) from the provided `{path}`",
+        "tags": [
+          "sfw"
+        ],
+        "parameters": [
+          {
+            "name": "path",
+            "in": "path",
+            "description": "The path to list all available images in. Allowed are all available `/api/img/sfw/` paths.",
+            "example": "background/img",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListSuccess"
+                },
+                "example": {
+                  "links": [
+                    "https://purrbot.site/img/sfw/background/img/color_black.png",
+                    "https://purrbot.site/img/sfw/background/img/color_blue.png",
+                    "https://purrbot.site/img/sfw/background/img/color_blurple.png",
+                    "https://purrbot.site/img/sfw/background/img/color_green.png",
+                    "https://purrbot.site/img/sfw/background/img/color_grey.png",
+                    "https://purrbot.site/img/sfw/background/img/color_red.png",
+                    "https://purrbot.site/img/sfw/background/img/color_white.png",
+                    "https://purrbot.site/img/sfw/background/img/gradient.png",
+                    "https://purrbot.site/img/sfw/background/img/gradient_blue.png",
+                    "https://purrbot.site/img/sfw/background/img/gradient_dark_red.png",
+                    "https://purrbot.site/img/sfw/background/img/gradient_green.png",
+                    "https://purrbot.site/img/sfw/background/img/gradient_orange.png",
+                    "https://purrbot.site/img/sfw/background/img/gradient_red.png",
+                    "https://purrbot.site/img/sfw/background/img/rainbow.png"
+                  ],
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/list/sfw/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/list/sfw/",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/nsfw/anal/gif": {
+      "get": {
+        "summary": "Get a random anal sex gif",
+        "description": "Returns a randomly selected anal sex gif.",
+        "tags": [
+          "nsfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/nsfw/anal/gif/anal_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/anal/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/anal",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/nsfw/blowjob/gif": {
+      "get": {
+        "summary": "Get a random blowjob gif",
+        "description": "Returns a randomly selected blowjob gif.",
+        "tags": [
+          "nsfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/nsfw/blowjob/gif/blowjob_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/blowjob/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/blowjob",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/nsfw/cum/gif": {
+      "get": {
+        "summary": "Get a random cum gif",
+        "description": "Returns a randomly selected cum gif.",
+        "tags": [
+          "nsfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/nsfw/cum/gif/cum_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/cum/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/cum",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/nsfw/fuck/gif": {
+      "get": {
+        "summary": "Get a random fuck gif",
+        "description": "Returns a randomly selected fuck gif.",
+        "tags": [
+          "nsfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/nsfw/fuck/gif/_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/fuck/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/fuck",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/nsfw/neko/{type}": {
+      "get": {
+        "summary": "Get a random Gif or Image of a Neko",
+        "description": "Returns a randomly selected Gif or Image of a Neko (Cat girl), depending on the provided `{type}`",
+        "tags": [
+          "nsfw"
+        ],
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "description": "Type of media to return.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "gif",
+                "img"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "examples": {
+                  "Gif": {
+                    "value": {
+                      "link": "https://purrbot.site/img/nsfw/neko/gif/neko_001.gif",
+                      "error": false,
+                      "time": 0
+                    }
+                  },
+                  "Img": {
+                    "value": {
+                      "link": "https://purrbot.site/img/nsfw/neko/img/neko_001.jpg",
+                      "error": false,
+                      "time": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/neko/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/neko",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/nsfw/pussylick/gif": {
+      "get": {
+        "summary": "Get a random pussylick gif",
+        "description": "Returns a randomly selected pussylick gif.",
+        "tags": [
+          "nsfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/nsfw/pussylick/gif/pussylick_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/pussylick/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/pussylick",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/nsfw/solo/gif": {
+      "get": {
+        "summary": "Get a random solo masturbation gif",
+        "description": "Returns a randomly selected solo masturbation gif.",
+        "tags": [
+          "nsfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/nsfw/solo/gif/solo_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/solo/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/solo",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/nsfw/threesome_fff/gif": {
+      "get": {
+        "summary": "Get a random threesome (Females only) gif",
+        "description": "Returns a randomly selected threesome (Females only) gif.",
+        "tags": [
+          "nsfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/nsfw/threesome_fff/gif/threesome_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/threesome_fff/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/threesome_fff",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/nsfw/threesome_ffm/gif": {
+      "get": {
+        "summary": "Get a random threesome (2 Females, 1 Male) gif",
+        "description": "Returns a randomly selected threesome (2 Females, 1 Male) gif.",
+        "tags": [
+          "nsfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/nsfw/threesome_ffm/gif/threesome_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/threesome_ffm/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/threesome_ffm",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/nsfw/threesome_mmf/gif": {
+      "get": {
+        "summary": "Get a random threesome (2 Males, 1 Female) gif",
+        "description": "Returns a randomly selected threesome (2 Males, 1 Female) gif.",
+        "tags": [
+          "nsfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/nsfw/threesome_mmf/gif/threesome_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/threesome_mmf/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/threesome_mmf",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/nsfw/yaoi/gif": {
+      "get": {
+        "summary": "Get a random yaoi (gay) gif",
+        "description": "Returns a randomly selected yaoi (gay) gif.",
+        "tags": [
+          "nsfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/nsfw/yaoi/gif/yaoi_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/yaoi/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/yaoi",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/nsfw/yuri/gif": {
+      "get": {
+        "summary": "Get a random yuri (lesbian) gif",
+        "description": "Returns a randomly selected yuri (lesbian) gif.",
+        "tags": [
+          "nsfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/nsfw/yuri/gif/yuri_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/yuri/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/yuri",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/list/nsfw/{path}": {
+      "get": {
+        "summary": "Get all available images of the path",
+        "description": "Returns a list of all available images (as URLs) from the provided `{path}`",
+        "tags": [
+          "nsfw"
+        ],
+        "parameters": [
+          {
+            "name": "path",
+            "in": "path",
+            "description": "The path to list all available images in. Allowed are all available `/api/img/nsfw/` paths.",
+            "example": "anal/gif",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListSuccess"
+                },
+                "example": {
+                  "links": [
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_001.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_002.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_003.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_004.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_005.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_006.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_007.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_008.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_009.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_010.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_011.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_012.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_013.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_014.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_015.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_016.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_017.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_018.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_019.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_020.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_021.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_022.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_023.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_024.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_025.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_026.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_027.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_028.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_029.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_030.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_031.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_032.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_033.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_034.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_035.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_036.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_037.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_038.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_039.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_040.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_041.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_042.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_043.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_044.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_045.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_046.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_047.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_048.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_049.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_050.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_051.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_052.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_053.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_054.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_055.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_056.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_057.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_058.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_059.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_060.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_061.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_062.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_063.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_064.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_065.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_066.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_067.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_068.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_069.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_070.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_071.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_072.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_073.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_074.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_075.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_076.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_077.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_078.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_079.gif",
+                    "https://purrbot.site/img/nsfw/anal/gif/anal_080.gif"
+                  ],
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw//invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ImgSuccess": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "boolean"
+          },
+          "link": {
+            "type": "string"
+          },
+          "time": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "ListSuccess": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "boolean"
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "time": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "ImgFailure": {
+        "type": "object",
+        "properties": {
+          "details": {
+            "$ref": "#/components/schemas/DetailsContent"
+          },
+          "error": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string"
+          },
+          "time": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "DetailsContent": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "content-type": {
+            "type": "string"
+          },
+          "user-agent": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
