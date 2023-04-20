@@ -106,6 +106,7 @@ plugins:
   - search
   - swagger-ui-tag:
       tryItOutEnabled: false
+      supportedSubmitMethods: []
       extra_css:
         - assets/css/styling/swagger.css
 
