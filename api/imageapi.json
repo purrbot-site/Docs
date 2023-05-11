@@ -649,10 +649,10 @@
         }
       }
     },
-    "/img/sfw/holo/gif": {
+    "/img/sfw/holo/img": {
       "get": {
-        "summary": "Get a random holo gif",
-        "description": "Returns a randomly selected holo gif.",
+        "summary": "Get a random holo image",
+        "description": "Returns a randomly selected image from Holo of the anime \"Spice and Wolf\".",
         "tags": [
           "sfw"
         ],
@@ -665,7 +665,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/holo/gif/holo_001.gif",
+                  "link": "https://purrbot.site/img/sfw/holo/img/holo_001.jpg",
                   "error": false,
                   "time": 0
                 }
