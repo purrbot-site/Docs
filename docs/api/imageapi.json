@@ -2312,6 +2312,72 @@
         }
       }
     },
+    "/img/nsfw/solo_male/gif": {
+      "get": {
+        "summary": "Get a random solo masturbation gif of a man",
+        "description": "Returns a randomly selected solo masturbation gif of a man.",
+        "tags": [
+          "nsfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/nsfw/solo_male/gif/solo_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/solo_male/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/nsfw/solo_male",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/img/nsfw/threesome_fff/gif": {
       "get": {
         "summary": "Get a random threesome (Females only) gif",
