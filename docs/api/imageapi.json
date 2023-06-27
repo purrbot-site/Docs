@@ -29,6 +29,72 @@
     }
   ],
   "paths": {
+    "/img/sfw/angry/gif": {
+      "get": {
+        "summary": "Get a random angry gif",
+        "description": "Returns a randomly selected gif of someone being angry.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/angry/gif/angry_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/angry/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/angry",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/img/sfw/background/img": {
       "get": {
         "summary": "Get a random background image",
@@ -1388,6 +1454,72 @@
                 "example": {
                   "details": {
                     "path": "/api/img/sfw/poke",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/img/sfw/pout/gif": {
+      "get": {
+        "summary": "Get a random pouting gif",
+        "description": "Returns a randomly selected gif of someone pouting.",
+        "tags": [
+          "sfw"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgSuccess"
+                },
+                "example": {
+                  "link": "https://purrbot.site/img/sfw/pout/gif/pout_001.gif",
+                  "error": false,
+                  "time": 0
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid path provided",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/pout/invalid",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "The provided path is not valid.",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Path doesn't contain images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImgFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/img/sfw/pout",
                     "content-type": "application/json",
                     "user-agent": "Some_User-Agent/1.0"
                   },
