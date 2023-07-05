@@ -20,14 +20,17 @@ The default prefix is `p.` but can be changed with the [prefix command](#prefix)
         - `Read Message History`
         - `Add Reactions`  
         - `Use External Emojis`
+        - Every Command has a `help` sub-command that lists necessary permissions and if the bot has it.
     - Arguments surrounded by `<>` are required while those surrounded with `[]` are optional.
         - You don't need to include the `<>` and `[]` for an argument!
         - Order of the arguments is not important unless mentioned.
         - Arguments containing `...` mean you can add as many as you like.
 
 ### [Fun](#category-fun)
+- [Angry](#angry)
 - [Bite](#bite)
 - [Blush](#blush)
+- [Comfy](#comfy)
 - [Cry](#cry)
 - [Cuddle](#cuddle)
 - [Dance](#dance)
@@ -38,10 +41,13 @@ The default prefix is `p.` but can be changed with the [prefix command](#prefix)
 - [Hug](#hug)
 - [Kiss](#kiss)
 - [Kitsune](#kitsune)
+- [Lay](#lay)
 - [Lick](#lick)
 - [Neko](#neko)
+- [Okami](#okami)
 - [Pat](#pat)
 - [Poke](#poke)
+- [Pout](#pout)
 - [Senko](#senko)
 - [Ship](#ship)
 - [Shiro](#shiro)
@@ -80,6 +86,26 @@ The default prefix is `p.` but can be changed with the [prefix command](#prefix)
 ----
 ## Fun { #category-fun }
 
+### Angry
+
+!!! summary "&nbsp;"
+    **Permission:** `None`  
+    **Bot requires:** `None`
+    
+    **Aliases:**
+    
+    - `Angy`
+    - `Rage`
+    
+    **Arguments:** `None`
+    
+    **Examples:**
+    
+    - `p.angry`
+
+Lets you be angry.
+
+----
 ### Bite
 
 !!! summary "&nbsp;"
@@ -348,6 +374,25 @@ Kisses the mentioned users
 Gives a random image of a kitsune (fox girl). ([Example](https://purrbot.site/img/sfw/kitsune/img/kitsune_001.jpg))
 
 ----
+### Lay
+
+!!! summary "&nbsp;"
+    **Permission:** `None`  
+    **Bot requires:** `None`
+    
+    **Aliases:**
+    
+    - `Laying`
+    
+    **Arguments:** `None`
+    
+    **Examples:**
+    
+    - `p.lay`
+
+Lets you lay down.
+
+----
 ### Lick
 
 !!! summary "&nbsp;"
@@ -387,6 +432,8 @@ Licks the mentioned users.
     - `p.neko --gif`
 
 Gives an image of a Neko (cat girl). ([Example (Image)](https://purrbot.site/img/sfw/neko/img/neko_001.jpg))
+
+For the NSFW version see [here](#neko-nsfw).
 
 ----
 ### Pat
@@ -431,6 +478,25 @@ Pats the mentioned users.
     - `p.poke @user`
 
 Pokes the mentioned users.
+
+----
+### Pout
+
+!!! summary "&nbsp;"
+    **Permission:** `None`  
+    **Bot requires:** `None`
+    
+    **Aliases:**
+    
+    - `Hmph`
+    
+    **Arguments:** `None`
+    
+    **Examples:**
+    
+    - `p.pout`
+
+Lets you go "hmph".
 
 ----
 ### Senko
@@ -1049,7 +1115,7 @@ Gives a random image or gif of a NSFW Neko (Cat girl)
     
     **Arguments:**
     
-    - `<@user>` - The User to the pussy of. Needs to be a mention.
+    - `<@user>` - The User to lick the pussy of. Needs to be a mention.
     
     **Examples:**
     
@@ -1071,13 +1137,17 @@ The user can accept or deny the request.
     
     - `Girl`
     
-    **Arguments:** `None`
+    **Arguments:**
+
+    - `[--male]` - Gives a male instead of a female.
     
     **Examples:**
     
     - `p.solo`
+    - `p.solo --male`
 
-Gives a random gif of a girl masturbating.
+Gives a random gif of a girl masturbating.  
+When `--male` is provided, returns a gif of a male masturbating instead.
 
 ----
 ### Threesome
