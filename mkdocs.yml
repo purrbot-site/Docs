@@ -104,11 +104,13 @@ extra:
 
 plugins:
   - search
-  - swagger-ui-tag:
-      tryItOutEnabled: false
-      supportedSubmitMethods: []
-      extra_css:
-        - assets/css/styling/swagger.css
+  - neoteroi.mkdocsoad:
+      use_pymdownx: true
+  #- swagger-ui-tag:
+  #    tryItOutEnabled: false
+  #    supportedSubmitMethods: []
+  #    extra_css:
+  #      - assets/css/styling/swagger.css
 
 markdown_extensions:
   - attr_list
