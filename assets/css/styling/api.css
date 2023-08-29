@@ -1,0 +1,15 @@
+:root {
+    --color-http-get: #448aff;
+    --color-http-get__bg: #448aff1a;
+}
+
+.http-get {
+    background-color: var(--color-http-get__bg);
+    
+    border: .05rem solid var(--color-http-get);
+    
+    border-radius: .2em;
+    
+    padding: .1rem .3rem;
+    margin-right: .3em;
+}
