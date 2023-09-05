@@ -37,7 +37,7 @@ jobs:
           issue-number: ${{ github.event.pull_request.number }}
           token: ${{ secrets.BOT }}
           edit-mode: replace
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         name: Checkout Code
         with:
           ref: refs/pull/${{ github.event.pull_request.number }}/merge
