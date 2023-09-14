@@ -1,0 +1,31 @@
+.md-typeset .mdx-badge {
+    font-size: .85em;
+}
+
+.md-typeset .mdx-badge__icon {
+    border: .05rem solid var(--md-default-fg-color--lighter);
+    border-right-width: 0;
+    border-bottom-left-radius: .1rem;
+    border-top-left-radius: .1rem;
+    background: var(--md-accent-fg-color--transparent);
+    padding: .2rem;
+}
+
+.md-typeset .mdx-badge__icon.icon-only {
+    border-right-width: .05rem !important;
+    border-bottom-right-radius: .1rem;
+    border-top-right-radius: .1rem;
+}
+
+.md-typeset .mdx-badge__text {
+    border: .05rem solid var(--md-default-fg-color--lighter);
+    border-left-width: 0;
+    border-bottom-right-radius: .1rem;
+    border-top-right-radius: .1rem;
+    padding: .2rem .3rem;
+    color: var(--md-default-fg-color--light);
+}
+
+.md-typeset a > .mdx-badge > .mdx-badge__text {
+    color: var(--md-typeset-a-color);
+}

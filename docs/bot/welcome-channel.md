@@ -20,8 +20,8 @@ The welcome channel allows you to greet people with a message and image when the
     <iframe width="560" height="315" src="https://www.youtube.com/embed/vfhSj-4PF1A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Step 1: Set a channel {: #step-1 }
-> **Required step?** Yes  
-> **Default**: `None`
+<!-- md-badge:required -->
+<!-- md-badge:default none -->
 
 You first have to set a channel, before you can greet people.  
 To do that, run `p.welcome channel set #channel` where `#channel` is the channel you want to use for greeting people.
@@ -29,26 +29,26 @@ To do that, run `p.welcome channel set #channel` where `#channel` is the channel
 Reset this using `p.welcome channel reset`
 
 ## Step 2: Set a background {: #step-2 }
-> **Required step?** No  
-> **Default**: [`color_white`](../welcome-images#color_white)
+<!-- md-badge:optional -->
+[<!-- md-badge:default color_white -->](welcome-images.md#color_white)
 
 Set a background that will be used on the image.  
-The syntax is `p.welcome bg set <background>` where `<background>` is one of the [available backgrounds](../welcome-images#backgrounds).
+The syntax is `p.welcome bg set <background>` where `<background>` is one of the [available backgrounds](welcome-images.md#backgrounds).
 
 Reset this using `p.welcome bg reset`
 
 ## Step 3: Set an icon {: #step-3 }
-> **Required step?** No  
-> **Default**: [`purr`](../welcome-images#purr)
+<!-- md-badge:optional -->
+[<!-- md-badge:default purr -->](welcome-images.md#purr)
 
 You can set an icon, which is shown on the right side of the image.  
-Use `p.welcome icon set <icon>` where `<icon>` is one of the [available icons](../welcome-images#icons).
+Use `p.welcome icon set <icon>` where `<icon>` is one of the [available icons](welcome-images.md#icons).
 
 Reset this using `p.welcome icon reset`
 
 ## Step 4: Set a text color {: #step-4 }
-> **Required step?** No  
-> **Default**: `hex:000000`
+<!-- md-badge:optional -->
+<!-- md-badge:default hex:000000 -->
 
 The default font color isn't visible on all backgrounds. For that can you change it with `.welcome color set <color>`.  
 `<color>` has to be either `hex:rrggbb`, `rgb:r,g,b` or `random`.
@@ -56,8 +56,8 @@ The default font color isn't visible on all backgrounds. For that can you change
 Reset this using `p.welcome color reset`
 
 ## Step 5: Set a message {: #step-5 }
-> **Required step?** No  
-> **Default**: `Welcome {mention}!`
+<!-- md-badge:optional -->
+<!-- md-badge:default Welcome {mention}! -->
 
 You can set your very own welcome message that is shown next to the image.  
 To do that run `p.welcome msg set <message>` where `<message>` can be anything you want.  
@@ -80,8 +80,8 @@ To do that run `p.welcome msg set <message>` where `<message>` can be anything y
 Reset this using `p.welcome msg reset`
 
 ## Final Step: Testing {: #final-step }
-> **Required step?** No  
-> **Default**: `Uses saved values`
+<!-- md-badge:optional -->
+<!-- md-badge:default Saved values -->
 
 You can see the current message and image set by running `p.welcome test`  
 This will generate a message similar to the one which would be shown for joining members.

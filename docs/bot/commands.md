@@ -21,10 +21,11 @@ The default prefix is `p.` but can be changed with the [prefix command](#prefix)
         - `Add Reactions`  
         - `Use External Emojis`
         - Every Command has a `help` sub-command that lists necessary permissions and if the bot has it.
-    - Arguments surrounded by `<>` are required while those surrounded with `[]` are optional.
-        - You don't need to include the `<>` and `[]` for an argument!
+    - Arguments:
+        - <!-- md-badge:req_arg --> indicate required arguments.
+        - <!-- md-badge:opt_arg --> indicate optional arguments.
         - Order of the arguments is not important unless mentioned.
-        - Arguments containing `...` mean you can add as many as you like.
+        - Arguments ending with `...` mean you can add as many as you like.
 
 ### [Fun](#category-fun)
 - [Angry](#angry)
@@ -119,7 +120,8 @@ Lets you be angry.
     
     **Arguments:**
     
-    - `<@user ...>` - The User(s) to bite. Needs to be a mention.
+    - <!-- md-badge:required `@user ...` -->  
+      The User(s) to bite. Needs to be a mention.
     
     **Examples:**
     
@@ -199,7 +201,8 @@ Lets you cry. :cry:
     
     **Arguments:**
     
-    - `<@user ...>` - The User(s) to cuddle. Needs to be a mention.
+    - <!-- md-badge:required `@user ...` -->  
+      The User(s) to cuddle. Needs to be a mention.
     
     **Examples:**
     
@@ -237,7 +240,8 @@ Lets you show to others that you're dancing. ~(^-^)~
     
     **Arguments:**
     
-    - `[--gif]` - Receive a gif instead of an image.
+    - <!-- md-badge:optional `--gif` -->  
+      Receive a gif instead of an image.
     
     **Examples:**
     
@@ -260,7 +264,8 @@ Gives you a random image/gif of the Pokémon Eevee. ([Example (Image)](https://p
     
     **Arguments:**
     
-    - `<@user>` - The User to feed. Needs to be a mention.
+    - <!-- md-badge:required `@user` -->  
+      The User to feed. Needs to be a mention.
     
     **Examples:**
     
@@ -282,7 +287,8 @@ The asked user can either accept or deny the request.
     
     **Arguments:**
     
-    - `<@user>` - The User to fluff. Needs to be a mention.
+    - <!-- md-badge:required `@user` -->  
+      The User to fluff. Needs to be a mention.
     
     **Examples:**
     
@@ -301,7 +307,6 @@ The asked user can either accept or deny the request.
     **Aliases:**
     
     - `Spiceandwolf`
-    - `Nom`
     
     **Arguments:** `None`
     
@@ -324,7 +329,8 @@ Gives an image of Holo from the manga and anime "Spice & Wolf". ([Example](https
     
     **Arguments:**
     
-    - `<@user ...>` - The User(s) to hug. Needs to be a mention.
+    - <!-- md-badge:required `@user ...` -->  
+      The User(s) to hug. Needs to be a mention.
     
     **Examples:**
     
@@ -346,7 +352,8 @@ Hugs the mentioned users.
     
     **Arguments:**
     
-    - `<@user ...>` - The User(s) to kiss. Needs to be a mention.
+    - <!-- md-badge:required `@user ...` -->  
+      The User(s) to kiss. Needs to be a mention.
     
     **Examples:**
     
@@ -403,7 +410,8 @@ Lets you lay down.
     
     **Arguments:**
     
-    - `<@user ...>` - The User(s) to lick. Needs to be a mention.
+    - <!-- md-badge:required `@user ...` -->  
+      The User(s) to lick. Needs to be a mention.
     
     **Examples:**
     
@@ -424,7 +432,8 @@ Licks the mentioned users.
     
     **Arguments:**
     
-    - `[--gif]` - Receive a gif instead of an image.
+    - <!-- md-badge:optional `--gif` -->  
+      Receive a gif instead of an image.
     
     **Examples:**
     
@@ -449,7 +458,8 @@ For the NSFW version see [here](#neko-nsfw).
     
     **Arguments:**
     
-    - `<@user ...>` - The User(s) to pat. Needs to be a mention.
+    - <!-- md-badge:required `@user ...` -->  
+      The User(s) to pat. Needs to be a mention.
     
     **Examples:**
     
@@ -471,7 +481,8 @@ Pats the mentioned users.
     
     **Arguments:**
     
-    - `<@user ...>` - The User(s) to poke. Needs to be a mention.
+    - <!-- md-badge:required `@user ...` -->  
+      The User(s) to poke. Needs to be a mention.
     
     **Examples:**
     
@@ -532,8 +543,10 @@ Gives a random image of Senko-San from the anime and manga "Sewayaki Kitsune no 
     
     **Arguments:**
     
-    - `<@user1>` - The user to ship with. Needs to be a mention.
-    - `[@user2]` - A second user to ship first one with. Needs to be a mention. Defaults to you if not set.
+    - <!-- md-badge:required `@user1` -->  
+      The User to ship with. Needs to be a mention.
+    - <!-- md-badge:optional `@user2` -->  
+      A second user to ship the first one with. Needs to be a mention and defaults to you if not provided.
     
     **Examples:**
     
@@ -571,7 +584,8 @@ Gives a random image of Shiro from the anime and manga "Sewayaki Kitsune no Senk
     
     **Arguments:**
     
-    - `<@user ...>` - The User(s) to slap. Needs to be a mention.
+    - <!-- md-badge:required `@user ...` -->  
+      The User(s) to slap. Needs to be a mention.
     
     **Examples:**
     
@@ -630,7 +644,8 @@ Lets you wag your tail (in excitement hopefully).
     
     **Arguments:**
     
-    - `<@user ...>` - The User(s) to tickle. Needs to be a mention.
+    - <!-- md-badge:required `@user ...` -->  
+      The User(s) to tickle. Needs to be a mention.
     
     **Examples:**
     
@@ -653,8 +668,10 @@ Tickles the mentioned users.
     
     **Arguments:**
     
-    - `[set <language>]` - Sets the language used to the specified one. `<language>` is the language you want to use.
-    - `[reset]` - Resets the language back to `en` (English).
+    - <!-- md-badge:optional `set {language}` -->  
+      Sets the new language to use. `{language}` needs to be a supported language.
+    - <!-- md-badge:optional `reset` -->  
+      Resets the language back to `en` (English).
     
     **Examples:**
     
@@ -678,8 +695,10 @@ A list of currently worked on (and perhaps completed) translations can be found 
     
     **Arguments:**
     
-    - `<set <prefix>>` - The new prefix to use for commands. `<prefix>` is the new prefix you want to use.
-    - `<reset>` - Resets the prefix back to `p.`
+    - <!-- md-badge:required `set {prefix}` -->  
+      Sets the new prefix to use. `{prefix}` needs to be the new prefix to use.
+    - <!-- md-badge:required `reset` -->  
+      Resets the prefix back to the default one (`p.`).
     
     **Examples:**
     
@@ -702,17 +721,30 @@ By default is `p.` used.
     
     **Arguments:**
     
-    - `[bg set <background>]` - Sets the background to the specified one. `<background>` needs to be the [name of an existing background](../welcome-images#backgrounds) to use. [Tier 2/3 Patreons][patreon] can set an image URL to use.
-    - `[bg reset]` - Resets the background to [`color_white`](../welcome-images/#color_white).
-    - `[channel set <#channel>]` - Sets the channel to send welcome messages in. `<#channel>` needs to be a Channel mention where the bot can send messages in.
-    - `[channel reset]` - Resets the channel back to `none`.
-    - `[color set <color>]` - Sets the color to use for the text in the image. `<color>` needs to either be in the format `rgb:r,g,b`, `hex:rrggbb` or just `random` for randomized colours.
-    - `[color reset]` - Resets the color back to `hex:000000` (Black).
-    - `[icon set <icon>]` - Sets the icon to the specified one. `<icon>` needs to be the [name of an existing icon](../welcome-images#icons) to use. [Tier 2/3 Patreons][patreon] can set an image URL to use.
-    - `[icon reset]` - Resets the icon back to [`purr`](../welcome-images#purr).
-    - `[msg set <message>]` - Sets the message to greet joining users with. `<message>` can be any String you like and even have [Placeholders](#placeholders).
-    - `[msg reset]` - Resets the message back to `Welcome {mention}!`
-    - `[test]` - Generates a message with the image using you as the user.
+    - <!-- md-badge:optional `bg set {background}` -->  
+      Sets the background to the specified one. Needs to be the [name of an existing background](welcome-images.md#backgrounds).  
+      [Patreons of Tier 2/3][patreon] can set an image URL to use.
+    - <!-- md-badge:optional `bg reset ` -->  
+      Resets the background back to [`color_white`](welcome-images.md#color_white)
+    - <!-- md-badge:optional `channel set {#channel}` -->  
+      Sets the channel to send welcome messages in. `{#channel}` needs to be a mention of a channel the bot can write in.
+    - <!-- md-badge:optional `channel reset` -->  
+      Resets the channel back to `none`. 
+    - <!-- md-badge:optional `color set {color}` -->  
+      Sets the color to use for the text in the welcome image. `{color}` can be either `hex:` with a hexadecimal color value, `rgb:` with RGB values separated by commas or `random` for randomized colour selection.
+    - <!-- md-badge:optional `color reset` -->  
+      Resets the color back to `hex:000000`.
+    - <!-- md-badge:optional `icon set {icon}` -->  
+      Sets the icon to the specified one. Needs to be the [name of an existing icon](welcome-images.md#icons).  
+      [Patreons of Tier 2/3][patreon] can set an image URL to use.
+    - <!-- md-badge:optional `icon reset` -->  
+      Resets the icon back to [`purr`](welcome-images.md#purr).
+    - <!-- md-badge:optional `msg set {message}` -->  
+      Sets the message to greet a joining user with. `{message}` can be any string you like and contain [supported placeholders](#placeholders).
+    - <!-- md-badge:optional `msg reset` -->  
+      Resets the message back to `Welcome {mention}!`
+    - <!-- md-badge:optional `test` -->  
+      Creates a test welcome message using the currently saved values.
     
     **Examples:**
     
@@ -784,8 +816,10 @@ Gives you information on how you can donate and what awesome people donated so f
     
     **Arguments:**
     
-    - `<:emote:>` - The Emote to get more information from. Needs to be a custom Emoji (Not unicode Emoji).
-    - `<--search>` - Searches in the past 100 messages for any custom Emojis and lists them.
+    - <!-- md-badge:required `:emote:` -->  
+      The emote to get information from. Needs to be a mention of a custom emoji (Unicode emojis won't work).
+    - <!-- md-badge:required `--search` -->  
+      Searches the past 100 messages for any custom emojis in them and lists any it finds.
     
     **Examples:**
     
@@ -850,7 +884,8 @@ Gives you a link to the site you're currently reading.
     
     **Arguments:**
     
-    - `[--dm]` - Sends the info to your Direct Messages.
+    - <!-- md-badge:optional `--dm` -->  
+      Sends the bot info to your direct messages.
     
     **Examples:**
     
@@ -872,7 +907,8 @@ Gives you information about the bot (Version, Library used, bot lists, etc).
     
     **Arguments:**
     
-    - `[--dm]` - Sends the Invite info to your Direct Messages.
+    - <!-- md-badge:optional `--dm` -->  
+      Sends the invite and other links to your direct messages.
     
     **Examples:**
     
@@ -909,8 +945,11 @@ Checks the connection to Discord and how long it takes to edit a message and dis
     
     **Arguments:**
     
-    - `<messageId>` - The ID of the message to quote.
-    - `[#channel]` - Channel to search in for the message. Needs to be a channel mention. Only required if the message is not in the same channel where you use the command in.
+    - <!-- md-badge:required `messageId` -->  
+      The ID of the message to quote.
+    - <!-- md-badge:optional `#channel` -->  
+      Channel to quote the message from. Needs to me a channel mention.  
+      Only required if the message is not in the same channel as where you executed this command in.
     
     **Examples:**
     
@@ -982,7 +1021,9 @@ Gives some statistics about the bot such as total number of servers, shards, RAM
     
     **Arguments:**
     
-    - `[@user]` - Optional user to get information from. Needs to be a mention. Defaults to you if no user is provided.
+    - <!-- md-badge:optional `@user` -->  
+      Optional user to get information from.  
+      Defaults to you if not specified.
     
     **Examples:**
     
@@ -1010,7 +1051,8 @@ Shows information about yourself or another user, if provided.
     
     **Arguments:**
     
-    - `<@user>` - The User(s) to give a Blowjob. Needs to be a mention.
+    - <!-- md-badge:required `@user` -->  
+      The User to give a blojob. Needs to be a mention.
     
     **Examples:**
     
@@ -1055,11 +1097,16 @@ Returns a random gif of someone cumming.
     
     **Arguments:**
     
-    - `<@user>` - The User to have sex with. Needs to be a mention.
-    - `[--anal]` - Pre-selects analsex as option.
-    - `[--normal]` - Pre-selects normal sex as option.
-    - `[--yaoi]` - Pre-selects Yaoi (Gay) sex as option.
-    - `[--yuri]` - Pre-selects Yuri (Lesbian) sex as option.
+    - <!-- md-badge:required `@user` -->  
+      The user to have sex with. Needs to be a mention
+    - <!-- md-badge:optional `--anal` -->  
+      Pre-selects anal as sex option.
+    - <!-- md-badge:optional `--normal` -->  
+      Pre-selects hetero sex as sex option.
+    - <!-- md-badge:optional `--yaoi` -->  
+      Pre-selects yaoi (Gay) sex as sex option.
+    - <!-- md-badge:optional `--yuri` -->  
+      Pre-selects yuri (Lesbian) sex as sex option.
     
     **Examples:**
     
@@ -1089,8 +1136,10 @@ When one of the options has been provided can the asked user only accept or deny
     
     **Arguments:**
     
-    - `<--nsfw>` - Gives a nsfw neko image or gif.
-    - `[--gif]` - Returns a gif instead of an image.
+    - <!-- md-badge:required `--nsfw` -->  
+      Gives a NSFW neko image or gif.
+    - <!-- md-badge:optional `--gif` -->  
+      Receive a gif instead of an image.
     
     **Examples:**
     
@@ -1115,7 +1164,8 @@ Gives a random image or gif of a NSFW Neko (Cat girl)
     
     **Arguments:**
     
-    - `<@user>` - The User to lick the pussy of. Needs to be a mention.
+    - <!-- md-badge:required `@user` -->  
+      The User to give cunnylingus. Needs to be a mention.
     
     **Examples:**
     
@@ -1139,7 +1189,8 @@ The user can accept or deny the request.
     
     **Arguments:**
 
-    - `[--male]` - Gives a male instead of a female.
+    - <!-- md-badge:optional `--male` -->  
+      Gives a male masturbating instead of a female.
     
     **Examples:**
     
@@ -1164,10 +1215,14 @@ When `--male` is provided, returns a gif of a male masturbating instead.
     
     **Arguments:**
     
-    - `<@user1>` - The first user to ask for a threesome. Needs to be a mention.
-    - `<@user2>` - The second user to ask for a threesome. Needs to be a mention.
-    - `[--fff]` - Returns a random gif of 3 females having a threesome.
-    - `[--mmf]` - Returns a random gif of 2 males and 1 female having a threesome.
+    - <!-- md-badge:required `@user1` -->  
+      The first User to ask to have a threesome with. Needs to be a mention.
+    - <!-- md-badge:required `@user2` -->  
+      The second user to ask to have a threesome with. Needs to be a mention.
+    - <!-- md-badge:optional `--fff` -->  
+      Will return a gif with only females in it.
+    - <!-- md-badge:optional `--mmf` -->  
+      Will return a gif with 2 males and 1 female in it.
     
     **Examples:**
     

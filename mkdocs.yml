@@ -85,7 +85,6 @@ theme:
       quote: octicons/comment-16
 
 watch:
-  - .snippets
   - theme
 
 extra_css:
@@ -112,6 +111,9 @@ plugins:
   #    extra_css:
   #      - assets/css/styling/swagger.css
 
+hooks:
+  - theme/.hooks/badges.py
+
 markdown_extensions:
   - attr_list
   - admonition
@@ -132,4 +134,4 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.snippets:
       base_path:
-        - .snippets
+        - theme/.snippets
