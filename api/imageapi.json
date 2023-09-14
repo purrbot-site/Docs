@@ -15,7 +15,8 @@
   },
   "servers": [
     {
-      "url": "https://purrbot.site/api"
+      "url": "https://purrbot.site/api",
+      "description": "Main API endpoint to use."
     }
   ],
   "tags": [
