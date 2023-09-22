@@ -1,2 +1,2 @@
-mkdocs-material==9.3.2
+mkdocs-material==9.4.0
 neoteroi-mkdocs==1.0.4
