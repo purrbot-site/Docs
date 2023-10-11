@@ -109,7 +109,9 @@ A red gradient (bright red).
 Other available options.
 
 #### custom {: #custom-background }
-This is a Patreon-exclusive option.  
+
+<!-- md-badge:patreon -->
+
 Users that support us through [Patreon][patreon] gain access to use any image they want by providing a URL instead of a name.  
 The only requirements are, that the image has the right dimensions (`2000x350`)
 
@@ -196,7 +198,8 @@ The main character holo.
 Other available options.
 
 #### custom {: #custom-icon }
-This is a Patreon-exclusive option.
+
+<!-- md-badge:patreon -->
 
 Users that support us through [Patreon][patreon] gain access to use any image they want by providing a URL instead of a name.  
 The only requirements are, that the image has the right dimensions (`320x320`)
