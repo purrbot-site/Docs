@@ -37,4 +37,4 @@ You can find the source codes [here][imageapi].
 
 ## Translations
 We welcome every kind of translation. This even includes those that don't really exist (Are a joke-language like Klingon... No hate towards those guys).  
-To become a translator, read how to on the [translations](translate.md) page and join our [Discord], so that he can add you as a translator to the [Translation page][crowdin].
+To become a translator, read how to on the [translations](translate/index.md) page and join our [Discord], so that he can add you as a translator to the [Translation page][crowdin].

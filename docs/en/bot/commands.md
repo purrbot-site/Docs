@@ -8,8 +8,10 @@ description: List of all Commands the Bot currently offers.
 
 # Commands
 
-This page lists all available commands of the bot.  
-The default prefix is `p.` but can be changed with the [prefix command](#prefix)
+This page lists all available commands of the bot.
+
+The default prefix is `p.` but can be changed with the [prefix command](#prefix).  
+In addition can you use a mention of the bot (`@*Purr*#6875`) instead of the prefix.
 
 !!! warning "Important"
     - `Permission` means Discord permissions which the executor of the command (you) requires.

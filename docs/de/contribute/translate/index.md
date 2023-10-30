@@ -7,6 +7,11 @@ description: Find out how you can translate the bot into another language.
 [crowdin]: https://crowdin.com
 
 # Translations
+
+!!! info
+    This page only covers how to translate the Discord bot.
+    If you would like to translate these docs, head over to the [Translate the docs](translate-docs.md) page.
+
 \*Purr* is available in various languages.  
 Each of those languages was made with :heart:, effort and some letters by the community.
 

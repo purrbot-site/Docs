@@ -21,7 +21,7 @@ The welcome channel allows you to greet people with a message and image when the
 
 ## Step 1: Set a channel {: #step-1 }
 <!-- md-badge:required -->
-<!-- md-badge:default none -->
+<!-- md-badge:default Default: `none` -->
 
 You first have to set a channel, before you can greet people.  
 To do that, run `p.welcome channel set #channel` where `#channel` is the channel you want to use for greeting people.
@@ -30,7 +30,7 @@ Reset this using `p.welcome channel reset`
 
 ## Step 2: Set a background {: #step-2 }
 <!-- md-badge:optional -->
-[<!-- md-badge:default color_white -->](welcome-images.md#color_white)
+[<!-- md-badge:default Default: `color_white` -->](welcome-images.md#color_white)
 
 Set a background that will be used on the image.  
 The syntax is `p.welcome bg set <background>` where `<background>` is one of the [available backgrounds](welcome-images.md#backgrounds).
@@ -39,7 +39,7 @@ Reset this using `p.welcome bg reset`
 
 ## Step 3: Set an icon {: #step-3 }
 <!-- md-badge:optional -->
-[<!-- md-badge:default purr -->](welcome-images.md#purr)
+[<!-- md-badge:default Default: `purr` -->](welcome-images.md#purr)
 
 You can set an icon, which is shown on the right side of the image.  
 Use `p.welcome icon set <icon>` where `<icon>` is one of the [available icons](welcome-images.md#icons).
@@ -48,7 +48,7 @@ Reset this using `p.welcome icon reset`
 
 ## Step 4: Set a text color {: #step-4 }
 <!-- md-badge:optional -->
-<!-- md-badge:default hex:000000 -->
+<!-- md-badge:default Default: `hex:000000` -->
 
 The default font color isn't visible on all backgrounds. For that can you change it with `.welcome color set <color>`.  
 `<color>` has to be either `hex:rrggbb`, `rgb:r,g,b` or `random`.
@@ -57,7 +57,7 @@ Reset this using `p.welcome color reset`
 
 ## Step 5: Set a message {: #step-5 }
 <!-- md-badge:optional -->
-<!-- md-badge:default Welcome {mention}! -->
+<!-- md-badge:default Default: `Welcome {mention}!` -->
 
 You can set your very own welcome message that is shown next to the image.  
 To do that run `p.welcome msg set <message>` where `<message>` can be anything you want.  
@@ -81,7 +81,7 @@ Reset this using `p.welcome msg reset`
 
 ## Final Step: Testing {: #final-step }
 <!-- md-badge:optional -->
-<!-- md-badge:default Saved values -->
+<!-- md-badge:default Default: Saved values -->
 
 You can see the current message and image set by running `p.welcome test`  
 This will generate a message similar to the one which would be shown for joining members.

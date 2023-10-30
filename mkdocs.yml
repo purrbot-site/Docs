@@ -17,29 +17,30 @@ repo_url: https://github.com/purrbot-site/PurrBot
 edit_uri: https://github.com/purrbot-site/Docs/edit/master/docs
 
 nav:
-  - Welcome: index.md
+  - index.md
   - API:
     - api/index.md
   - Bot:
-    - General:
-      - bot/index.md
-      - Commands: bot/commands.md
-      - FAQ: 'https://purrbot.site/discord'
-      - Selfhosting: bot/selfhosting.md
+    - bot/index.md
+    - bot/commands.md
+    - FAQ: 'https://purrbot.site/discord'
+    - bot/selfhosting.md
     - Welcome-System:
-      - Setup: bot/welcome-channel.md
-      - Images: bot/welcome-images.md
+      - bot/welcome-channel.md
+      - bot/welcome-images.md
   - Contributing:
     - contribute/index.md
-    - Formatting Help: contribute/formatting-help.md
-    - Translations: contribute/translate.md
+    - contribute/formatting-help.md
+    - Translations:
+      - contribute/translate/index.md
+      - contribute/translate/translate-docs.md
   - Credits:
     - credits/index.md
   - Legal: 
     - legal/index.md
-    - Bot: legal/bot.md
-    - API: legal/api.md
-    - Website: legal/website.md
+    - legal/bot.md
+    - legal/api.md
+    - legal/website.md
 
 theme:
   name: 'material'
@@ -105,18 +106,30 @@ plugins:
   - search
   - neoteroi.mkdocsoad:
       use_pymdownx: true
-  #- swagger-ui-tag:
-  #    tryItOutEnabled: false
-  #    supportedSubmitMethods: []
-  #    extra_css:
-  #      - assets/css/styling/swagger.css
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: de
+          name: Deutsch
+          build: true
+          nav_translations:
+            # Welcome system
+            Welcome-System: Willkommenssystem
+            # Contributing
+            Contributing: Mitmachen
+            Translations: Übersetzungen
+            # Legal
+            Legal: Rechtliches
 
 hooks:
   - theme/.hooks/badges.py
 
 markdown_extensions:
   - attr_list
-  - admonition
   - toc:
       permalink: true
   - meta
@@ -135,3 +148,17 @@ markdown_extensions:
   - pymdownx.snippets:
       base_path:
         - theme/.snippets
+  - pymdownx.blocks.admonition:
+      types:
+        - note
+        - abstract
+        - info
+        - tip
+        - success
+        - question
+        - warning
+        - failure
+        - danger
+        - bug
+        - example
+        - quote
