@@ -89,7 +89,7 @@ Die einfachste Struktur sieht ähnlich wie diese aus (`de-CH` (Schweizer Hochdeu
           default: true
           name: English
           build: true
-        # ...other languages
+        # ...andere Sprachen
         - locale: de-CH # (1)
           name: Deutsch (Schweiz) # (2)
           build: true
@@ -126,6 +126,7 @@ Die einfachste Struktur sieht ähnlich wie diese aus (`de-CH` (Schweizer Hochdeu
      - `missing_translation` wird auf Seiten angezeigt, welche noch nicht für diese Sprache existieren.
      - `not_translatable` wird auf Seiten angezeigt, welche nicht übersetzt werden können (Seiten mit `not_translatable: true` im Frontmatter).
      - `footer` ändert den `Erstellt mit ...` text im Footer der Seite.
+
   5. Dies wird verwendet, um bestimmte deile der Navigation zu übersetzen, welche nicht durch andere Methoden übersetzt werden können.
 
 Dieses Beispiel würde nun nach Dateien im `de-CH` Ordner schauen und diese laden. Du solltest natürlich deinen eigenen Sprach Identifikator als Ordnername verwenden.

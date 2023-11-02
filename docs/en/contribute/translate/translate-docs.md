@@ -125,6 +125,7 @@ The most basic structure looks similar to this (Using `de-CH` (Swiss german) as 
      - `missing_translation` will be displayed on pages that don't have a page in their language yet.
      - `not_translatable` will be displayed on pages that cannot be translated (That have `not_translatable: true` in their frontmatter).
      - `footer` changes the `Build using ...` text in the footer of the page.
+
   5. This is used to translate parts of the nav that can't be translated through other means.
 
 This example would now look for and load files inside the `de-CH` folder. You obviously would need to use your language identifier here as folder name.
