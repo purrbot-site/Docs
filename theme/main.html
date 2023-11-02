@@ -42,8 +42,25 @@
   {% endif %}
 {% endblock %}
 
-{% block config %}
-  {{ super() }}
-  <link rel="stylesheet" href="{{ 'assets/stylesheets/extra.0d2c79a8.min.css' | url }}">
-  <script src="{{ 'assets/javascripts/extra/bundle.5f09fbc3.min.js' | url }}" defer></script>
+{% block announce %}
+  {% if page.meta and i18n_page_locale != "en" and i18n_file_locale != i18n_page_locale %}
+    {% set announcement_classes = "announcement-translation" %}
+    {% if page.meta.not_translatable %}
+      {% set announcement_classes = announcement_classes ~ " announcement-translation__not-translatable" %}
+    {% endif %}
+    
+    <div class="{{ announcement_classes }}">
+      {% if page.meta.not_translatable %}
+        <span class="twemoji">
+          {% include ".icons/material/translate-off.svg" %}
+        </span>
+        {{ config.extra.translate.not_translatable | d('This page cannot be translated and is therefore only available in English.') }}
+      {% else %}
+        <span class="twemoji">
+          {% include ".icons/material/translate.svg" %}
+        </span>
+        {{ config.extra.translate.missing_translation | d('This page has not yet been translated.') }}
+      {% endif%}
+    </div>
+  {% endif %}
 {% endblock %}

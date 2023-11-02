@@ -44,6 +44,7 @@ def on_page_markdown(
         elif type == "default": return _badge_for_default(args)
         elif type == "req_arg": return _badge_for_required_arg()
         elif type == "opt_arg": return _badge_for_optional_arg()
+        elif type == "patreon": return _badge_for_patreon(args)
         
         raise RuntimeError(f"Unknown shortcode: {type}")
     
@@ -94,7 +95,7 @@ def _badge_for_default(args: str):
     
     return _badge(
         icon = f":{icon}:",
-        text = f"Default: `{args}`"
+        text = f"{args}"
     )
 
 def _badge_for_required_arg():
@@ -109,4 +110,14 @@ def _badge_for_optional_arg():
     return _badge(
         icon = f":{icon}:",
         type = "icon-only"
+    )
+
+def _badge_for_patreon(args: str = ""):
+    icon = "simple-patreon"
+    text = f"{args}" if args else "Patreon Reward"
+    
+    return _badge(
+        icon = f"[:{icon}:](https://patreon.com/andre_601)",
+        text = f"[{text}](https://patreon.com/andre_601)",
+        type = "patreon"
     )

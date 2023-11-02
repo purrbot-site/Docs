@@ -4,6 +4,8 @@ description: 'Documentation about the ImageAPI located under https://purrbot.sit
 
 hide:
   - navigation
+
+not_translatable: true
 ---
 
-[OAD(./docs/api/imageapi.json)]
+[OAD(./docs/assets/imageapi.json)]

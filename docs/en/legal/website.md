@@ -1,6 +1,8 @@
 ---
 title: Website Legal info
 description: Legal information about the website.
+
+not_translatable: true
 ---
 
 [Maxee]: https://notmaxee.github.io/

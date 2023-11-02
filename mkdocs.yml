@@ -7,8 +7,8 @@ site_url: 'https://docs.purrbot.site'
 copyright: |
   Docs made with 
   <img alt="❤" class="twemoji heart-anim md-footer-custom-text" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title="love"> 
-  and provided under the 
-  <a href="https://github.com/purrbot-site/Docs/blob/master/LICENSE" target="_blank">MIT-License</a>.
+  and available under the 
+  <a href="https://github.com/purrbot-site/Docs/blob/master/LICENSE" target="_blank" rel="nofollow">MIT-License</a>.
 
 docs_dir: docs/
 
@@ -17,29 +17,29 @@ repo_url: https://github.com/purrbot-site/PurrBot
 edit_uri: https://github.com/purrbot-site/Docs/edit/master/docs
 
 nav:
-  - Welcome: index.md
+  - index.md
   - API:
     - api/index.md
   - Bot:
-    - General:
-      - bot/index.md
-      - Commands: bot/commands.md
-      - FAQ: 'https://purrbot.site/discord'
-      - Selfhosting: bot/selfhosting.md
+    - bot/index.md
+    - bot/commands.md
+    - bot/faq.md
+    - bot/selfhosting.md
     - Welcome-System:
-      - Setup: bot/welcome-channel.md
-      - Images: bot/welcome-images.md
+      - bot/welcome-channel.md
+      - bot/welcome-images.md
   - Contributing:
     - contribute/index.md
-    - Formatting Help: contribute/formatting-help.md
-    - Translations: contribute/translate.md
-  - Credits:
-    - credits/index.md
+    - contribute/formatting-help.md
+    - Translations:
+      - contribute/translate/index.md
+      - contribute/translate/translate-docs.md
+  - credits/index.md
   - Legal: 
     - legal/index.md
-    - Bot: legal/bot.md
-    - API: legal/api.md
-    - Website: legal/website.md
+    - legal/bot.md
+    - legal/api.md
+    - legal/website.md
 
 theme:
   name: 'material'
@@ -100,30 +100,63 @@ extra:
       link: 'https://twitter.com/TruePurrBot'
     - icon: 'simple/mastodon'
       link: 'https://botsin.space/@purrbot'
+  translate:
+    missing_translation: 'This page has not yet been translated.'
+    not_translatable: 'This page cannot be translated and is therefore only available in English.'
+    footer: |
+      Build using <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>,
+      <a href="https://squidfunk.github.io/mkdocs-material" target="_blank" rel="noopener">Material for MkDocs</a> and
+      <a href="https://facelessuser.github.io/pymdown-extensions/" target="_blank" rel="noopener">Pymdown Extensions</a>.
 
 plugins:
   - search
   - neoteroi.mkdocsoad:
       use_pymdownx: true
-  #- swagger-ui-tag:
-  #    tryItOutEnabled: false
-  #    supportedSubmitMethods: []
-  #    extra_css:
-  #      - assets/css/styling/swagger.css
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: de-CH
+          name: Deutsch (Schweiz)
+          build: true
+          site_name: PurrBot Dokumentation
+          site_description: 'API-Dokumentation und Wiki von *Purr*'
+          copyright: |
+            Dokumentation mit 
+            <img alt="❤" class="twemoji heart-anim md-footer-custom-text" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title="Liebe"> 
+            gemacht und unter der
+            <a href="https://github.com/purrbot-site/Docs/blob/master/LICENSE" target="_blank" rel="nofollow">MIT-Lizenz</a> verfügbar.
+          extra:
+            translate:
+              missing_translation: 'Diese Seite wurde noch nicht übersetzt.'
+              not_translatable: 'Diese Seite kann nicht übersetzt werden und ist darum nur auf Englisch verfügbar.'
+              footer: |
+                Erstellt mit <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>,
+                <a href="https://squidfunk.github.io/mkdocs-material" target="_blank" rel="noopener">Material for MkDocs</a> und
+                <a href="https://facelessuser.github.io/pymdown-extensions/" target="_blank" rel="noopener">Pymdown Extensions</a>.
+          nav_translations:
+            # Welcome system
+            Welcome-System: Willkommenssystem
+            # Contributing
+            Contributing: Mitmachen
+            Translations: Übersetzungen
+            # Legal
+            Legal: Rechtliches
 
 hooks:
   - theme/.hooks/badges.py
 
 markdown_extensions:
   - attr_list
-  - admonition
   - toc:
       permalink: true
   - meta
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
-  - pymdownx.details
   - pymdownx.magiclink:
       repo_url_shortener: true
       repo_url_shorthand: true
@@ -135,3 +168,20 @@ markdown_extensions:
   - pymdownx.snippets:
       base_path:
         - theme/.snippets
+  - pymdownx.blocks.admonition:
+      types:
+        - note
+        - abstract
+        - info
+        - tip
+        - success
+        - question
+        - warning
+        - failure
+        - danger
+        - bug
+        - example
+        - quote
+  - pymdownx.blocks.details:
+  - pymdownx.blocks.tab:
+      alternate_style: true

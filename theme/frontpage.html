@@ -1,6 +1,3 @@
-{#-
-  This file was automatically generated - do not edit
--#}
 {% extends "main.html" %}
 {% block tabs %}
   {{ super() }}
@@ -31,12 +28,28 @@
   <section class="mdx-container">
     <div class="md-grid md-typeset">
       <header class="mdx-hero">
-        <img src="./assets/img/logo.png" alt="" width="200" height="200" draggable="false">
+        <img src="/assets/img/logo.png" alt="" width="200" height="200" draggable="false">
         <p class="mdx-description">
-          Discord Bot for fun, entertainment and nekos.
+          {% if page.meta and page.meta.subtitle %}
+            {{ page.meta.subtitle }}
+          {% else %}
+            Discord Bot for fun, entertainment and nekos.
+          {% endif %}
         </p>
-          <a href="https://purrbot.site" title="website" class="md-button">Main Website</a>
-          <a href="https://github.com/purrbot-site/PurrBot" title="Documentation" class="md-button">Source Code</a>
+          <a href="https://purrbot.site" class="md-button">
+            {% if page.meta and page.meta.button and page.meta.button.website %}
+              {{ page.meta.button.website }}
+            {% else %}
+              Main Website
+            {% endif %}
+          </a>
+          <a href="https://github.com/purrbot-site/PurrBot" class="md-button">
+            {% if page.meta and page.meta.button and page.meta.button.source %}
+              {{ page.meta.button.source }}
+            {% else %}
+              Source Code
+            {% endif %}
+          </a>
         <p>
       </header>
       <div class="mdx-description">

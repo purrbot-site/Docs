@@ -29,3 +29,12 @@
 .md-typeset a > .mdx-badge > .mdx-badge__text {
     color: var(--md-typeset-a-color);
 }
+
+.md-typeset .mdx-badge__icon.patreon {
+    background-color: #FF424D;
+    border-color: #FF424D;
+}
+
+.md-typeset .mdx-badge__icon svg {
+    color: #fff;
+}

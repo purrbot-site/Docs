@@ -14,3 +14,23 @@
 .md-nav__item--section > .md-nav > .md-nav__list {
     margin-left: 0.5rem;
 }
+
+.md-banner__inner {
+    margin: 0 auto;
+}
+
+.announcement-translation {
+    margin: .5em auto;
+    display: table;
+    color: #64dd17;
+    border: 1px solid #64dd17;
+    border-radius: .01rem;
+    background-color: #64dd171a;
+    padding: .2rem;
+}
+
+.announcement-translation.announcement-translation__not-translatable {
+    color: #ff9100;
+    border: 1px solid #ff9100;
+    background-color: #ff91001a;
+}

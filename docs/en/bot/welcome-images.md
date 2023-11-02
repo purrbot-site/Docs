@@ -10,14 +10,14 @@ description: All available Welcome images.
 [waifu]: https://fluxpoint.dev/waifu
 [hangman]: https://fluxpoint.dev/hangman
 
-\*Purr* allows you to set a welcome-channel where she greets joining users with a message and an image.  
+\*Purr\* allows you to set a welcome-channel where she greets joining users with a message and an image.  
 A tutorial on how to set this up can be found [here](welcome-channel.md).
 
 This page here lists all available icons and backgrounds that can be used.  
 If you have suggestions for new backgrounds or icons, feel free to join our [Discord] and suggest it there.
 
 ## Credit
-\*Purr* uses the API from [Fluxpoint Development][fluxpoint] which is owned by Builderb, the creator of popular bots like [Waifu] and [Hangman].
+\*Purr\* uses the API from [Fluxpoint Development][fluxpoint] which is owned by Builderb, the creator of popular bots like [Waifu] and [Hangman].
 
 ----
 ## Backgrounds
@@ -29,7 +29,7 @@ These backrgounds are only available as a reward for boosting the [Discord Serve
 #### booster
 Background with Booster colour and icons.
 
-![image](https://purrbot.site/images/boost/booster_background.png)
+![image](https://purrbot.site/images/boost/booster_background.png){ loading="lazy" }
 
 ----
 ### Colors
@@ -38,37 +38,37 @@ Simple one color-backgrounds.
 #### color_black
 The color black. (`#000000`)
 
-![image](https://purrbot.site/img/sfw/background/img/color_black.png)
+![image](https://purrbot.site/img/sfw/background/img/color_black.png){ loading="lazy" }
 
 #### color_blue
 The color blue. (`#2980B9`)
 
-![image](https://purrbot.site/img/sfw/background/img/color_blue.png)
+![image](https://purrbot.site/img/sfw/background/img/color_blue.png){ loading="lazy" }
 
 #### color_blurple
 The **original** Blurple from before the Discord rebranding (`#7289DA`)
 
-![image](https://purrbot.site/img/sfw/background/img/color_blurple.png)
+![image](https://purrbot.site/img/sfw/background/img/color_blurple.png){ loading="lazy" }
 
 #### color_green
 The color green. (`#27AE60`)
 
-![image](https://purrbot.site/img/sfw/background/img/color_green.png)
+![image](https://purrbot.site/img/sfw/background/img/color_green.png){ loading="lazy" }
 
 #### color_grey
 The color grey. (`#959595`)
 
-![image](https://purrbot.site/img/sfw/background/img/color_grey.png)
+![image](https://purrbot.site/img/sfw/background/img/color_grey.png){ loading="lazy" }
 
 #### color_red
 The color red. (`#C0392B`)
 
-![image](https://purrbot.site/img/sfw/background/img/color_red.png)
+![image](https://purrbot.site/img/sfw/background/img/color_red.png){ loading="lazy" }
 
 #### color_white
 The color white. (`#FFFFFF`)
 
-![image](https://purrbot.site/img/sfw/background/img/color_white.png)
+![image](https://purrbot.site/img/sfw/background/img/color_white.png){ loading="lazy" }
 
 ----
 ### Gradients
@@ -77,46 +77,48 @@ Some nice gradients
 #### gradient
 A slightly blue-ish gradient.
 
-![image](https://purrbot.site/img/sfw/background/img/gradient.png)
+![image](https://purrbot.site/img/sfw/background/img/gradient.png){ loading="lazy" }
 
 #### gradient_blue
 A dark-blue gradient.
 
-![image](https://purrbot.site/img/sfw/background/img/gradient_blue.png)
+![image](https://purrbot.site/img/sfw/background/img/gradient_blue.png){ loading="lazy" }
 
 #### gradient_dark_red
 A dark-red gradient.
 
-![image](https://purrbot.site/img/sfw/background/img/gradient_dark_red.png)
+![image](https://purrbot.site/img/sfw/background/img/gradient_dark_red.png){ loading="lazy" }
 
 #### gradient_green
 A dark_green gradient.
 
-![image](https://purrbot.site/img/sfw/background/img/gradient_green.png)
+![image](https://purrbot.site/img/sfw/background/img/gradient_green.png){ loading="lazy" }
 
 #### gradient_orange
 A orange gradient.
 
-![image](https://purrbot.site/img/sfw/background/img/gradient_orange.png)
+![image](https://purrbot.site/img/sfw/background/img/gradient_orange.png){ loading="lazy" }
 
 #### gradient_red
 A red gradient (bright red).
 
-![image](https://purrbot.site/img/sfw/background/img/gradient_red.png)
+![image](https://purrbot.site/img/sfw/background/img/gradient_red.png){ loading="lazy" }
 
 ----
 ### Other {: #other-backgrounds }
 Other available options.
 
 #### custom {: #custom-background }
-This is a Patreon-exclusive option.  
+
+<!-- md-badge:patreon -->
+
 Users that support us through [Patreon][patreon] gain access to use any image they want by providing a URL instead of a name.  
 The only requirements are, that the image has the right dimensions (`2000x350`)
 
 #### rainbow
 A rainbow gradient.
 
-![image](https://purrbot.site/img/sfw/background/img/rainbow.png)
+![image](https://purrbot.site/img/sfw/background/img/rainbow.png){ loading="lazy" }
 
 #### random
 The option `random` picks one of the above backgrounds randomly for each new image.
@@ -131,7 +133,7 @@ These icons are only available as a reward for boosting the [Discord Server][dis
 #### booster
 Icon Wumpus on it.
 
-![image](https://purrbot.site/images/boost/booster_icon.png)
+![image](https://purrbot.site/images/boost/booster_icon.png){ loading="lazy" }
 
 ### Nekos
 Neko related icons.
@@ -139,34 +141,34 @@ Neko related icons.
 #### neko_hug
 Shows a neko hugging a human UwU
 
-![image](https://purrbot.site/img/sfw/icon/img/neko_hug.png)
+![image](https://purrbot.site/img/sfw/icon/img/neko_hug.png){ loading="lazy" }
 
 #### neko_smile
 A smiling neko :3
 
-![image](https://purrbot.site/img/sfw/icon/img/neko_smile.png)
+![image](https://purrbot.site/img/sfw/icon/img/neko_smile.png){ loading="lazy" }
 
 #### purr
 \*Purr\* herself. >w<  
 Created by `Makay#0270`
 
-![image](https://purrbot.site/img/sfw/icon/img/purr.png){: width="320" }
+![image](https://purrbot.site/img/sfw/icon/img/purr.png){ width="320" loading="lazy" }
 
 #### purr_old
 \*Purr\*'s old avatar. -w-
 
-![image](https://purrbot.site/img/sfw/icon/img/purr_old.png)
+![image](https://purrbot.site/img/sfw/icon/img/purr_old.png){ loading="lazy" }
 
 #### snuggle
 \*Purr\*'s younger sister \*Snuggle\*. OwO
 
-![image](https://purrbot.site/img/sfw/icon/img/snuggle.png)
+![image](https://purrbot.site/img/sfw/icon/img/snuggle.png){ loading="lazy" }
 
 #### snuggle_lurk
 \*Snuggle\* lurking at you...  
 Created by `Makay#0270`
 
-![image](https://purrbot.site/img/sfw/icon/img/snuggle_lurk.png)
+![image](https://purrbot.site/img/sfw/icon/img/snuggle_lurk.png){ loading="lazy" }
 
 ----
 ### Sewayaki Kitsune no Senko-san {: #senko-san }
@@ -175,12 +177,12 @@ Characters from the anime "Sewayaki Kitsune no Senko-san"
 #### Senko
 The main female character of the anime.
 
-![image](https://purrbot.site/img/sfw/icon/img/senko.png)
+![image](https://purrbot.site/img/sfw/icon/img/senko.png){ loading="lazy" }
 
 #### Shiro
 The second female character of the anime.
 
-![image](https://purrbot.site/img/sfw/icon/img/shiro.png)
+![image](https://purrbot.site/img/sfw/icon/img/shiro.png){ loading="lazy" }
 
 ----
 ### Spice & Wolf {: #spice-and-wolf }
@@ -189,14 +191,15 @@ Characters from the anime "Spice & Wolf".
 #### holo
 The main character holo.
 
-![image](https://purrbot.site/img/sfw/icon/img/holo.png)
+![image](https://purrbot.site/img/sfw/icon/img/holo.png){ loading="lazy" }
 
 ----
 ### Other {: #other-icons }
 Other available options.
 
 #### custom {: #custom-icon }
-This is a Patreon-exclusive option.
+
+<!-- md-badge:patreon -->
 
 Users that support us through [Patreon][patreon] gain access to use any image they want by providing a URL instead of a name.  
 The only requirements are, that the image has the right dimensions (`320x320`)

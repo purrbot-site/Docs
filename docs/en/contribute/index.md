@@ -14,11 +14,10 @@ description: Help us improving the bot, website or this Documentation!
 [imageapi]: https://github.com/purrbot-site/ImageAPI
 [crowdin]: https://lang.purrbot.site
 
-# Contribute towards the Projects
 We're always happy for people who want to help us improve our various projects.  
 But before you blindly dive into the stuff, keep the following things in mind.
 
-## Documentation/Wiki
+## Documentation/Wiki { #documentation-wiki }
 The documentation (The site you're currently on) is located [here][doc] and we're happy over every improvement made, being it the addition of missing information, fixing style-issues or even just correcting minor typos.
 
 Before you start, make sure you've read the [formatting help](formatting-help.md) page to know everything important about the styling of the docs.  
@@ -37,4 +36,4 @@ You can find the source codes [here][imageapi].
 
 ## Translations
 We welcome every kind of translation. This even includes those that don't really exist (Are a joke-language like Klingon... No hate towards those guys).  
-To become a translator, read how to on the [translations](translate.md) page and join our [Discord], so that he can add you as a translator to the [Translation page][crowdin].
+To become a translator, read how to on the [translations](translate/index.md) page and join our [Discord], so that he can add you as a translator to the [Translation page][crowdin].
