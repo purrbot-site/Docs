@@ -30,7 +30,7 @@ Zudem kann anstelle des Präfix auch eine Erwähnung des Bots (`@*Purr*#6875`) v
     - Argumente welche mit `...` enden geben an, dass du sie so oft wie du willst anwenden kannst.
 ///
 
-### [Spass](#category-fun)
+### [Spass](#category-fun) { #fun }
 - [Angry](#angry)
 - [Bite](#bite)
 - [Blush](#blush)
@@ -60,12 +60,12 @@ Zudem kann anstelle des Präfix auch eine Erwähnung des Bots (`@*Purr*#6875`) v
 - [Tail](#tail)
 - [Tickle](#tickle)
 
-### [Gilde](#category-guild)
+### [Gilde](#category-guild) { #guild }
 - [Language](#language)
 - [Prefix](#prefix)
 - [Welcome](#welcome)
 
-### [Info](#category-info)
+### [Info](#category-info) { #info }
 - [Donate](#donate)
 - [Emote](#emote)
 - [Guild](#guild)
@@ -78,7 +78,7 @@ Zudem kann anstelle des Präfix auch eine Erwähnung des Bots (`@*Purr*#6875`) v
 - [Stats](#stats)
 - [User](#user)
 
-### [NSFW](#category-nsfw)
+### [NSFW](#category-nsfw) { #nsfw }
 - [Blowjob](#blowjob)
 - [Cum](#cum)
 - [Fuck](#fuck)
@@ -124,12 +124,12 @@ Lässt dich wütend sein.
 
 **Argumente:**
 
-- <!-- md-badge:required `@user ...` -->  
+- <!-- md-badge:required `@benutzer ...` -->  
   Der/Die Benutzer die du beissen willst. Muss eine Erwähnung sein.
 
 **Beispiele:**
 
-- `p.bite @user`
+- `p.bite @benutzer`
 ///
 
 Beisst die erwähnten Benutzer.
@@ -207,12 +207,12 @@ Lässt dich weinen. :cry:
 
 **Argumente:**
 
-- <!-- md-badge:required `@user ...` -->  
+- <!-- md-badge:required `@benutzer ...` -->  
   Der/Die Benutzer welche du Knuddeln willst. Muss eine Erwähnung sein.
 
 **Beispiele:**
 
-- `p.cuddle`
+- `p.cuddle @benutzer`
 ///
 
 Knuddel die erwähnten Benutzer.
@@ -273,12 +273,12 @@ Gibt dir ein zufälliges Bild/Gif vom Pokémon Evoli. ([Beispiel (Bild)](https:/
 
 **Argumente:**
 
-- <!-- md-badge:required `@user` -->  
+- <!-- md-badge:required `@benutzer` -->  
   Der Benutzer dem du Essen geben willst. Muss eine Erwähnung sein.
 
 **Beispiele:**
 
-- `p.feed @user`
+- `p.feed @benutzer`
 ///
 
 Lässt dich jemanden was zu essen geben.  
@@ -297,12 +297,12 @@ Der angefragte Benutzer kann deine Anfrage akzeptieren oder ablehnen.
 
 **Argumente:**
 
-- <!-- md-badge:required `@user` -->  
+- <!-- md-badge:required `@benutzer` -->  
   Der Benutzer den du fluffen möchtest. Muss eine Erwähnung sein.
 
 **Beispiele:**
 
-- `p.fluff @user`
+- `p.fluff @benutzer`
 ///
 
 Fragt jemanden ob du ihren Schweif fluffen kannst.  
@@ -341,12 +341,12 @@ Gibt ein zufälliges Bild von Holo aus dem Manga und Anime "Spice & Wolf". ([Bei
 
 **Argumente:**
 
-- <!-- md-badge:required `@user ...` -->  
+- <!-- md-badge:required `@benutzer ...` -->  
   Der/Die Benutzer welche du Umarmen willst. Muss eine Erwähnung sein.
 
 **Beispiele:**
 
-- `p.hug @user`
+- `p.hug @benutzer`
 ///
 
 Umarmt die erwähnten Benutzer.
@@ -365,12 +365,12 @@ Umarmt die erwähnten Benutzer.
 
 **Argumente:**
 
-- <!-- md-badge:required `@user ...` -->  
+- <!-- md-badge:required `@benutzer ...` -->  
   Der/Die Benutzer welche du küssen willst. Muss eine Erwähnung sein.
 
 **Beispiele:**
 
-- `p.kiss @user`
+- `p.kiss @benutzer`
 ///
 
 Küsst die erwähnten Benutzer.
@@ -426,12 +426,12 @@ Lässt dich liegen
 
 **Argumente:**
 
-- <!-- md-badge:required `@user ...` -->  
+- <!-- md-badge:required `@benutzer ...` -->  
   Der/Die Benutzer welche du lecken willst. Muss eine Erwähnung sein.
 
 **Beispiele:**
 
-- `p.lick @user`
+- `p.lick @benutzer`
 ///
 
 Leckt die erwähnten Benutzer.
@@ -476,12 +476,12 @@ Für die NSFW version dieses Befehls, klicke [hier](#neko-nsfw).
 
 **Argumente:**
 
-- <!-- md-badge:required `@user ...` -->  
+- <!-- md-badge:required `@benutzer ...` -->  
   Der/Die Benutzer welche du streicheln willst. Muss eine Erwähnung sein.
 
 **Beispiele:**
 
-- `p.pat @user`
+- `p.pat @benutzer`
 ///
 
 Streichelt die erwähnten Benutzer.
@@ -500,12 +500,12 @@ Streichelt die erwähnten Benutzer.
 
 **Argumente:**
 
-- <!-- md-badge:required `@user` -->  
+- <!-- md-badge:required `@benutzer ...` -->  
   Der/Die Benutzer welche du stupsen willst. Muss eine Erwähnung sein.
 
 **Beispiele:**
 
-- `p.poke @user`
+- `p.poke @benutzer`
 ///
 
 Stupst die erwähnten Benutzer.
@@ -565,15 +565,15 @@ Gibt ein zufälliges Bild von Senko-san aus dem Manga und Anime "Sewayaki Kitsun
 
 **Argumente:**
 
-- <!-- md-badge:required `@user1` -->  
+- <!-- md-badge:required `@benutzer1` -->  
   Der Benutzer mit welchem man verkuppelt werden soll. Muss eine Erwähnung sein.
-- <!-- md-badge:optional `@user2` -->  
+- <!-- md-badge:optional `@benutzer2` -->  
   Zweiter Benutzer welcher mit dem ersten Benutzer verkuppelt werden soll. Muss eine Erwähnung sein. Verwendet standardmässig dich.
 
 **Beispiele:**
 
-- `p.ship @user`
-- `p.ship @user @user2`
+- `p.ship @benutzer1`
+- `p.ship @benutzer1 @benutzer2`
 ///
 
 Verkuppelt dich (oder den zweiten Benutzer wenn gegeben) mit dem erwähnten Benutzer.  
@@ -608,12 +608,12 @@ Gibt ein zufälliges Bild von Shiro aus dem Manga und Anime "Sewayaki Kitsune no
 
 **Argumente:**
 
-- <!-- md-badge:required `@user ...` -->  
+- <!-- md-badge:required `@benutzer ...` -->  
   Der/Die Benutzer die geohrfeigt werden sollen. Muss eine Erwähnung sein.
 
 **Beispiele:**
 
-- `p.slap @user`
+- `p.slap @benutzer`
 ///
 
 Ohrfeigt die erwähnten Benutzer.
@@ -671,12 +671,12 @@ Lässt dich deinen Schwanz wedeln.
 
 **Argumente:**
 
-- <!-- md-badge:required `@user ...` -->  
+- <!-- md-badge:required `@benutzer ...` -->  
   Der/Die Benutzer die du kitzeln willst.
 
 **Beispiele:**
 
-- `p.tickle @user`
+- `p.tickle @benutzer`
 ///
 
 Kitzelt die erwähnten Benutzer.
@@ -962,316 +962,331 @@ Gibt dir informationen wie du den Bot einladen kannst.
 ----
 ### Ping
 
-!!! summary "&nbsp;"
-    **Permission:** `None`  
-    **Bot requires:** `None`
-    
-    **Aliases:** `None`
-    
-    **Arguments:** `None`
-    
-    **Examples:**
-    
-    - `p.ping`
+/// note | Daten
+**Berechtigungen:** `Nichts`  
+**Bot benötigt:** `Nichts`
 
-Checks the connection to Discord and how long it takes to edit a message and displays it to you.
+**Aliase:** `Keine`
+
+**Argumente:** `Keine`
+
+**Beispiele:**
+
+- `p.ping`
+///
+
+Überprüft und zeigt den aktuellen Ping zu Discord und wie lange es dauert, eine Nachricht zu bearbeiten.
 
 ----
 ### Quote
 
-!!! summary "&nbsp;"
-    **Permission:** `None`  
-    **Bot requires:** `None`
-    
-    **Aliases:** `None`
-    
-    **Arguments:**
-    
-    - <!-- md-badge:required `messageId` -->  
-      The ID of the message to quote.
-    - <!-- md-badge:optional `#channel` -->  
-      Channel to quote the message from. Needs to me a channel mention.  
-      Only required if the message is not in the same channel as where you executed this command in.
-    
-    **Examples:**
-    
-    - `p.quote 123456789123456789`
-    - `p.quote 123456789123456789 #otherchannel`
+/// note | Daten
+**Berechtigungen:** `Nichts`  
+**Bot benötigt:** `Nichts`
 
-Gets the message using the provided message ID and quotes it.  
-The bot won't quote messages, if the channel it is located in is marked as Age-gated (NSFW) while the channel you used the command in is not.
+**Aliasse:** `Keine`
 
-----
+**Argumente:**
+
+- <!-- md-badge:required `id` -->  
+  Die ID der Nachricht, welche zitiert werden soll.
+- <!-- md-badge:optional `#kanal` -->  
+  Optionaler Kanal in welchem die Nachricht ist. Muss eine Erwähnung sein. Verwendet den Kanal in welchem der Befehl ausgeführt wurde, sollte kein Kanal angegeben werden.
+
+**Beispiele:**
+
+- `p.quote 1234567890123456789`
+- `p.quote 1234567890123456789 #andererkanal`
+///
+
+Holt die Nachricht mit der verwendeten ID und zitiert diese.  
+Der Bot wird die Nachricht nicht zitieren, wenn diese in einem Altersbeschränkten kanal ist, während der Kanal in welchem der Befehl verwendet wird, nicht Altersbeschränkt ist.
+
+---
 ### Shards
 
-!!! summary "&nbsp;"
-    **Permission:** `None`  
-    **Bot requires:** `None`
-    
-    **Aliases:**
-    
-    - `Shard`
-    - `Shardinfo`
-    
-    **Arguments:** `None`
-    
-    **Examples:**
-    
-    - `p.shards`
+/// note | Daten
+**Berechtigungen:** `Nichts`  
+**Bot benötigt:** `Nichts`
 
-Lists the shards the bot currently has including their ping, number of servers and connection status.
+**Aliasse:**
 
-??? question "What is a shard?"
-    Quote from the [Discord Developer Documentation][shard_info]:
-    > As apps grow and are added to an increasing number of guilds, some developers may find it necessary to divide portions of their app's operations across multiple processes. As such, the Gateway implements a method of user-controlled guild sharding which allows apps to split events across a number of Gateway connections. Guild sharding is entirely controlled by an app, and requires no state-sharing between separate connections to operate. While all apps can enable sharding, it's not necessary for apps in a smaller number of guilds.
-    
-    tl;dr: Shards are - in most simplistic terms - separate gateway connections to Discord, which receive updates and events only for themself and not other shards.
+- `Shard`
+- `Shardinfo`
 
-----
+**Argumente:** `Keine`
+
+**Beispiele:**
+
+- `p.shards`
+///
+
+Gibt eine Liste aller Shards, welcher der Bot aktuell hat, inklusive deren Ping, Anzahl an Servern und Verbindungsstatus.
+
+/// details | Was ist eine Shard?
+    type: question
+
+Zitat von der [Discord Entwickler Dokumentation][shard_info] (Übersetzt vom Englischen):  
+> Wenn Anwendungen wachsen und zu einer zunehmenden Anzahl von Gilden hinzugefügt werden, kann es für einige Entwickler notwendig sein, Teile der Vorgänge ihrer Anwendung auf mehrere Prozesse aufzuteilen. Daher implementiert das Gateway eine Methode der benutzergesteuerten Gildenaufteilung, die es Anwenungen ermöglicht, Ereignisse auf mehrere Gateway-Verbindungen aufzuteilen. Gildenaufteilung wird vvollständig von einer Anwendung gesteuert und erfordert keine gemeinsame Nutzung von Zuständen zwischen separaten Verbindungen, um zu funktionieren. Während alle Answendungen aufteilungen aktivieren können, ist es für Anwendungen in einer kleineren Anzahl von Gilden nicht notwendig.
+
+Kurz zusammengefasst: Shards sind - einfach zusammengefasst - separate Gateway-Verbindungen zu Discord, welche nur Ereignisse und Updates für sich selber erhält und nicht für andere Shards.
+///
+
+---
 ### Stats
 
-!!! summary "&nbsp;"
-    **Permission:** `None`  
-    **Bot requires:** `None`
-    
-    **Aliases:**
-    
-    - `Stat`
-    - `Statistic`
-    - `Statistics`
-    
-    **Arguments:** `None`
-    
-    **Examples:**
-    
-    - `p.stats`
+/// note | Daten
+**Berechtigungen:** `Nichts`  
+**Bot benötigt:** `Nichts`
 
-Gives some statistics about the bot such as total number of servers, shards, RAM usage and how long it has been running since last restart.
+**Aliasse:**
 
-----
+- `Stat`
+- `Statistic`
+- `Statistics`
+
+**Argumente:** `Keine`
+
+**Beispiele:**
+
+- `p.stats`
+///
+
+Gibt einige Statistiken über den Bot wie beispielsweise totale anzahl Server, Shards, RAM benutzung und wie lange es seit dem letzten Neustart läuft.
+
+---
 ### User
 
-!!! summary "&nbsp;"
-    **Permission:** `None`  
-    **Bot requires:** `None`
-    
-    **Aliases:**
-    
-    - `Member`
-    - `Userinfo`
-    - `Userstats`
-    
-    **Arguments:**
-    
-    - <!-- md-badge:optional `@user` -->  
-      Optional user to get information from.  
-      Defaults to you if not specified.
-    
-    **Examples:**
-    
-    - `p.user`
-    - `p.user @user`
+/// note | Daten
+**Berechtigungen:** `Nichts`  
+**Bot benötigt:** `Nichts`
 
-Shows information about yourself or another user, if provided.
+**Aliasse:**
 
-----
-## NSFW { #category-nsfw }
+- `Member`
+- `Userinfo`
+- `Userstats`
+
+**Argumente:**
+
+- <!-- md-badge:optional `@benutzer` -->  
+  Der Benutzer von welchem du Informationen willst. Muss eine Erwähnung sein. Verwendet standardmässig dich.
+
+**Beispiele:**
+
+- `p.user`
+- `p.user @benutzer`
+///
+
+Zeigt informationen über den erwähnten Benutzer.
+
+---
+## NSFW
 
 ### Blowjob
 
 --8<-- "nsfw-only__de.md"
 
-!!! summary "&nbsp;"
-    **Permission:** `None`  
-    **Bot requires:** `None`
-    
-    **Aliases:**
-    
-    - `Bj`
-    - `Bjob`
-    - `Succ`
-    
-    **Arguments:**
-    
-    - <!-- md-badge:required `@user` -->  
-      The User to give a blojob. Needs to be a mention.
-    
-    **Examples:**
-    
-    - `p.blowjob @user`
+/// note | Daten
+**Berechtigungen:** `Nichts`  
+**Bot benötigt:** `Nichts`
 
-Askes the mentioned user, if you can give them a blowjob.  
-The user can accept or deny the request.
+**Aliasse:**
 
-----
+- `Bj`
+- `Bjob`
+- `Succ`
+
+**Argumente:**
+
+- <!-- md-badge:required `@benutzer` -->  
+  Der Benutzer, welchem du einen Blowjob geben möchtest. Muss eine Erwähnung sein.
+
+**Beispiele:**
+
+- `p.blowjob @benutzer`
+///
+
+Fragt den erwähnten Benutzer, ob du ihm einen Blowjob geben kannst.  
+Der Benutzer kann deine Anfrage annehmen oder ablehnen.
+
+---
 ### Cum
 
 --8<-- "nsfw-only__de.md"
 
-!!! summary "&nbsp;"
-    **Permission:** `None`  
-    **Bot requires:** `None`
-    
-    **Aliases:**
-    
-    - `Cumming`
-    
-    **Arguments:** `None`
-    
-    **Examples:**
-    
-    - `p.cum`
+/// note | Daten
+**Berechtigungen:** `Nichts`  
+**Bot benötigt:** `Nichts`
 
-Returns a random gif of someone cumming.
+**Aliasse:**
 
-----
+- `Cumming`
+
+**Argumente:** `Keine`
+
+**Beispiele:**
+
+- `p.cum`
+///
+
+Gibt ein zufälliges Gif von jemandem, welcher einen Orgasmus hat.
+
+---
 ### Fuck
 
 --8<-- "nsfw-only__de.md"
 
-!!! summary "&nbsp;"
-    **Permission:** `None`  
-    **Bot requires:** `None`
-    
-    **Aliases:**
-    
-    - `Sex`
-    
-    **Arguments:**
-    
-    - <!-- md-badge:required `@user` -->  
-      The user to have sex with. Needs to be a mention
-    - <!-- md-badge:optional `--anal` -->  
-      Pre-selects anal as sex option.
-    - <!-- md-badge:optional `--normal` -->  
-      Pre-selects hetero sex as sex option.
-    - <!-- md-badge:optional `--yaoi` -->  
-      Pre-selects yaoi (Gay) sex as sex option.
-    - <!-- md-badge:optional `--yuri` -->  
-      Pre-selects yuri (Lesbian) sex as sex option.
-    
-    **Examples:**
-    
-    - `p.fuck @user`
-    - `p.fuck @user --anal`
-    - `p.fuck @user --normal`
-    - `p.fuck @user --yaoi`
-    - `p.fuck @user --yuri`
+/// note | Daten
+**Berechtigungen:** `Nichts`  
+**Bot benötigt:** `Nichts`
 
-Asks the mentioned user if they want to have sex with you.
+**Aliasse:**
 
-If no other argument was provided can the asked user select between anal, normal, yaoi (Gay) or Yuri (Lesbian) sex, or deny the request.  
-When one of the options has been provided can the asked user only accept or deny the request.
+- `Sex`
 
-----
+**Argumente:**
+
+- <!-- md-badge:required `@benutzer` -->  
+  Der Benutzer, mit welchem du Sex haben willst. Muss eine Erwähnung sein.
+- <!-- md-badge:optional `--anal` -->  
+  Wählt Analsex als Option aus.
+- <!-- md-badge:optional `--normal` -->  
+  Wählt Heterosex als Option aus.
+- <!-- md-badge:optional `--yaoi` -->  
+  Wählt Yaoi (Homosexuellen) Sex als Option aus.
+- <!-- md-badge:optional `--yuri` -->  
+  Wählt Yuri (Lesbischen) Sex als Option aus.
+
+**Beispiele:**
+
+- `p.fuck @benutzer`
+- `p.fuck @benutzer --anal`
+- `p.fuck @benutzer --normal`
+- `p.fuck @benutzer --yaoi`
+- `p.fuck @benutzer --yuri`
+///
+
+Fragt die Erwähnte Person, ob sie mit dir Sex haben will.
+
+Wenn keine weiteren Argumente gegeben wurden, kann der gefragte Benutzer zwischen Anal, Normal (Hetero), Yaoi (Homosexuell) oder Yuri (Lesbisch) Sex auswählen, oder die Anfrage ablehnen.  
+Wenn eine der Argumente gegeben wurde, kann der gefragte Benutzer die Anfrage annehmen oder ablehnen. 
+
+---
 ### Neko { #neko-nsfw }
 
 --8<-- "nsfw-only__de.md"
 
-!!! summary "&nbsp;"
-    **Permission:** `None`  
-    **Bot requires:** `None`
-    
-    **Aliases:**
-    
-    - `Catgirl`
-    
-    **Arguments:**
-    
-    - <!-- md-badge:required `--nsfw` -->  
-      Gives a NSFW neko image or gif.
-    - <!-- md-badge:optional `--gif` -->  
-      Receive a gif instead of an image.
-    
-    **Examples:**
-    
-    - `p.neko --nsfw`
-    - `p.neko --nsfw --gif`
+/// note | Daten
+**Berechtigungen:** `Nichts`  
+**Bot benötigt:** `Nichts`
 
-Gives a random image or gif of a NSFW Neko (Cat girl)
+**Aliasse:**
 
-----
+- `Catgirl`
+
+**Argumente:**
+
+- <!-- md-badge:required `--nsfw` -->  
+  Gibt ein/e nicht Jugendfreie/s Bild/Gif.
+- <!-- md-badge:optional `--gif` -->  
+  Erhalte ein Gif anstelle eines Bildes.
+
+**Beispiele:**
+
+- `p.neko --nsfw`
+- `p.neko --nsfw --gif`
+///
+
+Gibt ein zufälliges Bild oder Gif einer nicht jugendfreien Neko (Katzenfrau).
+
+---
 ### Pussylick
 
 --8<-- "nsfw-only__de.md"
 
-!!! summary "&nbsp;"
-    **Permission:** `None`  
-    **Bot requires:** `None`
-    
-    **Aliases:**
-    
-    - `Plick`
-    - `Cunni`
-    
-    **Arguments:**
-    
-    - <!-- md-badge:required `@user` -->  
-      The User to give cunnylingus. Needs to be a mention.
-    
-    **Examples:**
-    
-    - `p.pussylick @user`
+/// note | Daten
+**Berechtigungen:** `Nichts`  
+**Bot benötigt:** `Nichts`
 
-Asks the mentioned user if you can lick their pussy.  
-The user can accept or deny the request.
+**Aliasse:**
 
-----
+- `Plick`
+- `Cunni`
+
+**Argumente:**
+
+- <!-- md-badge:required `@benutzer` -->  
+  Der Benutzer, welchem du Cunnilingus geben willst. Muss eine Erwähnung sein.
+
+**Beispiele:**
+
+- `p.pussylick @benutzer`
+///
+
+Fragt den erwähnten Benutzer, ob du deren Pussy lecken kannst.  
+Der Benutzer kann deine Anfrage annehmen oder ablehnen.
+
+---
 ### Solo
 
 --8<-- "nsfw-only__de.md"
 
-!!! summary "&nbsp;"
-    **Permission:** `None`  
-    **Bot requires:** `None`
-    
-    **Aliases:**
-    
-    - `Girl`
-    
-    **Arguments:**
+/// note | Daten
+**Berechtigungen:** `Nichts`  
+**Bot benötigt:** `Nichts`
 
-    - <!-- md-badge:optional `--male` -->  
-      Gives a male masturbating instead of a female.
-    
-    **Examples:**
-    
-    - `p.solo`
-    - `p.solo --male`
+**Aliasse:**
 
-Gives a random gif of a girl masturbating.  
-When `--male` is provided, returns a gif of a male masturbating instead.
+- `Girl`
 
-----
+**Argumente:**
+
+- <!-- md-badge:optional `--male` -->  
+  Gibt einen Mann, welcher masturbiert, anstelle einer Frau.
+
+**Beispiele:**
+
+- `p.solo`
+- `p.solo --male`
+///
+
+Gibt ein zufälliges Gif einer Frau, welche masturbiert.  
+Wenn `--male` verwendet wird, wird ein Gif eines Mannes welcher masturbiert gegeben.
+
+---
 ### Threesome
 
 --8<-- "nsfw-only__de.md"
 
-!!! summary "&nbsp;"
-    **Permission:** `None`  
-    **Bot requires:** `None`
-    
-    **Aliases:**
-    
-    - `3some`
-    
-    **Arguments:**
-    
-    - <!-- md-badge:required `@user1` -->  
-      The first User to ask to have a threesome with. Needs to be a mention.
-    - <!-- md-badge:required `@user2` -->  
-      The second user to ask to have a threesome with. Needs to be a mention.
-    - <!-- md-badge:optional `--fff` -->  
-      Will return a gif with only females in it.
-    - <!-- md-badge:optional `--mmf` -->  
-      Will return a gif with 2 males and 1 female in it.
-    
-    **Examples:**
-    
-    - `p.threesome @user1 @user2`
-    - `p.threesome @user1 @user2 --fff`
-    - `p.threesome @user1 @user2 --mmf`
+/// note | Daten
+**Berechtigungen:** `Nichts`  
+**Bot benötigt:** `Nichts`
 
-Askes two users if they want to have sex with you.  
-If no additional argument is provided, will the returned gif show 1 male and 2 females. This can be changed to only females with `--fff` or 2 males and 1 female with `--mmf`.  
-The users can accept or deny the request. Only when both accept will the command succeed.
+**Aliasse:**
+
+- `3some`
+
+**Argumente:**
+
+- <!-- md-badge:required `@benutzer1` -->  
+  Der erste Benutzer mit welchem du einen Dreier willst. Muss eine Erwähnung sein.
+- <!-- md-badge:required `@benutzer2` -->  
+  Der zweite Benutzer mit welchem du einen Dreier willst. Muss eine Erwähnung sein.
+- <!-- md-badge:optional `--fff` -->  
+  Gibt ein Gif, in welchem nur Frauen zu sehen sind.
+- <!-- md-badge:optional `--mmf` -->  
+  Gibt ein Gif, in welchem 2 Männer und 1 Frau zu sehen sind.
+
+**Beispiele:**
+
+- `p.threesome @benutzer1 @benutzer2`
+- `p.threesome @benutzer1 @benutzer2 --fff`
+- `p.threesome @benutzer1 @benutzer2 --mmf`
+///
+
+Fragt zwei Benutzer, ob diese mit dir einen Dreier haben wollen.  
+Wenn keine weiteren Argumente angegeben wurde, wird das Gif einen Mann und zwei Frauen zeigen. Dies kann mit `--fff` zu nur Frauen oder mit `--mmf` zu zwei Männern und einer Frau geändert werden.  
+Die Benutzer können die Anfrage annehmen oder ablehnen. Nur wenn beide annehmen ist der Befehl erfolgreich.
+
+---

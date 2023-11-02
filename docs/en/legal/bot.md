@@ -1,6 +1,8 @@
 ---
 title: Bot ToS and Privacy Policy
 description: The Terms of Service and Privacy Policy of the Discord Bot.
+
+not_translatable: true
 ---
 
 [Terms of Service]: https://discord.com/terms
@@ -9,22 +11,6 @@ description: The Terms of Service and Privacy Policy of the Discord Bot.
 [discord]: https://discord.com
 [support]: https://purrbot.site/discord
 [language]: https://discord.com/developers/docs/dispatch/field-values#predefined-field-values-accepted-locales
-
-<!--                     TRANSLATOR NOTES                       -->
-<!--                                                            -->
-<!-- Do not translate the below text.                           -->
-<!-- Instead, edit the description in the above frontmatter.    -->
-<!--                                                            -->
-<!-- Additionally, add the following content after this comment -->
-<!-- by removing the lines saying "REMOVE THIS LINE."           -->
-<!-- Also, don't forget to translate the title (Text after |)   -->
-<!-- and description.                                           -->
-<!--                                                            -->
-<!-- REMOVE THIS LINE.
-/// note | Note
-The below content is only available in English.
-///
-REMOVE THIS LINE. -->
 
 # Bot
 

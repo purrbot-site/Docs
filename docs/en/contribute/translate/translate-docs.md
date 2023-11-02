@@ -1,4 +1,7 @@
-# Translate the Documentation
+---
+title: Translate the Documentation
+description: How you can translate the documentation into your language.
+---
 
 Our goal is to provide these docs in as many languages as possible to make them accessible to everyone.
 
@@ -47,14 +50,34 @@ docs/
     └── index.md
 ```
 
-To start translating just copy the `en` folder and paste it in the `docs` folder. Don't forget to rename it to a [supported language identifier][languages]{ target="_blank" rel="nofollow" }.
+To start with translating the docs, copy the following files and folders from the `en` folder into your own sub-folder. Make sure the sub-folder matches an [existing language identifier][languages]{ target="_blank" rel="nofollow" }:
+```txt title="Files to copy over"
+docs/
+└── en/
+    ├── bot/
+    │   ├── commands.md
+    │   ├── index.md
+    │   ├── selfhosting.md
+    │   ├── welcome-channel.md
+    │   └── welcome-images.md
+    ├── contribute/
+    │   ├── translate/
+    │   │   ├── index.md
+    │   │   └── translate-docs.md
+    │   ├── formatting-help.md
+    │   └── index.md
+    ├── credits/
+    │   └── index.md
+    ├── legal/
+    │   └── index.md
+    └── index.md
+```
 
 ### Adding your language
 
 In order for the `mkdocs-static-i18n` to recognize your language will you need to add a new entry to the `languages` setting of the `i18n` plugin in the `mkdocs.yml`.  
-The most basic structure looks similar to this:
+The most basic structure looks similar to this (Using `de-CH` (Swiss german) as example):
 ```yaml title="mkdocs.yml"
-plugins:
   - search
   - neoteroi.mkdocsoad:
       use_pymdownx: true
@@ -66,24 +89,45 @@ plugins:
           name: English
           build: true
         # ...other languages
-        - locale: example # (1)
-          name: Example # (2)
+        - locale: de-CH # (1)
+          name: Deutsch (Schweiz) # (2)
           build: true
-          nav_translations: # (3)
+          site_name: PurrBot Dokumentation
+          site_description: 'API-Dokumentation und Wiki von *Purr*'
+          copyright: | # (3)
+            Dokumentation mit 
+            <img alt="❤" class="twemoji heart-anim md-footer-custom-text" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title="Liebe"> 
+            gemacht und unter der
+            <a href="https://github.com/purrbot-site/Docs/blob/master/LICENSE" target="_blank">MIT-Lizenz</a> geteilt.
+          extra: # (4)
+            translate:
+              missing_translation: 'Diese Seite wurde noch nicht übersetzt.'
+              not_translatable: 'Diese Seite kann nicht übersetzt werden und ist darum nur auf Englisch verfügbar.'
+              footer: |
+                Erstellt mit <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>,
+                <a href="https://squidfunk.github.io/mkdocs-material" target="_blank" rel="noopener">Material for MkDocs</a> und
+                <a href="https://facelessuser.github.io/pymdown-extensions/" target="_blank" rel="noopener">Pymdown Extensions</a>.
+          nav_translations: # (5)
             # Welcome system
-            Welcome-System: Lorem
+            Welcome-System: Willkommenssystem
             # Contributing
-            Contributing: Ipsum
-            Translations: Dolor
+            Contributing: Mitmachen
+            Translations: Übersetzungen
             # Legal
-            Legal: Sit
+            Legal: Rechtliches
 ```
 
   1. Replace this entry with a [valid language option][languages]{ target="_blank" rel="nofollow" }.
   2. This will be displayed in the language selector.
-  3. This is used to translate parts of the nav that can't be translated through other means.
+  3. This will be used to change the text in the copyright footer. The `<img>` tag should - with exception of the `title` attribute - not be modified.
+  4. This is used to translate Strings in the "extra" section of the config.  
+     
+     - `missing_translation` will be displayed on pages that don't have a page in their language yet.
+     - `not_translatable` will be displayed on pages that cannot be translated (That have `not_translatable: true` in their frontmatter).
+     - `footer` changes the `Build using ...` text in the footer of the page.
+  5. This is used to translate parts of the nav that can't be translated through other means.
 
-This should now load files inside the `example` folder, allowing you to translate them into your language.
+This example would now look for and load files inside the `de-CH` folder. You obviously would need to use your language identifier here as folder name.
 
 ### Special notes
 
@@ -98,42 +142,31 @@ Headers should be translated. However, to allow cross-language navigation will y
 As an example, `## Some header` would become `## Lorem ipsum { #some-header }`, translating the header but keeping its original ID.  
 Should the header in question already have a `{ #:id }` at the end are you not required to add one and only need to translate the header itself.
 
-#### API Page
+#### Untranslatable pages
 
-The API page's content is auto-generated from the `imageapi.json` file and is therefore not translatable by normal means.
+There are a few pages that cannot be translated for various reasons.  
+To avoid any issues, do not include these pages in your translations folder (Delete them if they exist in your language folder).
 
-Instead of having you translate an entire JSON file should you only translate the page title and description in the YAML frontmatter and add an admonition box informing about the untranslated docs.
+The following pages are not to be included in your translation folder (Path relative to `docs/en/`):
 
-Here is an example of how the file would look like:
-```markdown title="api/index.md"
----
-title: API
-description: 'Documentation about the ImageAPI found at https://purrbot.site/api'
-
-hide:
-  - navigation
----
-
-/// note | Note <!-- Translate Note -->
-The shown API documentation is auto-generated and therefore only available in English. <!-- Translate this -->
-///
-
-<!-- ... OAD object here -->
-```
+- `api/index.md`
+- `legal/api.md`
+- `legal/bot.md`
+- `legal/website.md`
 
 #### Snippets
 
 Snippets are files located in `theme/.snippets/` and should be translated too.  
 To do this, copy the snippet in question, change the `__en` to your language code (i.e. `__de`) and translate the content inside it. Make sure to keep things such as Admonition formatting consistent.
 
-#### Things NOT to translate
+#### Untranslatable content
 
-The following things should **not** be translated and kept as-is:
+The following content should **not** be translated and kept as-is:
 
 - Headers of image names in [Welcome Images](../../bot/welcome-images.md) (i.e. `color_black`).
 - Command names and Aliases in [Commands](../../bot/commands.md) (i.e. `bite`).
 - The name of the bot (`*Purr*`).
-- Project names in [`Credits`](../../credits/index.md).
-- Any brand name (Discord, YouTube, etc.).
+- Project and user names in [`Credits`](../../credits/index.md).
+- Any brand name (Discord, YouTube, etc.) unless they have a brand name specific to your language.
 
 [languages]: https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language

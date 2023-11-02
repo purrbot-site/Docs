@@ -21,12 +21,13 @@ description: Want to selfhost the Bot? This page explains the details.
 Some of you may want to selfhost the bot on your own VPS/server.  
 This page explains how you can selfhost the bot for yourself.
 
-!!! warning "Important!"
-    By selfhosting the bot will you agree to the following terms:
-	
-    - You follow the [MIT-License] of the bot.
-        - This means that you give credit to the original author (Andre_601) and won't claim this code as your own.
-    - You aknowledge and agree that you won't receive any support for your selfhosted bot.
+/// warning | Important!
+By selfhosting the bot will you agree to the following terms:
+
+- You follow the [MIT-License] of the bot.
+    - This means that you give credit to the original author (Andre_601) and won't claim this code as your own.
+- You aknowledge and agree that you won't receive any support for your selfhosted bot.
+///
 
 ## Requirements
 Before you can run the bot will you need to make sure that the following requirements are met.
@@ -116,35 +117,38 @@ When you're done with your changes, make sure to execute `gradlew clean shadowJa
 The `config.json` is the core file of the bot in which you set various different information that will be used by the bot.  
 On first startup will it generate with the below default values.
 
-??? note "Default Config.json"
-    ```json
-    {
-      "bot-token": "TOKEN",
-      
-      "beta": false,
-      "debug": false,
-      
-      "webhooks": {
-        "guild": "guild-webhook-url",
-        "log": "log-webhook-url"
-      },
-      
-      "tokens": {
-        "fluxpoint-dev": "fluxpoint-dev-token",
-        
-        "discord-bots-gg": "dbgg-token",
-        "botlist-space": "botlist-token",
-        "discordextremelist-xyz": "debl-token",
-        "discordservices-net": "discordservices-net-token"
-      },
-      
-      "database": {
-        "ip": "127.0.0.1",
-        "name": "DatabaseName",
-        "guildTable": "GuildTable"
-      }
-    }
-    ```
+/// details | Default Config.json
+    type: note
+
+```json
+{
+  "bot-token": "TOKEN",
+  
+  "beta": false,
+  "debug": false,
+  
+  "webhooks": {
+    "guild": "guild-webhook-url",
+    "log": "log-webhook-url"
+  },
+  
+  "tokens": {
+    "fluxpoint-dev": "fluxpoint-dev-token",
+    
+    "discord-bots-gg": "dbgg-token",
+    "botlist-space": "botlist-token",
+    "discordextremelist-xyz": "debl-token",
+    "discordservices-net": "discordservices-net-token"
+  },
+  
+  "database": {
+    "ip": "127.0.0.1",
+    "name": "DatabaseName",
+    "guildTable": "GuildTable"
+  }
+}
+```
+///
 
 Note that you don't have to set values for every option in the config.json.  
 If you followed the previous step on preparing the bot will you only need to set the following options:

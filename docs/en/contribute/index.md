@@ -14,11 +14,10 @@ description: Help us improving the bot, website or this Documentation!
 [imageapi]: https://github.com/purrbot-site/ImageAPI
 [crowdin]: https://lang.purrbot.site
 
-# Contribute towards the Projects
 We're always happy for people who want to help us improve our various projects.  
 But before you blindly dive into the stuff, keep the following things in mind.
 
-## Documentation/Wiki
+## Documentation/Wiki { #documentation-wiki }
 The documentation (The site you're currently on) is located [here][doc] and we're happy over every improvement made, being it the addition of missing information, fixing style-issues or even just correcting minor typos.
 
 Before you start, make sure you've read the [formatting help](formatting-help.md) page to know everything important about the styling of the docs.  
