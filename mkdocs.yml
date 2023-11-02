@@ -148,6 +148,8 @@ plugins:
 
 hooks:
   - theme/.hooks/badges.py
+  - theme/.hooks/theme_overrides_manager.py
+  - theme/.hooks/language_flags.py
 
 markdown_extensions:
   - attr_list
