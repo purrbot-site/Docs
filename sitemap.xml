@@ -2,238 +2,238 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://docs.purrbot.site/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/"/>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/api/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/api/"/>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/api/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/bot/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/bot/"/>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/bot/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/bot/commands/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/bot/commands/"/>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/bot/commands/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/bot/faq/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/bot/faq/"/>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/bot/faq/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/bot/selfhosting/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/bot/selfhosting/"/>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/bot/selfhosting/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/bot/welcome-channel/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/bot/welcome-channel/"/>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/bot/welcome-channel/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/bot/welcome-images/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/bot/welcome-images/"/>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/bot/welcome-images/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/contribute/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/contribute/"/>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/contribute/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/contribute/formatting-help/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/contribute/formatting-help/"/>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/contribute/formatting-help/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/contribute/translate/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/contribute/translate/"/>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/contribute/translate/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/contribute/translate/translate-docs/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/contribute/translate/translate-docs/"/>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/contribute/translate/translate-docs/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/credits/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/credits/"/>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/credits/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/legal/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/legal/"/>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/legal/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/legal/api/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/legal/api/"/>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/legal/api/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/legal/bot/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/legal/bot/"/>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/legal/bot/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/legal/website/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/legal/website/"/>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/legal/website/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/de-CH/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/de-CH/bot/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/bot/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/bot/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/de-CH/bot/commands/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/bot/commands/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/bot/commands/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/de-CH/bot/selfhosting/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/bot/selfhosting/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/bot/selfhosting/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/de-CH/bot/welcome-channel/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/bot/welcome-channel/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/bot/welcome-channel/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/de-CH/bot/welcome-images/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/bot/welcome-images/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/bot/welcome-images/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/de-CH/contribute/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/contribute/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/contribute/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/de-CH/contribute/formatting-help/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/contribute/formatting-help/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/contribute/formatting-help/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/de-CH/contribute/translate/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/contribute/translate/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/contribute/translate/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/de-CH/contribute/translate/translate-docs/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/contribute/translate/translate-docs/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/contribute/translate/translate-docs/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/de-CH/credits/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/credits/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/credits/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/de-CH/legal/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/legal/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/legal/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/de-CH/api/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/api/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/api/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/de-CH/bot/faq/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/bot/faq/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/bot/faq/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/de-CH/legal/api/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/legal/api/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/legal/api/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/de-CH/legal/bot/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/legal/bot/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/legal/bot/"/>
     </url>
     <url>
         <loc>https://docs.purrbot.site/de-CH/legal/website/</loc>
-        <lastmod>2023-11-02</lastmod>
+        <lastmod>2023-11-03</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de-CH" href="https://docs.purrbot.site/de-CH/legal/website/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.purrbot.site/legal/website/"/>
