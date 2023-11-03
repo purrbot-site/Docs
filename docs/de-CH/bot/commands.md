@@ -1085,7 +1085,7 @@ Zeigt informationen über den erwähnten Benutzer.
 
 ### Blowjob
 
---8<-- "nsfw-only__de.md"
+--8<-- "nsfw-only__de-CH.md"
 
 /// note | Daten
 **Berechtigungen:** `Nichts`  
@@ -1113,7 +1113,7 @@ Der Benutzer kann deine Anfrage annehmen oder ablehnen.
 ---
 ### Cum
 
---8<-- "nsfw-only__de.md"
+--8<-- "nsfw-only__de-CH.md"
 
 /// note | Daten
 **Berechtigungen:** `Nichts`  
@@ -1135,7 +1135,7 @@ Gibt ein zufälliges Gif von jemandem, welcher einen Orgasmus hat.
 ---
 ### Fuck
 
---8<-- "nsfw-only__de.md"
+--8<-- "nsfw-only__de-CH.md"
 
 /// note | Daten
 **Berechtigungen:** `Nichts`  
@@ -1175,7 +1175,7 @@ Wenn eine der Argumente gegeben wurde, kann der gefragte Benutzer die Anfrage an
 ---
 ### Neko { #neko-nsfw }
 
---8<-- "nsfw-only__de.md"
+--8<-- "nsfw-only__de-CH.md"
 
 /// note | Daten
 **Berechtigungen:** `Nichts`  
@@ -1203,7 +1203,7 @@ Gibt ein zufälliges Bild oder Gif einer nicht jugendfreien Neko (Katzenfrau).
 ---
 ### Pussylick
 
---8<-- "nsfw-only__de.md"
+--8<-- "nsfw-only__de-CH.md"
 
 /// note | Daten
 **Berechtigungen:** `Nichts`  
@@ -1230,7 +1230,7 @@ Der Benutzer kann deine Anfrage annehmen oder ablehnen.
 ---
 ### Solo
 
---8<-- "nsfw-only__de.md"
+--8<-- "nsfw-only__de-CH.md"
 
 /// note | Daten
 **Berechtigungen:** `Nichts`  
@@ -1257,7 +1257,7 @@ Wenn `--male` verwendet wird, wird ein Gif eines Mannes welcher masturbiert gege
 ---
 ### Threesome
 
---8<-- "nsfw-only__de.md"
+--8<-- "nsfw-only__de-CH.md"
 
 /// note | Daten
 **Berechtigungen:** `Nichts`  
