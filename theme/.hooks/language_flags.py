@@ -158,7 +158,7 @@ COUNTRIES: Dict[str, str] = {
     "cs": "cz",
     "da": "dk",
     "de": "de",
-    "de-CH": "ch",
+    "de_CH": "ch",
     "el": "gr",
     "en": "gb",
     "eo": "eu",

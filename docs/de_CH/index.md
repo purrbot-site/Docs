@@ -12,7 +12,7 @@ Willkommen auf der PurrBot Dokumentation!
 Diese Seiten behandeln verschiedenste Dinge für die API, den Bot und einige andere.  
 Möchtest du dabei helfen, diese Seiten zu verbessern? Wunderbar! Schau dir einfach den [Mitmachen Bereich](#contributing) an um zu erfahren, wie das geht.
 
-## Pages
+## Seiten { #pages }
 
 <div class="mdx-grid-container">
   <div class="mdx-grid-wrapper">

@@ -1084,7 +1084,7 @@ Shows information about yourself or another user, if provided.
 
 ### Blowjob
 
---8<-- "nsfw-only__en.md"
+--8<-- "nsfw-only.md:en"
 
 /// note | Data
 **Permission:** `None`  
@@ -1112,7 +1112,7 @@ The user can accept or deny the request.
 ----
 ### Cum
 
---8<-- "nsfw-only__en.md"
+--8<-- "nsfw-only.md:en"
 
 /// note | Data
 **Permission:** `None`  
@@ -1134,7 +1134,7 @@ Returns a random gif of someone cumming.
 ----
 ### Fuck
 
---8<-- "nsfw-only__en.md"
+--8<-- "nsfw-only.md:en"
 
 /// note | Data
 **Permission:** `None`  
@@ -1174,7 +1174,7 @@ When one of the options has been provided can the asked user only accept or deny
 ----
 ### Neko { #neko-nsfw }
 
---8<-- "nsfw-only__en.md"
+--8<-- "nsfw-only.md:en"
 
 /// note | Data
 **Permission:** `None`  
@@ -1202,7 +1202,7 @@ Gives a random image or gif of a NSFW Neko (Cat girl)
 ----
 ### Pussylick
 
---8<-- "nsfw-only__en.md"
+--8<-- "nsfw-only.md:en"
 
 /// note | Data
 **Permission:** `None`  
@@ -1229,7 +1229,7 @@ The user can accept or deny the request.
 ----
 ### Solo
 
---8<-- "nsfw-only__en.md"
+--8<-- "nsfw-only.md:en"
 
 /// note | Data
 **Permission:** `None`  
@@ -1256,7 +1256,7 @@ When `--male` is provided, returns a gif of a male masturbating instead.
 ----
 ### Threesome
 
---8<-- "nsfw-only__en.md"
+--8<-- "nsfw-only.md:en"
 
 /// note | Data
 **Permission:** `None`  

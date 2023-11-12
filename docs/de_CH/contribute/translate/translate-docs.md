@@ -76,7 +76,7 @@ docs/
 ### Deine Sprache hinzufügen { #adding-your-language }
 
 Damit das `mkdocs-static-i18n` Plugin deine Sprache erkennt musst du diese als neuen Eintraf zur `languages` Einstellung des `i18n` Plugin in der `mkdocs.yml` hinzufügen.  
-Die einfachste Struktur sieht ähnlich wie diese aus (`de_CH` (Schweizer Hochdeutsch) wird als Beispiel verwendet):
+Die einfachste Struktur sieht ähnlich wie diese aus (`de-CH` (Schweizer Hochdeutsch) wird als Beispiel verwendet):
 
 ```yaml title="mkdocs.yml"
   - search
@@ -90,7 +90,7 @@ Die einfachste Struktur sieht ähnlich wie diese aus (`de_CH` (Schweizer Hochdeu
           name: English
           build: true
         # ...andere Sprachen
-        - locale: de_CH # (1)
+        - locale: de-CH # (1)
           name: Deutsch (Schweiz) # (2)
           build: true
           site_name: PurrBot Dokumentation
@@ -129,7 +129,7 @@ Die einfachste Struktur sieht ähnlich wie diese aus (`de_CH` (Schweizer Hochdeu
 
   5. Dies wird verwendet, um bestimmte deile der Navigation zu übersetzen, welche nicht durch andere Methoden übersetzt werden können.
 
-Dieses Beispiel würde nun nach Dateien im `de_CH` Ordner schauen und diese laden. Du solltest natürlich deinen eigenen Sprach Identifikator als Ordnername verwenden.
+Dieses Beispiel würde nun nach Dateien im `de-CH` Ordner schauen und diese laden. Du solltest natürlich deinen eigenen Sprach Identifikator als Ordnername verwenden.
 
 ### Spezielle Hinweise { #special-notes }
 

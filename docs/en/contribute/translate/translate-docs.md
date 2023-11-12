@@ -76,7 +76,7 @@ docs/
 ### Adding your language
 
 In order for the `mkdocs-static-i18n` to recognize your language will you need to add a new entry to the `languages` setting of the `i18n` plugin in the `mkdocs.yml`.  
-The most basic structure looks similar to this (Using `de-CH` (Swiss german) as example):
+The most basic structure looks similar to this (Using `de_CH` (Swiss german) as example):
 ```yaml title="mkdocs.yml"
   - search
   - neoteroi.mkdocsoad:
@@ -89,7 +89,7 @@ The most basic structure looks similar to this (Using `de-CH` (Swiss german) as 
           name: English
           build: true
         # ...other languages
-        - locale: de-CH # (1)
+        - locale: de_CH # (1)
           name: Deutsch (Schweiz) # (2)
           build: true
           site_name: PurrBot Dokumentation
@@ -128,7 +128,7 @@ The most basic structure looks similar to this (Using `de-CH` (Swiss german) as 
 
   5. This is used to translate parts of the nav that can't be translated through other means.
 
-This example would now look for and load files inside the `de-CH` folder. You obviously would need to use your language identifier here as folder name.
+This example would now look for and load files inside the `de_CH` folder. You obviously would need to use your language identifier here as folder name.
 
 ### Special notes
 
@@ -157,8 +157,12 @@ The following pages are not to be included in your translation folder (Path rela
 
 #### Snippets
 
-Snippets are files located in `theme/.snippets/` and should be translated too.  
-To do this, copy the snippet in question, change the `__en` to your language code (i.e. `__de`) and translate the content inside it. Make sure to keep things such as Admonition formatting consistent.
+Snippets are files located in `theme/.snippets/` and should be translated too.
+
+To translate a snippet, open the file and copy the content that is surrounded by `--8<-- [start:en]` and `--8<-- [end:en]` (Include these lines in the copy too!). Paste the content at the bottom of the file. You can leave an empty gap for spacing.  
+Next, translate the content in-between the previously mentioned start and end lines. Make sure to keep the existing formatting (i.e. from admonition blocks). Once you're done, change the `en` in the start and end line to the language code you use. Don't forget to save your changes.
+
+Finally, go to the pages where snippets are used (Shown as `--8<-- "<snippet_name>.md:en"`) and replace the `en` with the language code you added.
 
 #### Untranslatable content
 

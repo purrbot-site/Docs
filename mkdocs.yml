@@ -119,7 +119,7 @@ plugins:
           default: true
           name: English
           build: true
-        - locale: de-CH
+        - locale: de_CH
           name: Deutsch (Schweiz)
           build: true
           site_name: PurrBot Dokumentation
@@ -157,8 +157,6 @@ markdown_extensions:
       permalink: true
   - meta
   - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
   - pymdownx.magiclink:
       repo_url_shortener: true
       repo_url_shorthand: true
