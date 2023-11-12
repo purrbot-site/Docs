@@ -11,9 +11,21 @@ on:
     branches:
     - master
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
     - name: Chekout code
       uses: actions/checkout@v4
@@ -25,48 +37,14 @@ jobs:
       run: |
         python -m pip install --upgrade pip setuptools
         python -m pip install -r requirements.txt
-    - name: Deploy Files
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git remote add gh-token "https://github.com/purrbot-site/Docs.git"
-        git fetch gh-token && git fetch gh-token gh-pages:gh-pages
-        python -m mkdocs gh-deploy --clean -m "Deploying Docs to GitHub Pages (${GITHUB_SHA:0:7})" --remote-name gh-token
-        git push gh-token gh-pages
-  sendMsg:
-    needs: [build]
-    if: success()
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout Code
-      uses: actions/checkout@v4
-    - name: Send Discord Notification
-      uses: Sniddl/discord-commits@v1.6
+    - name: Build documentation
+      run: mkdocs build
+    - name: Configure GitHub Pages
+      uses: actions/configure-pages@v3
+    - name: Upload pages artifact
+      uses: actions/upload-pages-artifact@v2
       with:
-        webhook: ${{ secrets.DISCORD_WEBHOOK }}
-        embed: |
-          {
-            "color": 65280,
-            "title": "Documentation updated!",
-            "url": "https://github.com/purrbot-site/Docs",
-            "footer": {
-              "text": "Page built using MkDocs"
-            },
-            "fields": [
-              {
-                "name": "Commit",
-                "value": "[`${{ github.event.after }}`](${{ github.event.compare }})",
-                "inline": false
-              },
-              {
-                "name": "Source",
-                "value": "https://github.com/purrbot-site/Docs",
-                "inline": false
-              },
-              {
-                "name": "Site",
-                "value": "https://docs.purrbot.site",
-                "inline": false
-              }
-            ]
-          }
+        path: 'site/'
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v2
