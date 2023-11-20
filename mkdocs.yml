@@ -8,7 +8,8 @@ copyright: |
   Docs made with 
   <img alt="❤" class="twemoji heart-anim md-footer-custom-text" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title="love"> 
   and available under the 
-  <a href="https://github.com/purrbot-site/Docs/blob/master/LICENSE" target="_blank" rel="nofollow">MIT-License</a>.
+  <a href="https://github.com/purrbot-site/Docs/blob/master/LICENSE" target="_blank" rel="nofollow">MIT-License</a>.<br>
+  <a href="#__consent">Change cookie settings</a>
 
 docs_dir: docs/
 
@@ -91,6 +92,11 @@ extra_css:
   - 'assets/css/extra.css'
 
 extra:
+  consent:
+    title: Cookie Consent
+    description: >
+      We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for.
+      With your consent, you're helping us to make our documentation better.
   social:
     - icon: 'simple/patreon'
       link: 'https://patreon.com/andre_601'
@@ -128,8 +134,14 @@ plugins:
             Dokumentation mit 
             <img alt="❤" class="twemoji heart-anim md-footer-custom-text" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title="Liebe"> 
             gemacht und unter der
-            <a href="https://github.com/purrbot-site/Docs/blob/master/LICENSE" target="_blank" rel="nofollow">MIT-Lizenz</a> verfügbar.
+            <a href="https://github.com/purrbot-site/Docs/blob/master/LICENSE" target="_blank" rel="nofollow">MIT-Lizenz</a> verfügbar.<br>
+            <a href="#__consent">Cookie-Einstellungen verwalten</a>
           extra:
+            conesnt:
+              title: Cookie Zustimmung
+              description: >
+                Wir verwenden cookies um deine wiederholten Besuche und Einstellungen zu erkennen, aber auch um die Wirksamkeit unserer Dokumentation und ob Benutzer finden nach was sie suchen zu messen.
+                Mit deiner Zustimmung hilfst du uns, unsere Dokumentation zu verbessern.
             translate:
               missing_translation: 'Diese Seite wurde noch nicht übersetzt.'
               not_translatable: 'Diese Seite kann nicht übersetzt werden und ist darum nur auf Englisch verfügbar.'
