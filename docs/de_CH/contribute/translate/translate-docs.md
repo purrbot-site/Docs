@@ -100,7 +100,12 @@ Die einfachste Struktur sieht ähnlich wie diese aus (`de-CH` (Schweizer Hochdeu
             <img alt="❤" class="twemoji heart-anim md-footer-custom-text" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title="Liebe"> 
             gemacht und unter der
             <a href="https://github.com/purrbot-site/Docs/blob/master/LICENSE" target="_blank" rel="nofollow">MIT-Lizenz</a> geteilt.
-          extra: # (4)
+          extra: # (4):
+            consent:
+              title: Cookie Zustimmung
+              description: >
+                Wir verwenden cookies um deine wiederholten Besuche und Einstellungen zu erkennen, aber auch um die Wirksamkeit unserer Dokumentation und ob Benutzer finden nach was sie suchen zu messen.
+                Mit deiner Zustimmung hilfst du uns, unsere Dokumentation zu verbessern.
             translate:
               missing_translation: 'Diese Seite wurde noch nicht übersetzt.'
               not_translatable: 'Diese Seite kann nicht übersetzt werden und ist darum nur auf Englisch verfügbar.'
@@ -122,7 +127,8 @@ Die einfachste Struktur sieht ähnlich wie diese aus (`de-CH` (Schweizer Hochdeu
   2. Dies wird in der Sprachauswahl angezeigt.
   3. Dies wird zum ändern des Copyright text im Footer verwendet. Die `<img>` class sollte - Mit ausnahme des `title` Attributes - nicht geändert werden.
   4. Dies wird verwendet um Zeilen im "extra" Abschnitt der Config zu übersetzen.  
-     
+
+     - `consent` enthält Titel und Beschreibung der Cookie-Zustimmung welche as banner beim ersten Besuch der Webseite angezeigt wird.
      - `missing_translation` wird auf Seiten angezeigt, welche noch nicht für diese Sprache existieren.
      - `not_translatable` wird auf Seiten angezeigt, welche nicht übersetzt werden können (Seiten mit `not_translatable: true` im Frontmatter).
      - `footer` ändert den `Erstellt mit ...` text im Footer der Seite.

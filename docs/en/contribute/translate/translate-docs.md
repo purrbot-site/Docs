@@ -98,8 +98,14 @@ The most basic structure looks similar to this (Using `de_CH` (Swiss german) as 
             Dokumentation mit 
             <img alt="❤" class="twemoji heart-anim md-footer-custom-text" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title="Liebe"> 
             gemacht und unter der
-            <a href="https://github.com/purrbot-site/Docs/blob/master/LICENSE" target="_blank">MIT-Lizenz</a> geteilt.
-          extra: # (4)
+            <a href="https://github.com/purrbot-site/Docs/blob/master/LICENSE" target="_blank">MIT-Lizenz</a> geteilt.<br>
+            <a href="#__consent">Cookie-Einstellungen verwalten</a>
+          extra: # (4):
+            consent:
+              title: Cookie Zustimmung
+              description: >
+                Wir verwenden cookies um deine wiederholten Besuche und Einstellungen zu erkennen, aber auch um die Wirksamkeit unserer Dokumentation und ob Benutzer finden nach was sie suchen zu messen.
+                Mit deiner Zustimmung hilfst du uns, unsere Dokumentation zu verbessern.
             translate:
               missing_translation: 'Diese Seite wurde noch nicht übersetzt.'
               not_translatable: 'Diese Seite kann nicht übersetzt werden und ist darum nur auf Englisch verfügbar.'
@@ -121,7 +127,8 @@ The most basic structure looks similar to this (Using `de_CH` (Swiss german) as 
   2. This will be displayed in the language selector.
   3. This will be used to change the text in the copyright footer. The `<img>` tag should - with exception of the `title` attribute - not be modified.
   4. This is used to translate Strings in the "extra" section of the config.  
-     
+
+     - `consent` contains title and description for the Cookie Consent banner that would be displayed on first visit of the site.
      - `missing_translation` will be displayed on pages that don't have a page in their language yet.
      - `not_translatable` will be displayed on pages that cannot be translated (That have `not_translatable: true` in their frontmatter).
      - `footer` changes the `Build using ...` text in the footer of the page.
