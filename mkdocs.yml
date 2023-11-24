@@ -116,8 +116,6 @@ extra:
 
 plugins:
   - search
-  - neoteroi.mkdocsoad:
-      use_pymdownx: true
   - i18n:
       docs_structure: folder
       languages:
@@ -162,6 +160,7 @@ hooks:
   - theme/.hooks/badges.py
   - theme/.hooks/theme_overrides_manager.py
   - theme/.hooks/language_flags.py
+  - theme/.hooks/api_docs_gen.py
 
 markdown_extensions:
   - attr_list

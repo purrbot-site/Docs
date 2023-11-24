@@ -1,0 +1,34 @@
+{% include "partials/info.html" %}
+
+{%- if servers %}
+{% include "partials/servers.html" %}
+{% endif -%}
+
+{% include "partials/path-items.html" %}
+
+---
+{%- if components %}
+{%- if components.schemas %}
+{% include "partials/components/schemas.html" %}
+{% endif -%}
+
+{%- if components.responses %}
+{% include "partials/components/responses.html" %}
+{% endif -%}
+
+{%- if components.parameters %}
+{% include "partials/components/parameters" %}
+{% endif -%}
+
+{%- if components.securitySchemes %}
+{% include "partials/components/security-schemes.html" %}
+{% endif -%}
+{% endif -%}
+
+{%- if tags %}
+{% include "partials/tags.html"}
+{% endif -%}
+
+{%- if externalDocs %}
+{% include "partials/external-docs.html" %}
+{% endif -%}
