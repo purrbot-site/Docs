@@ -41,7 +41,7 @@ jobs:
         name: Checkout Code
         with:
           ref: refs/pull/${{ github.event.pull_request.number }}/merge
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         name: Setup Python
         with:
           python-version: 3.x
