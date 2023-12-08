@@ -6,7 +6,7 @@ site_url: 'https://docs.purrbot.site'
 
 copyright: |
   Docs made with 
-  <img alt="❤" class="twemoji heart-anim md-footer-custom-text" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title="love"> 
+  <img alt="❤" class="twemoji heart md-footer-custom-text" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title="love"> 
   and available under the 
   <a href="https://github.com/purrbot-site/Docs/blob/master/LICENSE" target="_blank" rel="nofollow">MIT-License</a>.<br>
   <a href="#__consent">Change cookie settings</a>
@@ -131,7 +131,7 @@ plugins:
           site_description: 'API-Dokumentation und Wiki von *Purr*'
           copyright: |
             Dokumentation mit 
-            <img alt="❤" class="twemoji heart-anim md-footer-custom-text" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title="Liebe"> 
+            <img alt="❤" class="twemoji heart md-footer-custom-text" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title="Liebe"> 
             gemacht und unter der
             <a href="https://github.com/purrbot-site/Docs/blob/master/LICENSE" target="_blank" rel="nofollow">MIT-Lizenz</a> verfügbar.<br>
             <a href="#__consent">Cookie-Einstellungen verwalten</a>

@@ -7,6 +7,6 @@
     }
 }
 
-.heart-anim {
+.heart {
     animation: heart-anim 1500ms infinite;
 }
