@@ -63,12 +63,13 @@ theme:
         icon: octicons/moon-24
         name: "Switch to Light Mode"
   features:
-  - navigation.indexes
-  - navigation.tabs
-  - navigation.tabs.sticky
-  - navigation.sections
-  - navigation.top
-  - content.code.annotate
+    - navigation.indexes
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - content.code.annotate
+    - content.tooltips
   icon:
     repo: fontawesome/brands/square-github
     admonition:
@@ -167,6 +168,7 @@ markdown_extensions:
   - toc:
       permalink: true
   - meta
+  - md_in_html
   - pymdownx.superfences
   - pymdownx.magiclink:
       repo_url_shortener: true
