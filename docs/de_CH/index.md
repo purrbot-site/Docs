@@ -14,34 +14,58 @@ Möchtest du dabei helfen, diese Seiten zu verbessern? Wunderbar! Schau dir einf
 
 ## Seiten { #pages }
 
-<div class="mdx-grid-container">
-  <div class="mdx-grid-wrapper">
-    <div class="mdx-grid-child">
-      <h3 id="api">API<a class="headerlink" href="#api" title="Permanenter Link">¶</a></h3>
-      <p>Dokumentation über die <a href="https://github.com/purrbot-site/ImageAPI" target="_blank">quelloffenen ImageAPI</a>.</p>
-      <a class="md-button" href="./api/">Zur Seite wechseln</a>
-    </div>
-    <div class="mdx-grid-child">
-      <h3 id="wiki">Wiki<a class="headerlink" href="#wiki" title="Permanenter Link">¶</a></h3>
-      <p>Komplette Dokumentation des Bot *Purr* inklusive aller Befehle und Funktionen.</p>
-      <a class="md-button" href="./bot/">Zur Seite wechseln</a>
-    </div>
-    <div class="mdx-grid-child">
-      <h3 id="contributing">Mitmachen<a class="headerlink" href="#contributing" title="Permanent link">¶</a></h3>
-      <p>Möchtest du beim Bot, der API oder dieser Seite aushelfen? Wechsle zur Mitmachen Seite um mehr zu erfahren.</p>
-      <a class="md-button" href="./contribute/">Zur Seite wechseln</a>
-    </div>
-    <div class="mdx-grid-child">
-      <h3 id="credits">Credits<a class="headerlink" href="#credits" title="Permanent link">¶</a></h3>
-      <p>Der Bot und diese Webseite währen nicht möglich ohne die Hilfe dieser coolen quelloffenen Projekte!</p>
-      <a class="md-button" href="./credits/">Zur Seite wechseln</a>
-    </div>
-    <div class="mdx-grid-child">
-      <h3 id="legal">Rechtliches<a class="headerlink" href="#legal" title="Permanent link">¶</a></h3>
-      <p>Various legal bits and pieces such as Terms of Service and Privacy Policy of the bot.</p>
-      <a class="md-button" href="./legal/">Zur Seite wechseln</a>
-    </div>
-  </div>
+<div class="grid cards" markdown>
+
+-   ### API
+    
+    ----
+    
+    Dokumentation über die [quelloffene ImageAPI](https://github.com/purrbot-site/ImageAPI).
+    
+    ----
+    
+    [Zur Seite wechseln](api/index.md){ .md-button }
+
+-   ### Wiki
+    
+    ----
+    
+    Komplette Dokumentation des Bot \*Purr\* inklusive aller Befehle und Funktionen.
+    
+    ----
+    
+    [Zur Seite wechseln](bot/index.md){ .md-button }
+
+-   ### Mitmachen { #contributing }
+    
+    ----
+    
+    Möchtest du bei der API, dem Bot oder dieser Seite mithelfen? Wechsle zur Mitmachen Seite um mehr zu erfahren.
+    
+    ----
+    
+    [Zur Seite wechseln](contribute/index.md){ .md-button }
+
+-   ### Credits
+    
+    ----
+    
+    Der Bot und diese Webseite währen nicht möglich ohne die Hilfe dieser coolen quelloffenen Projekte!
+    
+    ----
+    
+    [Zur Seite wechseln](credits/index.md){ .md-button }
+
+-   ### Rechtliches { #legal }
+    
+    ----
+    
+    Verschiedenste rechtliche Dinge wie die Servicebedingungen und Datenschutzbestimmungen.
+    
+    ----
+    
+    [Zur Seite wechseln](legal/index.md){ .md-button }
+
 </div>
 
 ## Andere Links
