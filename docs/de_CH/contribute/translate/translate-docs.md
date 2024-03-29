@@ -9,7 +9,7 @@ Um dies zu erreichen benötigen wir deine Hilfe! Solltest du eine andere Sprache
 
 ## Vorraussetzungen { #prerequisites }
 
-Bevor du mit dem übersetzen startest, solltest du sicherstellen, dass du folgendes vorbereitet hast:
+Bevor du mit dem übersetzen startest, solltest du sicherstellen, dass du folgendes sicherstellen:
 
 - Du hast Erfahrung mit Git (Zum pullen und committen von Änderungen)
 - Du hast mindestens Python 3.11 installiert
@@ -75,8 +75,8 @@ docs/
 
 ### Deine Sprache hinzufügen { #adding-your-language }
 
-Damit das `mkdocs-static-i18n` Plugin deine Sprache erkennt musst du diese als neuen Eintraf zur `languages` Einstellung des `i18n` Plugin in der `mkdocs.yml` hinzufügen.  
-Die einfachste Struktur sieht ähnlich wie diese aus (`de-CH` (Schweizer Hochdeutsch) wird als Beispiel verwendet):
+Damit das `mkdocs-static-i18n` Plugin deine Sprache erkennt musst du diese als neuen Eintrag zur `languages` Einstellung des `i18n` Plugin in der `mkdocs.yml` hinzufügen.  
+Die einfachste Struktur sieht ähnlich wie diese aus (`de_CH` (Schweizer Hochdeutsch) wird als Beispiel verwendet):
 
 ```yaml title="mkdocs.yml"
   - search
@@ -90,7 +90,7 @@ Die einfachste Struktur sieht ähnlich wie diese aus (`de-CH` (Schweizer Hochdeu
           name: English
           build: true
         # ...andere Sprachen
-        - locale: de-CH # (1)
+        - locale: de_CH # (1)
           name: Deutsch (Schweiz) # (2)
           build: true
           site_name: PurrBot Dokumentation
@@ -100,7 +100,7 @@ Die einfachste Struktur sieht ähnlich wie diese aus (`de-CH` (Schweizer Hochdeu
             <img alt="❤" class="twemoji heart-anim md-footer-custom-text" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title="Liebe"> 
             gemacht und unter der
             <a href="https://github.com/purrbot-site/Docs/blob/master/LICENSE" target="_blank" rel="nofollow">MIT-Lizenz</a> geteilt.
-          extra: # (4):
+          extra: # (4)
             consent:
               title: Cookie Zustimmung
               description: >
@@ -128,14 +128,14 @@ Die einfachste Struktur sieht ähnlich wie diese aus (`de-CH` (Schweizer Hochdeu
   3. Dies wird zum ändern des Copyright text im Footer verwendet. Die `<img>` class sollte - Mit ausnahme des `title` Attributes - nicht geändert werden.
   4. Dies wird verwendet um Zeilen im "extra" Abschnitt der Config zu übersetzen.  
 
-     - `consent` enthält Titel und Beschreibung der Cookie-Zustimmung welche as banner beim ersten Besuch der Webseite angezeigt wird.
+     - `consent` enthält Titel und Beschreibung der Cookie-Zustimmung welche als Banner beim ersten Besuch der Webseite angezeigt wird.
      - `missing_translation` wird auf Seiten angezeigt, welche noch nicht für diese Sprache existieren.
      - `not_translatable` wird auf Seiten angezeigt, welche nicht übersetzt werden können (Seiten mit `not_translatable: true` im Frontmatter).
      - `footer` ändert den `Erstellt mit ...` text im Footer der Seite.
 
-  5. Dies wird verwendet, um bestimmte deile der Navigation zu übersetzen, welche nicht durch andere Methoden übersetzt werden können.
+  5. Dies wird verwendet, um bestimmte Teile der Navigation zu übersetzen, welche nicht durch andere Methoden übersetzt werden können.
 
-Dieses Beispiel würde nun nach Dateien im `de-CH` Ordner schauen und diese laden. Du solltest natürlich deinen eigenen Sprach Identifikator als Ordnername verwenden.
+Dieses Beispiel würde nun nach Dateien im `de_CH` Ordner schauen und diese laden. Du solltest natürlich deinen eigenen Sprach Identifikator als Ordnername verwenden.
 
 ### Spezielle Hinweise { #special-notes }
 
@@ -153,7 +153,7 @@ Sollte die Kopfzeile bereits eine `{ #:id }` am Ende besitzen musst du nur die K
 #### Unübersetzbare Seiten { #untranslatable-pages }
 
 Es gibt einige Seiten welche aus verschiedenen Gründen nicht übersetzt werden können.  
-Um Fehler zu vermeide, füge diese Seiten nicht in deiner Übersetzung hinzu (Lösche sie, sollten sie in deinem Ordner existieren).
+Um Fehler zu vermeiden, füge diese Seiten nicht in deiner Übersetzung hinzu (Lösche sie, sollten sie in deinem Ordner existieren).
 
 Die folgenden Seiten sollten nicht in deiner Übersetzung existieren (Pfad relativ zu `docs/en/`):
 
@@ -167,7 +167,7 @@ Die folgenden Seiten sollten nicht in deiner Übersetzung existieren (Pfad relat
 Snippets sind Dateien welche in `theme/.snippets/` existieren und sollten auch übersetzt werden.
 
 Um ein Snippet zu übersetzen, öffne die Datei und kopiere den Inhalt, welcher von `--8<-- [start:en]` und `--8<-- [end:en]` umgeben ist (Kopiere diese Linien auch!). Füge den kopierten Inhalt am unteren Ende der Datei ein. Du kannst auch leere Zeilen lassen um Abstände zu halten.  
-Als nächstes übersetzt du den Inhlat zwischen den vorher genannten Zeilen. Stell sicher, dass du existierende Formattierungen beibehälst (z.B. von Admonition Blöcken), Sobald du fertig bist, ändere das `en` in der Start- und Endzeile zu dem Sprachcode welchen du verwendest. Vergiss nicht, deine Änderungen zu speichern.
+Als nächstes übersetzt du den Inhalt zwischen den vorher genannten Zeilen. Stell sicher, dass du existierende Formattierungen beibehälst (z.B. von Admonition Blöcken), Sobald du fertig bist, ändere das `en` in der Start- und Endzeile zu dem Sprachcode welchen du verwendest. Vergiss nicht, deine Änderungen zu speichern.
 
 Zum schluss gehe zu den Seiten, welche Snippets verwenden (Erkennbar durch `--8<-- "<snippet_name>.md:en"`) und ändere das `en` zu dem Sprachcode, welchen du vorhin hinzugefügt hast.
 
