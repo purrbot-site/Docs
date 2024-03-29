@@ -1,5 +1,5 @@
 {% for tag, operations in handler.get_operations().items() %}
-## <span class="api-tag">{{ tag or "Endpoints" }}</span>
+## <span class="api-tag">{{ tag.upper() or "Endpoints" }}</span>
 
 {% for path, definition in operations %}
 {%- for http_method, operation in definition.items() %}
