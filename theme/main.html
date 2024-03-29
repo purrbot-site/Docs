@@ -44,23 +44,11 @@
 
 {% block announce %}
   {% if page.meta and i18n_page_locale != "en" and i18n_file_locale != i18n_page_locale %}
-    {% set announcement_classes = "announcement-translation" %}
-    {% if page.meta.not_translatable %}
-      {% set announcement_classes = announcement_classes ~ " announcement-translation__not-translatable" %}
-    {% endif %}
+    {% set type = "not_translatable" if page.meta.not_translatable else "translate" %}
+    {% set text = config.extra.translate.not_translatable if page.meta.not_translatable else config.translate.missing_translation | d('Error: Missing text') %}
     
-    <div class="{{ announcement_classes }}">
-      {% if page.meta.not_translatable %}
-        <span class="twemoji">
-          {% include ".icons/material/translate-off.svg" %}
-        </span>
-        {{ config.extra.translate.not_translatable | d('This page cannot be translated and is therefore only available in English.') }}
-      {% else %}
-        <span class="twemoji">
-          {% include ".icons/material/translate.svg" %}
-        </span>
-        {{ config.extra.translate.missing_translation | d('This page has not yet been translated.') }}
-      {% endif%}
+    <div class="admonition {{ type }}">
+      <p class="admonition-title" style="text-align: center;">{{ text }}</p>
     </div>
   {% endif %}
 {% endblock %}

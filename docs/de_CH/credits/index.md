@@ -8,7 +8,7 @@ Diese Seite zeigt verschiedene Credits für all die unterschiedlichen Dinge welc
 ## Verwendete Bibliotheken { #used-libraries-and-utilities }
 
 ### Bot
-Dank gilt den folgenden Leuten, welche Ihre Bibliothek bereitstellen, welche von \*Purr\* verwendet werden:
+Dank gilt den folgenden Personen/Gruppen, welche Ihre Bibliothek bereitstellen, welche von \*Purr\* verwendet werden:
 
 | Bibliothek                        | Lizenz     | Verwendet für                                                 |
 |-----------------------------------|------------|---------------------------------------------------------------|
@@ -20,12 +20,11 @@ Dank gilt den folgenden Leuten, welche Ihre Bibliothek bereitstellen, welche von
 | @rethinkdb/rethinkdb              | Apache 2.0 | Datenbank handhaben.                                          |
 
 ### Wiki
-Dank gilt den folgenden Personsn, welche Software bereitstellen, welche diese Dokumentation möglich machen!
+Dank gilt den folgenden Personen/Gruppen, welche Software bereitstellen, welche diese Dokumentation möglich machen!
 
 | Software                        | Lizenz       | Verwendet für                                  |
 |---------------------------------|--------------|------------------------------------------------|
 | @mkdocs/mkdocs                  | BSD-2-Clause | Erstellen dieser Dokumentation.                |
 | @squidfunk/mkdocs-material      | MIT          | Design dieser Dokumentation.                   |
 | @facelessuser/pymdown-extension | MIT          | Unzählige Erweiterungen für die Dokumentation. |
-| @neoteroi/mkdocs-plugins        | MIT          | REST-API Dokumentation.                        |
 | @ultrabug/mkdocs-static-i18n    | MIT          | Übersetzungen der Dokumentation                |
