@@ -465,6 +465,27 @@ Gives an image of a Neko (cat girl). ([Example (Image)](https://purrbot.site/img
 For the NSFW version see [here](#neko-nsfw).
 
 ----
+### Okami
+
+/// note | Data
+**Permission:** `None`  
+**Bot requires:** `None`
+
+**Aliases:**
+
+- `Wolf`
+- `Wolfgirl`
+
+**Arguments:** `None`
+
+**Examples:**
+
+- `p.okami`
+///
+
+Gives you a random image of an Okami (Wolf Girl). ([Example](https://purrbot.site/img/sfw/okami/img/okami_001.jpg))
+
+----
 ### Pat
 
 /// note | Data

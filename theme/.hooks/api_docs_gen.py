@@ -1,6 +1,4 @@
 import sys, os
-sys.path.insert(0, os.path.dirname(__file__))
-
 import re
 
 from mkdocs.plugins import get_plugin_logger
@@ -19,6 +17,7 @@ def on_page_markdown(markdown: str, *args, **kwargs):
     return markdown
 
 def _replacer(match: Match) -> str:
+    sys.path.insert(0, os.path.dirname(__file__))
     source = match.group(1).strip("'\"")
     data = read_from_source(source)
     

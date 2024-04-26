@@ -463,6 +463,27 @@ Gibt ein zufälliges Bild/Gif einer Neko (Katzenmädchen). ([Beispiel (Bild)](ht
 Für die NSFW version dieses Befehls, klicke [hier](#neko-nsfw).
 
 ----
+### Okami
+
+/// note | Data
+**Berechtigungen:** `Nichts`  
+**Bot benötigt:** `Nichts`
+
+**Aliasse:**
+
+- `Wolf`
+- `Wolfgirl`
+
+**Argumente:** `None`
+
+**Beispiele:**
+
+- `p.okami`
+///
+
+Gibt ein zufälliges Bild einer Okami (Wolfmädchen). ([Beispiel](https://purrbot.site/img/sfw/okami/img/okami_001.jpg))
+
+----
 ### Pat
 
 /// note | Daten
