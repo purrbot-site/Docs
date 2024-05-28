@@ -103,7 +103,7 @@ extra:
       link: 'https://patreon.com/andre_601'
     - icon: 'simple/github'
       link: 'https://github.com/purrbot-site'
-    - icon: 'simple/twitter'
+    - icon: 'material/twitter'
       link: 'https://twitter.com/TruePurrBot'
     - icon: 'simple/mastodon'
       link: 'https://botsin.space/@purrbot'

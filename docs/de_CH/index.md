@@ -74,7 +74,7 @@ Möchtest du dabei helfen, diese Seiten zu verbessern? Wunderbar! Schau dir einf
 - [:simple-discord: Discord](https://purrbot.site/discord)
 - [:simple-github: GitHub](https://purrbot.site/github)
 - [:simple-mastodon: Mastodon](https://purrbot.site/mastodon)
-- [:simple-twitter: Twitter](https://purrbot.site/twitter)
+- [:material-twitter: Twitter](https://purrbot.site/twitter)
 - [:simple-youtube: YouTube](https://purrbot.site/youtube)
 
 **Spenden**
