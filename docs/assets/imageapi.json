@@ -11,7 +11,7 @@
       "name": "MIT",
       "url": "https://github.com/purrbot-site/ImageAPI/blob/master/LICENSE"
     },
-    "version": "1.7.0"
+    "version": "1.8.0"
   },
   "servers": [
     {
@@ -27,6 +27,10 @@
     {
       "name": "nsfw",
       "description": "Not safe for Work endpoints"
+    },
+    {
+      "name": "owo",
+      "description": "OWOify endpoints (Just one right now)"
     }
   ],
   "paths": {
@@ -58,7 +62,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -78,7 +82,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -124,7 +128,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -144,7 +148,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -190,7 +194,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -210,7 +214,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -256,7 +260,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -276,7 +280,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -322,7 +326,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -342,7 +346,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -388,7 +392,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -408,7 +412,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -454,7 +458,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -474,7 +478,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -520,7 +524,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -540,7 +544,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -612,7 +616,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -632,7 +636,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -678,7 +682,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -698,7 +702,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -744,7 +748,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -764,7 +768,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -810,7 +814,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -830,7 +834,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -876,7 +880,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -896,7 +900,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -942,7 +946,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -962,7 +966,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1008,7 +1012,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1028,7 +1032,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1074,7 +1078,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1094,7 +1098,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1140,7 +1144,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1160,7 +1164,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1232,7 +1236,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1252,7 +1256,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1298,7 +1302,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1318,7 +1322,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1364,7 +1368,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1384,7 +1388,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1430,7 +1434,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1450,7 +1454,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1496,7 +1500,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1516,7 +1520,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1562,7 +1566,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1582,7 +1586,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1628,7 +1632,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1648,7 +1652,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1694,7 +1698,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1714,7 +1718,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1760,7 +1764,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1780,7 +1784,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1826,7 +1830,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1846,7 +1850,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1892,7 +1896,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1912,7 +1916,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -1985,7 +1989,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2005,7 +2009,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2051,7 +2055,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2071,7 +2075,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2117,7 +2121,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2137,7 +2141,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2183,7 +2187,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2203,7 +2207,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2249,7 +2253,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2269,7 +2273,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2341,7 +2345,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2361,7 +2365,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2407,7 +2411,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2427,7 +2431,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2473,7 +2477,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2493,7 +2497,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2539,7 +2543,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2559,7 +2563,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2605,7 +2609,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2625,7 +2629,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2671,7 +2675,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2691,7 +2695,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2737,7 +2741,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2757,7 +2761,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2803,7 +2807,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2823,7 +2827,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2869,7 +2873,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -2889,7 +2893,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -3028,7 +3032,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -3048,7 +3052,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImgFailure"
+                  "$ref": "#/components/schemas/RequestFailure"
                 },
                 "example": {
                   "details": {
@@ -3058,6 +3062,65 @@
                   },
                   "error": true,
                   "message": "The provided path does not contain any images.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/owoify": {
+      "post": {
+        "summary": "OWOify text",
+        "description": "OWOify text. This means replacing specific characters with other characters or words.",
+        "tags": [
+          "owo"
+        ],
+        "requestBody": {
+          "description": "The JSON Request Body",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OWOifyRequest"
+              },
+              "example": {
+                "text": "Hello World!"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OWOifySuccess"
+                },
+                "example": {
+                  "error": false,
+                  "text": "Hewwo Wowd owo",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Received Malformed JSON Body",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RequestFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/owoify",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "Received JSON Body does not contain a 'text' value.",
                   "time": 0
                 }
               }
@@ -3102,7 +3165,22 @@
           }
         }
       },
-      "ImgFailure": {
+      "OWOifySuccess": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "boolean"
+          },
+          "text": {
+            "type": "string"
+          },
+          "time": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "RequestFailure": {
         "type": "object",
         "properties": {
           "details": {
@@ -3130,6 +3208,14 @@
             "type": "string"
           },
           "user-agent": {
+            "type": "string"
+          }
+        }
+      },
+      "OWOifyRequest": {
+        "type": "object",
+        "properties": {
+          "text": {
             "type": "string"
           }
         }
