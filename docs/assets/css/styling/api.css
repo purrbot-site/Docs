@@ -1,6 +1,8 @@
 :root {
     --color-http-get: #448aff;
+    --color-http-post: #00c853;
     --color-http-get__bg: #448aff1a;
+    --color-http-post__bg: #00c8531a;
 }
 
 .http-get {
@@ -10,6 +12,17 @@
     
     border-radius: .2em;
     
+    padding: .1rem .3rem;
+    margin-right: .3em;
+}
+
+.http-post {
+    background-color: var(--color-http-post__bg);
+
+    border: .05rem solid var(--color-http-post);
+
+    border-radius: .2em;
+
     padding: .1rem .3rem;
     margin-right: .3em;
 }
