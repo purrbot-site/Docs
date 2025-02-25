@@ -29,8 +29,8 @@
       "description": "Not safe for Work endpoints"
     },
     {
-      "name": "owo",
-      "description": "OWOify endpoints (Just one right now)"
+      "name": "misc",
+      "description": "Miscellaneous Endpoints"
     }
   ],
   "paths": {
@@ -3075,7 +3075,7 @@
         "summary": "OWOify text",
         "description": "OWOify text. This means replacing specific characters with other characters or words.",
         "tags": [
-          "owo"
+          "misc"
         ],
         "requestBody": {
           "description": "The JSON Request Body",
@@ -3106,7 +3106,7 @@
               }
             }
           },
-          "404": {
+          "400": {
             "description": "Received Malformed JSON Body",
             "content": {
               "application/json": {
@@ -3122,6 +3122,96 @@
                   "error": true,
                   "message": "Received JSON Body does not contain a 'text' value.",
                   "time": 0
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "OWOify text",
+        "description": "OWOify text. This means replacing specific characters with other characters or words.",
+        "tags": [
+          "misc"
+        ],
+        "parameters": [
+          {
+            "name": "text",
+            "in": "query",
+            "description": "The text to OwOify.",
+            "example": "Hello World!",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OWOifySuccess"
+                },
+                "example": {
+                  "error": false,
+                  "text": "Hewwo Wowd owo",
+                  "time": 0
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Received Malformed Query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RequestFailure"
+                },
+                "example": {
+                  "details": {
+                    "path": "/api/owoify",
+                    "content-type": "application/json",
+                    "user-agent": "Some_User-Agent/1.0"
+                  },
+                  "error": true,
+                  "message": "Received request does not contain a 'text' query parameter, or it was empty.",
+                  "time": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/info": {
+      "get": {
+        "summary": "Provides info about the API",
+        "description": "Returns info about the API including version, license, source code link, etc.",
+        "tags": [
+          "misc"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InfoSuccess"
+                },
+                "example": {
+                  "name": "Purrbot ImageAPI",
+                  "version": "2.0.0",
+                  "description": "A public API made for the Discord Bot *Purr* that contains random image and text features.",
+                  "links": {
+                    "documentation": "https://docs.purrbot.site/api",
+                    "source": "https://github.com/purrbot-site/ImageAPI"
+                  },
+                  "license": {
+                    "type": "MIT",
+                    "link": "https://github.com/purrbot-site/ImageAPI/blob/master/LICENSE"
+                  }
                 }
               }
             }
@@ -3180,6 +3270,26 @@
           }
         }
       },
+      "InfoSuccess": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "links": {
+            "$ref": "#/components/schemas/LinksContent"
+          },
+          "license": {
+            "$ref": "#/components/schemas/LicenseContent"
+          }
+        }
+      },
       "RequestFailure": {
         "type": "object",
         "properties": {
@@ -3208,6 +3318,28 @@
             "type": "string"
           },
           "user-agent": {
+            "type": "string"
+          }
+        }
+      },
+      "LinksContent": {
+        "type": "object",
+        "properties": {
+          "documentation": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "LicenseContent": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "link": {
             "type": "string"
           }
         }
