@@ -25,7 +25,7 @@ Schema(<a href="#{{ type_name.lower() | link }}" class="ref-link">{{ type_name }
 {%- endif -%}
 {%- if type_name == "array" -%}
 {%- with schema = schema["items"] -%}
-Array&lt;{%- include "partial/schema-repr.html" -%}&gt;
+Array({%- include "partial/schema-repr.html" -%})
 {%- endwith -%}
 {%- endif -%}
 {%- if type_name == "null" -%}

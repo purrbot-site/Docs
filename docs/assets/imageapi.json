@@ -3226,14 +3226,17 @@
         "type": "object",
         "properties": {
           "error": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Whether the response is an error response. Always `false` for this response type."
           },
           "link": {
-            "type": "string"
+            "type": "string",
+            "description": "URL of the randomly selected image file."
           },
           "time": {
             "type": "integer",
-            "format": "int64"
+            "format": "int64",
+            "description": "How long the request took to be processed (in milliseconds)."
           }
         }
       },
@@ -3241,17 +3244,20 @@
         "type": "object",
         "properties": {
           "error": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Whether the response is an error response. Always `false` for this response type."
           },
           "links": {
             "type": "array",
+            "description": "List of Image URLs found within the provided path.",
             "items": {
               "type": "string"
             }
           },
           "time": {
             "type": "integer",
-            "format": "int64"
+            "format": "int64",
+            "description": "How long the request took to be processed (in milliseconds)."
           }
         }
       },
@@ -3259,14 +3265,17 @@
         "type": "object",
         "properties": {
           "error": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Whether the response is an error response. Always `false` for this response type."
           },
           "text": {
-            "type": "string"
+            "type": "string",
+            "description": "The OwOified text."
           },
           "time": {
             "type": "integer",
-            "format": "int64"
+            "format": "int64",
+            "description": "How long the request took to be processed (in milliseconds)."
           }
         }
       },
@@ -3274,19 +3283,24 @@
         "type": "object",
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "Name of the API."
           },
           "version": {
-            "type": "string"
+            "type": "string",
+            "description": "Current version used of the API."
           },
           "description": {
-            "type": "string"
+            "type": "string",
+            "description": "Description of the API."
           },
           "links": {
-            "$ref": "#/components/schemas/LinksContent"
+            "$ref": "#/components/schemas/LinksContent",
+            "description": "Links for documentation and source of the API."
           },
           "license": {
-            "$ref": "#/components/schemas/LicenseContent"
+            "$ref": "#/components/schemas/LicenseContent",
+            "description": "License information about the API."
           }
         }
       },
@@ -3294,17 +3308,21 @@
         "type": "object",
         "properties": {
           "details": {
-            "$ref": "#/components/schemas/DetailsContent"
+            "$ref": "#/components/schemas/DetailsContent",
+            "description": "Request details."
           },
           "error": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Whether the response is an error response. Always `true` for this response type."
           },
           "message": {
-            "type": "string"
+            "type": "string",
+            "description": "The error message."
           },
           "time": {
             "type": "integer",
-            "format": "int64"
+            "format": "int64",
+            "description": "How long the request took to be processed (in milliseconds)."
           }
         }
       },
@@ -3312,13 +3330,16 @@
         "type": "object",
         "properties": {
           "path": {
-            "type": "string"
+            "type": "string",
+            "description": "The API path that was used by the user."
           },
           "content-type": {
-            "type": "string"
+            "type": "string",
+            "description": "The content-type header the user provided."
           },
           "user-agent": {
-            "type": "string"
+            "type": "string",
+            "description": "The User-Agent header the user provided."
           }
         }
       },
@@ -3326,10 +3347,12 @@
         "type": "object",
         "properties": {
           "documentation": {
-            "type": "string"
+            "type": "string",
+            "description": "Link to the API documentation."
           },
           "source": {
-            "type": "string"
+            "type": "string",
+            "description": "Link to the Source Code of the API."
           }
         }
       },
@@ -3337,10 +3360,12 @@
         "type": "object",
         "properties": {
           "type": {
-            "type": "string"
+            "type": "string",
+            "description": "License Type (Name of the license)."
           },
           "link": {
-            "type": "string"
+            "type": "string",
+            "description": "Link to the License file."
           }
         }
       },
@@ -3348,7 +3373,8 @@
         "type": "object",
         "properties": {
           "text": {
-            "type": "string"
+            "type": "string",
+            "description": "Text to OwOify."
           }
         }
       }
