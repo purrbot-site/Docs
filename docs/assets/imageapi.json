@@ -1554,7 +1554,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/senko/img/_001.jpg",
+                  "link": "https://purrbot.site/img/sfw/senko/img/senko_001.jpg",
                   "error": false,
                   "time": 0
                 }
@@ -2241,7 +2241,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/nsfw/fuck/gif/_001.gif",
+                  "link": "https://purrbot.site/img/nsfw/fuck/gif/fuck_001.gif",
                   "error": false,
                   "time": 0
                 }
