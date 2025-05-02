@@ -1,8 +1,8 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Purrbot Image API",
-    "description": "The Purrbot Image API is an open-source API to provide randomly selected images or gifs based on the API path selected.<br>It was created as a replacement to commonly known APIs like nekos.life or weeb.sh, with the goal of having more control over the returned images for platforms like Discord.<br><br>Access is given free of charge without any authorization required.",
+    "title": "Purrbot API",
+    "description": "The Purrbot API (Formerly Purrbot Image API) is an open-source API that currently provides the following features:\n\n- Receive a randomly selected image as a link based on the category and image type.\n- Receive a list of images as links available in the provided category and of the provided type.\n- \"OWOify\" provided text, replacing specific characters with other values.\n\n## Testing connection\n\nThis page does not support directly testing API endpoints. Instead are you required to use a tool such as [cURL](https://curl.se) or [Postman](https://www.postman.com) to access and test API paths.\n\nTo test it, connect to `https://api.purrbot.site` and look for a response similar to the following:  \n```json\n{\n  \"name\": \"Purrbot API\",\n  \"version\": \"2.0.0\",\n  \"description\": \"A public API made for the Discord Bot *Purr* that contains random image and text features.\",\n  \"links\": {\n    \"documentation\": \"https://docs.purrbot.site/api\",\n    \"source\": \"https://github.com/purrbot-site/ImageAPI\",\n    \"api\": \"https://api.purrbot.site/v2\"\n  },\n  \"license\": {\n    \"type\": \"MIT\",\n    \"link\": \"https://github.com/purrbot-site/ImageAPI/blob/master/LICENSE\"\n  }\n}\n```\nShould you receive this or a similar response can you obtain the current API domain from the `links` object.\n\n## Versioning\n\nThe versioning of the API is simple.  \nWhenever the API receives a breaking change will the version in the URL path get bumped.\n\nWhere possible will we try to still support the old API path for a while to allow an easier migration to the new version.\n\n### Current API deprecations\n\nThe following API URL paths are currently considered deprecated and will be removed in the future:\n\n- `https://purrbot.site/api` (switch to `https://api.purrbot.site/v2`)",
     "termsOfService": "https://docs.purrbot.site/legal/api",
     "contact": {
       "email": "support@purrbot.site"
@@ -15,8 +15,12 @@
   },
   "servers": [
     {
-      "url": "https://purrbot.site/api",
+      "url": "https://api.purrbot.site/v2",
       "description": "Main API endpoint to use."
+    },
+    {
+      "url": "https://purrbot.site/api",
+      "description": "[DEPRECATED] Old API Endpoint."
     }
   ],
   "tags": [
@@ -3192,6 +3196,7 @@
         "tags": [
           "misc"
         ],
+        "deprecated": true,
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -3206,7 +3211,8 @@
                   "description": "A public API made for the Discord Bot *Purr* that contains random image and text features.",
                   "links": {
                     "documentation": "https://docs.purrbot.site/api",
-                    "source": "https://github.com/purrbot-site/ImageAPI"
+                    "source": "https://github.com/purrbot-site/ImageAPI",
+                    "api": "https://api.purrbot.site/v2"
                   },
                   "license": {
                     "type": "MIT",
@@ -3224,6 +3230,7 @@
     "schemas": {
       "ImgSuccess": {
         "type": "object",
+        "description": "A successful response returning a randomly selected image link.",
         "properties": {
           "error": {
             "type": "boolean",
@@ -3237,11 +3244,17 @@
             "type": "integer",
             "format": "int64",
             "description": "How long the request took to be processed (in milliseconds)."
+          },
+          "deprecation-warning": {
+            "type": "string",
+            "description": "Warning about the deprecation of the accessed endpoint.  \nNot present for https://api.purrbot.site/v2 endpoints.",
+            "nullable": true
           }
         }
       },
       "ListSuccess": {
         "type": "object",
+        "description": "A success response returning a list of all available image links.",
         "properties": {
           "error": {
             "type": "boolean",
@@ -3258,11 +3271,17 @@
             "type": "integer",
             "format": "int64",
             "description": "How long the request took to be processed (in milliseconds)."
+          },
+          "deprecation-warning": {
+            "type": "string",
+            "description": "Warning about the deprecation of the accessed endpoint.  \nNot present for https://api.purrbot.site/v2 endpoints.",
+            "nullable": true
           }
         }
       },
       "OWOifySuccess": {
         "type": "object",
+        "description": "A successful OWOify response returning the converted text.",
         "properties": {
           "error": {
             "type": "boolean",
@@ -3276,11 +3295,17 @@
             "type": "integer",
             "format": "int64",
             "description": "How long the request took to be processed (in milliseconds)."
+          },
+          "deprecation-warning": {
+            "type": "string",
+            "description": "Warning about the deprecation of the accessed endpoint.  \nNot present for https://api.purrbot.site/v2 endpoints.",
+            "nullable": true
           }
         }
       },
       "InfoSuccess": {
         "type": "object",
+        "description": "A successful response containing API information.",
         "properties": {
           "name": {
             "type": "string",
@@ -3295,21 +3320,19 @@
             "description": "Description of the API."
           },
           "links": {
-            "$ref": "#/components/schemas/LinksContent",
-            "description": "Links for documentation and source of the API."
+            "$ref": "#/components/schemas/LinksContent"
           },
           "license": {
-            "$ref": "#/components/schemas/LicenseContent",
-            "description": "License information about the API."
+            "$ref": "#/components/schemas/LicenseContent"
           }
         }
       },
       "RequestFailure": {
         "type": "object",
+        "description": "A failed response for an API request.",
         "properties": {
           "details": {
-            "$ref": "#/components/schemas/DetailsContent",
-            "description": "Request details."
+            "$ref": "#/components/schemas/DetailsContent"
           },
           "error": {
             "type": "boolean",
@@ -3328,6 +3351,7 @@
       },
       "DetailsContent": {
         "type": "object",
+        "description": "A JSON object nested in a failed response containing request information.",
         "properties": {
           "path": {
             "type": "string",
@@ -3345,6 +3369,7 @@
       },
       "LinksContent": {
         "type": "object",
+        "description": "A JSON object nested in the API info response containing useful links.",
         "properties": {
           "documentation": {
             "type": "string",
@@ -3353,11 +3378,16 @@
           "source": {
             "type": "string",
             "description": "Link to the Source Code of the API."
+          },
+          "api": {
+            "type": "string",
+            "description": "API link that can be used for requests."
           }
         }
       },
       "LicenseContent": {
         "type": "object",
+        "description": "A JSON object nested in the API info response containing License-related info.",
         "properties": {
           "type": {
             "type": "string",
@@ -3371,6 +3401,7 @@
       },
       "OWOifyRequest": {
         "type": "object",
+        "description": "A JSON object for a proper POST request towards the OWOify endpoint.",
         "properties": {
           "text": {
             "type": "string",
