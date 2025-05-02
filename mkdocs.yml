@@ -195,6 +195,7 @@ markdown_extensions:
         - bug
         - example
         - quote
+        - deprecated
   - pymdownx.blocks.details:
   - pymdownx.blocks.tab:
       alternate_style: true
