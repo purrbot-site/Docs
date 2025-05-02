@@ -16,6 +16,12 @@
 ///
 {% endif %}
 
+{%- if operation.deprecated %}
+/// deprecated
+This endpoint was **deprecated**. It will be removed in a future version!
+///
+{% endif %}
+
 {%- with parameters = handler.get_parameters(operation) -%}
 {%- if parameters %}
 {% include "partial/request/parameters.html" %}
