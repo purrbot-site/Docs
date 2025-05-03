@@ -19,9 +19,9 @@ Schema(<a href="#{{ type_name.lower() | link }}" class="ref-link">{{ type_name }
 {%- if schema.format -%}
 (<span class="{{ schema.format }}-format format">{{ schema.format }}</span>)
 {%- endif -%}
-{% if nullable %}
- (nullable)
-{% endif %}
+{%- if nullable -%}
+&nbsp;(nullable)
+{%- endif -%}
 {%- endif -%}
 {%- if type_name == "array" -%}
 {%- with schema = schema["items"] -%}
