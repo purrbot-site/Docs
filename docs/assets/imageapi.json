@@ -3077,7 +3077,7 @@
     "/owoify": {
       "post": {
         "summary": "OWOify text",
-        "description": "OWOify text. This means replacing specific characters with other characters or words.",
+        "description": "\"OWOifies\" text, meaning it replaces characters and words with others, depending on the provided configuration.\nMultiple configurations can be set via additional JSON properties:\n\n- Only `text`: Replaces `l` and `r` with `w` (Respects casing).\n- `replace-words`: Replaces specific key-words with others.\n- `stutter`: Randomly makes some word stutter by repeating the first character followed by a hyphon.\n- `emoticons`: Replaces punctuation characters (`.!?`) with random text emoticons.",
         "tags": [
           "misc"
         ],
@@ -3134,7 +3134,7 @@
       },
       "get": {
         "summary": "OWOify text",
-        "description": "OWOify text. This means replacing specific characters with other characters or words.",
+        "description": "\"OWOifies\" text, meaning it replaces characters and words with others, depending on the provided configuration.\nMultiple configurations can be set via additional query parameters:\n\n- Only `text`: Replaces `l` and `r` with `w` (Respects casing).\n- `replace-words`: Replaces specific key-words with others.\n- `stutter`: Randomly makes some word stutter by repeating the first character followed by a hyphon.\n- `emoticons`: Replaces punctuation characters (`.!?`) with random text emoticons.",
         "tags": [
           "misc"
         ],
@@ -3147,6 +3147,33 @@
             "required": true,
             "schema": {
               "type": "string"
+            }
+          },
+          {
+            "name": "replace-words",
+            "in": "query",
+            "description": "Whether to replace specific key-words with others.",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "stutter",
+            "in": "query",
+            "description": "Whether stuttering should be added.",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "emoticons",
+            "in": "query",
+            "description": "Whether to replace punctuation characters (`.!?`) with random emoticons.",
+            "required": false,
+            "schema": {
+              "type": "boolean"
             }
           }
         ],
@@ -3406,6 +3433,21 @@
           "text": {
             "type": "string",
             "description": "Text to OwOify."
+          },
+          "replace-words": {
+            "type": "boolean",
+            "description": "Whether to replace specific key-words with others",
+            "required": false
+          },
+          "stutter": {
+            "type": "boolean",
+            "description": "Whether stuttering should be added.",
+            "required": false
+          },
+          "emoticons": {
+            "type": "boolean",
+            "description": "Whether to replace punctuation characters (`.!?`) with random emoticons.",
+            "required": false
           }
         }
       }
