@@ -5,9 +5,9 @@ description: The Terms of Service and Privacy Policy of the Discord Bot.
 not_translatable: true
 ---
 
-[Terms of Service]: https://discord.com/terms
-[Privacy Policy]: https://discord.com/privacy
-[Community Guidelines]: https://discord.com/guidelines
+[discord-tos]: https://discord.com/terms
+[discord-policy]: https://discord.com/privacy
+[discord-guidelines]: https://discord.com/guidelines
 [discord]: https://discord.com
 [support]: https://purrbot.site/discord
 [language]: https://discord.com/developers/docs/dispatch/field-values#predefined-field-values-accepted-locales
@@ -16,78 +16,74 @@ not_translatable: true
 
 ## Terms of Service
 
-### Usage Agreement
+### 1. Agreement to Terms
+By inviting the Discord bot `*Purr*#6875` (Discord bot ID: `425382319449309197`, hereafter referred to as the "Bot") to a server or using any of its features, you agree to be bound by these Terms of Service ("Terms"), the accompanying [Privacy Policy](#privacy-policy), as well as the [API Terms of Service and Privacy Policy](api.md) when using features powered by the Bot's external API.
 
-By inviting the Discord Bot `*Purr*#6875` (Unique discord user ID `425382319449309197`. Hereby referred to as "bot") to a Discord Server ("server"), or by using its features, you agree to the below listed Terms of Service ("terms") and [Privacy Policy](#privacy-policy) ("policy").
+You are permitted to invite the Bot to any server where you have the appropriate permissions. Continued usage of the Bot and its features implies agreement to these Terms, the [Discord Terms of Service][discord-tos], [Discord Privacy Policy][discord-policy], and Discord's [Community Guidelines][discord-guidelines].
 
-You may invite the bot to a server you have sufficient permissions for and use its sets of features on any server you share with it. This priviledge can be revoked and the bot be removed from the server at any time, should you violate these terms and/or [policy](#privacy-policy), the [Terms of Service] and/or [Privacy Policy] of [Discord Inc.][discord], or their [Community Guidelines].
+Violation of any of these Terms or policies may result in the Bot being removed from your server without notice.
 
-Through inviting the bot, you agree to share data as described in the bot's [policy](#privacy-policy). The intended use of this data is described in said policy.
+### 2. Data Collection and Use
+By inviting or using the Bot, you agree to the collection and use of data as outlined in the [Privacy Policy](#privacy-policy). The Bot uses this data strictly to deliver its intended functionality.
 
-### Intended Age
+Additionally, some features rely on an external API which has its own [API Terms of Service and Privacy Policy](api.md). Continued use of these features constitues acceptance of those documents as well.
 
-Individuals of minimal age required to use Discord, as described in their [Terms of Service] may use the bot and its features.  
-Certain features are only available within text channels marked as "age-gated" (Also known as "NSFW") and may only be used by individuals of mature age. Granting access to these features for individuals under age of maturity will result in a removal of the bot from any server associated with the indivual granting access to these features for people under the age of maturity.
+### 3. Age Restrictions
+Use of the Bot is permitted only for individuals who meet Discord's minimum age requirements as outlined in their [Terms of Service][discord-tos].  
+Some features are restricted to "age-gated" (NSFW) channels and may only be accessed by users of legal age in their respective jurisdiction. Missuse of these features, especially by or for underage users, will result in immediate removal of the Bot from all related servers.
 
-### Affiliation
+### 4. Affiliations
+The Bot is not affiliated with, endorsed by, or created by Discord Inc.  
+All references to Discord and its associated trademarks are used only for descriptive purposes. The developers of \*Purr\* make no claims to ownership of Discord's assets, trademarks, or intellectual property.
 
-The Bot is not affiliated with, supported or made by Discord Inc.  
-Any direct connection to Discord or any of its Trademark objects is purely coincidental. We do not claim to have the copyright ownership of any of Discord's assets, trademarks or other intellectual property.
+### 5. Limitation of Liability
+The developers of the Bot expect it to be used in good faith and for its intended purpose. The Bot should not be used in any way that violates Discord's policies or causes harm to other users, communities, or services.
 
-### Liability
+We reserve the right to update these Terms or the [Privacy Policy](#privacy-policy) at any time. Updates will be announced with a seven (7) notice period. You may opt out by removing the Bot fom your server and ceasing its use.
 
-The owner of the bot has faith in a users honesty and that the bot may only be used for its intended purpose and not in malicious ways against others or Discord Inc.
+### 6. Contact
+For questions or support should the following forms of contacts be used:
 
-We reserve the right to update these Terms and [policy](#privacy-policy) at our own discretion, giving a 1 Week (7 days) period to opt out of the changed Terms and [policy](#privacy-policy). You may opt out of these terms and [policy](#privacy-policy) by removing the bot from any server you have permission for and not using its features.
-
-### Contact
-
-People may get in contact through e-mail at support@purrbot.site, or through the official [Support Discord][support] of the Bot.  
-Other ways of support may be provided but aren't guaranteed.
+- **Email:** `support[at]purrbot.site`
+- **Support Discord Server:** https://purrbot.site/discord
 
 ----
 ## Privacy Policy
 
-### Usage of Data
+### 1. Data Usage
+The Bot collects limited server-specific data to enable and enhance features such as welcome messages and command handling.  
+This data is not shared with third-parties and is used solely for Bot functionality. However, select features rely on an external API governed by its own [API Privacy Policy](api.md).
 
-The bot may use stored data, as defined below, for different features including but not limited to: Welcoming joining users (when enabled) and command handling.  
-No usage of data outside of the aformentioned cases will happen and the data is not shared with any 3rd-party site or service.
+### 2. Data Stored
+Upon being added to a server, the following default data may be stored by the Bot:
 
-### Stored Information
+- `id`: Server ID
+- `language`: Default value `en`
+- `prefix`: Default command prefix `p.`
+- `welcome_background`: Default `color_white`
+- `welcome_channel`: Default `none`
+- `welcome_color`: Default `#000000`
+- `welcome_icon`: Default `purr`
+- `welcome_message`: Default `Welcome {mention}!`
 
-The bot may store the following information automatically when being invited to a new Discord Server:
+No additional data is stored without explicit user interaction.
 
-- `id` with the Server's ID as value.
-- `language` with value `en`
-- `prefix` with value `p.`
-- `welcome_background` with value `color_white`
-- `welcome_channel` with value `none`
-- `welcome_color` with value `hex:000000`
-- `welcome_icon` with value `purr`
-- `welcome_message` with value `Welcome {mention}!`
+### 3. Data Updates
+Certain features may allow users to update this data. These updates may include user-provided content (e.g. custom welcome messages), which may be considered identifiable or sensitive. This data is stored securely and used only for its stated purpose.
 
-No other information outside of the above mentioned one will be stored.
+### 4. Temporary Caching
+To improve performance, some data may be cached temporarely.  
+Cached data is automatically cleared after a predetermined duration or may be invalidated early, such as when the Bot is removed from the server.
 
-### Updating Data
+### 5. Third-Party API Use
+Some Bot features require interaction with an external API. When these features are used, your data may be transmitted to and processed by the API according to its own [API Terms of Service and Privacy Policy](api.md). We encourage users to review those documents before using such features.
 
-The data may be updated when using specific features of the bot.  
-Such updates of data often requires the input of a user, including data that can be seen as identifiable and sensitive, such as text messages. This data is only kept in the database and only used for its intended purpose.
+### 6. Data Deletion
 
-### Temporarely stored Information
+#### Automatic Deletion
+Removing the Bot from a server triggers automatic deletion of all related stored data. Reinviting the Bot will result in new data being collected per the [Data Stored](#2-data-stored) section.
 
-The Bot may keep the stored information in an internal cacheing mechanic for a certain amount of time to reduce requests to its database.  
-After a specified time period will the cached data be discared and only re-aquired when needed.
-
-Data may be dropped from cache pre-maturely through actions such as removing the bot from the Server.
-
-### Removal of Data
-
-#### Automatic removal
-
-Stored Data can be removed automatically through means of removing the bot from a Server. This can be achieved by using the moderation features provided by Discord.  
-Re-adding the bot back to the server will store data again, as described in the [Stored Information](#stored-information) section of this policy.
-
-#### Manual removal
-
-Manual removal of the data can be requested through email at support@purrbot.site.  
-For security reasons will we ask you to provide us with proof of ownership of the server, that you wish the data to be removed of. Only a server owner may request manual removal of data and requesting it will result in the bot being removed from the server, if still present on it.
+#### Manual Deletion
+You may request manual deletion of your server's data by emailing `support[at]purrbot.site`.  
+For security reasons, requests must come from the server owner, and proof of ownership may be required.  
+Manual data removal will result in the Bot being removed from the server, if still present.
