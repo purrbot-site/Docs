@@ -9,26 +9,40 @@ not_translatable: true
 
 ## Terms of Service
 
-### Usage Agreement
-These Terms will apply when using the ImageAPI by either connecting to https://purrbot.site/api and all its sub-pages, using the API in your own services or by using it through the Bot \*Purr*.
+### 1. Usage Agreement
+These Terms of Service ("Terms") govern the use of the Purrbot API ("API"), accessible at https://purrbot.site/api, https://api.purrbot.site, and all associated subpages, as well as any interaction with the Discord Bot \*Purr\*.
 
-### Intended Use
-The APIs are intended to be used for software and projects mostly aimed at Discord, but may also be used on other sites and services, as long as the targeted site/service allows this.
+### 2. Intended Use
+The API is primarily intended for integration with Discord-related software and projects. However, use on other platforms and services is permitted, provided that such usage complies with the respective platform's terms of service.
 
-### Affiliation
-The API is not affiliated with, supported or made by Discord Inc.  
-No Trademark material from Discord Inc is used within the API. Any depicted images are the intelectual property of their respective owners and no claim of ownership of these images is done by the owner of the API.
+### 3. Affiliation
+The API is not affiliated with, endorsed by, or created by Discord Inc.  
+No trademarked materials owned by Discord Inc. are used in this service. All third-party images or assets referenced or used by the API remain the intellectual property of their respective owners. The API owner makes no claim of ownership over such materials.
 
-### Liability
-The owner cannot be made responsible for sensitive data - as described in the Privacy Policy below - being used in malicious ways or for things outside of the APIs intended use.  
-The user is solely responsible for the data provided and for its intendet use.
+### 4. Liability
+The API owner is not responsible for any misuse of sensitive data, as outlined in the accompanying Privacy Policy, nor for any use of the API outside its intended scope.  
+Users are fully responsible for the data they provide and for ensuring their use of the API complies with these Terms any any applicable laws or regulations.
 
-We reserve the right to update these terms at our own discretion, giving you a 1-Week (7 days) period to opt out of these terms if you're not agreeing with the new changes.  
-You may opt out by not utilizing the API as described above.
+### 5. Changes to the Terms
+We reserve the right to update or modify these terms at any time. In the event of any changes, users will be given a seven (7) day notice period. If you do not agree to the revised Terms, you may opt out by discontinuing use of the API and associated services.
 
 ----
 ## Privacy Policy
 
-### Used Information
-The API does not utilize any sensitive information as described by Discord's Developer Terms of Service.  
-It may log anonymous information regarding the retrieved request. This information cannot be traced back towards an individual.
+### 1. General Information
+The Purrbot API ("API") does not collect or store any personally identifiable information (PII) or sensitive data beyond what is typically transmitted as part of a standard HTTP GET or POST request.
+
+### 2. Data Handling
+Certain endpoints, such as the `/owoify` endpoint, require user-provided input (e.g. text content) either through a JSON body in a POST request or as a query parameter in a GET request. This input is **only processed in-memory** for the purpose of generating a response. It is **not stored**, logged, or retained in any way.
+
+### 3. Data Storage
+The API does not store request payloads, including text sent to endpoints like `/owoify`. No database or persistent storage is used to retain user-submitted data.
+
+### 4. Third-Party Services
+The API does not use any third-party analytics, tracking or external services that collect data from users.
+
+### 5. Security
+While the API itself does not store user data, it follows standard web security practices to help ensure safe usage. Users are still responsible for ensuring that any data sent to the API does not violate any applicable laws or platform rules.
+
+### 6. Updates to This Policy
+This Privacy Policy may be updated occasionally. Changes will be announced alongside updates to the Terms of Service, and users will have the option to discontinue use if they do not agree with the changes.
