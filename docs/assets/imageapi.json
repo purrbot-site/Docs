@@ -54,7 +54,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/angry/gif/angry_001.gif",
+                  "link": "https://cdn.purrbot.site/sfw/angry/gif/angry_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -120,7 +120,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/background/color_black.png",
+                  "link": "https://cdn.purrbot.site/sfw/background/color_black.png",
                   "error": false,
                   "time": 0
                 }
@@ -186,7 +186,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/bite/gif/bite_001.gif",
+                  "link": "https://cdn.purrbot.site/sfw/bite/gif/bite_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -252,7 +252,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/blush/gif/blush_001.gif",
+                  "link": "https://cdn.purrbot.site/sfw/blush/gif/blush_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -318,7 +318,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/comfy/gif/comfy_001.gif",
+                  "link": "https://cdn.purrbot.site/sfw/comfy/gif/comfy_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -384,7 +384,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/cry/gif/cry_001.gif",
+                  "link": "https://cdn.purrbot.site/sfw/cry/gif/cry_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -450,7 +450,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/cuddle/gif/cuddle_001.gif",
+                  "link": "https://cdn.purrbot.site/sfw/cuddle/gif/cuddle_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -516,7 +516,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/dance/gif/dance_001.gif",
+                  "link": "https://cdn.purrbot.site/sfw/dance/gif/dance_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -599,14 +599,14 @@
                 "examples": {
                   "Gif": {
                     "value": {
-                      "link": "https://purrbot.site/img/sfw/eevee/gif/eevee_001.gif",
+                      "link": "https://cdn.purrbot.site/sfw/eevee/gif/eevee_001.gif",
                       "error": false,
                       "time": 0
                     }
                   },
                   "Img": {
                     "value": {
-                      "link": "https://purrbot.site/img/sfw/eevee/img/eevee_001.jpg",
+                      "link": "https://cdn.purrbot.site/sfw/eevee/img/eevee_001.jpg",
                       "error": false,
                       "time": 0
                     }
@@ -674,7 +674,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/fluff/gif/fluff_001.gif",
+                  "link": "https://cdn.purrbot.site/sfw/fluff/gif/fluff_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -740,7 +740,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/holo/img/holo_001.jpg",
+                  "link": "https://cdn.purrbot.site/sfw/holo/img/holo_001.jpg",
                   "error": false,
                   "time": 0
                 }
@@ -806,7 +806,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/hug/gif/hug_001.gif",
+                  "link": "https://cdn.purrbot.site/sfw/hug/gif/hug_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -872,7 +872,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/icon/img/icon_001.jpg",
+                  "link": "https://cdn.purrbot.site/sfw/icon/img/icon_001.jpg",
                   "error": false,
                   "time": 0
                 }
@@ -938,7 +938,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/kiss/gif/kiss_001.gif",
+                  "link": "https://cdn.purrbot.site/sfw/kiss/gif/kiss_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -1004,7 +1004,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/kitsune/img/kitsune_001.jpg",
+                  "link": "https://cdn.purrbot.site/sfw/kitsune/img/kitsune_001.jpg",
                   "error": false,
                   "time": 0
                 }
@@ -1070,7 +1070,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/lay/gif/lay_001.gif",
+                  "link": "https://cdn.purrbot.site/sfw/lay/gif/lay_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -1136,7 +1136,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/lick/gif/lick_001.gif",
+                  "link": "https://cdn.purrbot.site/sfw/lick/gif/lick_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -1219,14 +1219,14 @@
                 "examples": {
                   "Gif": {
                     "value": {
-                      "link": "https://purrbot.site/img/sfw/neko/gif/neko_001.gif",
+                      "link": "https://cdn.purrbot.site/sfw/neko/gif/neko_001.gif",
                       "error": false,
                       "time": 0
                     }
                   },
                   "Img": {
                     "value": {
-                      "link": "https://purrbot.site/img/sfw/neko/img/neko_001.jpg",
+                      "link": "https://cdn.purrbot.site/sfw/neko/img/neko_001.jpg",
                       "error": false,
                       "time": 0
                     }
@@ -1294,7 +1294,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/okami/img/okami_001.jpg",
+                  "link": "https://cdn.purrbot.site/sfw/okami/img/okami_001.jpg",
                   "error": false,
                   "time": 0
                 }
@@ -1360,7 +1360,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/pat/gif/pat_001.gif",
+                  "link": "https://cdn.purrbot.site/sfw/pat/gif/pat_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -1426,7 +1426,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/poke/gif/poke_001.gif",
+                  "link": "https://cdn.purrbot.site/sfw/poke/gif/poke_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -1492,7 +1492,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/pout/gif/pout_001.gif",
+                  "link": "https://cdn.purrbot.site/sfw/pout/gif/pout_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -1558,7 +1558,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/senko/img/senko_001.jpg",
+                  "link": "https://cdn.purrbot.site/sfw/senko/img/senko_001.jpg",
                   "error": false,
                   "time": 0
                 }
@@ -1624,7 +1624,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/shiro/img/shiro_001.jpg",
+                  "link": "https://cdn.purrbot.site/sfw/shiro/img/shiro_001.jpg",
                   "error": false,
                   "time": 0
                 }
@@ -1690,7 +1690,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/slap/gif/slap_001.gif",
+                  "link": "https://cdn.purrbot.site/sfw/slap/gif/slap_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -1756,7 +1756,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/smile/gif/smile_001.gif",
+                  "link": "https://cdn.purrbot.site/sfw/smile/gif/smile_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -1822,7 +1822,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/tail/gif/tail_001.gif",
+                  "link": "https://cdn.purrbot.site/sfw/tail/gif/tail_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -1888,7 +1888,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/sfw/tickle/gif/tickle_001.gif",
+                  "link": "https://cdn.purrbot.site/sfw/tickle/gif/tickle_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -1967,20 +1967,20 @@
                 },
                 "example": {
                   "links": [
-                    "https://purrbot.site/img/sfw/background/img/color_black.png",
-                    "https://purrbot.site/img/sfw/background/img/color_blue.png",
-                    "https://purrbot.site/img/sfw/background/img/color_blurple.png",
-                    "https://purrbot.site/img/sfw/background/img/color_green.png",
-                    "https://purrbot.site/img/sfw/background/img/color_grey.png",
-                    "https://purrbot.site/img/sfw/background/img/color_red.png",
-                    "https://purrbot.site/img/sfw/background/img/color_white.png",
-                    "https://purrbot.site/img/sfw/background/img/gradient.png",
-                    "https://purrbot.site/img/sfw/background/img/gradient_blue.png",
-                    "https://purrbot.site/img/sfw/background/img/gradient_dark_red.png",
-                    "https://purrbot.site/img/sfw/background/img/gradient_green.png",
-                    "https://purrbot.site/img/sfw/background/img/gradient_orange.png",
-                    "https://purrbot.site/img/sfw/background/img/gradient_red.png",
-                    "https://purrbot.site/img/sfw/background/img/rainbow.png"
+                    "https://cdn.purrbot.site/sfw/background/img/color_black.png",
+                    "https://cdn.purrbot.site/sfw/background/img/color_blue.png",
+                    "https://cdn.purrbot.site/sfw/background/img/color_blurple.png",
+                    "https://cdn.purrbot.site/sfw/background/img/color_green.png",
+                    "https://cdn.purrbot.site/sfw/background/img/color_grey.png",
+                    "https://cdn.purrbot.site/sfw/background/img/color_red.png",
+                    "https://cdn.purrbot.site/sfw/background/img/color_white.png",
+                    "https://cdn.purrbot.site/sfw/background/img/gradient.png",
+                    "https://cdn.purrbot.site/sfw/background/img/gradient_blue.png",
+                    "https://cdn.purrbot.site/sfw/background/img/gradient_dark_red.png",
+                    "https://cdn.purrbot.site/sfw/background/img/gradient_green.png",
+                    "https://cdn.purrbot.site/sfw/background/img/gradient_orange.png",
+                    "https://cdn.purrbot.site/sfw/background/img/gradient_red.png",
+                    "https://cdn.purrbot.site/sfw/background/img/rainbow.png"
                   ],
                   "error": false,
                   "time": 0
@@ -2047,7 +2047,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/nsfw/anal/gif/anal_001.gif",
+                  "link": "https://cdn.purrbot.site/nsfw/anal/gif/anal_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -2113,7 +2113,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/nsfw/blowjob/gif/blowjob_001.gif",
+                  "link": "https://cdn.purrbot.site/nsfw/blowjob/gif/blowjob_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -2179,7 +2179,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/nsfw/cum/gif/cum_001.gif",
+                  "link": "https://cdn.purrbot.site/nsfw/cum/gif/cum_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -2245,7 +2245,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/nsfw/fuck/gif/fuck_001.gif",
+                  "link": "https://cdn.purrbot.site/nsfw/fuck/gif/fuck_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -2328,14 +2328,14 @@
                 "examples": {
                   "Gif": {
                     "value": {
-                      "link": "https://purrbot.site/img/nsfw/neko/gif/neko_001.gif",
+                      "link": "https://cdn.purrbot.site/nsfw/neko/gif/neko_001.gif",
                       "error": false,
                       "time": 0
                     }
                   },
                   "Img": {
                     "value": {
-                      "link": "https://purrbot.site/img/nsfw/neko/img/neko_001.jpg",
+                      "link": "https://cdn.purrbot.site/nsfw/neko/img/neko_001.jpg",
                       "error": false,
                       "time": 0
                     }
@@ -2403,7 +2403,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/nsfw/pussylick/gif/pussylick_001.gif",
+                  "link": "https://cdn.purrbot.site/nsfw/pussylick/gif/pussylick_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -2469,7 +2469,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/nsfw/solo/gif/solo_001.gif",
+                  "link": "https://cdn.purrbot.site/nsfw/solo/gif/solo_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -2535,7 +2535,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/nsfw/solo_male/gif/solo_001.gif",
+                  "link": "https://cdn.purrbot.site/nsfw/solo_male/gif/solo_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -2601,7 +2601,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/nsfw/threesome_fff/gif/threesome_001.gif",
+                  "link": "https://cdn.purrbot.site/nsfw/threesome_fff/gif/threesome_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -2667,7 +2667,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/nsfw/threesome_ffm/gif/threesome_001.gif",
+                  "link": "https://cdn.purrbot.site/nsfw/threesome_ffm/gif/threesome_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -2733,7 +2733,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/nsfw/threesome_mmf/gif/threesome_001.gif",
+                  "link": "https://cdn.purrbot.site/nsfw/threesome_mmf/gif/threesome_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -2799,7 +2799,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/nsfw/yaoi/gif/yaoi_001.gif",
+                  "link": "https://cdn.purrbot.site/nsfw/yaoi/gif/yaoi_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -2865,7 +2865,7 @@
                   "$ref": "#/components/schemas/ImgSuccess"
                 },
                 "example": {
-                  "link": "https://purrbot.site/img/nsfw/yuri/gif/yuri_001.gif",
+                  "link": "https://cdn.purrbot.site/nsfw/yuri/gif/yuri_001.gif",
                   "error": false,
                   "time": 0
                 }
@@ -2944,86 +2944,86 @@
                 },
                 "example": {
                   "links": [
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_001.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_002.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_003.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_004.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_005.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_006.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_007.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_008.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_009.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_010.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_011.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_012.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_013.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_014.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_015.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_016.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_017.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_018.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_019.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_020.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_021.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_022.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_023.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_024.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_025.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_026.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_027.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_028.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_029.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_030.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_031.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_032.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_033.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_034.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_035.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_036.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_037.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_038.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_039.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_040.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_041.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_042.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_043.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_044.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_045.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_046.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_047.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_048.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_049.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_050.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_051.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_052.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_053.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_054.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_055.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_056.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_057.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_058.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_059.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_060.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_061.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_062.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_063.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_064.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_065.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_066.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_067.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_068.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_069.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_070.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_071.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_072.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_073.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_074.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_075.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_076.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_077.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_078.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_079.gif",
-                    "https://purrbot.site/img/nsfw/anal/gif/anal_080.gif"
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_001.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_002.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_003.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_004.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_005.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_006.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_007.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_008.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_009.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_010.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_011.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_012.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_013.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_014.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_015.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_016.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_017.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_018.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_019.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_020.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_021.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_022.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_023.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_024.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_025.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_026.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_027.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_028.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_029.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_030.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_031.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_032.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_033.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_034.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_035.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_036.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_037.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_038.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_039.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_040.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_041.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_042.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_043.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_044.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_045.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_046.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_047.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_048.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_049.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_050.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_051.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_052.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_053.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_054.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_055.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_056.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_057.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_058.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_059.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_060.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_061.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_062.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_063.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_064.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_065.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_066.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_067.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_068.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_069.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_070.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_071.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_072.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_073.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_074.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_075.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_076.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_077.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_078.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_079.gif",
+                    "https://cdn.purrbot.site/nsfw/anal/gif/anal_080.gif"
                   ],
                   "error": false,
                   "time": 0
