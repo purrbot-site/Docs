@@ -12,7 +12,7 @@
     <tbody>
         {%- for param in parameters %}
         <tr>
-            <td class="parameter-name"><code>{{ param.name }}</code></td>
+            <td class="parameter-name"><code>{{ param.name }}</code>{% if param.required %}<span class="api-required" title="Required Parameter">*</span>{% endif %}</td>
             <td>{{ param.in }}</td>
             <td>{{ read_dict(param, "schema", "type") }}</td>
             <td>

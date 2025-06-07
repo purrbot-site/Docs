@@ -5,31 +5,11 @@ Schema(<a href="#{{ type_name.lower() | link }}" class="ref-link">{{ type_name }
 {%- endif -%}
 
 {%- if schema.type -%}
-{%- with type_name = schema["type"], nullable = schema.get("nullable") -%}
-{%- if type_name == "object" -%}
-{%- if schema.example -%}
-<em>{{ texts.example }}: </em><code>{{ schema.example }}</code>
-{%- elif schema.properties -%}
-<em>{{ texts.properties }}: </em><code>{{ ", ".join(schema.properties.keys()) }}</code>
-{%- endif -%}
-{%- endif -%}
-{# Scalar types #}
-{%- if type_name in scalar_types -%}
-<span class="{{ type_name }}-type">{{ type_name }}</span>
-{%- if schema.format -%}
-(<span class="{{ schema.format }}-format format">{{ schema.format }}</span>)
-{%- endif -%}
-{%- if nullable -%}
-&nbsp;(nullable)
-{%- endif -%}
-{%- endif -%}
-{%- if type_name == "array" -%}
-{%- with schema = schema["items"] -%}
-Array({%- include "partial/schema-repr.html" -%})
-{%- endwith -%}
-{%- endif -%}
-{%- if type_name == "null" -%}
-<span class="null-type">null</span>
+{%- with type_name = schema["type"] -%}
+{%- if type_name is iterable and (type_name is not string and type_name is not mapping) -%}
+{{ type_name | join(" &#124; ") }}
+{%- else -%}
+{{ type_name }}
 {%- endif -%}
 {%- endwith -%}
 {%- endif -%}

@@ -26,3 +26,7 @@
     padding: .1rem .3rem;
     margin-right: .3em;
 }
+
+.api-required {
+    color: #ff5252;
+}

@@ -3274,8 +3274,7 @@
           },
           "deprecation-warning": {
             "type": "string",
-            "description": "Warning about the deprecation of the accessed endpoint. Not present for https://api.purrbot.site/v2 endpoints.",
-            "nullable": true
+            "description": "Warning about the deprecation of the accessed endpoint. Not present for https://api.purrbot.site/v2 endpoints."
           }
         }
       },
@@ -3300,9 +3299,8 @@
             "description": "How long the request took to be processed (in milliseconds)."
           },
           "deprecation-warning": {
-            "type": "string",
-            "description": "Warning about the deprecation of the accessed endpoint. Not present for https://api.purrbot.site/v2 endpoints.",
-            "nullable": true
+            "type": ["string", "null"],
+            "description": "Warning about the deprecation of the accessed endpoint. Not present for https://api.purrbot.site/v2 endpoints."
           }
         }
       },
@@ -3324,9 +3322,8 @@
             "description": "How long the request took to be processed (in milliseconds)."
           },
           "deprecation-warning": {
-            "type": "string",
-            "description": "Warning about the deprecation of the accessed endpoint. Not present for https://api.purrbot.site/v2 endpoints.",
-            "nullable": true
+            "type": ["string", "null"],
+            "description": "Warning about the deprecation of the accessed endpoint. Not present for https://api.purrbot.site/v2 endpoints."
           }
         }
       },
@@ -3429,6 +3426,7 @@
       "OWOifyRequest": {
         "type": "object",
         "description": "A JSON object for a proper POST request towards the OWOify endpoint.",
+        "required": ["text"],
         "properties": {
           "text": {
             "type": "string",
@@ -3436,18 +3434,15 @@
           },
           "replace-words": {
             "type": "boolean",
-            "description": "Whether to replace specific key-words with others",
-            "required": false
+            "description": "Whether to replace specific key-words with others"
           },
           "stutter": {
             "type": "boolean",
-            "description": "Whether stuttering should be added.",
-            "required": false
+            "description": "Whether stuttering should be added."
           },
           "emoticons": {
             "type": "boolean",
-            "description": "Whether to replace punctuation characters (`.!?`) with random emoticons.",
-            "required": false
+            "description": "Whether to replace punctuation characters (`.!?`) with random emoticons."
           }
         }
       }

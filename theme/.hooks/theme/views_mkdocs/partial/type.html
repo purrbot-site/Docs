@@ -3,7 +3,7 @@
 {% if props %}
 | Name | Type | Description |
 |------|------|-------------|{% for name, schema in props %}
-| `{{ name }}` | {% include "partial/schema-repr.html" %} | {{ schema.description }}{%- endfor %}
+| `{{ name }}`{% if name in definition.required %}<span class="api-required" title="Required Parameter">*</span>{% endif %} | {% include "partial/schema-repr.html" %} | {{ schema.description }}{%- endfor %}
 {%- endif %}
 {%- endwith -%}
 {%- else -%}
