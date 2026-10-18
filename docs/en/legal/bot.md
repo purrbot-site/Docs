@@ -39,7 +39,8 @@ All references to Discord and its associated trademarks are used only for descri
 ### 5. Limitation of Liability
 The developers of the Bot expect it to be used in good faith and for its intended purpose. The Bot should not be used in any way that violates Discord's policies or causes harm to other users, communities, or services.
 
-We reserve the right to update these Terms or the [Privacy Policy](#privacy-policy) at any time. Updates will be announced with a seven (7) notice period. You may opt out by removing the Bot fom your server and ceasing its use.
+We reserve the right to update these Terms or the [Privacy Policy](#privacy-policy) at any time. Updates will be announced with a seven (7) days notice period. You may opt out by removing the Bot fom your server and ceasing its use.  
+Any usage of the bot after the aforementioned grace period will be seen as acceptance of the Terms and/or Privacy Policy Changes
 
 ### 6. Contact
 For questions or support should the following forms of contacts be used:
