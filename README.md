@@ -24,6 +24,9 @@
   <img alt="mkdocs" align="right" height="64" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@2/assets/cozy/built-with/mkdocs_vector.svg">
 </a>
 
+> [!IMPORTANT]
+> This repository has been moved to [Codeberg](https://codeberg.org/purrbot-site/Website).
+
 This is the source of the [PurrBot Documentation][docs] containing the [Wiki of \*Purr*][wiki] and [ImageAPI documentation][api-docs].  
 The content is made in Markdown, build using [MkDocs][mkdocs] with the [Material for MkDocs theme][mkdocs-material] and hosted using [GitHub Pages][gh-pages].
 
