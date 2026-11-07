@@ -43,6 +43,10 @@
 {% endblock %}
 
 {% block announce %}
+  <p>
+    <b>Documentation has been moved!</b><br>
+    It is now found on the main <a href="https://purrbot.site">purrbot.site</a> domain. The source has also moved <a href="https://codeberg.org/purrbot-site/Website" target="_blank" rel="nofollow noopener">to Codeberg</a>!
+  </p>
   {% if page.meta and i18n_page_locale != "en" and i18n_file_locale != i18n_page_locale %}
     {% set type = "not_translatable" if page.meta.not_translatable else "translate" %}
     {% set text = config.extra.translate.not_translatable if page.meta.not_translatable else config.translate.missing_translation | d('Error: Missing text') %}
